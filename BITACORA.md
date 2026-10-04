@@ -250,3 +250,46 @@ de piezas.
 **Pendiente (Etapa 3).** Evolucionar: generación de la población inicial con
 rechazo de genomas inválidos, evaluación con el modelo compilado por criatura
 (cada esclavo compila su MJCF), y la aptitud de caminata con asentamiento.
+
+---
+
+## 0009 · 2026-10-04 · Cinco semillas: ¿convergen al mismo cerebro?
+
+**Contexto.** Pendiente de la Etapa 1: repetir `nado01` con semillas 2 a 5
+(300 × 50, mismos parámetros) para ver si todas las corridas llegan al mismo
+tipo de cerebro o aparecen otras formas de nadar.
+
+| corrida | aptitud | distancia | a mitad de paso | neuronas | mejor gen 10 | mediana final |
+|---|---|---|---|---|---|---|
+| nado01 | 6.45 | 4.58 m | 4.40 m | 3 | 5.25 | 6.44 |
+| nado02 | 5.75 | 4.08 m | 4.16 m | 7 | 5.49 | 5.74 |
+| nado03 | 5.46 | 3.86 m | 3.97 m | 14 | 5.16 | 5.45 |
+| nado04 | 6.42 | 4.56 m | 4.35 m | 18 | 3.32 | 6.39 |
+| nado05 | 6.47 | 4.60 m | 4.41 m | 24 | 6.16 | 6.46 |
+
+**Qué se vio.**
+- Las cinco corridas terminan entre 3.9 y 4.6 m en 10 s, y en todas la mediana
+  final casi iguala al mejor: cada población converge a su campeón. Las tres
+  mejores (semillas 1, 4 y 5) quedan a menos de 1 % entre sí, lo que sugiere un
+  techo del cuerpo (torque de 14.4 N·m contra el arrastre) más que del cerebro.
+- El mecanismo es el mismo en las cinco: **un efector lee directamente un
+  sensor de ángulo con peso grande** (`e1 = s2×4.00`, `e1 = s0×4.00`,
+  `e1 = s0×2.93`, `e0 = s1×1.41`, `e0 = s1×1.64`), un reflejo saturado que
+  convierte la bisagra en un oscilador de relevo a torque máximo. Las otras dos
+  bisagras siguen a esa con neuronas evolucionadas (oscilador, retardo, `if`).
+  No apareció una onda viajera "limpia" como la del controlador a mano: el
+  relevo saturado es más rápido de encontrar y más fuerte.
+- Los cerebros grandes están llenos de neuronas inertes: en `nado05`, nueve de
+  las 24 son `if` con condición constante negativa, que siempre devuelven su
+  tercera entrada. La recolección de basura no las quita porque siguen
+  conectadas a un efector. Es deriva neutral, no funcionalidad. Sims no
+  penalizaba el tamaño; nosotros tampoco, por ahora.
+- `nado04` arrancó lento (3.3 en la generación 10, la peor) y terminó segundo:
+  la curva de las primeras generaciones no predice el resultado.
+- Verificación numérica: las cinco a la mitad del paso cambian menos de 5 %.
+
+**Decisión.** Sin cambios en el modelo. Queda anotado para la Etapa 3 que la
+aptitud de nado con este cuerpo tiene un techo cerca de 4.6 m, y que un
+reflejo saturado sobre un sensor es la primera solución que encuentra la
+evolución en cualquier semilla. Los cinco campeones se pueden ver en carrera en
+el visor («Cinco semillas»).

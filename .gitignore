@@ -7,3 +7,6 @@ runs/*.log
 MUJOCO_LOG.TXT
 runs/*/poblacion/
 runs/*/galeria.json
+runs/semillas.json
+runs/semillas.log
+runs/semillas.err
