@@ -8,7 +8,7 @@ población.
 
 **Visor en vivo:** <https://lucianotejadac.github.io/simulador-criaturas-sims/viewer/>
 
-## Estado: Etapa 2
+## Estado: Etapa 3
 
 **Etapa 1 (cerrada):** cuerpo fijo (cadena de cuatro cajas unidas por tres
 bisagras) en agua sin gravedad. Solo evoluciona el cerebro: un grafo de neuronas
@@ -21,6 +21,12 @@ recursión, reflexión, escala y conexiones terminales, y desarrollo a MJCF con 
 siete tipos de articulación de Sims. Los cerebros anidados (uno por nodo, más
 centrales) se aplanan al desarrollar. Verificado con tres genomas escritos a
 mano que se ven en el visor (`Etapa 2 · los tres cuerpos juntos`).
+
+**Etapa 3 (en curso):** coevolución de cuerpo y cerebro para nado y caminata
+(`src/evolve_morfo.py`). En caminata la criatura se asienta antes de medir y la
+aptitud es el mínimo entre tres pasos de integración, porque los saltadores son
+caóticos (BITACORA 0010). Cinco semillas por tarea; campeones en el visor
+(`Etapa 3 · campeones con cuerpo evolucionado`).
 
 Las decisiones de diseño y las trampas que encontraron las criaturas están en
 [BITACORA.md](BITACORA.md).
@@ -52,6 +58,10 @@ python src/galeria.py --nombre nado01 --generaciones 1,10,25,50 --cuales mejor,m
 # Etapa 2: desarrollar y simular los genomas escritos a mano (viewer/ejemplos.json)
 python src/ejemplos.py
 
+# Etapa 3: coevolución cuerpo + cerebro (nado o caminata) y reunión de campeones para el visor
+python src/evolve_morfo.py --nombre morfo-cam01 --tarea caminata --semilla 1 --generaciones 60 --poblacion 200
+python src/etapa3.py --nado morfo-nado01,morfo-nado02 --caminata morfo-cam01
+
 # tests
 python -m pytest -q tests
 
@@ -77,6 +87,10 @@ src/
   develop.py         cuerpo fijo de la Etapa 1 -> MJCF
   develop_morfo.py   genoma morfológico -> MJCF + cerebro aplanado (Etapa 2)
   ejemplos.py        simula los genomas a mano -> viewer/ejemplos.json
+  tareas.py          caminata (asentamiento, suelo) y despacho por tarea (Etapa 3)
+  evolve_morfo.py    coevolución cuerpo + cerebro con multiprocessing (Etapa 3)
+  etapa3.py          campeones de varias corridas -> viewer/etapa3.json
+  semillas.py        campeones de nado01..05 -> viewer/semillas.json
   brain.py           ejecución del grafo neuronal
   fluido.py          arrastre viscoso por cara (modelo de agua de Sims)
   fitness.py         evaluación y aptitud de nado
@@ -93,7 +107,7 @@ BITACORA.md          decisiones de diseño y trampas detectadas
 
 1. **Etapa 1**: cuerpo fijo, cerebro evolucionado, nado. *(cerrada)*
 2. **Etapa 2**: genoma morfológico de grafo dirigido con recursión y desarrollo a MJCF. *(cerrada)*
-3. Etapa 3: coevolución cuerpo + cerebro para nado y caminata. *(siguiente)*
+3. **Etapa 3**: coevolución cuerpo + cerebro para nado y caminata. *(en curso)*
 4. Etapa 4: seguimiento de luz con fotosensores.
 5. Etapa 5: competencia por un cubo y mundo compartido.
 

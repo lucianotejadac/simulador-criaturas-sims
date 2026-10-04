@@ -55,7 +55,8 @@ def limites_articulares(model: mujoco.MjModel) -> np.ndarray:
 
 def evaluar_nado(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
                  duracion: float = 10.0, grabar_cada: int = 0,
-                 cortar_temprano: bool = True, arrastre: ArrastrePorCara | None = None) -> dict:
+                 cortar_temprano: bool = True, arrastre: ArrastrePorCara | None = None,
+                 tau_activacion: float = 0.0) -> dict:
     """Simula una criatura y devuelve aptitud y diagnósticos.
 
     `grabar_cada` > 0 guarda un cuadro cada tantos pasos de física (para exportar).
@@ -79,7 +80,11 @@ def evaluar_nado(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
         salida = None
         for _ in range(PASOS_CEREBRO_POR_FISICA):
             salida = cerebro.paso(sens)
-        data.ctrl[:] = salida
+        if tau_activacion > 0:
+            # Activación muscular de primer orden: el torque no cambia de golpe.
+            data.ctrl[:] += (np.asarray(salida) - data.ctrl) * min(1.0, dt / tau_activacion)
+        else:
+            data.ctrl[:] = salida
         arrastre.aplicar(model, data)
         mujoco.mj_step(model, data)
         sens = sensores_angulo(model, data, lim)

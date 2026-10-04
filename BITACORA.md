@@ -293,3 +293,77 @@ aptitud de nado con este cuerpo tiene un techo cerca de 4.6 m, y que un
 reflejo saturado sobre un sensor es la primera solución que encuentra la
 evolución en cualquier semilla. Los cinco campeones se pueden ver en carrera en
 el visor («Cinco semillas»).
+
+---
+
+## 0010 · 2026-10-04 · Etapa 3: coevolución, caminata y la física de los contactos
+
+**Contexto.** Con el genoma morfológico verificado, se coevolucionan cuerpo y
+cerebro en dos tareas: nado (el agua de la Etapa 1) y caminata (gravedad y
+suelo con fricción). El usuario dejó las decisiones a mi criterio y preguntó
+por la GPU.
+
+**Decisiones de base.**
+- **CPU, no GPU.** MJX simula en GPU miles de copias del *mismo* modelo; aquí
+  cada criatura tiene un árbol de piezas distinto y no se puede agrupar en un
+  lote. El costo tampoco está en la física sino en el cerebro (grafo
+  heterogéneo en Python) y en el arrastre por cara. Y JAX con CUDA no corre en
+  Windows nativo. Patrón maestro–esclavo con un proceso por criatura, como
+  Sims en la CM-5. Medido: una evaluación de nado tarda 0.14 s (mediana) con
+  cuerpos de hasta 13 piezas; no hace falta Numba.
+- **Crías inválidas se descartan y se regeneran** (demasiadas piezas, sin
+  grados de libertad, interpenetradas), hasta 40 intentos por cupo. En la
+  población inicial se rechazan unos dos genomas aleatorios por cada uno
+  aceptado.
+- **Tamaño del cerebro sin penalizar**, como Sims; los topes de la Etapa 2
+  acotan la deriva neutral.
+- **Asentamiento con fricción.** Sims soltaba la criatura sin fricción ni
+  torques hasta que se quedara quieta, para que no ganara distancia cayendo.
+  Sin fricción, una criatura que cae torcida resbala para siempre y nunca se
+  asienta (el `bilateral` de ejemplo no se asentó en 2 s). Se asienta *con*
+  fricción y sin torques, y la distancia se mide desde ahí: el efecto que Sims
+  quería evitar se evita igual, porque el origen se fija después de la caída.
+  Si al final el centro de masa queda por debajo de la mitad de su altura
+  asentada, no se suma el premio de la fase final.
+
+**Trampa: el caminante que avanza por el error de integración.** En la primera
+corrida de humo (40 criaturas, 3 generaciones), una criatura de 2 piezas con
+articulación universal obtuvo 5.4 de aptitud en la generación 0 y el campeón
+de 6 piezas llegó a 4.0 m. Reevaluado a paso más fino: 1.2 m a 1/960 s y
+1.6 m a 1/1920 s, con el centro de masa saltando hasta 0.79 m de altura con
+un cuerpo de 12 cm. Torque máximo alternado (bang-bang) contra el suelo y los
+límites articulares, con contactos blandos integrados a 1/480 s.
+
+Lo que se probó, en orden:
+1. **Filtro de activación muscular** de primer orden (50 ms): el torque no
+   puede cambiar de signo en un paso. Fisiológicamente razonable, y queda. No
+   bastó: el nuevo campeón pasaba de 5.3 m a 1.4 m al afinar el paso.
+2. **Opciones del solver de contactos** (cono elíptico, `impratio` 10,
+   `noslip`, límites y contactos más rígidos): ninguna hizo converger la
+   distancia; cambiaban los números, no la dispersión.
+3. **Menos fuerza en tierra.** En el agua la escala del torque es el arrastre;
+   en tierra es el peso. Con `K_FUERZA = 1000` el torque era diez veces el
+   necesario para levantar el propio cuerpo; en caminata se usa
+   `K_FUERZA_CAMINATA = 300` (unas tres veces). Los saltos bajan de 0.8 m a
+   0.3 m, pero la dispersión sigue.
+4. **Diagnóstico final:** se evaluó el campeón de humo en diez pasos entre
+   1/480 y 1/1000 s y en diez entre 1/1900 y 1/4000 s. Distancias de 1.6 a
+   5.2 m en el primer rango (media 3.4, desviación 1.2) y de 0.7 a 6.3 m en el
+   segundo (media 2.6, desviación 1.6). **No es un error que se reduce con el
+   paso: es caos.** Una criatura que salta y rebota es un sistema caótico; la
+   distancia de un ensayo de 10 s es una variable aleatoria ancha, y el
+   promedio sí es parecido entre rangos. Nada que ver con el nado, donde el
+   fluido viscoso amortigua todo y el campeón convergía a 6 %.
+
+**Decisión.** La aptitud de caminata es el **mínimo entre tres evaluaciones
+con pasos distintos** (1/480, 1/720 y 1/960 s). No elimina el caos, pero
+premia a las criaturas que avanzan de forma consistente y castiga a las que
+dependen de un rebote afortunado. Costo: tres evaluaciones por criatura,
+unos 7 s por generación de 200. El nado sigue con una evaluación, porque
+converge. En la bitácora queda la lección de método: antes de llamar "trampa"
+a una dependencia del paso, mirar si el promedio converge; si converge y la
+dispersión no, es caos y la respuesta es estadística, no numérica.
+
+**Lote lanzado.** Cinco semillas de nado y cinco de caminata (200 criaturas,
+60 generaciones), en secuencia y desacopladas, `scratch/lote_etapa3.py`.
+Resultados en la entrada siguiente.

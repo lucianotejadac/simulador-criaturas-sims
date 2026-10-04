@@ -126,16 +126,18 @@ def _instanciar(g: dict, nodo_idx: int, madre, conexion, contador: dict, piezas:
                     espejo != bool(c["reflejo"]), escala * c["escala"])
 
 
-def _mjcf(piezas: list, gravedad: bool) -> str:
+def _mjcf(piezas: list, gravedad: bool, paso: float = PASO_FISICA, k_fuerza: float = K_FUERZA) -> str:
     g = "0 0 -9.81" if gravedad else "0 0 0"
     out = ['<mujoco model="criatura">\n',
            '  <compiler angle="degree" autolimits="true"/>\n',
-           f'  <option timestep="{PASO_FISICA:.6f}" gravity="{g}" integrator="implicitfast"/>\n',
+           f'  <option timestep="{paso:.6f}" gravity="{g}" integrator="implicitfast"/>\n',
            '  <default>\n',
            f'    <geom type="box" density="{DENSIDAD_PIEZAS}" rgba="0.85 0.89 0.92 1"/>\n',
            '    <joint type="hinge" damping="0.3"/>\n',
            '    <motor ctrlrange="-1 1"/>\n',
            '  </default>\n  <worldbody>\n']
+    if gravedad:
+        out.append('    <geom name="suelo" type="plane" size="0 0 1" friction="1 0.005 0.0001" rgba="0.3 0.35 0.3 1"/>\n')
     actuadores: list[str] = []
 
     def escribir(p, nivel: int) -> None:
@@ -148,7 +150,7 @@ def _mjcf(piezas: list, gravedad: bool) -> str:
         else:
             anc = -(SEPARACION + p.dims[0] / 2.0)
             area = min(p.dims[1] * p.dims[2], p.madre.dims[1] * p.madre.dims[2])
-            torque = K_FUERZA * area * (-1.0 if p.espejo else 1.0)
+            torque = k_fuerza * area * (-1.0 if p.espejo else 1.0)
             for k, eje in enumerate(p.ejes):
                 nombre = f"{p.nombre}_j{k}"
                 out.append(f'{ind}  <joint name="{nombre}" axis="{eje[0]:.4f} {eje[1]:.4f} {eje[2]:.4f}" '
@@ -220,7 +222,8 @@ def _aplanar_cerebro(g: dict, piezas: list) -> dict:
     return {"n_sensores": sensor, "neuronas": plano, "efectores": efectores}
 
 
-def desarrollar(g: dict, gravedad: bool = False) -> dict:
+def desarrollar(g: dict, gravedad: bool = False, paso: float = PASO_FISICA,
+                k_fuerza: float = K_FUERZA) -> dict:
     """Genoma morfológico -> {"xml", "cerebro" (plano), "piezas", "n_dof"}.
 
     Lanza ValueError si el cuerpo alcanza MAX_PIEZAS o no tiene grados de
@@ -233,7 +236,7 @@ def desarrollar(g: dict, gravedad: bool = False) -> dict:
     n_dof = sum(len(p.ejes) for p in piezas)
     if n_dof == 0:
         raise ValueError("cuerpo sin grados de libertad")
-    xml = _mjcf(piezas, gravedad)
+    xml = _mjcf(piezas, gravedad, paso, k_fuerza)
     cerebro = _aplanar_cerebro(g, piezas)
     info = [{"nombre": p.nombre, "nodo": p.nodo_idx, "dims": p.dims, "espejo": p.espejo,
              "madre": p.madre.nombre if p.madre else None, "dof": len(p.ejes)} for p in piezas]
@@ -241,17 +244,27 @@ def desarrollar(g: dict, gravedad: bool = False) -> dict:
 
 
 def interpenetra(model, data) -> bool:
-    """True si hay contacto en reposo entre piezas no adyacentes (madre-hija se filtra)."""
+    """True si hay contacto en reposo entre piezas no adyacentes (madre-hija se
+    filtra). Con suelo, la criatura se eleva primero y los contactos con el
+    plano no cuentan."""
     import mujoco
     mujoco.mj_resetData(model, data)
+    suelo = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "suelo")
+    if suelo >= 0:
+        from tareas import elevar_al_suelo
+        elevar_al_suelo(model, data)
     mujoco.mj_forward(model, data)
-    return data.ncon > 0
+    for i in range(data.ncon):
+        c = data.contact[i]
+        if c.geom1 != suelo and c.geom2 != suelo:
+            return True
+    return False
 
 
-def compilar(g: dict, gravedad: bool = False):
+def compilar(g: dict, gravedad: bool = False, paso: float = PASO_FISICA, k_fuerza: float = K_FUERZA):
     """Desarrolla y compila en MuJoCo. Devuelve (model, data, resultado) o lanza ValueError."""
     import mujoco
-    r = desarrollar(g, gravedad)
+    r = desarrollar(g, gravedad, paso, k_fuerza)
     model = mujoco.MjModel.from_xml_string(r["xml"])
     data = mujoco.MjData(model)
     if interpenetra(model, data):

@@ -10,3 +10,6 @@ runs/*/galeria.json
 runs/semillas.json
 runs/semillas.log
 runs/semillas.err
+runs/etapa3.json
+runs/lote_etapa3.log
+runs/lote_etapa3.err

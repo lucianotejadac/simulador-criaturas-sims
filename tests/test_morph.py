@@ -125,3 +125,28 @@ def test_demasiadas_piezas():
         assert False, "debió rechazar"
     except ValueError as e:
         assert "piezas" in str(e)
+
+
+def test_caminata_se_asienta_y_mide_desde_el_suelo():
+    import tareas
+    m, d, r = tareas.compilar_tarea(ejemplos.ciempies(), "caminata")
+    assert mujoco.mj_name2id(m, mujoco.mjtObj.mjOBJ_GEOM, "suelo") >= 0
+    res = tareas.evaluar(m, d, r["cerebro"], "caminata", duracion=3.0, cortar_temprano=False)
+    assert res["motivo"] == "completa"
+    assert 0.3 <= res["t_asentamiento"] <= tareas.T_ASENTAMIENTO_MAX
+    assert res["z0"] > 0 and res["distancia"] > 0.05
+    # Punto más bajo: tras elevar, queda a ALTURA_INICIAL del suelo.
+    mujoco.mj_resetData(m, d)
+    tareas.elevar_al_suelo(m, d)
+    assert abs(tareas.punto_mas_bajo(m, d) - tareas.ALTURA_INICIAL) < 1e-6
+
+
+def test_cerebro_vacio_no_camina():
+    import tareas
+    g = ejemplos.cadena4()
+    for x in g["nodos"]:
+        x["neuronas"] = []
+        x["efectores"] = [["c", 0, 0.0]] * len(x["efectores"])
+    m, d, r = tareas.compilar_tarea(g, "caminata")
+    res = tareas.evaluar(m, d, r["cerebro"], "caminata", duracion=10.0)
+    assert res["motivo"] == "sin_movimiento" and res["distancia"] < 0.02

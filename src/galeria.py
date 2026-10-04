@@ -26,7 +26,7 @@ import mujoco  # noqa: E402
 
 import develop  # noqa: E402
 import fitness  # noqa: E402
-from genome import neural  # noqa: E402
+from genome import morph, neural  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -83,10 +83,19 @@ def exportar_galeria(nombre: str, generaciones: list[int] | None = None,
         ultima = disponibles[-1] + 1
         generaciones = sorted({g for g in (1, 10, 25, ultima) if g <= ultima})
     rng = random.Random(semilla)
-    cuerpo = develop.CuerpoFijo()
-    model = mujoco.MjModel.from_xml_string(develop.mjcf_cuerpo_fijo(cuerpo))
-    data = mujoco.MjData(model)
-    cada = max(1, int(round(1.0 / (fps * cuerpo.paso))))
+    etapa3 = config.get("etapa") == 3
+    tarea = config.get("tarea", "nado")
+    if etapa3:
+        import develop_morfo as dm
+        import tareas
+        from ejemplos import piezas_y_bisagras
+        model = data = None
+        cada = max(1, int(round(1.0 / (fps * dm.PASO_FISICA))))
+    else:
+        cuerpo = develop.CuerpoFijo()
+        model = mujoco.MjModel.from_xml_string(develop.mjcf_cuerpo_fijo(cuerpo))
+        data = mujoco.MjData(model)
+        cada = max(1, int(round(1.0 / (fps * cuerpo.paso))))
     salida_gens = []
     for gen1 in generaciones:
         gen = gen1 - 1
@@ -99,13 +108,28 @@ def exportar_galeria(nombre: str, generaciones: list[int] | None = None,
         puesto = {c["indice"]: k + 1 for k, c in enumerate(orden)}
         criaturas = []
         for et, c in elegir(pob, cuales, rng):
-            r = fitness.evaluar_nado(model, data, c["genoma"], duracion=config["duracion"],
-                                     grabar_cada=cada, cortar_temprano=False)
-            criaturas.append({"etiqueta": et, "indice": c["indice"], "puesto": puesto[c["indice"]],
-                              "aptitud": c["aptitud"], "distancia": r["distancia"], "motivo": c["motivo"],
-                              "n_neuronas": len(c["genoma"]["neuronas"]),
-                              "cerebro": neural.describir(c["genoma"]),
-                              "cuadros": _redondear_cuadros(r["cuadros"])})
+            extra = {}
+            if etapa3:
+                try:
+                    model, data, des = tareas.compilar_tarea(c["genoma"], tarea)
+                except ValueError as e:
+                    print(f"gen {gen1:3d} {et:8s} #{c['indice']:3d} no compila ({e}), se omite")
+                    continue
+                cerebro_plano = des["cerebro"]
+                pz, bs = piezas_y_bisagras(model)
+                extra = {"piezas": pz, "bisagras": bs, "n_piezas": len(pz), "n_dof": des["n_dof"],
+                         "tarea": tarea, "descripcion": morph.describir(c["genoma"])}
+                r = tareas.evaluar(model, data, cerebro_plano, tarea, duracion=config["duracion"],
+                                   grabar_cada=cada, cortar_temprano=False)
+                n_neu, desc = len(cerebro_plano["neuronas"]), morph.describir(c["genoma"])
+            else:
+                r = fitness.evaluar_nado(model, data, c["genoma"], duracion=config["duracion"],
+                                         grabar_cada=cada, cortar_temprano=False)
+                n_neu, desc = len(c["genoma"]["neuronas"]), neural.describir(c["genoma"])
+            criaturas.append(dict({"etiqueta": et, "indice": c["indice"], "puesto": puesto[c["indice"]],
+                                   "aptitud": c["aptitud"], "distancia": r["distancia"], "motivo": c["motivo"],
+                                   "n_neuronas": n_neu, "cerebro": desc,
+                                   "cuadros": _redondear_cuadros(r["cuadros"])}, **extra))
             print(f"gen {gen1:3d} {et:8s} #{c['indice']:3d} puesto {puesto[c['indice']]:3d} "
                   f"aptitud {c['aptitud']:6.3f} distancia {r['distancia']:6.3f}")
         salida_gens.append({"generacion": gen1, "poblacion": len(pob), "criaturas": criaturas})
@@ -113,16 +137,16 @@ def exportar_galeria(nombre: str, generaciones: list[int] | None = None,
     with open(os.path.join(carpeta, "log.csv"), encoding="utf-8") as f:
         for fila in csv.DictReader(f):
             log.append({k: float(v) for k, v in fila.items()})
-    piezas = [{"nombre": mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_BODY, b),
+    piezas = [] if etapa3 else [{"nombre": mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_BODY, b),
                "size": [float(2 * s) for s in model.geom_size[model.body_geomadr[b]]]}
               for b in range(1, model.nbody)]
-    bisagras = [{"nombre": mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_JOINT, j),
+    bisagras = [] if etapa3 else [{"nombre": mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_JOINT, j),
                  "cuerpo": int(model.jnt_bodyid[j]) - 1, "eje": [float(v) for v in model.jnt_axis[j]],
                  "pos": [float(v) for v in model.jnt_pos[j]], "rango": [float(v) for v in model.jnt_range[j]]}
                 for j in range(model.njnt) if model.jnt_type[j] == mujoco.mjtJoint.mjJNT_HINGE]
     salida = {"meta": {"corrida": nombre, "semilla": config["semilla"], "generaciones": config["generaciones"],
                        "poblacion": config["poblacion"], "duracion": config["duracion"], "fps": fps,
-                       "cuales": cuales, "semilla_galeria": semilla},
+                       "cuales": cuales, "semilla_galeria": semilla, "etapa": config.get("etapa", 1), "tarea": tarea},
               "piezas": piezas, "bisagras": bisagras, "log": log, "generaciones": salida_gens}
     destino = os.path.join(carpeta, "galeria.json")
     with open(destino, "w", encoding="utf-8") as f:
