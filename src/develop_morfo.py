@@ -90,7 +90,9 @@ def _instanciar(g: dict, nodo_idx: int, madre, conexion, contador: dict, piezas:
     nodo = g["nodos"][nodo_idx]
     if len(piezas) >= morph.MAX_PIEZAS:
         return
-    dims = [max(morph.DIM_MIN * 0.5, d * escala) for d in nodo["dims"]]
+    # La escala acumulada por recursión no puede sacar a la pieza del rango del
+    # genoma: sin este tope aparecen gigantes de 14 m y 690 t (BITACORA 0012).
+    dims = [min(morph.DIM_MAX, max(morph.DIM_MIN, d * escala)) for d in nodo["dims"]]
     if madre is None:
         pos, R, ejes = np.zeros(3), np.eye(3), []
     else:

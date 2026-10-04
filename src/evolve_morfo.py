@@ -43,9 +43,9 @@ def _evaluar(args: tuple) -> dict:
         return {"aptitud": 0.0, "distancia": 0.0, "motivo": "invalido:" + str(e), "n_piezas": 0, "n_dof": 0}
     res = tareas.evaluar(model, data, r["cerebro"], tarea, duracion=duracion)
     if tarea == "nado" and res["aptitud"] > UMBRAL_SOSPECHA_NADO:
-        # Un nadador demasiado bueno se reevalúa a la mitad del paso: si no es
+        # Un nadador demasiado bueno se reevalúa a un cuarto del paso: si no es
         # consistente, es un artefacto numérico y no cuenta (BITACORA 0011).
-        m2, d2, r2 = tareas.compilar_tarea(genoma, tarea, dm.PASO_FISICA / 2)
+        m2, d2, r2 = tareas.compilar_tarea(genoma, tarea, dm.PASO_FISICA / 4)
         res2 = tareas.evaluar(m2, d2, r2["cerebro"], tarea, duracion=duracion)
         res["aptitudes_pasos"] = [res["aptitud"], res2["aptitud"]]
         if res2["aptitud"] < res["aptitud"] / 2:

@@ -405,3 +405,36 @@ la morfología evolutiva: la escala acumulada por recursión (1.27⁴ ≈ 2.6) l
 a las criaturas a los extremos del rango donde los parámetros numéricos dejan
 de estar calibrados; la respuesta correcta no fue acotar la escala sino hacer
 que la amortiguación acompañe a la fuerza.
+
+---
+
+## 0012 · 2026-10-04 · Trampa: gigantes por escala acumulada
+
+**Qué pasó.** Segunda corrida del lote relanzado (`morfo-nado02`). En la
+generación 29, toda la población nadaba entre 50 y 80 m: la mediana era 61.
+El campeón tenía 15 piezas, la mayor de 8 × 14 × 9 m, y una masa total de
+690 toneladas, con torques de 43 000 N·m. Cada generación tardaba 35 s en vez
+de 5. Había pasado la verificación a medio paso (78 frente a 83) pero no a un
+cuarto de paso (41).
+
+**Por qué funcionó.** El genoma limita las dimensiones de cada nodo a
+[0.04, 0.8] m, pero la escala de cada conexión (hasta 1.5) se multiplica a lo
+largo de la recursión y el desarrollo no la acotaba: 1.46⁴ ≈ 4.5 por rama y
+más al encadenar nodos. Como la aptitud se mide en metros absolutos, ser
+grande paga por sí solo, y con tamaños fuera de todo lo calibrado la física
+tampoco converge.
+
+**Cambio.** Las dimensiones de cada pieza desarrollada se recortan al mismo
+rango del genoma, [0.04, 0.8] m, sin importar la escala acumulada: la escala
+sigue sirviendo para afinar y para hacer colas que se achican, pero no para
+crecer sin límite. Con eso el gigante queda en 1.8 t y 1.5 m de pieza máxima
+y nada 1.5 m. Además, la verificación de consistencia en nado pasa de medio
+paso a un cuarto de paso (1/1920 s), porque el gigante era consistente a
+medio paso y no a un cuarto.
+
+**Consecuencias.** La aptitud en metros absolutos sigue favoreciendo a las
+criaturas grandes dentro del rango, como en Sims. Si en el lote se ve que
+todas convergen al tope de 0.8 m, la alternativa es medir en largos de
+cuerpo; queda anotado, no decidido. El lote se relanzó por tercera vez,
+conservando `morfo-nado01`, cuyo campeón (3 piezas, 7.2 m) converge con la
+física corregida: 7.20, 6.96 y 6.82 m a 1/480, 1/960 y 1/1920 s.
