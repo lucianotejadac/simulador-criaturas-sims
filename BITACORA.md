@@ -192,3 +192,61 @@ simulan completas (siguen quietas).
 **Consecuencias.** `galeria.json` pesa 2.3 MB (28 criaturas a 30 cuadros por
 segundo) y se versiona en `viewer/` para Pages. Las trampas futuras se podrán
 ver en la criatura que las explota, no solo en la curva.
+
+---
+
+## 0008 · 2026-10-04 · Etapa 2: genoma morfológico y desarrollo a MJCF
+
+**Contexto.** Con la Etapa 1 cerrada, el cuerpo pasa a salir de un genoma de
+grafo dirigido como el de Sims: nodos (cajas con articulación, límites, límite
+recursivo y cerebro local) y conexiones (cara de anclaje, posición, rotación,
+escala, reflexión y "solo terminal"). Esta etapa cierra sin evolución: se
+verifica con genomas escritos a mano.
+
+**Decisiones.**
+- Siete tipos de articulación desde el inicio: rígida, bisagra, torsión,
+  universal, flexión-torsión, torsión-flexión y esférica. En MuJoCo son una,
+  dos o tres bisagras en serie en la hija, con ejes X, Y o Z de su marco.
+- Límites: 8 nodos, 4 conexiones por nodo, 16 piezas, 12 neuronas por nodo y
+  8 centrales. Un cuerpo que alcanza 16 piezas, que no tiene grados de libertad
+  o cuyas piezas no adyacentes se tocan en reposo se rechaza (MuJoCo filtra el
+  contacto madre–hija; cualquier otro contacto en reposo es interpenetración).
+- **Referencias por identificador, no por posición.** Las neuronas tienen un id
+  único por genoma y las entradas "n" (local), "p" (madre), "g" (central) y "r"
+  (raíz, desde las centrales) apuntan a ids. Con índices, borrar una neurona
+  corría las demás y cambiaba a quién apuntaban los nodos vecinos; con ids,
+  la recolección de basura nunca reconecta nada. Una referencia que no existe
+  en la instancia concreta vale cero (entrada ausente), lo que permite escribir
+  `sum(p:cabeza.osc, p:segmento.lag)` en un nodo recursivo: la primera
+  instancia lee a la cabeza y las siguientes al segmento anterior.
+- **Reflexión** (bilateralidad): la hija reflejada se espeja respecto del plano
+  XZ de la madre (posición M·p, orientación M·R·M, ejes de las bisagras M·a) y
+  se invierte el signo del torque y del sensor de sus articulaciones, de modo
+  que el mismo cerebro produce el movimiento espejo. El estado se hereda por
+  el subárbol (reflejo de reflejo = normal).
+- Fuerza muscular: `K_FUERZA` por el área menor entre la sección de la hija y
+  la de la madre.
+- El cerebro anidado se "aplana" al desarrollar: una copia por instancia de
+  pieza más las centrales, en el formato de la Etapa 1, así `brain.Cerebro`,
+  `fitness` y `fluido` no cambian.
+
+**Alternativas descartadas.** Resolver las referencias "p" por módulo del
+número de neuronas de la madre (frágil ante cualquier borrado). Un solo plano
+de reflexión global en vez de relativo a la madre (no reproduce extremidades
+reflejadas en subárboles rotados).
+
+**Verificación.** Tres genomas a mano (`src/genome/ejemplos.py`): `cadena4`
+reproduce la Etapa 1 con un nodo recursivo (4 piezas, 3 dof) y nada 1.9 m con
+una onda viajera que nace de la recursión (cada segmento retarda la oscilación
+de su madre); `ciempies` (13 piezas, 12 dof, 8 patas de las que 4 son reflejadas)
+y `bilateral` (aletas universales en cuadratura y cola que se achica por la
+escala). De 300 genomas aleatorios mutados cinco veces, un tercio compila; el
+resto se rechaza por interpenetración, por no tener grados de libertad o por
+exceso de piezas. Diez tests nuevos cubren validez tras mutación, cruce e
+injerto, recolección, límite recursivo, conexiones terminales, reflexión
+(posición espejada y torque con signo invertido), interpenetración y exceso
+de piezas.
+
+**Pendiente (Etapa 3).** Evolucionar: generación de la población inicial con
+rechazo de genomas inválidos, evaluación con el modelo compilado por criatura
+(cada esclavo compila su MJCF), y la aptitud de caminata con asentamiento.

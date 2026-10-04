@@ -1,0 +1,176 @@
+{
+ "siguiente_id": 10,
+ "raiz": 0,
+ "nodos": [
+  {
+   "dims": [
+    0.3,
+    0.2,
+    0.12
+   ],
+   "art": "rigida",
+   "limite": 60.0,
+   "rec": 1,
+   "neuronas": [
+    {
+     "id": 0,
+     "f": "oscillate-wave",
+     "in": [
+      [
+       "c",
+       0,
+       1.0
+      ],
+      [
+       "c",
+       0,
+       1.0
+      ],
+      [
+       "c",
+       0,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "efectores": [],
+   "conexiones": [
+    {
+     "a": 1,
+     "cara": 0,
+     "u": 0.0,
+     "v": 0.0,
+     "rot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "escala": 1.0,
+     "reflejo": false,
+     "terminal": false
+    }
+   ]
+  },
+  {
+   "dims": [
+    0.25,
+    0.18,
+    0.1
+   ],
+   "art": "bisagra",
+   "limite": 30.0,
+   "rec": 4,
+   "neuronas": [
+    {
+     "id": 2,
+     "f": "sum",
+     "in": [
+      [
+       "p",
+       0,
+       1.4
+      ],
+      [
+       "p",
+       3,
+       1.4
+      ],
+      [
+       "c",
+       0,
+       0.0
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "f": "smooth",
+     "in": [
+      [
+       "n",
+       2,
+       1.0
+      ],
+      [
+       "c",
+       0,
+       0.0065
+      ]
+     ]
+    }
+   ],
+   "efectores": [
+    [
+     "n",
+     3,
+     1.0
+    ]
+   ],
+   "conexiones": [
+    {
+     "a": 1,
+     "cara": 0,
+     "u": 0.0,
+     "v": 0.0,
+     "rot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "escala": 1.0,
+     "reflejo": false,
+     "terminal": false
+    },
+    {
+     "a": 2,
+     "cara": 2,
+     "u": 0.0,
+     "v": 0.0,
+     "rot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "escala": 1.0,
+     "reflejo": false,
+     "terminal": false
+    },
+    {
+     "a": 2,
+     "cara": 2,
+     "u": 0.0,
+     "v": 0.0,
+     "rot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "escala": 1.0,
+     "reflejo": true,
+     "terminal": false
+    }
+   ]
+  },
+  {
+   "dims": [
+    0.3,
+    0.05,
+    0.05
+   ],
+   "art": "bisagra",
+   "limite": 45.0,
+   "rec": 1,
+   "neuronas": [],
+   "efectores": [
+    [
+     "p",
+     3,
+     1.5
+    ]
+   ],
+   "conexiones": []
+  }
+ ],
+ "central": []
+}

@@ -1,0 +1,32 @@
+<mujoco model="criatura">
+  <compiler angle="degree" autolimits="true"/>
+  <option timestep="0.002083" gravity="0 0 0" integrator="implicitfast"/>
+  <default>
+    <geom type="box" density="300.0" rgba="0.85 0.89 0.92 1"/>
+    <joint type="hinge" damping="0.3"/>
+    <motor ctrlrange="-1 1"/>
+  </default>
+  <worldbody>
+    <body name="p0_n0" pos="0.00000 0.00000 0.00000" quat="1.000000 0.000000 0.000000 0.000000">
+      <freejoint name="raiz"/>
+      <geom name="g_p0_n0" size="0.20000 0.06000 0.06000" rgba="0.25 0.72 0.8 1"/>
+      <body name="p1_n1" pos="0.42000 0.00000 0.00000" quat="1.000000 0.000000 0.000000 0.000000">
+        <joint name="p1_n1_j0" axis="0.0000 0.0000 1.0000" pos="-0.22000 0 0" range="-60.00 60.00"/>
+        <geom name="g_p1_n1" size="0.20000 0.06000 0.06000"/>
+        <body name="p2_n1" pos="0.42000 0.00000 0.00000" quat="1.000000 0.000000 0.000000 0.000000">
+          <joint name="p2_n1_j0" axis="0.0000 0.0000 1.0000" pos="-0.22000 0 0" range="-60.00 60.00"/>
+          <geom name="g_p2_n1" size="0.20000 0.06000 0.06000"/>
+          <body name="p3_n1" pos="0.42000 0.00000 0.00000" quat="1.000000 0.000000 0.000000 0.000000">
+            <joint name="p3_n1_j0" axis="0.0000 0.0000 1.0000" pos="-0.22000 0 0" range="-60.00 60.00"/>
+            <geom name="g_p3_n1" size="0.20000 0.06000 0.06000"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="m_p1_n1_j0" joint="p1_n1_j0" gear="14.4000"/>
+    <motor name="m_p2_n1_j0" joint="p2_n1_j0" gear="14.4000"/>
+    <motor name="m_p3_n1_j0" joint="p3_n1_j0" gear="14.4000"/>
+  </actuator>
+</mujoco>

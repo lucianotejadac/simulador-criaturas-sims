@@ -1,0 +1,15 @@
+{
+  "nombre": "nado04",
+  "generaciones": 50,
+  "poblacion": 300,
+  "semilla": 4,
+  "procesos": 14,
+  "duracion": 10.0,
+  "tarea": "nado",
+  "cuerpo": "cadena4 fija",
+  "k_fuerza": 1000.0,
+  "torque_max": 14.4,
+  "paso_fisica": 0.0020833333333333333,
+  "pasos_cerebro_por_fisica": 2,
+  "mujoco": "3.3.2"
+}

@@ -104,6 +104,8 @@ footer a{color:var(--accent)}
       <option value="campeon">Campeón de la corrida</option>
       <option value="criatura">Una criatura de la galería</option>
       <option value="carrera">Carrera: varias criaturas de una generación</option>
+      <option value="ej-criatura">Etapa 2 · un cuerpo diseñado a mano</option>
+      <option value="ej-carrera">Etapa 2 · los tres cuerpos juntos</option>
     </select>
     <span class="lbl">Generación</span>
     <select id="gen" aria-label="Generación" disabled></select>
@@ -144,7 +146,7 @@ footer a{color:var(--accent)}
     <div class="card" id="panel-carrera" hidden>
       <h2>Participantes <small id="carrera-sub"></small></h2>
       <table class="race"><thead><tr><th>criatura</th><th>puesto</th><th class="n">aptitud</th><th class="n">distancia</th><th class="n">neuronas</th></tr></thead><tbody id="race-body"></tbody></table>
-      <p class="note" style="font-size:13px">Cada criatura nada en su propio carril, separadas 1 m. Las etiquetas (mejor, mediana, peor, azar) se refieren a la aptitud que obtuvo durante la evolución; «puesto» es su lugar entre las 300 de su generación.</p>
+      <p class="note" id="nota-carrera" style="font-size:13px">Cada criatura nada en su propio carril, separadas 1 m. Las etiquetas (mejor, mediana, peor, azar) se refieren a la aptitud que obtuvo durante la evolución; «puesto» es su lugar entre las 300 de su generación.</p>
     </div>
   </div>
 
@@ -171,7 +173,7 @@ footer a{color:var(--accent)}
   // MuJoCo usa Z hacia arriba; Three.js usa Y. Todo lo de MuJoCo vive en este grupo rotado.
   var mundo=new THREE.Group(); mundo.rotation.x=-Math.PI/2; scene.add(mundo);
 
-  var campeon=null, galeria=null, activas=[], DUR=10, playing=true, t=0, last=null, jbars=[];
+  var campeon=null, galeria=null, ejemplos=null, activas=[], DUR=10, playing=true, t=0, last=null, jbars=[];
   var PALETA=[0x3fb7cc,0xffc94d,0xff6f91,0x9be36b,0xc59bff,0xff9f43,0xe0e6ea,0x6fd3a7];
   var edgeMat=new THREE.LineBasicMaterial({color:0x0b2630});
   var AXCOL=[0xffc94d,0xff6f91,0x9be36b];
@@ -258,61 +260,84 @@ footer a{color:var(--accent)}
     $('panel-una').hidden=false; $('panel-carrera').hidden=true;
     dibujarGrafico(d.log,null); t=0; resetCam();
   }
-  function genActual(){ var g=parseInt($('gen').value,10); return galeria.generaciones.filter(function(x){return x.generacion===g;})[0]||galeria.generaciones[0]; }
+  function esEjemplo(){ return $('vista').value.indexOf('ej-')===0; }
+  function fuente(){ return esEjemplo()?ejemplos:galeria; }
+  function genActual(){ var F=fuente(), g=parseInt($('gen').value,10); return F.generaciones.filter(function(x){return x.generacion===g;})[0]||F.generaciones[0]; }
   function verCriatura(){
-    limpiar(); if(!galeria)return;
-    var G=genActual(), k=parseInt($('cri').value,10)||0, c=G.criaturas[k]; DUR=galeria.meta.duracion;
-    activas=[crearCriatura(galeria.piezas,galeria.bisagras,c.cuadros,galeria.meta.fps,PALETA[k%PALETA.length],0)];
-    activas[0].info={etiqueta:c.etiqueta,gen:G.generacion};
-    barrasArticulares(galeria.bisagras);
-    $('ficha-titulo').innerHTML='Criatura <small>'+c.etiqueta+' de la generación '+G.generacion+'</small>';
-    var motivo={completa:'simulación completa',sin_movimiento:'cortada a los 3 s por no moverse (aquí se muestra completa)',inestable:'simulación inestable'}[c.motivo]||c.motivo;
-    ficha([['generación',G.generacion+' de '+galeria.meta.generaciones+' · población '+G.poblacion],['criatura','#'+c.indice+' · '+c.etiqueta],
-      ['puesto',c.puesto+' de '+G.poblacion],['aptitud',c.aptitud.toFixed(3)+' durante la evolución'],['distancia',c.distancia.toFixed(3)+' m al volver a simularla'],
-      ['durante la evolución',motivo],['cerebro',c.n_neuronas+' neuronas']]);
+    limpiar(); var F=fuente(); if(!F)return;
+    var G=genActual(), k=parseInt($('cri').value,10)||0, c=G.criaturas[k]; DUR=F.meta.duracion;
+    var piezas=c.piezas||F.piezas, bisagras=c.bisagras||F.bisagras;
+    activas=[crearCriatura(piezas,bisagras,c.cuadros,F.meta.fps,PALETA[k%PALETA.length],0)];
+    activas[0].info={etiqueta:c.etiqueta,gen:esEjemplo()?'a mano':G.generacion};
+    barrasArticulares(bisagras);
+    if(esEjemplo()){
+      $('tag').textContent='Etapa 2 · cuerpos desde el genoma morfológico, cerebros a mano';
+      $('ficha-titulo').innerHTML='Cuerpo <small>'+c.etiqueta+' · genoma escrito a mano</small>';
+      ficha([['qué es',c.descripcion||''],['piezas',c.n_piezas+' cajas, '+c.n_dof+' grados de libertad, '+bisagras.length+' bisagras'],
+        ['cerebro',c.n_neuronas+' neuronas al instanciar el genoma'],['distancia',c.distancia.toFixed(3)+' m en '+DUR+' s con el cerebro a mano']]);
+      nota.className='note';
+      nota.textContent='Etapa 2, cuerpo '+c.etiqueta+': desarrollado desde un genoma de grafo dirigido y simulado con un cerebro escrito a mano. '+c.distancia.toFixed(2)+' m en '+DUR+' s.';
+    } else {
+      $('ficha-titulo').innerHTML='Criatura <small>'+c.etiqueta+' de la generación '+G.generacion+'</small>';
+      var motivo={completa:'simulación completa',sin_movimiento:'cortada a los 3 s por no moverse (aquí se muestra completa)',inestable:'simulación inestable'}[c.motivo]||c.motivo;
+      ficha([['generación',G.generacion+' de '+F.meta.generaciones+' · población '+G.poblacion],['criatura','#'+c.indice+' · '+c.etiqueta],
+        ['puesto',c.puesto+' de '+G.poblacion],['aptitud',c.aptitud.toFixed(3)+' durante la evolución'],['distancia',c.distancia.toFixed(3)+' m al volver a simularla'],
+        ['durante la evolución',motivo],['cerebro',c.n_neuronas+' neuronas']]);
+      nota.className='note';
+      nota.textContent='Criatura '+c.etiqueta+' (#'+c.indice+', puesto '+c.puesto+' de '+G.poblacion+') de la generación '+G.generacion+': '+c.distancia.toFixed(2)+' m en '+DUR+' s.';
+    }
     $('brain').textContent=c.cerebro||'(sin neuronas: los efectores leen sensores o constantes)';
-    nota.className='note';
-    nota.textContent='Criatura '+c.etiqueta+' (#'+c.indice+', puesto '+c.puesto+' de '+G.poblacion+') de la generación '+G.generacion+': '+c.distancia.toFixed(2)+' m en '+DUR+' s.';
     $('panel-una').hidden=false; $('panel-carrera').hidden=true;
-    dibujarGrafico(galeria.log,G.generacion); t=0; resetCam();
+    dibujarGrafico((galeria||campeon||{}).log,esEjemplo()?null:G.generacion); t=0; resetCam();
   }
   function verCarrera(){
-    limpiar(); if(!galeria)return;
-    var G=genActual(); DUR=galeria.meta.duracion;
-    var orden=G.criaturas.map(function(c,i){return i;}).sort(function(a,b){return G.criaturas[b].aptitud-G.criaturas[a].aptitud;});
-    var n=orden.length, sep=1.0;
+    limpiar(); var F=fuente(); if(!F)return;
+    var G=genActual(); DUR=F.meta.duracion; var ej=esEjemplo();
+    var orden=G.criaturas.map(function(c,i){return i;});
+    if(!ej) orden.sort(function(a,b){return G.criaturas[b].aptitud-G.criaturas[a].aptitud;});
+    var n=orden.length, sep=ej?1.6:1.0;
     activas=orden.map(function(k,lane){
-      var c=G.criaturas[k], a=crearCriatura(galeria.piezas,galeria.bisagras,c.cuadros,galeria.meta.fps,PALETA[lane%PALETA.length],(lane-(n-1)/2)*sep);
-      a.info={etiqueta:c.etiqueta,gen:G.generacion,aptitud:c.aptitud}; return a;
+      var c=G.criaturas[k], a=crearCriatura(c.piezas||F.piezas,c.bisagras||F.bisagras,c.cuadros,F.meta.fps,PALETA[lane%PALETA.length],(lane-(n-1)/2)*sep);
+      a.info={etiqueta:c.etiqueta,gen:ej?'a mano':G.generacion,aptitud:c.aptitud}; return a;
     });
     var body=$('race-body'); body.innerHTML='';
     orden.forEach(function(k,lane){
       var c=G.criaturas[k], col='#'+PALETA[lane%PALETA.length].toString(16).padStart(6,'0');
       var tr=document.createElement('tr');
-      tr.innerHTML='<td><span class="sw" style="background:'+col+'"></span>'+c.etiqueta+' #'+c.indice+'</td><td>'+c.puesto+' / '+G.poblacion+'</td><td class="n">'+c.aptitud.toFixed(2)+'</td><td class="n">'+c.distancia.toFixed(2)+' m</td><td class="n">'+c.n_neuronas+'</td>';
+      tr.innerHTML='<td><span class="sw" style="background:'+col+'"></span>'+c.etiqueta+(ej?'':' #'+c.indice)+'</td><td>'+(ej?(c.n_piezas+' piezas, '+c.n_dof+' dof'):(c.puesto+' / '+G.poblacion))+'</td><td class="n">'+c.aptitud.toFixed(2)+'</td><td class="n">'+c.distancia.toFixed(2)+' m</td><td class="n">'+c.n_neuronas+'</td>';
       body.appendChild(tr);
     });
-    $('carrera-sub').textContent='generación '+G.generacion+' · '+n+' de '+G.poblacion;
+    $('carrera-sub').textContent=ej?('Etapa 2 · '+n+' cuerpos a mano'):('generación '+G.generacion+' · '+n+' de '+G.poblacion);
+    $('tag').textContent=ej?'Etapa 2 · cuerpos desde el genoma morfológico, cerebros a mano':'Etapa 1 · cuerpo fijo, cerebro evolucionado · corrida '+F.meta.corrida;
+    $('nota-carrera').textContent=ej?'Cada cuerpo nada en su propio carril. Las piezas repetidas (segmentos, patas, aletas) son instancias del mismo nodo del genoma; las reflejadas comparten cerebro con signo invertido.':'Cada criatura nada en su propio carril, separadas 1 m. Las etiquetas (mejor, mediana, peor, azar) se refieren a la aptitud que obtuvo durante la evolución; «puesto» es su lugar entre las 300 de su generación.';
     nota.className='note';
-    nota.textContent='Carrera de la generación '+G.generacion+': '+n+' criaturas de las '+G.poblacion+' (la mejor, la mediana, la peor y algunas al azar), cada una en su carril. El color de la cabeza coincide con la tabla.';
+    nota.textContent=ej?('Etapa 2: los tres cuerpos diseñados a mano, desarrollados desde su genoma y simulados con cerebros escritos a mano. Las aletas, patas y segmentos repetidos salen del mismo nodo del genoma.')
+      :('Carrera de la generación '+G.generacion+': '+n+' criaturas de las '+G.poblacion+' (la mejor, la mediana, la peor y algunas al azar), cada una en su carril. El color de la cabeza coincide con la tabla.');
     $('panel-una').hidden=true; $('panel-carrera').hidden=false;
-    dibujarGrafico(galeria.log,G.generacion); t=0; resetCam();
+    dibujarGrafico((galeria||campeon||{}).log,ej?null:G.generacion); t=0; resetCam();
   }
   function refrescarVista(){
-    var v=$('vista').value;
-    $('gen').disabled=(v==='campeon'||!galeria); $('cri').disabled=(v!=='criatura'||!galeria);
-    if(v==='criatura'&&galeria){
+    var v=$('vista').value, F=fuente(), ej=esEjemplo();
+    if(v!=='campeon'&&!F){ nota.className='note err'; nota.textContent='No encontré '+(ej?'ejemplos.json':'galeria.json')+' junto a esta página.'; return; }
+    llenarGeneraciones(F);
+    $('gen').disabled=(v==='campeon'||!F||F.generaciones.length<2); $('cri').disabled=(!(v==='criatura'||v==='ej-criatura')||!F);
+    if((v==='criatura'||v==='ej-criatura')&&F){
       var G=genActual(), sel=$('cri'), prev=sel.value; sel.innerHTML='';
-      G.criaturas.forEach(function(c,i){var o=document.createElement('option');o.value=i;o.textContent=c.etiqueta+' · #'+c.indice+' · puesto '+c.puesto+' · '+c.aptitud.toFixed(2);sel.appendChild(o);});
+      G.criaturas.forEach(function(c,i){var o=document.createElement('option');o.value=i;o.textContent=ej?(c.etiqueta+' · '+c.n_piezas+' piezas'):(c.etiqueta+' · #'+c.indice+' · puesto '+c.puesto+' · '+c.aptitud.toFixed(2));sel.appendChild(o);});
       if(prev&&prev<G.criaturas.length)sel.value=prev;
     }
-    if(v==='campeon')verCampeon(); else if(v==='criatura')verCriatura(); else verCarrera();
+    if(v==='campeon')verCampeon(); else if(v==='criatura'||v==='ej-criatura')verCriatura(); else verCarrera();
+  }
+  var genLlenadoPara=null;
+  function llenarGeneraciones(F){
+    if(!F||genLlenadoPara===F)return; genLlenadoPara=F;
+    var sel=$('gen'); sel.innerHTML='';
+    F.generaciones.forEach(function(G){var o=document.createElement('option');o.value=G.generacion;o.textContent=F.meta.etapa===2?'a mano':(G.generacion+(G.generacion===F.meta.generaciones?' (última)':''));sel.appendChild(o);});
+    sel.value=F.generaciones[F.generaciones.length-1].generacion;
   }
   function cargarGaleria(g){
-    galeria=g; var sel=$('gen'); sel.innerHTML='';
-    g.generaciones.forEach(function(G){var o=document.createElement('option');o.value=G.generacion;o.textContent=G.generacion+(G.generacion===g.meta.generaciones?' (última)':'');sel.appendChild(o);});
-    sel.value=g.generaciones[g.generaciones.length-1].generacion;
-    $('vista').value='carrera'; refrescarVista();
+    if(g.meta&&g.meta.etapa===2){ejemplos=g;$('vista').value='ej-carrera';} else {galeria=g;$('vista').value='carrera';}
+    genLlenadoPara=null; refrescarVista();
   }
   $('vista').addEventListener('change',refrescarVista);
   $('gen').addEventListener('change',refrescarVista);
@@ -399,12 +424,16 @@ footer a{color:var(--accent)}
   function fetchJson(u){return fetch(u).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});}
   fetchJson('campeon.json').then(function(d){ campeon=d; verCampeon(); })
     .catch(function(err){ nota.className='note err'; nota.textContent='No encontré campeon.json junto a esta página ('+err.message+'). Elige abajo un archivo exportado con src/export.py o src/galeria.py.'; })
-    .then(function(){ return fetchJson('galeria.json'); }).then(function(g){ galeria=g; var sel=$('gen'); sel.innerHTML='';
-      g.generaciones.forEach(function(G){var o=document.createElement('option');o.value=G.generacion;o.textContent=G.generacion+(G.generacion===g.meta.generaciones?' (última)':'');sel.appendChild(o);});
-      sel.value=g.generaciones[g.generaciones.length-1].generacion;
-      var h=(location.hash||'').replace('#',''); if(h==='carrera'||h==='criatura')$('vista').value=h;
-      refrescarVista(); })
-    .catch(function(){ /* sin galería: solo el campeón */ });
+    .then(function(){ return fetchJson('galeria.json'); }).then(function(g){ galeria=g; })
+    .catch(function(){ /* sin galería: solo el campeón */ })
+    .then(function(){ return fetchJson('ejemplos.json'); }).then(function(e){ ejemplos=e; })
+    .catch(function(){ /* sin ejemplos */ })
+    .then(function(){
+      var h=(location.hash||'').replace('#','');
+      if((h==='carrera'||h==='criatura')&&galeria)$('vista').value=h;
+      if((h==='ej-carrera'||h==='ej-criatura')&&ejemplos)$('vista').value=h;
+      if($('vista').value!=='campeon')refrescarVista();
+    });
 })();
 </script>
 </body>

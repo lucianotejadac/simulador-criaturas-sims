@@ -8,13 +8,19 @@ población.
 
 **Visor en vivo:** <https://lucianotejadac.github.io/simulador-criaturas-sims/viewer/>
 
-## Estado: Etapa 1
+## Estado: Etapa 2
 
-Cuerpo fijo (cadena de cuatro cajas unidas por tres bisagras) en agua sin
-gravedad. Solo evoluciona el cerebro: un grafo de neuronas con el repertorio de
-23 funciones de Sims, sensores de ángulo articular y un efector de torque por
-bisagra. La aptitud es el desplazamiento del centro de masa en 10 s, con más peso
-a la velocidad del tramo final.
+**Etapa 1 (cerrada):** cuerpo fijo (cadena de cuatro cajas unidas por tres
+bisagras) en agua sin gravedad. Solo evoluciona el cerebro: un grafo de neuronas
+con el repertorio de 23 funciones de Sims, sensores de ángulo articular y un
+efector de torque por bisagra. La aptitud es el desplazamiento del centro de masa
+en 10 s, con más peso a la velocidad del tramo final.
+
+**Etapa 2 (cerrada, sin evolución):** genoma morfológico de grafo dirigido con
+recursión, reflexión, escala y conexiones terminales, y desarrollo a MJCF con los
+siete tipos de articulación de Sims. Los cerebros anidados (uno por nodo, más
+centrales) se aplanan al desarrollar. Verificado con tres genomas escritos a
+mano que se ven en el visor (`Etapa 2 · los tres cuerpos juntos`).
 
 Las decisiones de diseño y las trampas que encontraron las criaturas están en
 [BITACORA.md](BITACORA.md).
@@ -43,6 +49,9 @@ python src/export.py --nombre nado01
 # de las generaciones 1, 10, 25 y la última) para verlas una a una o en carrera
 python src/galeria.py --nombre nado01 --generaciones 1,10,25,50 --cuales mejor,mediana,peor,azar:4
 
+# Etapa 2: desarrollar y simular los genomas escritos a mano (viewer/ejemplos.json)
+python src/ejemplos.py
+
 # tests
 python -m pytest -q tests
 
@@ -63,7 +72,11 @@ puede volver a simular desde su genoma guardado.
 ```
 src/
   genome/neural.py   genoma neuronal: construcción, mutación, cruce, injerto, recolección
-  develop.py         genoma -> MJCF (Etapa 1: cuerpo fijo)
+  genome/morph.py    genoma morfológico: nodos, conexiones, cerebros anidados, operadores
+  genome/ejemplos.py genomas escritos a mano (cadena4, ciempies, bilateral)
+  develop.py         cuerpo fijo de la Etapa 1 -> MJCF
+  develop_morfo.py   genoma morfológico -> MJCF + cerebro aplanado (Etapa 2)
+  ejemplos.py        simula los genomas a mano -> viewer/ejemplos.json
   brain.py           ejecución del grafo neuronal
   fluido.py          arrastre viscoso por cara (modelo de agua de Sims)
   fitness.py         evaluación y aptitud de nado
@@ -78,9 +91,9 @@ BITACORA.md          decisiones de diseño y trampas detectadas
 
 ## Hoja de ruta
 
-1. **Etapa 1**: cuerpo fijo, cerebro evolucionado, nado. *(en curso)*
-2. Etapa 2: genoma morfológico de grafo dirigido con recursión y desarrollo a MJCF.
-3. Etapa 3: coevolución cuerpo + cerebro para nado y caminata.
+1. **Etapa 1**: cuerpo fijo, cerebro evolucionado, nado. *(cerrada)*
+2. **Etapa 2**: genoma morfológico de grafo dirigido con recursión y desarrollo a MJCF. *(cerrada)*
+3. Etapa 3: coevolución cuerpo + cerebro para nado y caminata. *(siguiente)*
 4. Etapa 4: seguimiento de luz con fotosensores.
 5. Etapa 5: competencia por un cubo y mundo compartido.
 
