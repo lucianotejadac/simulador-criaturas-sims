@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nadador de cuatro cajas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#eef2f4; --panel:#ffffff; --ink:#15232c; --muted:#5a6b76; --line:#d3dde3;
+  --accent:#177f93; --accent-ink:#ffffff; --soft:#dcebef;
+  --best:#177f93; --mean:#c27a2c; --worst:#9aa8b0;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+  --disp:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0e171d; --panel:#152129; --ink:#e3ebf0; --muted:#8fa1ab; --line:#263540;
+    --accent:#3fb7cc; --accent-ink:#06161b; --soft:#1a2f37;
+    --best:#3fb7cc; --mean:#e09a4a; --worst:#60717a;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0e171d; --panel:#152129; --ink:#e3ebf0; --muted:#8fa1ab; --line:#263540;
+  --accent:#3fb7cc; --accent-ink:#06161b; --soft:#1a2f37;
+  --best:#3fb7cc; --mean:#e09a4a; --worst:#60717a;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:14px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:18px 40px;display:grid;gap:16px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+h1{font-family:var(--disp);font-weight:600;font-size:26px;margin:0;letter-spacing:.01em;text-wrap:balance}
+.tag{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.note{background:var(--soft);border-left:3px solid var(--accent);padding:8px 12px;border-radius:0 6px 6px 0;max-width:72ch}
+.note.err{border-color:var(--mean)}
+.stage{position:relative;background:#071a24;border-radius:8px;overflow:hidden;aspect-ratio:16/8.5;max-width:100%}
+.stage canvas{display:block;width:100%;height:100%}
+.hud{position:absolute;left:12px;top:10px;font-family:var(--mono);font-size:12px;color:#bfe3ec;line-height:1.6;pointer-events:none;text-shadow:0 1px 2px #000}
+.hud b{color:#ffffff;font-weight:500}
+.hint{position:absolute;right:12px;bottom:8px;font-family:var(--mono);font-size:11px;color:#7fb3c1;pointer-events:none}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+button{font:500 13px var(--body);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);min-width:88px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.bar input[type=range]{flex:1 1 180px;accent-color:var(--accent)}
+.t{font-family:var(--mono);font-variant-numeric:tabular-nums;min-width:9ch}
+label.chk{display:flex;align-items:center;gap:6px;color:var(--muted)}
+select{font:13px var(--body);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 8px}
+.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;gap:10px;align-content:start}
+.card h2{font-family:var(--disp);font-weight:600;font-size:16px;margin:0;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.card h2 small{font:400 11px var(--mono);color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.joints{display:grid;gap:8px;font-family:var(--mono);font-size:12px}
+.j{display:grid;grid-template-columns:8ch 1fr 9ch;align-items:center;gap:10px}
+.j .track{position:relative;height:10px;background:var(--soft);border-radius:5px}
+.j .track i{position:absolute;top:0;bottom:0;background:var(--accent);border-radius:5px}
+.j .track:after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--muted)}
+.j .track u{position:absolute;top:0;bottom:0;width:2px;background:var(--mean)}
+.ax{color:var(--muted)}
+svg.chart{width:100%;height:auto;display:block}
+.leg{display:flex;flex-wrap:wrap;gap:4px 16px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.leg span:before{content:"";display:inline-block;width:14px;height:3px;margin-right:6px;vertical-align:middle;background:currentColor}
+.leg .b{color:var(--best)}.leg .m{color:var(--mean)}.leg .w{color:var(--worst)}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px}
+dt{font-family:var(--mono);font-size:12px;color:var(--muted)}
+dd{margin:0}
+pre.brain{margin:0;font:12px/1.5 var(--mono);background:var(--soft);padding:10px 12px;border-radius:6px;overflow-x:auto;max-height:220px}
+.load{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;color:var(--muted);font-size:13px}
+footer{font-size:12px;color:var(--muted);max-width:72ch}
+footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Nadador de cuatro cajas</h1>
+    <span class="tag" id="tag">Etapa 1 · cuerpo fijo, cerebro evolucionado · reconstrucción de Sims (1994)</span>
+  </header>
+
+  <p class="note" id="nota">Cargando la trayectoria del campeón…</p>
+
+  <div class="stage" id="stage">
+    <canvas id="c"></canvas>
+    <div class="hud" id="hud"></div>
+    <div class="hint">arrastra para girar · rueda para acercar</div>
+  </div>
+
+  <div class="bar">
+    <button class="primary" id="play">Pausar</button>
+    <span class="t" id="time">0.00 s / 0.00 s</span>
+    <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Tiempo">
+    <select id="speed" aria-label="Velocidad">
+      <option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option>
+    </select>
+    <label class="chk"><input type="checkbox" id="trail" checked> Estela del centro de masa</label>
+    <label class="chk"><input type="checkbox" id="follow" checked> Cámara sigue</label>
+    <button id="reset">Reiniciar cámara</button>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Aptitud por generación <small id="chartsub">mejor · media · peor</small></h2>
+      <svg class="chart" id="chart" viewBox="0 0 520 220" role="img" aria-label="Curvas mejor, media y peor por generación"></svg>
+      <div class="leg"><span class="b">mejor</span><span class="m">media</span><span class="w">peor</span></div>
+      <div class="load">
+        <span>Otra corrida:</span>
+        <input type="file" id="archivo" accept=".json,application/json" aria-label="Cargar un campeon_trayectoria.json">
+      </div>
+    </div>
+    <div class="card">
+      <h2>Articulaciones <small>ángulo · barra naranja = torque</small></h2>
+      <div class="joints" id="joints"></div>
+      <h2 style="margin-top:6px">Campeón <small>del JSON exportado</small></h2>
+      <dl id="ficha"></dl>
+      <h2 style="margin-top:6px">Cerebro <small>grafo neuronal</small></h2>
+      <pre class="brain" id="brain"></pre>
+    </div>
+  </div>
+
+  <footer>Física: MuJoCo con arrastre viscoso por cara (modelo de Sims). Aptitud: desplazamiento del centro de masa en 10 s, con más peso a la velocidad del tramo final.
+    Código y bitácora de decisiones en <a href="https://github.com/lucianotejadac/simulador-criaturas-sims">github.com/lucianotejadac/simulador-criaturas-sims</a>.</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var canvas=document.getElementById('c'), stage=document.getElementById('stage');
+  var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  var scene=new THREE.Scene();
+  scene.background=new THREE.Color(0x071a24);
+  scene.fog=new THREE.Fog(0x071a24,8,22);
+  var camera=new THREE.PerspectiveCamera(42,2,0.1,200);
+  scene.add(new THREE.HemisphereLight(0x9fd8e6,0x02070a,0.9));
+  var sun=new THREE.DirectionalLight(0xffffff,0.9); sun.position.set(3,6,2); scene.add(sun);
+  var grid=new THREE.GridHelper(40,40,0x1f5a68,0x123842); grid.position.y=-1.2; scene.add(grid);
+  var origin=new THREE.Mesh(new THREE.RingGeometry(0.08,0.11,32),new THREE.MeshBasicMaterial({color:0x7fd0e0,side:THREE.DoubleSide}));
+  origin.rotation.x=-Math.PI/2; origin.position.y=-1.19; scene.add(origin);
+
+  // MuJoCo usa Z hacia arriba; Three.js usa Y. Todo lo de MuJoCo vive en este grupo rotado.
+  var mundo=new THREE.Group(); mundo.rotation.x=-Math.PI/2; scene.add(mundo);
+
+  var datos=null, meshes=[], trail=null, trailPos=null, trailGeo=null, com0=new THREE.Vector3();
+  var DUR=10, FPS=60, playing=true, t=0, last=null, jbars=[];
+  var btn=document.getElementById('play'), scrub=document.getElementById('scrub'), timeEl=document.getElementById('time'),
+      speedEl=document.getElementById('speed'), hud=document.getElementById('hud'), nota=document.getElementById('nota');
+  var matBody=new THREE.MeshStandardMaterial({color:0xd9e4ea,roughness:0.55,metalness:0.05});
+  var matHead=new THREE.MeshStandardMaterial({color:0x3fb7cc,roughness:0.5,metalness:0.05});
+  var edgeMat=new THREE.LineBasicMaterial({color:0x0b2630});
+  var AXCOL=[0xffc94d,0xff6f91,0x9be36b];
+
+  function limpiar(){
+    meshes.forEach(function(m){mundo.remove(m);}); meshes=[];
+    if(trail){scene.remove(trail);trail=null;}
+    document.getElementById('joints').innerHTML=''; jbars=[];
+  }
+
+  function cargar(d){
+    limpiar(); datos=d;
+    var meta=d.meta; DUR=meta.duracion; FPS=meta.fps;
+    d.piezas.forEach(function(p,i){
+      var geo=new THREE.BoxGeometry(p.size[0],p.size[1],p.size[2]);
+      var m=new THREE.Mesh(geo,i===0?matHead:matBody);
+      m.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo),edgeMat));
+      mundo.add(m); meshes.push(m);
+    });
+    d.bisagras.forEach(function(b,i){
+      var cyl=new THREE.Mesh(new THREE.CylinderGeometry(0.02,0.02,d.piezas[b.cuerpo].size[1]+0.08,16),
+        new THREE.MeshStandardMaterial({color:AXCOL[i%3],emissive:AXCOL[i%3],emissiveIntensity:0.35}));
+      cyl.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),new THREE.Vector3(b.eje[0],b.eje[1],b.eje[2]).normalize());
+      cyl.position.set(b.pos[0],b.pos[1],b.pos[2]);
+      meshes[b.cuerpo].add(cyl);
+    });
+    var n=d.cuadros.length;
+    trailPos=new Float32Array(n*3); trailGeo=new THREE.BufferGeometry();
+    trailGeo.setAttribute('position',new THREE.BufferAttribute(trailPos,3)); trailGeo.setDrawRange(0,0);
+    trail=new THREE.Line(trailGeo,new THREE.LineBasicMaterial({color:0x7fd0e0,transparent:true,opacity:0.8}));
+    trail.rotation.x=-Math.PI/2; trail.visible=document.getElementById('trail').checked; scene.add(trail);
+    for(var f=0;f<n;f++){var c=d.cuadros[f].com; trailPos[f*3]=c[0];trailPos[f*3+1]=c[1];trailPos[f*3+2]=c[2];}
+    trailGeo.attributes.position.needsUpdate=true;
+    com0.set(d.cuadros[0].com[0],d.cuadros[0].com[1],d.cuadros[0].com[2]);
+
+    var jointsEl=document.getElementById('joints');
+    d.bisagras.forEach(function(b,i){
+      var row=document.createElement('div'); row.className='j';
+      var eje=Math.abs(b.eje[2])>0.5?'Z':(Math.abs(b.eje[1])>0.5?'Y':'X');
+      row.innerHTML='<span>'+b.nombre+'</span><div class="track"><i></i><u></u></div><span class="ax">eje '+eje+' <b></b></span>';
+      jointsEl.appendChild(row);
+      jbars.push({fill:row.querySelector('i'),tq:row.querySelector('u'),val:row.querySelector('b'),lim:Math.max(Math.abs(b.rango[0]),Math.abs(b.rango[1]))});
+    });
+    var ficha=document.getElementById('ficha');
+    var pz=d.piezas[0].size;
+    var filas=[['corrida',meta.corrida+' · semilla '+meta.semilla],['generación',(meta.generacion+1)+' de '+meta.generaciones+' · población '+meta.poblacion],
+      ['aptitud',meta.aptitud.toFixed(3)+' · distancia '+meta.distancia.toFixed(3)+' m'],
+      ['cuerpo',d.piezas.length+' cajas de '+pz[0].toFixed(2)+' × '+pz[1].toFixed(2)+' × '+pz[2].toFixed(2)+' m, '+d.bisagras.length+' bisagras ±'+Math.round(Math.abs(d.bisagras[0].rango[1]))+'°'],
+      ['torque máx',(meta.torque_max||0).toFixed(1)+' N·m por bisagra'],
+      ['cerebro',meta.n_neuronas+' neuronas, '+d.genoma.efectores.length+' efectores, '+d.genoma.n_sensores+' sensores de ángulo'],
+      ['cuadros',n+' ('+FPS+' por segundo), posición + cuaternión por pieza'],['física','MuJoCo '+(meta.mujoco||'')]];
+    ficha.innerHTML=filas.map(function(f){return '<dt>'+f[0]+'</dt><dd>'+f[1]+'</dd>';}).join('');
+    document.getElementById('brain').textContent=meta.cerebro||'(sin neuronas: los efectores leen sensores o constantes)';
+    document.getElementById('tag').textContent='Etapa 1 · cuerpo fijo, cerebro evolucionado · corrida '+meta.corrida;
+    nota.className='note';
+    nota.textContent='Campeón de la corrida '+meta.corrida+': desplazó su centro de masa '+meta.distancia.toFixed(2)+' m en '+DUR+' s. '+
+      'La trayectoria viene de MuJoCo; el visor solo la reproduce.';
+    dibujarGrafico(d.log);
+    t=0; resetCam(); cuadro(0);
+  }
+
+  function cuadro(tt){
+    if(!datos)return null;
+    var n=datos.cuadros.length;
+    var f=Math.min(n-1,Math.max(0,Math.floor(tt*FPS)));
+    var c=datos.cuadros[f];
+    for(var i=0;i<meshes.length;i++){
+      var p=c.pos[i], q=c.quat[i];           // MuJoCo: (w, x, y, z)
+      meshes[i].position.set(p[0],p[1],p[2]);
+      meshes[i].quaternion.set(q[1],q[2],q[3],q[0]);
+    }
+    if(trailGeo) trailGeo.setDrawRange(0,f+1);
+    for(var k=0;k<jbars.length;k++){
+      var deg=c.q[k]*180/Math.PI, pct=Math.max(-1,Math.min(1,deg/jbars[k].lim))*50;
+      jbars[k].fill.style.left=(pct<0?50+pct:50)+'%'; jbars[k].fill.style.width=Math.abs(pct)+'%';
+      jbars[k].tq.style.left=(50+c.ctrl[k]*50)+'%';
+      jbars[k].val.textContent=(deg>=0?'+':'')+deg.toFixed(0)+'°';
+    }
+    return c;
+  }
+
+  // Cámara orbital mínima
+  var cam={th:0.9,ph:1.15,r:3.4,target:new THREE.Vector3()};
+  function resetCam(){cam.th=0.9;cam.ph=1.15;cam.r=3.4;}
+  var drag=null;
+  stage.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY};stage.setPointerCapture(e.pointerId);});
+  stage.addEventListener('pointermove',function(e){ if(!drag)return; cam.th-=(e.clientX-drag.x)*0.008; cam.ph=Math.max(0.15,Math.min(Math.PI-0.15,cam.ph-(e.clientY-drag.y)*0.008)); drag={x:e.clientX,y:e.clientY};});
+  stage.addEventListener('pointerup',function(){drag=null;});
+  stage.addEventListener('wheel',function(e){e.preventDefault();cam.r=Math.max(1.2,Math.min(20,cam.r*(1+e.deltaY*0.001)));},{passive:false});
+  var comW=new THREE.Vector3();
+  function placeCam(c){
+    var follow=document.getElementById('follow').checked;
+    if(c){comW.set(c.com[0],c.com[1],c.com[2]).applyAxisAngle(new THREE.Vector3(1,0,0),-Math.PI/2);}
+    var tgt=follow&&c?comW:cam.target;
+    cam.target.lerp(tgt,follow?0.08:1);
+    camera.position.set(cam.target.x+cam.r*Math.sin(cam.ph)*Math.cos(cam.th), cam.target.y+cam.r*Math.cos(cam.ph), cam.target.z+cam.r*Math.sin(cam.ph)*Math.sin(cam.th));
+    camera.lookAt(cam.target);
+  }
+
+  btn.addEventListener('click',function(){playing=!playing;btn.textContent=playing?'Pausar':'Reproducir';});
+  scrub.addEventListener('input',function(){t=scrub.value/1000*DUR;});
+  document.getElementById('reset').addEventListener('click',resetCam);
+  document.getElementById('trail').addEventListener('change',function(e){if(trail)trail.visible=e.target.checked;});
+  document.getElementById('archivo').addEventListener('change',function(e){
+    var f=e.target.files[0]; if(!f)return;
+    var r=new FileReader(); r.onload=function(){ try{cargar(JSON.parse(r.result));}catch(err){nota.className='note err';nota.textContent='No pude leer ese JSON: '+err.message;} }; r.readAsText(f);
+  });
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){playing=false;btn.textContent='Reproducir';}
+
+  function resize(){
+    var w=stage.clientWidth, h=stage.clientHeight;
+    if(canvas.width!==Math.floor(w*renderer.getPixelRatio())){renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
+  }
+  function frame(now){
+    requestAnimationFrame(frame);
+    if(last===null)last=now;
+    var dt=Math.min(0.05,(now-last)/1000); last=now;
+    if(playing&&datos){ t+=dt*parseFloat(speedEl.value); if(t>=DUR)t=0; scrub.value=Math.round(t/DUR*1000); }
+    var c=cuadro(t);
+    resize(); placeCam(c);
+    timeEl.textContent=t.toFixed(2)+' s / '+DUR.toFixed(2)+' s';
+    if(c&&datos){
+      var dx=c.com[0]-com0.x, dy=c.com[1]-com0.y, dz=c.com[2]-com0.z;
+      hud.innerHTML='campeón · gen <b>'+(datos.meta.generacion+1)+'</b> · semilla <b>'+datos.meta.semilla+'</b><br>desplazamiento del centro de masa <b>'+Math.sqrt(dx*dx+dy*dy+dz*dz).toFixed(2)+' m</b><br>cuadro <b>'+Math.floor(t*FPS)+'</b> / '+datos.cuadros.length;
+    }
+    renderer.render(scene,camera);
+  }
+  requestAnimationFrame(frame);
+
+  function dibujarGrafico(log){
+    var svg=document.getElementById('chart'), W=520, H=220, m={l:44,r:12,t:12,b:30};
+    if(!log||!log.length){svg.innerHTML='';return;}
+    var G=log.length-1, ymax=Math.max.apply(null,log.map(function(r){return r.mejor;}))*1.08||1;
+    var x=function(g){return m.l+(W-m.l-m.r)*(G?g/G:0);}, y=function(v){return m.t+(H-m.t-m.b)*(1-v/ymax);};
+    var paso=Math.pow(10,Math.floor(Math.log10(ymax)))/2; if(ymax/paso>8)paso*=2; if(ymax/paso<3)paso/=2;
+    var out='';
+    for(var v=0;v<=ymax;v+=paso){out+='<line x1="'+m.l+'" x2="'+(W-m.r)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="var(--line)" stroke-width="1"/><text x="'+(m.l-8)+'" y="'+(y(v)+4)+'" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="11" fill="var(--muted)">'+v.toFixed(1)+'</text>';}
+    var pasoG=G>=40?10:(G>=15?5:1);
+    for(var g=0;g<=G;g+=pasoG){out+='<text x="'+x(g)+'" y="'+(H-10)+'" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" fill="var(--muted)">'+(g+1)+'</text>';}
+    function path(k){var d='';for(var g=0;g<=G;g++){d+=(g?'L':'M')+x(g).toFixed(1)+' '+y(log[g][k]).toFixed(1)+' ';}return d;}
+    out+='<path d="'+path('mejor')+'L'+x(G)+' '+y(0)+' L'+x(0)+' '+y(0)+' Z" fill="var(--best)" opacity="0.08"/>';
+    out+='<path d="'+path('peor')+'" fill="none" stroke="var(--worst)" stroke-width="1.5"/>';
+    out+='<path d="'+path('media')+'" fill="none" stroke="var(--mean)" stroke-width="1.5"/>';
+    out+='<path d="'+path('mejor')+'" fill="none" stroke="var(--best)" stroke-width="2.2"/>';
+    out+='<circle cx="'+x(G)+'" cy="'+y(log[G].mejor)+'" r="4" fill="var(--best)"/>';
+    out+='<text x="'+(x(G)-6)+'" y="'+(y(log[G].mejor)-8)+'" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="11" fill="var(--best)">'+log[G].mejor.toFixed(2)+'</text>';
+    out+='<text x="12" y="'+(m.t+6)+'" font-family="IBM Plex Mono,monospace" font-size="10" fill="var(--muted)" transform="rotate(-90 12 '+(m.t+6)+')" text-anchor="end">aptitud (m)</text>';
+    out+='<text x="'+(W-m.r)+'" y="'+(H-10)+'" dx="0" dy="-14" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="10" fill="var(--muted)">generación</text>';
+    svg.innerHTML=out;
+  }
+
+  fetch('campeon.json').then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(cargar)
+    .catch(function(err){
+      nota.className='note err';
+      nota.textContent='No encontré campeon.json junto a esta página ('+err.message+'). Elige abajo un archivo campeon_trayectoria.json exportado con src/export.py.';
+    });
+})();
+</script>
+</body>
+</html>
