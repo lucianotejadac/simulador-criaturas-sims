@@ -32,6 +32,7 @@ from genome import morph  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAX_INTENTOS = 40
+UMBRAL_SOSPECHA_NADO = 8.0   # por encima del techo de la Etapa 1 (6.5) se verifica a paso fino
 
 
 def _evaluar(args: tuple) -> dict:
@@ -41,6 +42,18 @@ def _evaluar(args: tuple) -> dict:
     except ValueError as e:
         return {"aptitud": 0.0, "distancia": 0.0, "motivo": "invalido:" + str(e), "n_piezas": 0, "n_dof": 0}
     res = tareas.evaluar(model, data, r["cerebro"], tarea, duracion=duracion)
+    if tarea == "nado" and res["aptitud"] > UMBRAL_SOSPECHA_NADO:
+        # Un nadador demasiado bueno se reevalúa a la mitad del paso: si no es
+        # consistente, es un artefacto numérico y no cuenta (BITACORA 0011).
+        m2, d2, r2 = tareas.compilar_tarea(genoma, tarea, dm.PASO_FISICA / 2)
+        res2 = tareas.evaluar(m2, d2, r2["cerebro"], tarea, duracion=duracion)
+        res["aptitudes_pasos"] = [res["aptitud"], res2["aptitud"]]
+        if res2["aptitud"] < res["aptitud"] / 2:
+            res = {"aptitud": 0.0, "distancia": res2["distancia"], "motivo": "inconsistente",
+                   "aptitudes_pasos": res["aptitudes_pasos"]}
+        elif res2["aptitud"] < res["aptitud"]:
+            res2["aptitudes_pasos"] = res["aptitudes_pasos"]
+            res = res2
     if tarea == "caminata" and res["aptitud"] > 0:
         # Aptitud robusta: la menor entre tres pasos de integración, para que no se
         # premie lo que solo funciona por el error de integración (BITACORA 0010).
@@ -139,7 +152,7 @@ def correr(nombre: str, tarea: str, generaciones: int, poblacion: int, semilla: 
             fila = [gen, apt[i_mejor], sum(apt) / len(apt), orden[0], orden[len(apt) // 2],
                     res[i_mejor]["n_piezas"], res[i_mejor].get("n_neuronas", 0),
                     sum(r["motivo"] == "sin_movimiento" for r in res),
-                    sum(r["motivo"] == "inestable" for r in res),
+                    sum(r["motivo"] in ("inestable", "inconsistente") for r in res),
                     sum(r["motivo"].startswith("invalido") for r in res),
                     sum(r["motivo"] == "no_asentada" for r in res),
                     contador["rechazadas"], sum(r["n_piezas"] for r in res) / len(res), time.time() - t_gen]

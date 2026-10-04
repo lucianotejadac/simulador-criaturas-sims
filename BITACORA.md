@@ -367,3 +367,41 @@ dispersión no, es caos y la respuesta es estadística, no numérica.
 **Lote lanzado.** Cinco semillas de nado y cinco de caminata (200 criaturas,
 60 generaciones), en secuencia y desacopladas, `scratch/lote_etapa3.py`.
 Resultados en la entrada siguiente.
+
+---
+
+## 0011 · 2026-10-04 · Trampa: el nadador de 227 metros y la fuerza–velocidad del músculo
+
+**Qué pasó.** Primera corrida del lote de la Etapa 3 (`morfo-nado01`, 200 × 60).
+Campeón con 15 piezas y aptitud 322: 227 m en 10 s, 23 m/s de media. Un
+genoma con un nodo que se repite cuatro veces con escala 1.27 acumulada, de
+modo que las piezas crecen hasta 1.56 m y 185 kg, todas con articulación
+esférica (tres bisagras apiladas) y torques de hasta 318 N·m.
+
+**Por qué funcionó.** Reevaluado a paso fino: 69 m a 1/960 s y 15 m a
+1/1920 s. La distancia se divide por tres cada vez que el paso se divide por
+dos: artefacto de integración puro. Aislando factores sobre el mismo genoma:
+sin arrastre la simulación explota; con límites más rígidos baja a la mitad;
+con el integrador `implicit` baja a un quinto; **con amortiguación articular
+10 veces mayor (3 en vez de 0.3 N·m·s/rad) queda en 0.3 m a cualquier paso.**
+La energía entraba por las bisagras: torques enormes sobre piezas enormes con
+una amortiguación fija pensada para la cadena de 14 N·m de la Etapa 1, y tres
+bisagras coincidentes peleando contra sus límites blandos.
+
+**Cambio.** La amortiguación de cada bisagra es proporcional a su torque
+máximo: `damping = 0.05 · torque_max` (N·m·s/rad). Es la relación
+fuerza–velocidad del músculo: un músculo grande también frena más, y a 20 rad/s
+la fricción iguala a la fuerza máxima. Con eso el campeón tramposo da 0.23,
+0.20 y 0.20 m a 1/480, 1/960 y 1/1920 s, y la cadena de ejemplo pasa de 1.83
+a 1.66 m. Además, en nado, toda criatura con aptitud mayor que 8 (por encima
+del techo de la Etapa 1) se reevalúa a la mitad del paso: si cae a menos de la
+mitad, su aptitud es 0 con motivo "inconsistente"; si no, se queda con la menor.
+
+**Consecuencias.** El lote se detuvo en la segunda corrida y se relanzó con la
+física corregida; los resultados de `morfo-nado01` se descartaron. Queda la
+lección de la Etapa 1 confirmada: cada vez que el cuerpo cambia de escala, hay
+que volver a verificar la convergencia con el paso. Y una segunda lección para
+la morfología evolutiva: la escala acumulada por recursión (1.27⁴ ≈ 2.6) lleva
+a las criaturas a los extremos del rango donde los parámetros numéricos dejan
+de estar calibrados; la respuesta correcta no fue acotar la escala sino hacer
+que la amortiguación acompañe a la fuerza.

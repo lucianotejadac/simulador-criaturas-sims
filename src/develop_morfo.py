@@ -22,6 +22,7 @@ from develop import K_FUERZA
 from genome import morph
 
 SEPARACION = 0.02      # hueco entre la cara de la madre y la hija, donde va la articulación
+C_AMORTIGUACION = 0.05  # s/rad: amortiguación articular = C · torque máximo (fuerza-velocidad, BITACORA 0011)
 DENSIDAD_PIEZAS = 300.0
 PASO_FISICA = 1.0 / 480.0
 
@@ -133,7 +134,7 @@ def _mjcf(piezas: list, gravedad: bool, paso: float = PASO_FISICA, k_fuerza: flo
            f'  <option timestep="{paso:.6f}" gravity="{g}" integrator="implicitfast"/>\n',
            '  <default>\n',
            f'    <geom type="box" density="{DENSIDAD_PIEZAS}" rgba="0.85 0.89 0.92 1"/>\n',
-           '    <joint type="hinge" damping="0.3"/>\n',
+           '    <joint type="hinge"/>\n',
            '    <motor ctrlrange="-1 1"/>\n',
            '  </default>\n  <worldbody>\n']
     if gravedad:
@@ -154,7 +155,8 @@ def _mjcf(piezas: list, gravedad: bool, paso: float = PASO_FISICA, k_fuerza: flo
             for k, eje in enumerate(p.ejes):
                 nombre = f"{p.nombre}_j{k}"
                 out.append(f'{ind}  <joint name="{nombre}" axis="{eje[0]:.4f} {eje[1]:.4f} {eje[2]:.4f}" '
-                           f'pos="{anc:.5f} 0 0" range="-{p.limite:.2f} {p.limite:.2f}"/>\n')
+                           f'pos="{anc:.5f} 0 0" range="-{p.limite:.2f} {p.limite:.2f}" '
+                           f'damping="{C_AMORTIGUACION * abs(torque):.4f}"/>\n')
                 actuadores.append(f'    <motor name="m_{nombre}" joint="{nombre}" gear="{torque:.4f}"/>\n')
         rgba = ' rgba="0.25 0.72 0.8 1"' if p.madre is None else ""
         out.append(f'{ind}  <geom name="g_{p.nombre}" size="{p.dims[0] / 2:.5f} {p.dims[1] / 2:.5f} '
