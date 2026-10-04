@@ -39,6 +39,10 @@ python src/evolve.py --nombre nado01 --generaciones 50 --poblacion 300 --semilla
 # solo exportar la trayectoria del campeón de una corrida ya hecha
 python src/export.py --nombre nado01
 
+# galería: volver a simular criaturas que no ganaron (mejor, mediana, peor y 4 al azar
+# de las generaciones 1, 10, 25 y la última) para verlas una a una o en carrera
+python src/galeria.py --nombre nado01 --generaciones 1,10,25,50 --cuales mejor,mediana,peor,azar:4
+
 # tests
 python -m pytest -q tests
 
@@ -48,8 +52,11 @@ cd viewer && python -m http.server 8000
 
 Cada corrida deja en `runs/<nombre>/`: `config.json` (parámetros y semilla),
 `cuerpo.xml` (MJCF), `log.csv` (mejor, media, peor y mediana por generación),
-`campeon.json` (genoma) y `campeon_trayectoria.json` (posición y cuaternión de
-cada pieza por cuadro, para el visor).
+`poblacion/gen_NNN.json` (genoma y aptitud de las 300 criaturas de cada
+generación), `campeon.json` (genoma), `campeon_trayectoria.json` y
+`galeria.json` (posición y cuaternión de cada pieza por cuadro, para el visor).
+Como la física es determinista, cualquier criatura de cualquier generación se
+puede volver a simular desde su genoma guardado.
 
 ## Estructura
 
@@ -62,7 +69,8 @@ src/
   fitness.py         evaluación y aptitud de nado
   evolve.py          bucle evolutivo + multiprocessing
   export.py          trayectoria del campeón -> JSON
-viewer/index.html    visor Three.js (GitHub Pages)
+  galeria.py         criaturas no campeonas de varias generaciones -> JSON
+viewer/index.html    visor Three.js (GitHub Pages): campeón, criatura a criatura o carrera
 tests/               genomas válidos, cuerpo que compila, aptitud finita
 runs/                resultados por corrida (los pesados no se versionan)
 BITACORA.md          decisiones de diseño y trampas detectadas

@@ -5,3 +5,5 @@ scratch/
 runs/*/campeon_trayectoria.json
 runs/*.log
 MUJOCO_LOG.TXT
+runs/*/poblacion/
+runs/*/galeria.json

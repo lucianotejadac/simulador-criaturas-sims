@@ -126,12 +126,12 @@ quedan para la Etapa 2, donde el genoma elige el tipo de articulación.
 **Corrida.** 300 criaturas, 50 generaciones, semilla 1, 14 procesos, paso 1/480 s:
 302 s en total (6 s por generación). Registro en `runs/nado01/log.csv`.
 
-| generación | mejor | media |
-|---|---|---|
-| 1 | 3.6 | 0.9 |
-| 10 | 5.5 | 2.9 |
-| 25 | 6.0 | 3.3 |
-| 50 | 6.45 | 4.25 |
+| generación | mejor | media | mediana |
+|---|---|---|---|
+| 1 | 1.24 | 0.02 | 0.01 |
+| 10 | 5.25 | 2.49 | 3.36 |
+| 25 | 6.01 | 3.45 | 4.97 |
+| 50 | 6.45 | 4.25 | 6.44 |
 
 **Campeón.** Aptitud 6.45, desplazamiento 4.58 m en 10 s (0.46 m/s, 2.7 largos de
 cuerpo). Tres neuronas: un `oscillate-wave` cuya amplitud y frecuencia salen de un
@@ -149,9 +149,46 @@ a 6 % del límite. No hay trampa numérica detectable en este campeón.
   hasta el final. Son crías cuya mutación desconectó los efectores; el corte
   temprano las hace baratas.
 - Ninguna simulación inestable en las 15 000 evaluaciones.
-- El mejor de la generación 1 ya nadaba 3.6 m: con tres bisagras y realimentación
-  del ángulo, un reflejo saturado basta para avanzar. La evolución después afinó
-  frecuencia y fase, no inventó el mecanismo.
+- En la generación 1, 215 de las 300 criaturas aleatorias no se movieron y la
+  mediana fue 0.006; el mejor avanzó 0.87 m con un reflejo saturado del ángulo.
+  A la generación 10 la mediana ya era 3.6: el mecanismo (oscilación por
+  realimentación a torque máximo) se descubre temprano y después se afina.
+- A la generación 50 la mediana (6.44) casi iguala al mejor (6.45): la población
+  convergió a variantes del mismo cerebro. Sigue habiendo un 10 % de crías rotas
+  por mutación (las "quietas"), que es el precio de seguir explorando.
 
 **Pendiente para la Etapa 2.** Genoma morfológico de grafo dirigido con recursión
 y desarrollo a MJCF; `fluido.py` ya acepta cualquier conjunto de cajas.
+
+---
+
+## 0007 · 2026-10-04 · Ver a las que no ganaron: población guardada y galería
+
+**Contexto.** El visor solo mostraba al campeón; la evolución descartaba las
+trayectorias y los genomas de las otras 299 criaturas de cada generación. Para
+entender qué hace una criatura mediana, una "quieta" o la peor, hacía falta
+poder volver a verlas.
+
+**Decisión.** `evolve.py` guarda la población completa de cada generación
+(genoma y aptitud, `runs/<nombre>/poblacion/gen_NNN.json`, unos 300 KB por
+generación; no se versionan). Como la física es determinista, `galeria.py`
+vuelve a simular criaturas elegidas (mejor, mediana, peor y algunas al azar) de
+las generaciones pedidas y escribe `galeria.json` para el visor, que suma dos
+vistas: una criatura a la vez, con su ficha y su cerebro, y **carrera**: todas
+las elegidas de una generación en carriles paralelos, con una tabla de
+colores, puesto, aptitud y distancia.
+
+**Alternativas descartadas.** Guardar las trayectorias de todas las criaturas
+durante la evolución: 300 × 50 × 80 KB = 1.2 GB por corrida, cuando el genoma
+pesa 1 KB y se puede volver a simular en 0.1 s. Grabar solo algunas al azar
+durante la evolución: no permite elegir después.
+
+**Verificación.** La corrida `nado01` se repitió con la misma semilla para
+generar las poblaciones y dio exactamente el mismo campeón (6.4527 en la
+generación 50). Las aptitudes de la galería coinciden con las del registro,
+salvo las criaturas cortadas a los 3 s por quietas, que en la galería se
+simulan completas (siguen quietas).
+
+**Consecuencias.** `galeria.json` pesa 2.3 MB (28 criaturas a 30 cuadros por
+segundo) y se versiona en `viewer/` para Pages. Las trampas futuras se podrán
+ver en la criatura que las explota, no solo en la curva.

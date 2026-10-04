@@ -88,3 +88,14 @@ def test_operadores_con_genomas_vacios():
             assert neural.es_valido(neural.cruzar(a, b, rng))
             assert neural.es_valido(neural.injertar(a, b, rng))
             assert neural.es_valido(neural.mutar(a, rng))
+
+
+def test_galeria_elige_sin_repetir():
+    import galeria
+    rng = random.Random(9)
+    pob = [{"indice": i, "aptitud": float(i % 7), "genoma": None} for i in range(40)]
+    el = galeria.elegir(pob, "mejor,mediana,peor,azar:5", rng)
+    idx = [c["indice"] for _, c in el]
+    assert len(idx) == len(set(idx)) == 8
+    assert el[0][0] == "mejor" and el[0][1]["aptitud"] == 6.0
+    assert el[2][0] == "peor" and el[2][1]["aptitud"] == 0.0

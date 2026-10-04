@@ -7,8 +7,11 @@ Parámetros de Sims (1994): población ~300, sobrevive 1/5, descendencia
 proporcional a la aptitud, reproducción 40 % asexual / 30 % cruce / 30 % injerto.
 Toda cría pasa además por `mutar`.
 
-Registro por generación en runs/<nombre>/log.csv y el campeón de cada
-generación en runs/<nombre>/campeon.json. Al terminar exporta la trayectoria.
+Registro por generación en runs/<nombre>/log.csv, el campeón de cada
+generación en runs/<nombre>/campeon.json y la población completa (genoma y
+aptitud de cada criatura) en runs/<nombre>/poblacion/gen_NNN.json, para poder
+volver a simular y ver a cualquier criatura, no solo al campeón.
+Al terminar exporta la trayectoria del campeón y una galería.
 """
 from __future__ import annotations
 
@@ -95,6 +98,8 @@ def correr(nombre: str, generaciones: int, poblacion: int, semilla: int, proceso
     with open(os.path.join(carpeta, "cuerpo.xml"), "w", encoding="utf-8") as f:
         f.write(xml)
 
+    carpeta_pob = os.path.join(carpeta, "poblacion")
+    os.makedirs(carpeta_pob, exist_ok=True)
     pob = [neural.genoma_aleatorio(rng, cuerpo.n_dof, cuerpo.n_dof) for _ in range(poblacion)]
     log_path = os.path.join(carpeta, "log.csv")
     with open(log_path, "w", newline="", encoding="utf-8") as f:
@@ -107,6 +112,10 @@ def correr(nombre: str, generaciones: int, poblacion: int, semilla: int, proceso
             t_gen = time.time()
             res = pool.map(_evaluar, [(g, duracion) for g in pob], chunksize=4)
             apt = [r["aptitud"] for r in res]
+            with open(os.path.join(carpeta_pob, f"gen_{gen:03d}.json"), "w", encoding="utf-8") as f:
+                json.dump([{"indice": i, "aptitud": r["aptitud"], "distancia": r["distancia"],
+                            "motivo": r["motivo"], "genoma": g} for i, (g, r) in enumerate(zip(pob, res))],
+                          f, separators=(",", ":"))
             i_mejor = max(range(len(apt)), key=apt.__getitem__)
             ordenado = sorted(apt)
             fila = [gen, apt[i_mejor], sum(apt) / len(apt), ordenado[0], ordenado[len(apt) // 2],
@@ -144,6 +153,8 @@ def main() -> None:
     if not a.sin_exportar:
         import export
         export.exportar_campeon(a.nombre)
+        import galeria
+        galeria.exportar_galeria(a.nombre)
 
 
 if __name__ == "__main__":
