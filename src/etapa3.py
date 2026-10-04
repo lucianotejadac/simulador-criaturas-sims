@@ -36,6 +36,8 @@ def grupo(tarea: str, corridas: list[str], numero: int) -> dict | None:
                                          f"generación {meta['generacion'] + 1} de {meta['generaciones']}): "
                                          f"{meta['n_piezas']} piezas, {meta['n_dof']} grados de libertad.",
                           "cerebro": meta["cerebro"], "piezas": d["piezas"], "bisagras": d["bisagras"],
+                          "generacion": meta["generacion"] + 1, "generaciones": meta["generaciones"],
+                          "log": [{k: fila[k] for k in ("generacion", "mejor", "media", "peor", "mediana")} for fila in d["log"]],
                           "cuadros": cuadros})
         print(f"{nombre}: {tarea}, aptitud {meta['aptitud']:.3f}, distancia {meta['distancia']:.3f} m, "
               f"{meta['n_piezas']} piezas, {meta['n_neuronas']} neuronas")

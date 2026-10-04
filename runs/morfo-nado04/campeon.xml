@@ -1,0 +1,38 @@
+<mujoco model="criatura">
+  <compiler angle="degree" autolimits="true"/>
+  <option timestep="0.002083" gravity="0 0 0" integrator="implicitfast"/>
+  <default>
+    <geom type="box" density="300.0" rgba="0.85 0.89 0.92 1"/>
+    <joint type="hinge"/>
+    <motor ctrlrange="-1 1"/>
+  </default>
+  <worldbody>
+    <body name="p0_n0" pos="0.00000 0.00000 0.00000" quat="1.000000 0.000000 0.000000 0.000000">
+      <freejoint name="raiz"/>
+      <geom name="g_p0_n0" size="0.06863 0.29517 0.06031" rgba="0.25 0.72 0.8 1"/>
+      <body name="p1_n1" pos="-0.12123 0.27719 -0.26373" quat="0.621541 0.170232 0.741183 0.188033">
+        <joint name="p1_n1_j0" axis="0.0000 -1.0000 0.0000" pos="-0.31046 0 0" range="-39.04 39.04" damping="1.4143"/>
+        <joint name="p1_n1_j1" axis="0.0000 0.0000 1.0000" pos="-0.31046 0 0" range="-39.04 39.04" damping="1.4143"/>
+        <geom name="g_p1_n1" size="0.29046 0.05191 0.13621"/>
+      </body>
+      <body name="p2_n2" pos="-0.03830 -0.56371 -0.27813" quat="0.718075 -0.018567 0.485265 -0.498540">
+        <joint name="p2_n2_j0" axis="1.0000 0.0000 0.0000" pos="-0.36587 0 0" range="-39.11 39.11" damping="3.3319"/>
+        <joint name="p2_n2_j1" axis="0.0000 0.0000 1.0000" pos="-0.36587 0 0" range="-39.11 39.11" damping="3.3319"/>
+        <geom name="g_p2_n2" size="0.34587 0.06722 0.24785"/>
+        <body name="p3_n2" pos="0.01730 -0.32622 -0.34485" quat="0.076133 -0.496778 0.776684 0.379706">
+          <joint name="p3_n2_j0" axis="1.0000 0.0000 0.0000" pos="-0.36282 0 0" range="-39.11 39.11" damping="3.2734"/>
+          <joint name="p3_n2_j1" axis="0.0000 0.0000 1.0000" pos="-0.36282 0 0" range="-39.11 39.11" damping="3.2734"/>
+          <geom name="g_p3_n2" size="0.34282 0.06662 0.24566"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="m_p1_n1_j0" joint="p1_n1_j0" gear="-28.2854"/>
+    <motor name="m_p1_n1_j1" joint="p1_n1_j1" gear="-28.2854"/>
+    <motor name="m_p2_n2_j0" joint="p2_n2_j0" gear="-66.6384"/>
+    <motor name="m_p2_n2_j1" joint="p2_n2_j1" gear="-66.6384"/>
+    <motor name="m_p3_n2_j0" joint="p3_n2_j0" gear="-65.4681"/>
+    <motor name="m_p3_n2_j1" joint="p3_n2_j1" gear="-65.4681"/>
+  </actuator>
+</mujoco>

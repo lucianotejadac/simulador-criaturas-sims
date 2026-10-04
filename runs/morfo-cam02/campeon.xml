@@ -1,0 +1,25 @@
+<mujoco model="criatura">
+  <compiler angle="degree" autolimits="true"/>
+  <option timestep="0.002083" gravity="0 0 -9.81" integrator="implicitfast"/>
+  <default>
+    <geom type="box" density="300.0" rgba="0.85 0.89 0.92 1"/>
+    <joint type="hinge"/>
+    <motor ctrlrange="-1 1"/>
+  </default>
+  <worldbody>
+    <geom name="suelo" type="plane" size="0 0 1" friction="1 0.005 0.0001" rgba="0.3 0.35 0.3 1"/>
+    <body name="p0_n0" pos="0.00000 0.00000 0.00000" quat="1.000000 0.000000 0.000000 0.000000">
+      <freejoint name="raiz"/>
+      <geom name="g_p0_n0" size="0.13232 0.18854 0.09312" rgba="0.25 0.72 0.8 1"/>
+      <body name="p1_n1" pos="0.13342 0.00039 -0.19666" quat="0.276211 0.802337 0.485281 -0.210869">
+        <joint name="p1_n1_j0" axis="0.0000 1.0000 0.0000" pos="-0.17073 0 0" range="-68.55 68.55" damping="1.0534"/>
+        <joint name="p1_n1_j1" axis="0.0000 0.0000 1.0000" pos="-0.17073 0 0" range="-68.55 68.55" damping="1.0534"/>
+        <geom name="g_p1_n1" size="0.15073 0.20878 0.10312"/>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="m_p1_n1_j0" joint="p1_n1_j0" gear="21.0679"/>
+    <motor name="m_p1_n1_j1" joint="p1_n1_j1" gear="21.0679"/>
+  </actuator>
+</mujoco>

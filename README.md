@@ -22,11 +22,13 @@ siete tipos de articulación de Sims. Los cerebros anidados (uno por nodo, más
 centrales) se aplanan al desarrollar. Verificado con tres genomas escritos a
 mano que se ven en el visor (`Etapa 2 · los tres cuerpos juntos`).
 
-**Etapa 3 (en curso):** coevolución de cuerpo y cerebro para nado y caminata
+**Etapa 3 (cerrada):** coevolución de cuerpo y cerebro para nado y caminata
 (`src/evolve_morfo.py`). En caminata la criatura se asienta antes de medir y la
 aptitud es el mínimo entre tres pasos de integración, porque los saltadores son
-caóticos (BITACORA 0010). Cinco semillas por tarea; campeones en el visor
-(`Etapa 3 · campeones con cuerpo evolucionado`).
+caóticos (BITACORA 0010). Cinco semillas por tarea: nadadores de 2.3 a 7.2 m y
+caminantes de 3.1 a 4.7 m en 10 s, todos verificados al afinar el paso; campeones
+en el visor (`Etapa 3 · campeones con cuerpo evolucionado`). Tres trampas
+documentadas en el camino (BITACORA 0011 a 0013).
 
 Las decisiones de diseño y las trampas que encontraron las criaturas están en
 [BITACORA.md](BITACORA.md).
@@ -107,7 +109,7 @@ BITACORA.md          decisiones de diseño y trampas detectadas
 
 1. **Etapa 1**: cuerpo fijo, cerebro evolucionado, nado. *(cerrada)*
 2. **Etapa 2**: genoma morfológico de grafo dirigido con recursión y desarrollo a MJCF. *(cerrada)*
-3. **Etapa 3**: coevolución cuerpo + cerebro para nado y caminata. *(en curso)*
+3. **Etapa 3**: coevolución cuerpo + cerebro para nado y caminata. *(cerrada)*
 4. Etapa 4: seguimiento de luz con fotosensores.
 5. Etapa 5: competencia por un cubo y mundo compartido.
 

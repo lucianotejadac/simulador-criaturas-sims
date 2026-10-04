@@ -438,3 +438,66 @@ todas convergen al tope de 0.8 m, la alternativa es medir en largos de
 cuerpo; queda anotado, no decidido. El lote se relanzó por tercera vez,
 conservando `morfo-nado01`, cuyo campeón (3 piezas, 7.2 m) converge con la
 física corregida: 7.20, 6.96 y 6.82 m a 1/480, 1/960 y 1/1920 s.
+
+---
+
+## 0013 · 2026-10-04 · Cierre del lote de la Etapa 3 y la trampa del umbral
+
+**Trampa: la población aprende dónde está el umbral.** La verificación de
+consistencia en nado (0011) se aplicaba solo a criaturas con aptitud mayor
+que 8. En el tercer lanzamiento del lote, `morfo-nado02` y `morfo-nado04`
+terminaron con 8.00 y 7.98: justo debajo del umbral, y ninguna de las dos
+convergía (5.7 → 2.2 → 0.9 m y 4.4 → 0.1 → 0.03 m al afinar el paso). Se bajó
+el umbral a 1.0 y se repitieron: a la generación 7 la mejor valía 0.998 y la
+mediana 0.97. La población no "sabe" nada, pero la selección encuentra
+cualquier discontinuidad de la aptitud y se acomoda justo del lado barato.
+
+**Cambio.** La verificación es incondicional: toda criatura de nado que se
+mueva (aptitud > 0.05) se reevalúa a la mitad del paso; si cae a menos de la
+mitad, su aptitud es 0 con motivo "inconsistente"; si no, vale la menor. Las
+quietas, que se cortan a los 3 s, no pagan la segunda evaluación. Costo: dos
+evaluaciones por nadador. Lección de método: **un chequeo condicionado a la
+aptitud crea un umbral, y el umbral se convierte en objetivo**; las defensas
+contra artefactos tienen que ser uniformes o la evolución las rodea.
+
+Resultado final (distancias a 1/480, 1/960 y 1/1920 s):
+
+| corrida | tarea | aptitud | 1/480 | 1/960 | 1/1920 | piezas | dof | neuronas | nodos | gen del mejor | mediana final |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| morfo-nado01 | nado | 10.11 | 7.20 m | 6.96 m | 6.82 m | 3 | 2 | 2 | 7 | 59 | 9.57 |
+| morfo-nado02 | nado | 7.00 | 4.94 m | 4.93 m | 4.92 m | 5 | 9 | 5 | 8 | 59 | 6.67 |
+| morfo-nado03 | nado | 3.21 | 2.28 m | 2.24 m | 2.19 m | 4 | 9 | 12 | 1 | 57 | 3.20 |
+| morfo-nado04 | nado | 3.60 | 2.44 m | 2.39 m | 2.37 m | 4 | 6 | 2 | 8 | 59 | 3.48 |
+| morfo-nado05 | nado | 5.74 | 3.95 m | 3.95 m | 3.94 m | 3 | 4 | 2 | 8 | 60 | 5.37 |
+| morfo-cam01 | caminata | 4.77 | 3.17 m | 3.16 m | 1.49 m | 2 | 2 | 1 | 3 | 11 | 4.77 |
+| morfo-cam02 | caminata | 6.70 | 4.71 m | 4.63 m | 4.76 m | 2 | 2 | 3 | 5 | 53 | 6.70 |
+| morfo-cam03 | caminata | 5.49 | 3.98 m | 3.87 m | 4.06 m | 3 | 4 | 1 | 8 | 46 | 5.49 |
+| morfo-cam04 | caminata | 6.10 | 4.21 m | 4.33 m | 4.28 m | 3 | 3 | 5 | 8 | 57 | 6.07 |
+| morfo-cam05 | caminata | 4.60 | 3.13 m | 3.15 m | 3.03 m | 3 | 4 | 8 | 2 | 57 | 4.60 |
+
+
+**Qué se vio.**
+- **Nado.** Con la verificación incondicional, las cinco convergen a menos de
+  3 % al afinar el paso. Los cuerpos son chicos: `morfo-nado01` son tres placas
+  de 0.76 m con articulaciones flexión–torsión movidas por un oscilador central
+  (7.2 m); `morfo-nado02` cinco piezas con 9 grados de libertad (4.9 m);
+  `morfo-nado05` tres piezas (3.9 m). Solo dos superan a la cadena fija de la
+  Etapa 1 (4.6 m), y lo hacen con menos piezas. En este régimen viscoso, más
+  piezas no ayudan.
+- **Caminata.** Las cinco corridas convergen (cuatro dentro del 5 % al afinar
+  el paso) a cuerpos de 2 o 3 piezas y 2 a 4 grados de libertad: balancines y
+  reptadores que avanzan entre 3.1 y 4.7 m en 10 s. En todas hay un efector
+  que lee un sensor de ángulo con peso grande (reflejo saturado), el mismo
+  mecanismo que en la Etapa 1. La aptitud robusta (mínimo de tres pasos)
+  eliminó a los saltadores caóticos de las corridas de humo.
+- **Tamaño.** Ningún campeón se acerca al tope de 0.8 m por pieza (la mayor
+  mide 0.77 m), así que no hace falta medir en largos de cuerpo por ahora.
+- **Generación del mejor.** En nado el mejor aparece al final (gen 54 a 60);
+  en caminata, en `morfo-cam01` apareció en la generación 11 y no mejoró en
+  49 generaciones: con aptitud robusta y cuerpos de dos piezas, el paisaje es
+  plano.
+
+**Decisión.** La Etapa 3 cierra con este lote. Quedan para la bitácora de la
+Etapa 4 dos preguntas abiertas: si conviene premiar en largos de cuerpo, y si
+la recursión está sirviendo (los campeones usan pocos nodos; los cuerpos
+repetitivos aparecen en la población pero no ganan).

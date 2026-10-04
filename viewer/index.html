@@ -131,7 +131,7 @@ footer a{color:var(--accent)}
 
   <div class="grid">
     <div class="card">
-      <h2>Aptitud por generación <small>mejor · media · peor</small></h2>
+      <h2>Aptitud por generación <small id="chartsub">mejor · media · peor</small></h2>
       <svg class="chart" id="chart" viewBox="0 0 520 220" role="img" aria-label="Curvas mejor, media y peor por generación"></svg>
       <div class="leg"><span class="b">mejor</span><span class="m">media</span><span class="w">peor</span></div>
       <div class="load">
@@ -262,7 +262,7 @@ footer a{color:var(--accent)}
     nota.className='note';
     nota.textContent='Campeón de la corrida '+meta.corrida+': desplazó su centro de masa '+meta.distancia.toFixed(2)+' m en '+DUR+' s. La trayectoria viene de MuJoCo; el visor solo la reproduce.';
     $('panel-una').hidden=false; $('panel-carrera').hidden=true;
-    dibujarGrafico(d.log,null); t=0; resetCam();
+    dibujarGrafico(d.log,null); $('chartsub').textContent=meta.corrida+' · mejor · media · peor'; t=0; resetCam();
   }
   function esEjemplo(){ return $('vista').value.indexOf('ej-')===0; }
   function esSemilla(){ return $('vista').value.indexOf('sem-')===0; }
@@ -275,7 +275,7 @@ footer a{color:var(--accent)}
     var G=genActual(), k=parseInt($('cri').value,10)||0, c=G.criaturas[k]; DUR=F.meta.duracion;
     var piezas=c.piezas||F.piezas, bisagras=c.bisagras||F.bisagras;
     activas=[crearCriatura(piezas,bisagras,c.cuadros,F.meta.fps,PALETA[k%PALETA.length],0)];
-    activas[0].info={etiqueta:c.etiqueta,gen:esEjemplo()?'a mano':G.generacion};
+    activas[0].info={etiqueta:c.etiqueta,gen:esEjemplo()?'a mano':(esEtapa3()?(G.tarea+' · '+c.corrida):(esSemilla()?c.corrida:G.generacion))};
     barrasArticulares(bisagras);
     suelo(c.tarea||G.tarea||'nado');
     if(esEtapa3()){
@@ -309,7 +309,9 @@ footer a{color:var(--accent)}
     }
     $('brain').textContent=c.cerebro||'(sin neuronas: los efectores leen sensores o constantes)';
     $('panel-una').hidden=false; $('panel-carrera').hidden=true;
-    dibujarGrafico((galeria||campeon||{}).log,esEjemplo()?null:G.generacion); t=0; resetCam();
+    if(esEtapa3()&&c.log){ dibujarGrafico(c.log,c.generacion); $('chartsub').textContent=c.corrida+' · mejor · media · peor'; }
+    else { dibujarGrafico((galeria||campeon||{}).log,(esEjemplo()||esSemilla())?null:G.generacion); $('chartsub').textContent=(galeria||campeon||{meta:{}}).meta.corrida+' · mejor · media · peor'; }
+    t=0; resetCam();
   }
   function verCarrera(){
     limpiar(); var F=fuente(); if(!F)return;
@@ -319,7 +321,7 @@ footer a{color:var(--accent)}
     var n=orden.length, sep=(ej||e3)?1.8:1.0;
     activas=orden.map(function(k,lane){
       var c=G.criaturas[k], a=crearCriatura(c.piezas||F.piezas,c.bisagras||F.bisagras,c.cuadros,F.meta.fps,PALETA[lane%PALETA.length],(lane-(n-1)/2)*sep);
-      a.info={etiqueta:c.etiqueta,gen:ej?'a mano':G.generacion,aptitud:c.aptitud}; return a;
+      a.info={etiqueta:c.etiqueta,gen:ej?'a mano':(e3?G.tarea:(sem?'última':G.generacion)),aptitud:c.aptitud}; return a;
     });
     var body=$('race-body'); body.innerHTML='';
     orden.forEach(function(k,lane){
@@ -335,7 +337,9 @@ footer a{color:var(--accent)}
     nota.textContent=e3?('Etapa 3, '+G.tarea+': los campeones de cada semilla, con el cuerpo que les evolucionó. '+(G.tarea==='caminata'?'Gravedad y suelo con fricción; la distancia se mide después de asentarse.':'Agua sin gravedad, como en la Etapa 1.')):sem?('Carrera de los campeones de las cinco corridas (semillas 1 a 5): las tres mejores quedan a menos de 1 % entre sí, lo que sugiere un techo del cuerpo más que del cerebro.'):ej?('Etapa 2: los tres cuerpos diseñados a mano, desarrollados desde su genoma y simulados con cerebros escritos a mano. Las aletas, patas y segmentos repetidos salen del mismo nodo del genoma.')
       :('Carrera de la generación '+G.generacion+': '+n+' criaturas de las '+G.poblacion+' (la mejor, la mediana, la peor y algunas al azar), cada una en su carril. El color de la cabeza coincide con la tabla.');
     $('panel-una').hidden=true; $('panel-carrera').hidden=false;
-    dibujarGrafico((galeria||campeon||{}).log,ej?null:G.generacion); t=0; resetCam();
+    if(e3&&G.criaturas[orden[0]].log){ var mejor=G.criaturas[orden[0]]; dibujarGrafico(mejor.log,mejor.generacion); $('chartsub').textContent=mejor.corrida+' (la mejor de la carrera) · mejor · media · peor'; }
+    else { dibujarGrafico((galeria||campeon||{}).log,(ej||sem)?null:G.generacion); $('chartsub').textContent=(galeria||campeon||{meta:{}}).meta.corrida+' · mejor · media · peor'; }
+    t=0; resetCam();
   }
   function refrescarVista(){
     var v=$('vista').value, F=fuente(), ej=esEjemplo();
