@@ -175,7 +175,7 @@ footer a{color:var(--accent)}
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
   var scene=new THREE.Scene();
   scene.background=new THREE.Color(0x071a24);
-  scene.fog=new THREE.Fog(0x071a24,10,28);
+  scene.fog=new THREE.Fog(0x071a24,14,60);
   var camera=new THREE.PerspectiveCamera(42,2,0.1,200);
   scene.add(new THREE.HemisphereLight(0x9fd8e6,0x02070a,0.9));
   var sun=new THREE.DirectionalLight(0xffffff,0.9); sun.position.set(3,6,2); scene.add(sun);
@@ -402,7 +402,7 @@ footer a{color:var(--accent)}
 
   // ---------- Cámara ----------
   var cam={th:0.9,ph:1.15,r:3.4,target:new THREE.Vector3()};
-  function resetCam(){cam.th=0.9;cam.ph=1.15;cam.r=activas.length>1?3.4+activas.length*0.9:3.4;}
+  function resetCam(){cam.th=0.9;cam.ph=1.15;cam.r=activas.length>1?Math.min(14,3.4+activas.length*0.9):3.4;}
   var drag=null;
   stage.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY};stage.setPointerCapture(e.pointerId);});
   stage.addEventListener('pointermove',function(e){ if(!drag)return; cam.th-=(e.clientX-drag.x)*0.008; cam.ph=Math.max(0.15,Math.min(Math.PI-0.15,cam.ph-(e.clientY-drag.y)*0.008)); drag={x:e.clientX,y:e.clientY};});

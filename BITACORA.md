@@ -833,3 +833,74 @@ retardos y nunca remos.
 la comida (raya) o apenas (ciempiés): son el control. La raya, además, es la
 más pesada. Lo que les pase es resultado, no defecto. `REC_MAX` quedó en 6
 (la anguila pedía 8; se acortó a 6 segmentos).
+
+---
+
+## 0021 · 2026-10-05 · Etapa 6: el acuario, reglas de vida y primer resultado
+
+**Contexto.** El usuario propuso partir de varias criaturas conocidas
+conviviendo y dejar que evolucione. Es un cambio de paradigma: no hay
+generaciones ni una aptitud definida por nosotros. Hay energía, comida,
+reproducción y muerte, y lo que "gana" emerge (`src/ecosistema.py`).
+
+**Reglas de vida** (todas son decisiones nuestras sobre qué vida es posible):
+- Acuario de agua sin gravedad con 8 luces-comida dentro de un radio de 5 m.
+  Tocar una luz (centro de masa a menos de 0.35 m) da 60 de energía y la luz
+  reaparece en otro lugar al azar. Cada criatura percibe la luz más cercana.
+- Energía inicial 100. Costo por existir 0.03 por segundo y por kg, y por
+  moverse 0.004 por segundo y por N·m de torque aplicado: ser grande y
+  agitarse cuesta.
+- Con energía ≥ 160 se reproduce: una hija con 1 o 2 mutaciones nace a 1.2 m,
+  con 60 de energía que la madre cede. Si la cría no desarrolla un cuerpo
+  válido, no nace y la madre no gasta. Tope de 36 individuos.
+- Muerte a energía 0, a los 400 s de edad, o al alejarse más de 15 m.
+- **Épocas.** MuJoCo no agrega ni quita cuerpos en medio de una simulación: el
+  mundo se recompila cada 20 s. Nacimientos y muertes se aplican entre
+  épocas; cada sobreviviente conserva posición, orientación, ángulos
+  articulares y energía; el estado interno del cerebro se reinicia. Una
+  limitación técnica convertida en regla del mundo.
+- Costo de cómputo: 13 a 17 s por época de 20 s con 24 a 36 criaturas, o sea
+  más rápido que el tiempo real. Sin el cerebro compilado (0019) habría sido
+  diez veces más lento.
+
+**Primer acuario (`eco01`)**: seis especies del bestiario, cuatro de cada
+una, 30 épocas = 10 minutos de vida.
+
+| época | t (s) | anguila | pez | renacuajo | raya | ciempiés | remador | total |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 20 | 4 | 4 | 4 | 4 | 4 | 4 | 24 |
+| 7 | 140 | 4 | 4 | 4 | 4 | 1 | 6 | 23 |
+| 10 | 200 | 4 | 4 | 4 | 0 | 1 | 8 | 21 |
+| 13 | 260 | 7 | 1 | 4 | 0 | 0 | 10 | 22 |
+| 20 | 400 | 25 | 0 | 4 | 0 | 0 | 7 | 36 |
+| 25 | 500 | 35 | 0 | 0 | 0 | 0 | 1 | 36 |
+| 30 | 600 | 36 | 0 | 0 | 0 | 0 | 0 | 36 |
+
+**Qué se vio.**
+- **Primero mueren las que no saben girar.** El ciempiés (gira apenas) y la
+  raya (no gira, y es la más pesada) se extinguen antes de los 200 s sin haber
+  comido: gastan energía por masa y por torque y no encuentran comida. Las dos
+  entraron como control, y el control se cumplió.
+- **Después pierde la que no es rentable.** El pez cae a uno a los 260 s y a
+  cero a los 400: nada cinco veces más lento que la anguila con una masa
+  parecida. El renacuajo, de cabeza pesada, resiste sin reproducirse hasta
+  los 500 s.
+- **El remador tiene su momento.** Es el que más se reproduce al principio
+  (10 individuos a los 260 s): liviano y barato, aunque lento. Cuando la
+  anguila llena el acuario y la comida escasea, desaparece.
+- **Monocultivo en 25 épocas.** La anguila, la más rápida y la que mejor
+  gira, llega al tope de 36 individuos y es la única especie a los 500 s. Sus
+  descendientes ya mutan: el promedio de piezas bajó de 7 a 5.8, y hay
+  anguilas de 2 piezas que no comen y van a morir. La mutación no para porque
+  las anguilas de 7 segmentos sigan ganando.
+- **Un acuario con tope y comida constante no sostiene diversidad.** Es el
+  resultado esperable de la exclusión competitiva: un solo recurso, un solo
+  ganador. Para sostener varias especies harían falta nichos distintos
+  (comida de varios tipos o tamaños, zonas) o depredación.
+
+**Decisión.** La Etapa 6 queda abierta como laboratorio, no cerrada: las
+reglas de vida son parámetros y cada ajuste cambia qué vida es posible. Lo
+que sigue, si se sigue: un segundo acuario con comida de dos tipos (una que
+solo pueden comer los cuerpos chicos, otra los grandes) para ver si aparece
+coexistencia; y más tiempo, para ver si del monocultivo de anguilas sale
+algo nuevo.

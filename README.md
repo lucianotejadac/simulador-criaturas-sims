@@ -8,7 +8,7 @@ población.
 
 **Visor en vivo:** <https://lucianotejadac.github.io/simulador-criaturas-sims/viewer/>
 
-## Estado: hoja de ruta completa
+## Estado: hoja de ruta completa y un ecosistema abierto
 
 **Etapa 1 (cerrada):** cuerpo fijo (cadena de cuatro cajas unidas por tres
 bisagras) en agua sin gravedad. Solo evoluciona el cerebro: un grafo de neuronas
@@ -21,6 +21,14 @@ recursión, reflexión, escala y conexiones terminales, y desarrollo a MJCF con 
 siete tipos de articulación de Sims. Los cerebros anidados (uno por nodo, más
 centrales) se aplanan al desarrollar. Verificado con tres genomas escritos a
 mano que se ven en el visor (`Etapa 2 · los tres cuerpos juntos`).
+
+**Etapa 6 (abierta, laboratorio):** ecosistema. Un bestiario de seis especies
+acuáticas escritas a mano con fototaxis cableada (`src/genome/bestiario.py`) convive
+en un acuario con luces-comida, energía, reproducción y muerte, sin generaciones ni
+aptitud (`src/ecosistema.py`). El mundo se recompila por épocas de 20 s. En el
+primer acuario la anguila, la más rápida y la que mejor gira, forma un monocultivo
+a los 500 s (BITACORA 0020-0021). Requiere Numba (cerebro y arrastre compilados,
+BITACORA 0019).
 
 **Etapa 5 (cerrada):** competencia por un cubo entre dos especies que
 coevolucionan (`src/arena.py`, `src/evolve_duelo.py`): dos criaturas en el mismo
@@ -86,6 +94,10 @@ python src/linaje.py --corridas pez-cam01 --generaciones 1,10,20,30,40,50,60
 # Etapa 5: dos especies por el cubo
 python src/evolve_duelo.py --nombre duelo01 --semilla 1 --ancestro pez --generaciones 50 --poblacion 100
 
+# Etapa 6: bestiario y acuario (30 épocas de 20 s, seis especies, cuatro de cada una)
+python src/bestiario_export.py
+python src/ecosistema.py --nombre eco01 --semilla 1 --epocas 30 --especies anguila,pez,renacuajo,raya,ciempies_acuatico,remador --por-especie 4
+
 # tests
 python -m pytest -q tests
 
@@ -119,6 +131,10 @@ src/
   linaje.py          el mejor de varias generaciones de una corrida -> viewer/linaje.json
   arena.py           dos criaturas y un cubo en el mismo mundo; aptitud del duelo (Etapa 5)
   evolve_duelo.py    coevolución de dos especies, todos contra el mejor -> viewer/duelos.json
+  brain_rapido.py    cerebro compilado con Numba (misma semántica que brain.py)
+  genome/bestiario.py seis especies a mano con fototaxis cableada
+  bestiario_export.py bestiario -> viewer/bestiario.json
+  ecosistema.py      acuario con energía, comida, reproducción y muerte -> viewer/acuario.json
   brain.py           ejecución del grafo neuronal
   fluido.py          arrastre viscoso por cara (modelo de agua de Sims)
   fitness.py         evaluación y aptitud de nado
@@ -137,7 +153,8 @@ BITACORA.md          decisiones de diseño y trampas detectadas
 2. **Etapa 2**: genoma morfológico de grafo dirigido con recursión y desarrollo a MJCF. *(cerrada)*
 3. **Etapa 3**: coevolución cuerpo + cerebro para nado y caminata. *(cerrada)*
 4. **Etapa 4**: ancestro pez, pez fuera del agua y seguimiento de luz. *(cerrada)*
-5. **Etapa 5**: competencia por un cubo entre dos especies. *(cerrada; el mundo compartido con recursos queda como extensión)*
+5. **Etapa 5**: competencia por un cubo entre dos especies. *(cerrada)*
+6. **Etapa 6**: bestiario y ecosistema con energía y comida. *(abierta como laboratorio)*
 
 ## Referencias
 
