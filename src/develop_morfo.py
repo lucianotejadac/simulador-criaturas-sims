@@ -191,6 +191,11 @@ def _aplanar_cerebro(g: dict, piezas: list) -> dict:
             neuronas.append((neu, p))
         sensor += len(p.ejes)
         efector += len(p.ejes)
+    # Fotosensores (Etapa 4): tres componentes por pieza, después de los ángulos.
+    n_dof_total = sensor
+    for k, p in enumerate(piezas):
+        p.base_luz = n_dof_total + 3 * k
+    sensor = n_dof_total + 3 * len(piezas)
     raiz = piezas[0]
 
     # Una referencia que no existe en esta instancia (por ejemplo "p" a una
@@ -209,6 +214,8 @@ def _aplanar_cerebro(g: dict, piezas: list) -> dict:
             return nada
         if t == "s":
             return ["s", p.base_sensor + r, -w if p.espejo else w] if r < len(p.ejes) else nada
+        if t == "l":
+            return ["s", p.base_luz + r, w] if 0 <= r < 3 else nada
         if t == "n":
             return ["n", p.ids_locales[r], w] if r in p.ids_locales else nada
         if t == "p":
@@ -223,7 +230,8 @@ def _aplanar_cerebro(g: dict, piezas: list) -> dict:
         nodo = g["nodos"][p.nodo_idx]
         for k in range(len(p.ejes)):
             efectores.append(resolver(nodo["efectores"][k], p))
-    return {"n_sensores": sensor, "neuronas": plano, "efectores": efectores}
+    return {"n_sensores": sensor, "n_dof": n_dof_total, "neuronas": plano, "efectores": efectores,
+            "espejos": [bool(p.espejo) for p in piezas]}
 
 
 def desarrollar(g: dict, gravedad: bool = False, paso: float = PASO_FISICA,

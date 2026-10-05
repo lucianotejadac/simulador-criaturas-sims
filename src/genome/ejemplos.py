@@ -80,4 +80,23 @@ def bilateral() -> dict:
     return {"siguiente_id": 10, "raiz": 0, "nodos": [cabeza, aleta, cola], "central": []}
 
 
-EJEMPLOS = {"cadena4": cadena4, "ciempies": ciempies, "bilateral": bilateral}
+def pez() -> dict:
+    """Ancestro de la Etapa 4: cabeza, cola recursiva que se afina (escala 0.85),
+    aleta caudal vertical en el último segmento (conexión solo terminal) y un
+    par de aletas pectorales reflejadas con articulación universal."""
+    cabeza = _nodo((0.30, 0.18, 0.16), "rigida", 60, 1,
+                   [_neu(OSC, "oscillate-wave", ["c", 0, 1.0], ["c", 0, 1.6], ["c", 0, 0.0]),
+                    _neu(OSC_Q, "oscillate-wave", ["c", 0, 1.0], ["c", 0, 1.6], ["c", 0, 1.5708])],
+                   [], [_con(1, 0),
+                        _con(3, 2, u=0.2, v=-0.3, rot=(0, 0, -25)),
+                        _con(3, 2, u=0.2, v=-0.3, rot=(0, 0, -25), reflejo=True)])
+    cola = _segmento_con_lag((0.26, 0.15, 0.13), "bisagra", 60, 5,
+                             [_con(1, 0, escala=0.85), _con(2, 0, terminal=True)], ganancia=2.2)
+    caudal = _nodo((0.16, 0.04, 0.34), "bisagra", 35, 1, [],
+                   [["p", LAG, 1.3]], [])
+    pectoral = _nodo((0.20, 0.16, 0.04), "universal", 40, 1, [],
+                     [["p", OSC_Q, 0.8], ["p", OSC, 0.8]], [])
+    return {"siguiente_id": 10, "raiz": 0, "nodos": [cabeza, cola, caudal, pectoral], "central": []}
+
+
+EJEMPLOS = {"cadena4": cadena4, "ciempies": ciempies, "bilateral": bilateral, "pez": pez}

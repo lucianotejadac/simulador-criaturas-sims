@@ -43,7 +43,7 @@ def _evaluar(args: tuple) -> dict:
     except ValueError as e:
         return {"aptitud": 0.0, "distancia": 0.0, "motivo": "invalido:" + str(e), "n_piezas": 0, "n_dof": 0}
     res = tareas.evaluar(model, data, r["cerebro"], tarea, duracion=duracion)
-    if tarea == "nado" and res["aptitud"] > UMBRAL_SOSPECHA_NADO:
+    if tarea in ("nado", "luz") and res["aptitud"] > (UMBRAL_SOSPECHA_NADO if tarea == "nado" else 0.005):
         # Todo nadador que avanza se reevalúa a la mitad del paso: si no es
         # consistente, es un artefacto numérico y no cuenta (BITACORA 0011).
         m2, d2, r2 = tareas.compilar_tarea(genoma, tarea, dm.PASO_FISICA / 2)
@@ -118,20 +118,40 @@ def siguiente_generacion(pob: list, apt: list, rng: random.Random, tarea: str, c
     return nueva
 
 
+def poblacion_inicial(rng: random.Random, poblacion: int, tarea: str, contador: dict,
+                      ancestro: str | None) -> list:
+    """Genomas aleatorios, o el ancestro más mutantes suyos (1 a 3 mutaciones)."""
+    if not ancestro:
+        return [cria_valida(lambda: morph.genoma_aleatorio(rng), rng, tarea, contador) for _ in range(poblacion)]
+    from genome import ejemplos
+    base = ejemplos.EJEMPLOS[ancestro]()
+    if not cuerpo_valido(base, tarea):
+        raise SystemExit(f"el ancestro {ancestro} no es válido para {tarea}")
+
+    def mutante():
+        g = base
+        for _ in range(rng.randint(1, 3)):
+            g = morph.mutar(g, rng)
+        return g
+    return [json.loads(json.dumps(base))] + [cria_valida(mutante, rng, tarea, contador) for _ in range(poblacion - 1)]
+
+
 def correr(nombre: str, tarea: str, generaciones: int, poblacion: int, semilla: int,
-           procesos: int, duracion: float) -> dict:
+           procesos: int, duracion: float, ancestro: str | None = None) -> dict:
     rng = random.Random(semilla)
     carpeta = os.path.join(RAIZ, "runs", nombre)
     os.makedirs(os.path.join(carpeta, "poblacion"), exist_ok=True)
     with open(os.path.join(carpeta, "config.json"), "w", encoding="utf-8") as f:
         json.dump({"nombre": nombre, "etapa": 3, "tarea": tarea, "generaciones": generaciones,
                    "poblacion": poblacion, "semilla": semilla, "procesos": procesos, "duracion": duracion,
-                   "cuerpo": "genoma morfológico", "k_fuerza": develop.K_FUERZA, "paso_fisica": dm.PASO_FISICA,
+                   "cuerpo": "genoma morfológico", "ancestro": ancestro, "k_fuerza": develop.K_FUERZA,
+                   "paso_fisica": dm.PASO_FISICA,
                    "pasos_cerebro_por_fisica": fitness.PASOS_CEREBRO_POR_FISICA,
                    "mujoco": mujoco.__version__}, f, indent=2, ensure_ascii=False)
     contador = {"rechazadas": 0, "forzadas": 0}
-    pob = [cria_valida(lambda: morph.genoma_aleatorio(rng), rng, tarea, contador) for _ in range(poblacion)]
-    print(f"población inicial: {contador['rechazadas']} genomas rechazados para llenar {poblacion}", flush=True)
+    pob = poblacion_inicial(rng, poblacion, tarea, contador, ancestro)
+    print(f"población inicial{' desde ' + ancestro if ancestro else ''}: "
+          f"{contador['rechazadas']} genomas rechazados para llenar {poblacion}", flush=True)
     log_path = os.path.join(carpeta, "log.csv")
     with open(log_path, "w", newline="", encoding="utf-8") as f:
         csv.writer(f).writerow(["generacion", "mejor", "media", "peor", "mediana", "piezas_mejor",
@@ -197,7 +217,8 @@ def exportar_campeon(nombre: str, fps: int = 60, copiar_a_viewer: bool = False) 
                        "poblacion": config["poblacion"], "aptitud": campeon["aptitud"], "distancia": res["distancia"],
                        "duracion": config["duracion"], "fps": fps, "mujoco": config.get("mujoco"),
                        "n_neuronas": len(r["cerebro"]["neuronas"]), "n_piezas": len(piezas), "n_dof": r["n_dof"],
-                       "cerebro": morph.describir(campeon["genoma"]), "torque_max": None},
+                       "cerebro": morph.describir(campeon["genoma"]), "torque_max": None,
+                       "luz": res.get("luz"), "velocidades": res.get("velocidades")},
               "genoma": r["cerebro"], "genoma_morfo": campeon["genoma"],
               "piezas": piezas, "bisagras": bisagras, "log": log, "cuadros": res["cuadros"]}
     destino = os.path.join(carpeta, "campeon_trayectoria.json")
@@ -211,15 +232,16 @@ def exportar_campeon(nombre: str, fps: int = 60, copiar_a_viewer: bool = False) 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Coevolución cuerpo + cerebro (Etapa 3).")
     ap.add_argument("--nombre", default="morfo-nado01")
-    ap.add_argument("--tarea", choices=["nado", "caminata"], default="nado")
+    ap.add_argument("--tarea", choices=["nado", "caminata", "luz"], default="nado")
     ap.add_argument("--generaciones", type=int, default=60)
     ap.add_argument("--poblacion", type=int, default=200)
     ap.add_argument("--semilla", type=int, default=1)
     ap.add_argument("--procesos", type=int, default=max(1, cpu_count() - 2))
     ap.add_argument("--duracion", type=float, default=10.0)
+    ap.add_argument("--ancestro", default=None, help="genoma de genome/ejemplos.py para sembrar la población (p. ej. pez)")
     ap.add_argument("--sin-exportar", action="store_true")
     a = ap.parse_args()
-    correr(a.nombre, a.tarea, a.generaciones, a.poblacion, a.semilla, a.procesos, a.duracion)
+    correr(a.nombre, a.tarea, a.generaciones, a.poblacion, a.semilla, a.procesos, a.duracion, a.ancestro)
     if not a.sin_exportar:
         exportar_campeon(a.nombre)
 

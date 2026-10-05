@@ -3,7 +3,7 @@
   <option timestep="0.002083" gravity="0 0 0" integrator="implicitfast"/>
   <default>
     <geom type="box" density="300.0" rgba="0.85 0.89 0.92 1"/>
-    <joint type="hinge" damping="0.3"/>
+    <joint type="hinge"/>
     <motor ctrlrange="-1 1"/>
   </default>
   <worldbody>
@@ -11,20 +11,20 @@
       <freejoint name="raiz"/>
       <geom name="g_p0_n0" size="0.17500 0.12500 0.06000" rgba="0.25 0.72 0.8 1"/>
       <body name="p1_n1" pos="0.00000 0.28475 -0.04614" quat="0.579228 0.405580 0.579228 0.405580">
-        <joint name="p1_n1_j0" axis="0.0000 1.0000 0.0000" pos="-0.17000 0 0" range="-45.00 45.00"/>
-        <joint name="p1_n1_j1" axis="0.0000 0.0000 1.0000" pos="-0.17000 0 0" range="-45.00 45.00"/>
+        <joint name="p1_n1_j0" axis="0.0000 1.0000 0.0000" pos="-0.17000 0 0" range="-45.00 45.00" damping="0.4000"/>
+        <joint name="p1_n1_j1" axis="0.0000 0.0000 1.0000" pos="-0.17000 0 0" range="-45.00 45.00" damping="0.4000"/>
         <geom name="g_p1_n1" size="0.15000 0.10000 0.02000"/>
       </body>
       <body name="p2_n1" pos="0.00000 -0.28475 -0.04614" quat="0.579228 -0.405580 0.579228 -0.405580">
-        <joint name="p2_n1_j0" axis="0.0000 -1.0000 0.0000" pos="-0.17000 0 0" range="-45.00 45.00"/>
-        <joint name="p2_n1_j1" axis="0.0000 0.0000 1.0000" pos="-0.17000 0 0" range="-45.00 45.00"/>
+        <joint name="p2_n1_j0" axis="0.0000 -1.0000 0.0000" pos="-0.17000 0 0" range="-45.00 45.00" damping="0.4000"/>
+        <joint name="p2_n1_j1" axis="0.0000 0.0000 1.0000" pos="-0.17000 0 0" range="-45.00 45.00" damping="0.4000"/>
         <geom name="g_p2_n1" size="0.15000 0.10000 0.02000"/>
       </body>
       <body name="p3_n2" pos="-0.34500 0.00000 0.00000" quat="0.000000 0.000000 1.000000 0.000000">
-        <joint name="p3_n2_j0" axis="0.0000 0.0000 1.0000" pos="-0.17000 0 0" range="-50.00 50.00"/>
+        <joint name="p3_n2_j0" axis="0.0000 0.0000 1.0000" pos="-0.17000 0 0" range="-50.00 50.00" damping="0.3200"/>
         <geom name="g_p3_n2" size="0.15000 0.04000 0.04000"/>
         <body name="p4_n2" pos="0.29000 0.00000 0.00000" quat="1.000000 0.000000 0.000000 0.000000">
-          <joint name="p4_n2_j0" axis="0.0000 0.0000 1.0000" pos="-0.14000 0 0" range="-50.00 50.00"/>
+          <joint name="p4_n2_j0" axis="0.0000 0.0000 1.0000" pos="-0.14000 0 0" range="-50.00 50.00" damping="0.2048"/>
           <geom name="g_p4_n2" size="0.12000 0.03200 0.03200"/>
         </body>
       </body>

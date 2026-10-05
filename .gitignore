@@ -13,3 +13,8 @@ runs/semillas.err
 runs/etapa3.json
 runs/lote_etapa3.log
 runs/lote_etapa3.err
+runs/lote_pez_cam.log
+runs/lote_pez_cam.err
+runs/lote_pez_luz.log
+runs/lote_pez_luz.err
+runs/linaje*.json

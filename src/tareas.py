@@ -89,7 +89,8 @@ def evaluar_caminata(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
     paso_final = int(round(0.8 * duracion / dt))
     d_08 = 0.0
     cuadros = []
-    sens = sensores_angulo(model, data, lim)
+    relleno = [0.0] * max(0, genoma.get("n_sensores", len(lim)) - len(lim))   # fotosensores apagados
+    sens = sensores_angulo(model, data, lim) + relleno
     motivo = "completa"
 
     def d_xy() -> float:
@@ -105,7 +106,7 @@ def evaluar_caminata(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
         else:
             data.ctrl[:] = salida
         mujoco.mj_step(model, data)
-        sens = sensores_angulo(model, data, lim)
+        sens = sensores_angulo(model, data, lim) + relleno
         if grabar_cada and k % grabar_cada == 0:
             com = centro_de_masa(model, data)
             cuadros.append({
@@ -159,4 +160,8 @@ def evaluar(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict, tarea: str
                                     tau_activacion=tau_activacion)
     if tarea == "caminata":
         return evaluar_caminata(model, data, genoma, duracion, grabar_cada, cortar_temprano, tau_activacion)
+    if tarea == "luz":
+        from luz import evaluar_luz
+        return evaluar_luz(model, data, genoma, genoma.get("espejos", []), grabar_cada=grabar_cada,
+                           cortar_temprano=cortar_temprano, tau_activacion=tau_activacion)
     raise ValueError("tarea desconocida: " + tarea)

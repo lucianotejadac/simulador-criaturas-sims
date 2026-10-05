@@ -14,6 +14,7 @@ nodo   = {"dims": [x, y, z] (m), "art": tipo de articulación, "limite": grados,
 neurona  = {"id": int, "f": función de Sims, "in": [entrada...]}
 entrada  = [tipo, ref, peso]
     "s"  sensor local: ángulo del grado de libertad `ref` de la propia articulación
+    "l"  fotosensor local: componente `ref` (0, 1, 2) de la dirección a la luz en el marco de la pieza
     "n"  neurona local con id `ref`
     "p"  neurona con id `ref` del nodo madre (en la instancia concreta)
     "g"  neurona central con id `ref`
@@ -45,8 +46,8 @@ MAX_PIEZAS = 16
 MAX_NEURONAS_NODO = 12
 MAX_CENTRALES = 8
 DIM_MIN, DIM_MAX = 0.04, 0.8
-REC_MAX = 4
-TIPOS_LOCALES = ("s", "n", "p", "g", "c")
+REC_MAX = 6   # el ancestro pez usa 5 segmentos (Etapa 4)
+TIPOS_LOCALES = ("s", "n", "p", "g", "c", "l")
 TIPOS_CENTRALES = ("g", "r", "c")
 
 
@@ -84,6 +85,7 @@ def entrada_aleatoria(rng: random.Random, g: dict, nodo: dict | None, central: b
     nd = n_dof(nodo["art"])
     if nd:
         opciones += [("s", list(range(nd)))] * 2
+    opciones.append(("l", [0, 1, 2]))   # fotosensor (Etapa 4): dirección a la luz
     if nodo["neuronas"]:
         opciones += [("n", _ids(nodo["neuronas"]))] * 2
     # Madre: cualquier nodo que conecte a este; si no se sabe, cualquier neurona del genoma.
@@ -167,6 +169,8 @@ def es_valido(g: dict) -> bool:
             if e[0] not in TIPOS_LOCALES:
                 return False
             if e[0] == "s" and not (0 <= e[1] < max(1, n_dof(x["art"]))):
+                return False
+            if e[0] == "l" and not (0 <= e[1] < 3):
                 return False
         for c in x["conexiones"]:
             if not (0 <= c["a"] < len(nodos)) or not (0 <= c["cara"] < 6):

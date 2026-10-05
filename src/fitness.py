@@ -74,7 +74,8 @@ def evaluar_nado(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
     paso_final = int(round(0.8 * duracion / dt))
     d_08 = 0.0
     cuadros = []
-    sens = sensores_angulo(model, data, lim)
+    relleno = [0.0] * max(0, genoma.get("n_sensores", len(lim)) - len(lim))   # fotosensores apagados
+    sens = sensores_angulo(model, data, lim) + relleno
     motivo = "completa"
     for k in range(n_pasos):
         salida = None
@@ -87,7 +88,7 @@ def evaluar_nado(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
             data.ctrl[:] = salida
         arrastre.aplicar(model, data)
         mujoco.mj_step(model, data)
-        sens = sensores_angulo(model, data, lim)
+        sens = sensores_angulo(model, data, lim) + relleno
         if grabar_cada and k % grabar_cada == 0:
             com = centro_de_masa(model, data)
             cuadros.append({

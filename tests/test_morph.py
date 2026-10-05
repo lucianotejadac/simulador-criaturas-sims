@@ -56,7 +56,7 @@ def test_cadena4_reproduce_la_etapa_1():
     # La onda viajera: cada segmento lee a su madre. El primer segmento lee la
     # oscilación de la cabeza; los siguientes, el retardo del segmento anterior.
     cer = r["cerebro"]
-    assert cer["n_sensores"] == 3 and len(cer["efectores"]) == 3
+    assert cer["n_dof"] == 3 and cer["n_sensores"] == 3 + 3 * 4 and len(cer["efectores"]) == 3   # ángulos + fotosensores
     assert all(e[0] == "n" for e in cer["efectores"])
     d = mujoco.MjData(m)
     assert not dm.interpenetra(m, d)
