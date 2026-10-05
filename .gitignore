@@ -24,3 +24,7 @@ runs/lote_eco.log
 runs/lote_eco.err
 runs/lote_eco2d.log
 runs/lote_eco2d.err
+runs/lote_eco2d0*.log
+runs/lote_eco2d0*.err
+runs/lote_sopa*.log
+runs/lote_sopa*.err

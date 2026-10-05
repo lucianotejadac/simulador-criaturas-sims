@@ -64,8 +64,10 @@ def _instanciar(g, nodo_idx, madre, conexion, contador, segs, espejo, escala):
             desvio = -desvio
         # el segmento nace SEPARACION más allá del anclaje a lo largo de su eje
         area = min(ancho, madre.ancho) * ESPESOR
+        rigida = nodo["art"] == "rigida"      # sin grado de libertad: tope en 0 y sin músculo
         seg = Segmento(nodo_idx, madre.indice, anclaje, desvio, largo, ancho,
-                       K_FUERZA * area * (-1.0 if espejo else 1.0), math.radians(nodo["limite"]), espejo)
+                       0.0 if rigida else K_FUERZA * area * (-1.0 if espejo else 1.0),
+                       0.0 if rigida else math.radians(nodo["limite"]), espejo)
     seg.indice = len(segs)
     segs.append(seg)
     contador = dict(contador)
@@ -136,13 +138,14 @@ def _aplanar(g, segs):
     return {"n_sensores": n_sensores, "n_dof": n_dof, "neuronas": plano, "efectores": efectores}
 
 
-def desarrollar2d(g: dict) -> dict:
-    """Genoma -> segmentos 2D y cerebro plano. ValueError si no hay articulaciones o hay demasiadas piezas."""
+def desarrollar2d(g: dict, permitir_uno: bool = False) -> dict:
+    """Genoma -> segmentos 2D y cerebro plano. ValueError si no hay articulaciones (salvo
+    `permitir_uno`, para la sopa primitiva: una caja sola que no puede moverse) o hay demasiadas piezas."""
     segs: list[Segmento] = []
     _instanciar(g, g["raiz"], None, None, {}, segs, False, 1.0)
     if len(segs) >= MAX_SEGMENTOS:
         raise ValueError("demasiadas piezas")
-    if len(segs) < 2:
+    if len(segs) < 2 and not permitir_uno:
         raise ValueError("cuerpo sin grados de libertad")
     return {"segmentos": segs, "cerebro": _aplanar(g, segs), "n": len(segs)}
 

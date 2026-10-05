@@ -52,6 +52,16 @@ EDAD_MAXIMA = 400.0
 POBLACION_MAXIMA = 500
 MUTACIONES = (1, 2)
 
+# Sopa primitiva (BITACORA 0024): cajas sueltas que no pueden moverse, agitación browniana y comida en manchas.
+SOPA = {"agitacion": 0.0, "manchas": False, "radio_mancha": 3.0, "p_mancha": 0.8}
+
+
+def genoma_caja(rng: random.Random) -> dict:
+    """Una caja sola, sin articulaciones ni cerebro útil: el ancestro de la sopa."""
+    return {"siguiente_id": 1, "raiz": 0, "central": [],
+            "nodos": [{"dims": [rng.uniform(0.12, 0.3), rng.uniform(0.06, 0.15), 0.08], "art": "rigida",
+                       "limite": 60.0, "rec": 1, "neuronas": [], "efectores": [], "conexiones": []}]}
+
 
 class Individuo:
     __slots__ = ("id", "especie", "genoma", "des", "pose", "theta", "energia", "madre", "nacimiento",
@@ -66,6 +76,41 @@ class Individuo:
         segs = des["segmentos"]
         self.largo_total = sum(s.largo for s in segs)
         self.masa = sum(s.largo * s.ancho * 0.08 * 300.0 for s in segs)
+
+
+def nada_solo(genoma: dict, T: float = 20.0) -> float:
+    """Desplazamiento (m) de la criatura sola, sin agitación, con una luz fija lejos: ¿nada de verdad?"""
+    des = develop2d.desarrollar2d(genoma, permitir_uno=True)
+    lote = develop2d.lote_desde([des])
+    sg = develop2d.signos_torque([des], lote.N)
+    cer = CerebrosLote([des["cerebro"]], DT_CEREBRO)
+    k_cer = max(1, int(round(DT / DT_CEREBRO)))
+    nd = des["cerebro"]["n_dof"]
+    ctrl = np.zeros((1, lote.N))
+    luz = np.array([30.0, 0.0])
+    com0 = lote.centro_de_masa()[0].copy()
+    for _ in range(int(round(T / DT))):
+        centro, phi, com = lote.cinematica()
+        j = 0
+        for sgm in des["segmentos"]:
+            if sgm.madre >= 0:
+                cer.sens[j] = max(-1.0, min(1.0, lote.theta[0, sgm.indice] / max(1e-3, lote.limite[0, sgm.indice]))); j += 1
+        for sgm in des["segmentos"]:
+            i = sgm.indice
+            dx, dy = luz[0] - centro[0, i, 0], luz[1] - centro[0, i, 1]
+            r = math.hypot(dx, dy) or 1e-9
+            c, sn = math.cos(phi[0, i]), math.sin(phi[0, i])
+            cer.sens[nd + 2 * i] = (c * dx + sn * dy) / r
+            cer.sens[nd + 2 * i + 1] = (-sn * dx + c * dy) / r
+        sal = cer.pasos(k_cer)
+        obj = np.zeros((1, lote.N))
+        j = 0
+        for sgm in des["segmentos"]:
+            if sgm.madre >= 0:
+                obj[0, sgm.indice] = sal[j]; j += 1
+        ctrl += (obj - ctrl) * min(1.0, DT / TAU_ACTIVACION)
+        lote.paso(ctrl * sg, DT)
+    return float(np.hypot(*(lote.centro_de_masa()[0] - com0)))
 
 
 def _envolver(x: np.ndarray) -> np.ndarray:
@@ -102,9 +147,10 @@ class Epoca:
                     ia_b.append(b); ia_s.append(s.indice); ia_k.append(so + j); j += 1
                     ef_b.append(b); ef_s.append(s.indice)
                 il_b.append(b); il_s.append(s.indice); il_k.append(so + nd + 2 * s.indice)
-        self.ia_b, self.ia_s, self.ia_k = np.array(ia_b), np.array(ia_s), np.array(ia_k)
-        self.il_b, self.il_s, self.il_k = np.array(il_b), np.array(il_s), np.array(il_k)
-        self.ef_b, self.ef_s = np.array(ef_b), np.array(ef_s)
+        ent = lambda v: np.array(v, dtype=int)   # noqa: E731  (vacíos en la sopa: sin articulaciones)
+        self.ia_b, self.ia_s, self.ia_k = ent(ia_b), ent(ia_s), ent(ia_k)
+        self.il_b, self.il_s, self.il_k = ent(il_b), ent(il_s), ent(il_k)
+        self.ef_b, self.ef_s = ent(ef_b), ent(ef_s)
         self.ctrl = np.zeros((B, N))
         self.k_cerebro = max(1, int(round(DT / DT_CEREBRO)))
         self.masa = np.array([i.masa for i in individuos])
@@ -112,6 +158,7 @@ class Epoca:
         self.come_grande = np.array([i.masa >= MASA_GRANDE for i in individuos])
         self.energia = np.array([i.energia for i in individuos])
         self.comidas = np.zeros(B, dtype=int)
+        self.pose_inicial = self.lote.pose.copy()
 
     def paso(self, comida: np.ndarray, rng: np.random.Generator) -> dict:
         lote, cer = self.lote, self.cer
@@ -140,10 +187,14 @@ class Epoca:
                 else:
                     n_grande += 1
                 comida[f, 3] = 0
-            # reaparecer
-            muertas = comida[:, 3] <= 0
-            comida[muertas, :2] = rng.uniform(-MUNDO / 2, MUNDO / 2, size=(int(muertas.sum()), 2))
-            comida[muertas, 3] = 1
+            # reaparecer: uniforme, o cerca de donde estaba (comida en manchas)
+            muertas = np.flatnonzero(comida[:, 3] <= 0)
+            for f in muertas:
+                if SOPA["manchas"] and rng.random() < SOPA["p_mancha"]:
+                    comida[f, :2] = _envolver(comida[f, :2] + rng.normal(0.0, SOPA["radio_mancha"], size=2))
+                else:
+                    comida[f, :2] = rng.uniform(-MUNDO / 2, MUNDO / 2, size=2)
+                comida[f, 3] = 1
             d = _envolver(comida[None, :, :2] - com[:, None, :])
             dist = np.hypot(d[..., 0], d[..., 1])
             dist_ok = np.where(permitido, dist, np.inf)
@@ -164,6 +215,9 @@ class Epoca:
         obj[self.ef_b, self.ef_s] = sal
         self.ctrl += (obj - self.ctrl) * min(1.0, DT / TAU_ACTIVACION)
         lote.paso(self.ctrl * self.signos, DT)
+        if SOPA["agitacion"] > 0.0:
+            lote.pose[:, :2] += rng.normal(0.0, SOPA["agitacion"] * math.sqrt(DT), size=(self.B, 2))
+            lote.pose[:, 2] += rng.normal(0.0, 0.5 * SOPA["agitacion"] * math.sqrt(DT), size=self.B)
         lote.pose[:, :2] = _envolver(lote.pose[:, :2])
         torque = np.abs(self.ctrl * lote.torque_max).sum(1)
         self.energia -= (COSTO_MASA * self.masa + COSTO_TORQUE * torque) * DT
@@ -178,7 +232,14 @@ def correr(nombre: str, semilla: int, epocas: int, especies: list[str], por_espe
     os.makedirs(carpeta, exist_ok=True)
     individuos: list[Individuo] = []
     sig = 0
-    for esp in especies:
+    if especies == ["sopa"]:
+        for _ in range(por_especie):
+            g = genoma_caja(rng)
+            des = develop2d.desarrollar2d(g, permitir_uno=True)
+            pose = (nrng.uniform(-MUNDO / 2, MUNDO / 2), nrng.uniform(-MUNDO / 2, MUNDO / 2), nrng.uniform(-math.pi, math.pi))
+            individuos.append(Individuo(sig, "sopa", g, des, pose, E0, None, 0.0))
+            sig += 1
+    for esp in [e for e in especies if e != "sopa"]:
         g = bestiario.especie(esp)
         des = develop2d.desarrollar2d(g)
         for _ in range(por_especie):
@@ -190,13 +251,15 @@ def correr(nombre: str, semilla: int, epocas: int, especies: list[str], por_espe
     comida[N_CHICA:, 2] = 1
     comida[:, 3] = 1
     config = {"nombre": nombre, "etapa": 7, "semilla": semilla, "epocas": epocas, "t_epoca": T_EPOCA, "mundo": MUNDO,
-              "especies": especies, "por_especie": por_especie, "reglas": {
+              "especies": especies, "por_especie": por_especie, "sopa": dict(SOPA), "reglas": {
                   "n_chica": N_CHICA, "n_grande": N_GRANDE, "e_chica": E_CHICA, "e_grande": E_GRANDE,
                   "largo_chico": LARGO_CHICO, "masa_grande": MASA_GRANDE, "radio_comer": RADIO_COMER,
                   "e0": E0, "e_repro": E_REPRO, "e_cria": E_CRIA, "costo_masa": COSTO_MASA, "costo_torque": COSTO_TORQUE,
                   "edad_maxima": EDAD_MAXIMA, "poblacion_maxima": POBLACION_MAXIMA, "dt": DT, "dt_cerebro": DT_CEREBRO}}
     json.dump(config, open(os.path.join(carpeta, "config.json"), "w", encoding="utf-8"), indent=2, ensure_ascii=False)
     historia, grabaciones = [], []
+    primer_nadador = None
+    nadadores, nadadores_vistos = [], set()
     t_global = 0.0
     t0 = time.time()
     pasos = int(round(T_EPOCA / DT))
@@ -219,6 +282,7 @@ def correr(nombre: str, semilla: int, epocas: int, especies: list[str], por_espe
                 cuadros.append(np.concatenate([centro, phi[..., None]], axis=2).round(3).tolist())
                 cuadros_comida.append(comida[:, :3].round(2).tolist())
         t_global += T_EPOCA
+        individuos_epoca = individuos
         for b, ind in enumerate(individuos):
             ind.pose = E.lote.pose[b].copy()
             ind.theta = E.lote.theta[b].copy()
@@ -246,7 +310,7 @@ def correr(nombre: str, semilla: int, epocas: int, especies: list[str], por_espe
             for _ in range(rng.randint(*MUTACIONES)):
                 g = morph.mutar(g, rng)
             try:
-                des = develop2d.desarrollar2d(g)
+                des = develop2d.desarrollar2d(g, permitir_uno=True)
             except ValueError:
                 continue
             ang = rng.uniform(0, 2 * math.pi)
@@ -260,10 +324,41 @@ def correr(nombre: str, semilla: int, epocas: int, especies: list[str], por_espe
             nac += 1
         individuos += crias
         conteo = {e: sum(1 for i in individuos if i.especie == e) for e in especies}
+        por_segmentos = {}
+        for i in individuos:
+            por_segmentos[i.des["n"]] = por_segmentos.get(i.des["n"], 0) + 1
+        # desplazamiento en la época por número de segmentos (quién se mueve)
+        desplaz = {}
+        for b, ind in enumerate(individuos[:E.B]):
+            d = float(np.hypot(*_envolver(E.lote.pose[b, :2] - E.pose_inicial[b, :2])))
+            desplaz.setdefault(ind.des["n"], []).append(d)
+        desplaz_media = {n: round(float(np.mean(v)), 3) for n, v in desplaz.items()}
+        # "nadador": se desplaza bastante más que la deriva de las cajas sueltas (media + 3 desviaciones)
+        base = np.array(desplaz.get(1, [0.0]))
+        umbral_nado = max(1.0, float(base.mean() + 3.0 * base.std()))
+        # candidatos a nadador: se confirman solos, sin agitación (1 m en 20 s)
+        nadadores_confirmados = 0
+        for b, ind in enumerate(individuos[:E.B]):
+            if ind.des["n"] >= 2 and ind.id not in nadadores_vistos and                float(np.hypot(*_envolver(E.lote.pose[b, :2] - E.pose_inicial[b, :2]))) > umbral_nado:
+                nadadores_vistos.add(ind.id)
+                d_solo = nada_solo(ind.genoma)
+                if d_solo > 1.0:
+                    nadadores_confirmados += 1
+                    registro = {"epoca": epoca, "t": t_global, "id": ind.id, "n": ind.des["n"], "madre": ind.madre,
+                                "nacimiento": ind.nacimiento, "desplazamiento_solo": round(d_solo, 2),
+                                "genoma": ind.genoma, "cerebro": morph.describir(ind.genoma)}
+                    nadadores.append(registro)
+                    if primer_nadador is None:
+                        primer_nadador = registro
+                        print(f"  *** primer nadador confirmado: #{ind.id}, {ind.des['n']} segmentos, época {epoca}, "
+                              f"{d_solo:.2f} m solo en 20 s", flush=True)
+                    json.dump(nadadores, open(os.path.join(carpeta, "nadadores.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
         fila = {"epoca": epoca, "t": t_global, "poblacion": len(individuos), "conteo": conteo,
                 "energia_media": {e: round(float(np.mean([i.energia for i in individuos if i.especie == e])), 1) if conteo[e] else 0.0 for e in especies},
                 "segmentos_media": {e: round(float(np.mean([i.des["n"] for i in individuos if i.especie == e])), 2) if conteo[e] else 0.0 for e in especies},
-                "nacimientos": nac, "muertes": muertes, "comidas": com_tot, "segundos": round(time.time() - t_ep, 1)}
+                "nacimientos": nac, "muertes": muertes, "comidas": com_tot, "segundos": round(time.time() - t_ep, 1),
+                "por_segmentos": por_segmentos, "desplazamiento_por_segmentos": desplaz_media, "umbral_nado": round(umbral_nado, 3),
+                "nadadores_confirmados": nadadores_confirmados, "nadadores_acumulados": len(nadadores)}
         historia.append(fila)
         print(f"época {epoca:3d} t={t_global:6.0f} s  población {len(individuos):3d} {conteo}  comidas {com_tot}  "
               f"nac {nac:3d} muertes {muertes:3d}  {fila['segundos']:5.1f} s", flush=True)
@@ -290,7 +385,28 @@ def main() -> None:
     ap.add_argument("--por-especie", type=int, default=40)
     ap.add_argument("--grabar-cada", type=int, default=15)
     ap.add_argument("--fps", type=float, default=2.0)
+    ap.add_argument("--sopa", type=int, default=0, help="N cajas sueltas como población inicial (sopa primitiva)")
+    ap.add_argument("--agitacion", type=float, default=0.0, help="m/sqrt(s): deriva browniana de las criaturas")
+    ap.add_argument("--manchas", action="store_true", help="la comida reaparece cerca de donde estaba")
+    ap.add_argument("--e-chica", type=float, default=None)
+    ap.add_argument("--e-repro", type=float, default=None)
+    ap.add_argument("--edad-maxima", type=float, default=None)
+    ap.add_argument("--n-chica", type=int, default=None)
     a = ap.parse_args()
+    if a.sopa:
+        a.especies = "sopa"
+        a.por_especie = a.sopa
+    SOPA["agitacion"] = a.agitacion
+    SOPA["manchas"] = a.manchas
+    g = globals()
+    if a.e_chica is not None:
+        g["E_CHICA"] = a.e_chica
+    if a.e_repro is not None:
+        g["E_REPRO"] = a.e_repro
+    if a.edad_maxima is not None:
+        g["EDAD_MAXIMA"] = a.edad_maxima
+    if a.n_chica is not None:
+        g["N_CHICA"] = a.n_chica
     correr(a.nombre, a.semilla, a.epocas, a.especies.split(","), a.por_especie, a.grabar_cada, a.fps)
 
 

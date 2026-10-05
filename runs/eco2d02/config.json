@@ -1,0 +1,35 @@
+{
+  "nombre": "eco2d02",
+  "etapa": 7,
+  "semilla": 2,
+  "epocas": 360,
+  "t_epoca": 20.0,
+  "mundo": 50.0,
+  "especies": [
+    "anguila",
+    "pez",
+    "renacuajo",
+    "raya",
+    "ciempies_acuatico",
+    "remador"
+  ],
+  "por_especie": 40,
+  "reglas": {
+    "n_chica": 90,
+    "n_grande": 30,
+    "e_chica": 40.0,
+    "e_grande": 150.0,
+    "largo_chico": 1.3,
+    "masa_grande": 2.0,
+    "radio_comer": 0.45,
+    "e0": 100.0,
+    "e_repro": 160.0,
+    "e_cria": 60.0,
+    "costo_masa": 0.03,
+    "costo_torque": 0.004,
+    "edad_maxima": 400.0,
+    "poblacion_maxima": 500,
+    "dt": 0.016666666666666666,
+    "dt_cerebro": 0.0010416666666666667
+  }
+}
