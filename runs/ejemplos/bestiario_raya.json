@@ -1,0 +1,181 @@
+{
+ "siguiente_id": 10,
+ "raiz": 0,
+ "nodos": [
+  {
+   "dims": [
+    0.2,
+    0.3,
+    0.08
+   ],
+   "art": "rigida",
+   "limite": 60.0,
+   "rec": 1,
+   "neuronas": [
+    {
+     "id": 0,
+     "f": "oscillate-wave",
+     "in": [
+      [
+       "c",
+       0,
+       1.0
+      ],
+      [
+       "c",
+       0,
+       1.4
+      ],
+      [
+       "c",
+       0,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "efectores": [],
+   "conexiones": [
+    {
+     "a": 1,
+     "cara": 0,
+     "u": 0.0,
+     "v": 0.0,
+     "rot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "escala": 1.0,
+     "reflejo": false,
+     "terminal": false
+    }
+   ]
+  },
+  {
+   "dims": [
+    0.18,
+    0.28,
+    0.07
+   ],
+   "art": "bisagra",
+   "limite": 40.0,
+   "rec": 4,
+   "neuronas": [
+    {
+     "id": 2,
+     "f": "sum",
+     "in": [
+      [
+       "p",
+       0,
+       1.6
+      ],
+      [
+       "p",
+       3,
+       1.6
+      ],
+      [
+       "l",
+       1,
+       4.0
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "f": "smooth",
+     "in": [
+      [
+       "n",
+       2,
+       1.0
+      ],
+      [
+       "c",
+       0,
+       0.0065
+      ]
+     ]
+    }
+   ],
+   "efectores": [
+    [
+     "n",
+     3,
+     1.0
+    ]
+   ],
+   "conexiones": [
+    {
+     "a": 1,
+     "cara": 0,
+     "u": 0.0,
+     "v": 0.0,
+     "rot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "escala": 0.9,
+     "reflejo": false,
+     "terminal": false
+    },
+    {
+     "a": 2,
+     "cara": 2,
+     "u": 0.0,
+     "v": 0.0,
+     "rot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "escala": 1.0,
+     "reflejo": false,
+     "terminal": false
+    },
+    {
+     "a": 2,
+     "cara": 2,
+     "u": 0.0,
+     "v": 0.0,
+     "rot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "escala": 1.0,
+     "reflejo": true,
+     "terminal": false
+    }
+   ]
+  },
+  {
+   "dims": [
+    0.3,
+    0.16,
+    0.04
+   ],
+   "art": "universal",
+   "limite": 45.0,
+   "rec": 1,
+   "neuronas": [],
+   "efectores": [
+    [
+     "p",
+     3,
+     2.0
+    ],
+    [
+     "c",
+     0,
+     0.0
+    ]
+   ],
+   "conexiones": []
+  }
+ ],
+ "central": []
+}

@@ -1,0 +1,29 @@
+{
+  "nombre": "eco01",
+  "etapa": 6,
+  "semilla": 1,
+  "epocas": 30,
+  "t_epoca": 20.0,
+  "especies": [
+    "anguila",
+    "pez",
+    "renacuajo",
+    "raya",
+    "ciempies_acuatico",
+    "remador"
+  ],
+  "por_especie": 4,
+  "reglas": {
+    "radio_comida": 5.0,
+    "n_comida": 8,
+    "radio_comer": 0.35,
+    "energia_inicial": 100.0,
+    "energia_comida": 60.0,
+    "umbral_reproduccion": 160.0,
+    "energia_cria": 60.0,
+    "costo_masa": 0.03,
+    "costo_torque": 0.004,
+    "edad_maxima": 400.0,
+    "poblacion_maxima": 36
+  }
+}

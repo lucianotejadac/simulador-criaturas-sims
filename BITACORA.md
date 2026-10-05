@@ -786,3 +786,50 @@ depende de nosotros. Más allá de esto, solo la GPU con cuerpos fijos (0010).
 en el fluido (0004), en el cerebro interpretado y en una función de NumPy
 pensada para arreglos grandes. Perfilar antes de optimizar, y verificar bit a
 bit después, porque una optimización que cambia el resultado es otra trampa.
+
+---
+
+## 0020 · 2026-10-05 · Bestiario: seis especies a mano y el teorema de la vieira
+
+**Contexto.** Para poblar un ecosistema sin esperar a la evolución, el
+usuario pidió partir de criaturas conocidas. Se buscó un bestiario publicado:
+Framsticks tiene genotipos compartidos (varillas y muelles, otro formato),
+dm_control trae un pez y nadadores en MJCF sin cerebro, Evolution Gym tiene
+robots de vóxeles en 2D. Nada en el formato de Sims. Se escribió el propio
+(`src/genome/bestiario.py`), con cerebro verificado y fototaxis cableada.
+
+**Fototaxis cableada.** Lo que la Etapa 4 enseñó se escribe a mano: en cada
+nodo con cadena de retardo, la suma que recibe la oscilación de la madre suma
+además la componente lateral de la dirección a la luz (entrada "l" 1) con un
+peso `sesgo`. El cuerpo se curva hacia la luz mientras ondula. El signo
+depende de cómo está orientado el nodo: el remador tiene la cola en la cara
+−X y necesita el signo contrario. Para remos y placas se probó una
+modulación diferencial de amplitud (el lado de la luz rema distinto).
+
+| especie | piezas | nado 10 s | acercamiento a la luz (m/s) | mecanismo |
+|---|---|---|---|---|
+| anguila | 7 | 2.99 m | +0.097 | onda viajera, 6 segmentos |
+| pez | 9 | 0.73 m | +0.017 | onda + caudal + pectorales |
+| renacuajo | 6 | 0.44 m | +0.003 | onda, cabeza pesada |
+| raya | 13 | 0.72 m | −0.003 | onda del cuerpo; las placas no empujan |
+| ciempiés acuático | 13 | 0.15 m | +0.004 | patas universales con plumeo en cuadratura |
+| remador | 5 | 0.20 m | +0.024 | aletas universales en cuadratura |
+
+**El teorema de la vieira decide qué animales son posibles.** El agua del
+proyecto es de arrastre lineal (régimen de Stokes, 0004). Ahí, un movimiento
+que es igual de ida que de vuelta no desplaza nada, por rápido que sea el
+golpe: es el teorema de la vieira de Purcell. Se vio tres veces en el
+bestiario: el ciempiés con patas de una bisagra nadaba 0.04 m (reman igual
+hacia adelante y hacia atrás); con articulación universal y plumeo en
+cuadratura, que es romper la simetría temporal, sube a 0.15 m. Las placas de
+la raya, de una bisagra, no empujan ni giran por más que se modulen: su
+avance es todo de la onda del cuerpo. Una medusa o un calamar de cajas no
+funcionarían aquí. Avanza lo que rompe la simetría en el tiempo: ondas
+viajeras, remos con desfase y plumeo, aletas que giran mientras baten. Eso
+explica, retrospectivamente, por qué la evolución encontró siempre ondas y
+retardos y nunca remos.
+
+**Consecuencias.** Dos especies entran al ecosistema sin saber girar hacia
+la comida (raya) o apenas (ciempiés): son el control. La raya, además, es la
+más pesada. Lo que les pase es resultado, no defecto. `REC_MAX` quedó en 6
+(la anguila pedía 8; se acortó a 6 segmentos).
