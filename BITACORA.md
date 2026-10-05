@@ -1034,3 +1034,84 @@ semillas, dos horas de vida, y la sopa primitiva (partir de cajas sueltas,
 sin bestiario), que ahora es viable. El archivo del visor se recorta a tres
 épocas grabadas (6.8 MB); las 34 MB completas quedan en `runs/`.
 
+
+---
+
+## 0024 · 2026-10-05 · Sopa primitiva: de cajas sueltas a nadadores
+
+**Contexto.** El usuario propuso partir de lo mínimo: no del bestiario ni de
+cuerpos al azar, sino de cajas sueltas que no pueden moverse, y dejar que la
+mutación invente articulaciones, cerebros y movimiento. En el mundo 2D es
+viable; en 3D no lo era. La física tiene una predicción (0020, teorema de la
+vieira): una caja no nada, dos eslabones tampoco, el primer nadador necesita
+tres piezas y desfase, como el nadador de Purcell.
+
+**Reglas de la sopa** (`ecosistema2d.py --sopa N`):
+- 300 cajas de 0.12 a 0.30 m de largo, sin articulaciones ni neuronas,
+  repartidas al azar en el mundo de 50 m. El desarrollo acepta cuerpos de una
+  pieza (`permitir_uno`); las articulaciones rígidas del genoma ahora son
+  rígidas de verdad en 2D (tope en 0 y sin músculo), que antes eran bisagras.
+- **Agitación browniana** de 0.25 m/√s: cada caja deriva 1.4 m por época de
+  20 s sin hacer nada. Sin agitación nadie comería nunca y no habría de qué
+  seleccionar.
+- Comida chica escasa (60 puntos, vale 40) que reaparece cerca de donde
+  estaba (manchas, 80 %): premia quedarse donde hay y, después, llegar antes.
+  Comida grande (vale 150) solo para masa ≥ 2 kg: un premio que exige cuerpo.
+- Energía inicial 100, reproducción a 160 (hay que comer dos veces), hija
+  con 60 y 1 o 2 mutaciones; edad máxima 900 s. Una caja de 0.2 × 0.1 m gasta
+  0.014 por segundo en existir: muere de vieja, no de hambre.
+- **Nadador confirmado:** una criatura que en una época se desplaza más que
+  la media de las cajas sueltas más tres desviaciones, y que vuelta a simular
+  sola, sin agitación, avanza más de 1 m en 20 s. Sin la segunda prueba, la
+  deriva browniana disfrazaba de nadadores a cuerpos que no nadan.
+
+**Corrida de humo (12 épocas, 300 cajas):** la población crece de 300 a 413
+solo por comer a la deriva; a los 240 s hay 69 cuerpos de 2 o 3 segmentos
+y uno de 13, nacidos de mutación, y ninguno se desplaza más que las cajas.
+La primera candidata (3 segmentos, época 11) no pasó la prueba en solitario.
+
+**Corrida larga (`sopa01`)**: 300 cajas, 300 épocas = 100 minutos de vida,
+24 minutos de cómputo. Columnas: cuántos individuos hay con cada número de
+segmentos, y cuánto se desplaza por época cada tamaño (la deriva de una caja
+sola es 1.4 m).
+
+| t (s) | población | 1 seg. | 2 | 3 | 4 | 5+ | desplaz. 1 seg. | desplaz. 2–3 | máx. |
+|---|---|---|---|---|---|---|---|---|---|
+| 20 | 302 | 300 | 0 | 1 | 0 | 1 | 1.42 | – | – |
+| 500 | 500 | 363 | 71 | 51 | 11 | 4 | 1.45 | 1.3 | 1.9 (9 seg.) |
+| 1000 | 474 | 98 | 176 | 136 | 35 | 29 | 1.48 | 1.4 | 2.1 (9 seg.) |
+| 2000 | 500 | 37 | 182 | 181 | 48 | 52 | 1.34 | 1.5 | 1.7 |
+| 4000 | 500 | 31 | 170 | 159 | 59 | 81 | 1.15 | 1.4 | 3.2 (12 seg.) |
+| 6000 | 500 | 18 | 170 | 192 | 40 | 80 | 1.51 | 1.45 | 2.5 (9 seg.) |
+
+**Qué se vio.**
+- **Complejidad sin función.** En 100 minutos las cajas sueltas pasaron de
+  300 a 18 y la sopa se llenó de cuerpos de 2 a 6 segmentos, con algunos de
+  13 y 14. Pero ningún tamaño se desplaza más que la deriva: todos entre 1.1
+  y 1.6 m por época, igual que una caja sola. Hubo candidatos (hasta 3.2 m)
+  y ninguno pasó la prueba en solitario. **No apareció el nadador.**
+- **Por qué crece la complejidad sin que sirva.** La mutación desde un genoma
+  de un nodo tiene una probabilidad por elemento de 1/4: agrega nodos y
+  conexiones con mucha frecuencia, y nada lo castiga, porque comer no
+  depende de moverse. Es deriva mutacional hacia lo complejo, no selección.
+  La vieja regla de este proyecto en su forma más cruda: la población
+  responde a lo que la aptitud mide, y aquí la aptitud era quedarse quieto
+  cerca de una mancha de comida. Las que comían, se reproducían; moverse
+  costaba energía y no ganaba nada.
+- **Pocas tiradas.** Unos 9 nacimientos por época: 2700 crías en toda la
+  corrida, cada una con 1 o 2 mutaciones. Para que una cría tenga tres
+  segmentos, un oscilador en el cerebro conectado a dos articulaciones y un
+  desfase entre ellas, hacen falta varias mutaciones coordinadas; 2700
+  intentos en los que además el movimiento no se premia son pocos.
+- **Lo que sí emergió:** cuerpos pesados (≥ 2 kg) que comen la comida
+  grande, de 1 a 23 por época desde los 1000 s. Ser grande sí pagaba.
+
+**Decisión.** La sopa como está no produce locomoción, y eso es un
+resultado: la deriva browniana alimenta lo suficiente como para que moverse
+no valga la pena. La versión siguiente tiene que hacer que la deriva no
+alcance: menos agitación o comida más lejana, de modo que solo coma quien
+llega. Queda anotada, y queda anotado también que el experimento necesita
+diez veces más nacimientos (población más grande o más tiempo) para que
+aparezcan las tres mutaciones del nadador de Purcell. La partida "sopa" del
+acuario en vivo (`vivo.html`) permite probar esas reglas a mano.
+

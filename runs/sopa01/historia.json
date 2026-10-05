@@ -3799,5 +3799,10501 @@
   "umbral_nado": 3.565,
   "nadadores_confirmados": 0,
   "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 84,
+  "t": 1700.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 171.1
+  },
+  "segmentos_media": {
+   "sopa": 2.7
+  },
+  "nacimientos": 4,
+  "muertes": 4,
+  "comidas": {
+   "chica": 30,
+   "grande": 20
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 196,
+   "4": 38,
+   "3": 164,
+   "1": 59,
+   "5": 23,
+   "6": 10,
+   "12": 1,
+   "8": 5,
+   "9": 1,
+   "7": 3
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.384,
+   "4": 1.356,
+   "3": 1.473,
+   "1": 1.382,
+   "5": 1.341,
+   "6": 1.576,
+   "12": 2.447,
+   "8": 1.306,
+   "9": 1.003,
+   "7": 1.737
+  },
+  "umbral_nado": 3.402,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 85,
+  "t": 1720.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 174.2
+  },
+  "segmentos_media": {
+   "sopa": 2.71
+  },
+  "nacimientos": 3,
+  "muertes": 3,
+  "comidas": {
+   "chica": 41,
+   "grande": 9
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "2": 196,
+   "4": 39,
+   "3": 163,
+   "1": 59,
+   "5": 23,
+   "6": 10,
+   "12": 1,
+   "8": 5,
+   "9": 1,
+   "7": 3
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.37,
+   "4": 1.38,
+   "3": 1.33,
+   "1": 1.338,
+   "5": 1.593,
+   "6": 1.236,
+   "12": 2.052,
+   "8": 1.85,
+   "9": 1.593,
+   "7": 1.915
+  },
+  "umbral_nado": 3.851,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 86,
+  "t": 1740.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 175.7
+  },
+  "segmentos_media": {
+   "sopa": 2.7
+  },
+  "nacimientos": 3,
+  "muertes": 3,
+  "comidas": {
+   "chica": 34,
+   "grande": 4
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 196,
+   "4": 39,
+   "3": 162,
+   "1": 60,
+   "5": 22,
+   "6": 11,
+   "12": 1,
+   "8": 5,
+   "9": 1,
+   "7": 3
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.474,
+   "4": 1.414,
+   "3": 1.48,
+   "1": 1.311,
+   "5": 1.351,
+   "6": 1.064,
+   "12": 0.817,
+   "8": 1.166,
+   "9": 1.9,
+   "7": 1.911
+  },
+  "umbral_nado": 3.287,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 87,
+  "t": 1760.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 179.9
+  },
+  "segmentos_media": {
+   "sopa": 2.7
+  },
+  "nacimientos": 2,
+  "muertes": 2,
+  "comidas": {
+   "chica": 39,
+   "grande": 11
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 196,
+   "4": 39,
+   "3": 163,
+   "1": 60,
+   "5": 21,
+   "6": 11,
+   "12": 1,
+   "8": 5,
+   "9": 1,
+   "7": 3
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.434,
+   "4": 1.333,
+   "3": 1.398,
+   "1": 1.425,
+   "5": 1.283,
+   "6": 1.177,
+   "12": 0.621,
+   "8": 1.155,
+   "9": 1.716,
+   "7": 2.285
+  },
+  "umbral_nado": 3.478,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 88,
+  "t": 1780.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 184.0
+  },
+  "segmentos_media": {
+   "sopa": 2.7
+  },
+  "nacimientos": 1,
+  "muertes": 1,
+  "comidas": {
+   "chica": 30,
+   "grande": 13
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 197,
+   "4": 38,
+   "3": 163,
+   "1": 60,
+   "5": 21,
+   "6": 11,
+   "12": 1,
+   "8": 5,
+   "9": 1,
+   "7": 3
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.393,
+   "4": 1.525,
+   "3": 1.422,
+   "1": 1.417,
+   "5": 1.211,
+   "6": 1.57,
+   "12": 2.177,
+   "8": 1.474,
+   "9": 1.617,
+   "7": 2.571
+  },
+  "umbral_nado": 3.393,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 89,
+  "t": 1800.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 187.6
+  },
+  "segmentos_media": {
+   "sopa": 2.7
+  },
+  "nacimientos": 0,
+  "muertes": 0,
+  "comidas": {
+   "chica": 25,
+   "grande": 13
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 197,
+   "4": 38,
+   "3": 163,
+   "1": 60,
+   "5": 21,
+   "6": 11,
+   "12": 1,
+   "8": 5,
+   "9": 1,
+   "7": 3
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.355,
+   "4": 1.403,
+   "3": 1.416,
+   "1": 1.405,
+   "5": 1.051,
+   "6": 1.717,
+   "12": 1.764,
+   "8": 1.283,
+   "9": 1.212,
+   "7": 1.603
+  },
+  "umbral_nado": 3.708,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 90,
+  "t": 1820.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 192.1
+  },
+  "segmentos_media": {
+   "sopa": 2.69
+  },
+  "nacimientos": 2,
+  "muertes": 2,
+  "comidas": {
+   "chica": 37,
+   "grande": 14
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 198,
+   "4": 38,
+   "3": 163,
+   "1": 60,
+   "5": 20,
+   "6": 11,
+   "12": 1,
+   "8": 5,
+   "9": 1,
+   "7": 3
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.396,
+   "4": 1.368,
+   "3": 1.293,
+   "1": 1.311,
+   "5": 1.513,
+   "6": 1.497,
+   "12": 0.917,
+   "8": 1.49,
+   "9": 2.367,
+   "7": 0.987
+  },
+  "umbral_nado": 3.578,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 91,
+  "t": 1840.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 165.7
+  },
+  "segmentos_media": {
+   "sopa": 2.79
+  },
+  "nacimientos": 81,
+  "muertes": 81,
+  "comidas": {
+   "chica": 40,
+   "grande": 14
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 182,
+   "6": 13,
+   "3": 172,
+   "4": 45,
+   "1": 56,
+   "5": 20,
+   "12": 1,
+   "8": 5,
+   "9": 1,
+   "7": 4,
+   "10": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.511,
+   "6": 1.297,
+   "3": 1.392,
+   "4": 1.408,
+   "1": 1.413,
+   "5": 1.493,
+   "12": 1.393,
+   "8": 1.683,
+   "9": 1.019,
+   "7": 1.264,
+   "10": 0.992
+  },
+  "umbral_nado": 3.472,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 92,
+  "t": 1860.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 145.0
+  },
+  "segmentos_media": {
+   "sopa": 2.88
+  },
+  "nacimientos": 59,
+  "muertes": 59,
+  "comidas": {
+   "chica": 33,
+   "grande": 12
+  },
+  "segundos": 4.6,
+  "por_segmentos": {
+   "2": 178,
+   "3": 172,
+   "6": 13,
+   "1": 51,
+   "4": 49,
+   "5": 22,
+   "12": 2,
+   "8": 5,
+   "9": 1,
+   "7": 4,
+   "10": 2,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.407,
+   "3": 1.41,
+   "6": 0.872,
+   "1": 1.384,
+   "4": 1.434,
+   "5": 1.399,
+   "12": 1.716,
+   "8": 1.883,
+   "9": 2.238,
+   "7": 1.589,
+   "10": 1.168,
+   "14": 1.123
+  },
+  "umbral_nado": 3.251,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 93,
+  "t": 1880.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 128.5
+  },
+  "segmentos_media": {
+   "sopa": 2.9
+  },
+  "nacimientos": 51,
+  "muertes": 51,
+  "comidas": {
+   "chica": 33,
+   "grande": 12
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 187,
+   "3": 170,
+   "1": 45,
+   "4": 48,
+   "12": 2,
+   "5": 22,
+   "6": 11,
+   "8": 7,
+   "9": 1,
+   "7": 4,
+   "10": 2,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.352,
+   "3": 1.426,
+   "1": 1.173,
+   "4": 1.35,
+   "12": 1.486,
+   "5": 1.571,
+   "6": 1.421,
+   "8": 1.301,
+   "9": 0.771,
+   "7": 1.298,
+   "10": 0.547,
+   "14": 2.031
+  },
+  "umbral_nado": 3.383,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 94,
+  "t": 1900.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 121.0
+  },
+  "segmentos_media": {
+   "sopa": 2.9
+  },
+  "nacimientos": 38,
+  "muertes": 38,
+  "comidas": {
+   "chica": 36,
+   "grande": 16
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "2": 185,
+   "12": 2,
+   "3": 170,
+   "4": 49,
+   "1": 43,
+   "5": 24,
+   "6": 13,
+   "8": 7,
+   "9": 1,
+   "7": 5,
+   "10": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.363,
+   "12": 1.034,
+   "3": 1.381,
+   "4": 1.344,
+   "1": 1.469,
+   "5": 1.427,
+   "6": 1.275,
+   "8": 1.581,
+   "9": 2.03,
+   "7": 1.375,
+   "10": 1.567
+  },
+  "umbral_nado": 3.27,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 95,
+  "t": 1920.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 117.7
+  },
+  "segmentos_media": {
+   "sopa": 2.86
+  },
+  "nacimientos": 28,
+  "muertes": 28,
+  "comidas": {
+   "chica": 49,
+   "grande": 16
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 191,
+   "4": 49,
+   "1": 43,
+   "3": 165,
+   "5": 22,
+   "6": 16,
+   "8": 7,
+   "9": 1,
+   "7": 5,
+   "10": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.418,
+   "4": 1.419,
+   "1": 1.554,
+   "3": 1.455,
+   "5": 1.378,
+   "6": 1.337,
+   "8": 1.861,
+   "9": 0.882,
+   "7": 1.29,
+   "10": 2.368
+  },
+  "umbral_nado": 3.989,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 96,
+  "t": 1940.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 113.0
+  },
+  "segmentos_media": {
+   "sopa": 2.88
+  },
+  "nacimientos": 22,
+  "muertes": 22,
+  "comidas": {
+   "chica": 49,
+   "grande": 5
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 189,
+   "1": 41,
+   "3": 168,
+   "4": 48,
+   "6": 18,
+   "5": 22,
+   "8": 7,
+   "9": 1,
+   "7": 6
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.431,
+   "1": 1.496,
+   "3": 1.444,
+   "4": 1.598,
+   "6": 1.44,
+   "5": 1.364,
+   "8": 1.225,
+   "9": 2.648,
+   "7": 0.702
+  },
+  "umbral_nado": 4.155,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 97,
+  "t": 1960.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 112.6
+  },
+  "segmentos_media": {
+   "sopa": 2.9
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 45,
+   "grande": 16
+  },
+  "segundos": 4.6,
+  "por_segmentos": {
+   "3": 175,
+   "2": 185,
+   "6": 18,
+   "1": 38,
+   "4": 48,
+   "5": 22,
+   "8": 7,
+   "9": 1,
+   "7": 6
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.329,
+   "2": 1.376,
+   "6": 1.422,
+   "1": 1.377,
+   "4": 1.285,
+   "5": 1.411,
+   "8": 1.09,
+   "9": 1.326,
+   "7": 1.886
+  },
+  "umbral_nado": 3.392,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 98,
+  "t": 1980.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 118.6
+  },
+  "segmentos_media": {
+   "sopa": 2.9
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 50,
+   "grande": 26
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "3": 180,
+   "1": 38,
+   "4": 48,
+   "2": 181,
+   "6": 17,
+   "5": 22,
+   "8": 7,
+   "9": 1,
+   "7": 6
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.372,
+   "1": 1.607,
+   "4": 1.27,
+   "2": 1.469,
+   "6": 1.856,
+   "5": 1.277,
+   "8": 1.918,
+   "9": 1.931,
+   "7": 1.129
+  },
+  "umbral_nado": 4.076,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 99,
+  "t": 2000.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 124.3
+  },
+  "segmentos_media": {
+   "sopa": 2.9
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 55,
+   "grande": 23
+  },
+  "segundos": 4.6,
+  "por_segmentos": {
+   "3": 181,
+   "6": 15,
+   "1": 37,
+   "4": 48,
+   "2": 182,
+   "5": 23,
+   "8": 7,
+   "9": 1,
+   "7": 6
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.489,
+   "6": 1.354,
+   "1": 1.337,
+   "4": 1.5,
+   "2": 1.465,
+   "5": 1.553,
+   "8": 1.646,
+   "9": 1.691,
+   "7": 1.174
+  },
+  "umbral_nado": 3.436,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 100,
+  "t": 2020.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 122.4
+  },
+  "segmentos_media": {
+   "sopa": 2.87
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 32,
+   "grande": 11
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 181,
+   "2": 184,
+   "5": 22,
+   "6": 13,
+   "8": 7,
+   "9": 1,
+   "4": 48,
+   "1": 38,
+   "7": 6
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.536,
+   "2": 1.429,
+   "5": 1.453,
+   "6": 1.389,
+   "8": 1.318,
+   "9": 2.039,
+   "4": 1.537,
+   "1": 1.655,
+   "7": 1.417
+  },
+  "umbral_nado": 3.804,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 101,
+  "t": 2040.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 123.1
+  },
+  "segmentos_media": {
+   "sopa": 2.84
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 33,
+   "grande": 16
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "4": 49,
+   "3": 178,
+   "2": 188,
+   "5": 22,
+   "8": 6,
+   "1": 38,
+   "7": 6,
+   "6": 13
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.227,
+   "3": 1.545,
+   "2": 1.496,
+   "5": 1.532,
+   "8": 1.126,
+   "1": 1.328,
+   "7": 1.623,
+   "6": 1.007
+  },
+  "umbral_nado": 3.396,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 102,
+  "t": 2060.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 126.7
+  },
+  "segmentos_media": {
+   "sopa": 2.83
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 28,
+   "grande": 24
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 178,
+   "2": 189,
+   "8": 6,
+   "1": 39,
+   "7": 6,
+   "5": 21,
+   "4": 48,
+   "6": 13
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.414,
+   "2": 1.509,
+   "8": 1.473,
+   "1": 1.438,
+   "7": 1.864,
+   "5": 1.2,
+   "4": 1.48,
+   "6": 1.259
+  },
+  "umbral_nado": 3.652,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 103,
+  "t": 2080.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 126.7
+  },
+  "segmentos_media": {
+   "sopa": 2.79
+  },
+  "nacimientos": 17,
+  "muertes": 17,
+  "comidas": {
+   "chica": 32,
+   "grande": 19
+  },
+  "segundos": 4.6,
+  "por_segmentos": {
+   "3": 179,
+   "2": 192,
+   "5": 21,
+   "1": 39,
+   "4": 49,
+   "6": 12,
+   "7": 4,
+   "8": 4
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.504,
+   "2": 1.48,
+   "5": 1.371,
+   "1": 1.568,
+   "4": 1.307,
+   "6": 1.164,
+   "7": 1.823,
+   "8": 1.14
+  },
+  "umbral_nado": 3.418,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 104,
+  "t": 2100.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 125.8
+  },
+  "segmentos_media": {
+   "sopa": 2.8
+  },
+  "nacimientos": 21,
+  "muertes": 21,
+  "comidas": {
+   "chica": 34,
+   "grande": 16
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 189,
+   "3": 178,
+   "1": 40,
+   "4": 52,
+   "5": 22,
+   "6": 11,
+   "7": 5,
+   "8": 2,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.405,
+   "3": 1.45,
+   "1": 1.242,
+   "4": 1.173,
+   "5": 1.273,
+   "6": 1.565,
+   "7": 1.421,
+   "8": 1.807,
+   "14": 1.219
+  },
+  "umbral_nado": 3.033,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 105,
+  "t": 2120.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 128.8
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 32,
+   "grande": 18
+  },
+  "segundos": 4.6,
+  "por_segmentos": {
+   "3": 176,
+   "1": 41,
+   "2": 189,
+   "4": 54,
+   "5": 23,
+   "6": 10,
+   "7": 5,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.345,
+   "1": 1.423,
+   "2": 1.438,
+   "4": 1.571,
+   "5": 1.424,
+   "6": 1.224,
+   "7": 1.516,
+   "8": 2.297
+  },
+  "umbral_nado": 3.532,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 106,
+  "t": 2140.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 126.6
+  },
+  "segmentos_media": {
+   "sopa": 2.81
+  },
+  "nacimientos": 19,
+  "muertes": 19,
+  "comidas": {
+   "chica": 22,
+   "grande": 17
+  },
+  "segundos": 4.4,
+  "por_segmentos": {
+   "2": 193,
+   "1": 38,
+   "3": 172,
+   "5": 23,
+   "4": 55,
+   "6": 10,
+   "7": 6,
+   "8": 2,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.478,
+   "1": 1.268,
+   "3": 1.374,
+   "5": 1.534,
+   "4": 1.41,
+   "6": 1.235,
+   "7": 1.047,
+   "8": 0.873,
+   "11": 1.698
+  },
+  "umbral_nado": 3.481,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 107,
+  "t": 2160.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 123.9
+  },
+  "segmentos_media": {
+   "sopa": 2.81
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 23,
+   "grande": 16
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 195,
+   "3": 169,
+   "4": 57,
+   "7": 6,
+   "1": 37,
+   "5": 24,
+   "6": 9,
+   "8": 2,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.32,
+   "3": 1.498,
+   "4": 1.433,
+   "7": 1.452,
+   "1": 1.117,
+   "5": 1.38,
+   "6": 1.323,
+   "8": 1.33,
+   "11": 1.678
+  },
+  "umbral_nado": 2.818,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 108,
+  "t": 2180.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 123.7
+  },
+  "segmentos_media": {
+   "sopa": 2.82
+  },
+  "nacimientos": 18,
+  "muertes": 18,
+  "comidas": {
+   "chica": 24,
+   "grande": 23
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 196,
+   "3": 167,
+   "5": 24,
+   "6": 10,
+   "1": 37,
+   "8": 2,
+   "4": 56,
+   "7": 7,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.46,
+   "3": 1.333,
+   "5": 1.576,
+   "6": 1.859,
+   "1": 1.348,
+   "8": 2.496,
+   "4": 1.323,
+   "7": 1.054,
+   "11": 2.344
+  },
+  "umbral_nado": 3.357,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 109,
+  "t": 2200.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 124.2
+  },
+  "segmentos_media": {
+   "sopa": 2.82
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 24,
+   "grande": 13
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 196,
+   "3": 167,
+   "1": 37,
+   "8": 2,
+   "5": 25,
+   "4": 56,
+   "7": 7,
+   "6": 9,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.352,
+   "3": 1.385,
+   "1": 1.331,
+   "8": 1.015,
+   "5": 1.466,
+   "4": 1.475,
+   "7": 1.413,
+   "6": 1.484,
+   "11": 0.396
+  },
+  "umbral_nado": 3.095,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 110,
+  "t": 2220.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 126.3
+  },
+  "segmentos_media": {
+   "sopa": 2.81
+  },
+  "nacimientos": 5,
+  "muertes": 5,
+  "comidas": {
+   "chica": 40,
+   "grande": 12
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "1": 38,
+   "3": 166,
+   "2": 196,
+   "8": 2,
+   "5": 26,
+   "4": 56,
+   "7": 6,
+   "6": 9,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.233,
+   "3": 1.416,
+   "2": 1.442,
+   "8": 1.054,
+   "5": 1.306,
+   "4": 1.214,
+   "7": 1.152,
+   "6": 1.439,
+   "11": 2.474
+  },
+  "umbral_nado": 3.823,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 111,
+  "t": 2240.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 126.6
+  },
+  "segmentos_media": {
+   "sopa": 2.82
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 29,
+   "grande": 9
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 196,
+   "3": 166,
+   "8": 2,
+   "5": 27,
+   "4": 56,
+   "1": 37,
+   "7": 6,
+   "6": 9,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.455,
+   "3": 1.41,
+   "8": 1.613,
+   "5": 1.596,
+   "4": 1.272,
+   "1": 1.636,
+   "7": 2.048,
+   "6": 1.796,
+   "11": 1.785
+  },
+  "umbral_nado": 4.015,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 112,
+  "t": 2260.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 126.9
+  },
+  "segmentos_media": {
+   "sopa": 2.8
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 26,
+   "grande": 12
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "3": 165,
+   "2": 200,
+   "5": 25,
+   "8": 2,
+   "4": 54,
+   "1": 38,
+   "7": 7,
+   "6": 8,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.287,
+   "2": 1.422,
+   "5": 1.365,
+   "8": 1.306,
+   "4": 1.321,
+   "1": 1.348,
+   "7": 1.129,
+   "6": 1.133,
+   "11": 2.074
+  },
+  "umbral_nado": 3.068,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 113,
+  "t": 2280.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 129.7
+  },
+  "segmentos_media": {
+   "sopa": 2.82
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 26,
+   "grande": 17
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 199,
+   "3": 163,
+   "5": 24,
+   "8": 2,
+   "4": 56,
+   "1": 38,
+   "7": 8,
+   "6": 8,
+   "11": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.484,
+   "3": 1.369,
+   "5": 1.556,
+   "8": 1.452,
+   "4": 1.45,
+   "1": 1.753,
+   "7": 1.34,
+   "6": 1.78,
+   "11": 1.617,
+   "9": 1.726
+  },
+  "umbral_nado": 4.338,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 114,
+  "t": 2300.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 128.7
+  },
+  "segmentos_media": {
+   "sopa": 2.8
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 25,
+   "grande": 5
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "5": 23,
+   "2": 198,
+   "3": 164,
+   "8": 2,
+   "1": 41,
+   "4": 54,
+   "7": 9,
+   "6": 7,
+   "11": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.673,
+   "2": 1.325,
+   "3": 1.349,
+   "8": 1.554,
+   "1": 1.314,
+   "4": 1.335,
+   "7": 1.099,
+   "6": 0.956,
+   "11": 0.989,
+   "9": 2.208
+  },
+  "umbral_nado": 3.77,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 115,
+  "t": 2320.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 132.0
+  },
+  "segmentos_media": {
+   "sopa": 2.79
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 33,
+   "grande": 16
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 200,
+   "3": 164,
+   "5": 22,
+   "8": 2,
+   "1": 41,
+   "4": 54,
+   "7": 8,
+   "6": 7,
+   "11": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.321,
+   "3": 1.396,
+   "5": 1.437,
+   "8": 1.312,
+   "1": 1.184,
+   "4": 1.413,
+   "7": 1.294,
+   "6": 1.765,
+   "11": 1.596,
+   "9": 0.328
+  },
+  "umbral_nado": 3.088,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 116,
+  "t": 2340.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 136.3
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 30,
+   "grande": 19
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 200,
+   "3": 162,
+   "5": 22,
+   "8": 2,
+   "1": 41,
+   "4": 57,
+   "7": 8,
+   "6": 7,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.448,
+   "3": 1.392,
+   "5": 1.197,
+   "8": 1.132,
+   "1": 1.439,
+   "4": 1.342,
+   "7": 1.19,
+   "6": 1.945,
+   "11": 2.239
+  },
+  "umbral_nado": 3.887,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 117,
+  "t": 2360.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 140.9
+  },
+  "segmentos_media": {
+   "sopa": 2.77
+  },
+  "nacimientos": 4,
+  "muertes": 4,
+  "comidas": {
+   "chica": 30,
+   "grande": 17
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 201,
+   "3": 163,
+   "5": 22,
+   "8": 1,
+   "1": 41,
+   "4": 56,
+   "7": 8,
+   "6": 7,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.455,
+   "3": 1.331,
+   "5": 1.42,
+   "8": 2.03,
+   "1": 1.305,
+   "4": 1.324,
+   "7": 1.338,
+   "6": 1.713,
+   "11": 1.472
+  },
+  "umbral_nado": 3.159,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 118,
+  "t": 2380.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 145.2
+  },
+  "segmentos_media": {
+   "sopa": 2.76
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 29,
+   "grande": 23
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 200,
+   "3": 165,
+   "8": 1,
+   "5": 21,
+   "1": 41,
+   "4": 56,
+   "7": 8,
+   "6": 7,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.418,
+   "3": 1.491,
+   "8": 1.37,
+   "5": 1.217,
+   "1": 1.357,
+   "4": 1.318,
+   "7": 1.454,
+   "6": 1.205,
+   "11": 1.191
+  },
+  "umbral_nado": 2.994,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 119,
+  "t": 2400.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 147.3
+  },
+  "segmentos_media": {
+   "sopa": 2.77
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 26,
+   "grande": 16
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 199,
+   "8": 1,
+   "3": 163,
+   "5": 22,
+   "1": 42,
+   "4": 56,
+   "7": 9,
+   "6": 7,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.358,
+   "8": 1.869,
+   "3": 1.394,
+   "5": 1.225,
+   "1": 1.337,
+   "4": 1.289,
+   "7": 1.841,
+   "6": 1.792,
+   "11": 0.926
+  },
+  "umbral_nado": 3.577,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 120,
+  "t": 2420.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 150.6
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 5,
+  "muertes": 5,
+  "comidas": {
+   "chica": 34,
+   "grande": 14
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 200,
+   "8": 1,
+   "3": 161,
+   "5": 22,
+   "1": 42,
+   "4": 56,
+   "7": 10,
+   "6": 7,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.403,
+   "8": 0.956,
+   "3": 1.347,
+   "5": 1.241,
+   "1": 1.522,
+   "4": 1.477,
+   "7": 1.209,
+   "6": 1.09,
+   "11": 1.448
+  },
+  "umbral_nado": 4.018,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 121,
+  "t": 2440.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 151.4
+  },
+  "segmentos_media": {
+   "sopa": 2.76
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 22,
+   "grande": 13
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 201,
+   "3": 161,
+   "5": 22,
+   "1": 42,
+   "4": 57,
+   "7": 9,
+   "6": 7,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.437,
+   "3": 1.429,
+   "5": 1.415,
+   "1": 1.347,
+   "4": 1.308,
+   "7": 1.55,
+   "6": 1.724,
+   "11": 1.543
+  },
+  "umbral_nado": 3.323,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 122,
+  "t": 2460.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 151.3
+  },
+  "segmentos_media": {
+   "sopa": 2.75
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 35,
+   "grande": 8
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "3": 164,
+   "5": 21,
+   "2": 201,
+   "1": 42,
+   "4": 55,
+   "7": 8,
+   "6": 8,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.333,
+   "5": 1.268,
+   "2": 1.352,
+   "1": 1.588,
+   "4": 1.441,
+   "7": 1.072,
+   "6": 0.871,
+   "11": 0.944
+  },
+  "umbral_nado": 4.195,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 123,
+  "t": 2480.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 156.1
+  },
+  "segmentos_media": {
+   "sopa": 2.77
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 51,
+   "grande": 21
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 201,
+   "3": 164,
+   "4": 56,
+   "1": 41,
+   "7": 8,
+   "5": 20,
+   "6": 8,
+   "11": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.408,
+   "3": 1.477,
+   "4": 1.376,
+   "1": 1.436,
+   "7": 1.773,
+   "5": 1.044,
+   "6": 1.674,
+   "11": 0.914,
+   "9": 0.693
+  },
+  "umbral_nado": 3.522,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 124,
+  "t": 2500.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 156.0
+  },
+  "segmentos_media": {
+   "sopa": 2.76
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 31,
+   "grande": 9
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "1": 42,
+   "4": 53,
+   "3": 163,
+   "2": 203,
+   "7": 9,
+   "5": 20,
+   "6": 8,
+   "11": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.414,
+   "4": 1.473,
+   "3": 1.318,
+   "2": 1.424,
+   "7": 1.278,
+   "5": 1.336,
+   "6": 1.07,
+   "11": 0.963,
+   "9": 0.976
+  },
+  "umbral_nado": 3.922,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 125,
+  "t": 2520.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 157.5
+  },
+  "segmentos_media": {
+   "sopa": 2.75
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 33,
+   "grande": 13
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 207,
+   "3": 162,
+   "1": 41,
+   "7": 9,
+   "4": 50,
+   "5": 21,
+   "6": 8,
+   "11": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.38,
+   "3": 1.413,
+   "1": 1.367,
+   "7": 1.212,
+   "4": 1.415,
+   "5": 1.62,
+   "6": 1.316,
+   "11": 1.742,
+   "9": 3.178
+  },
+  "umbral_nado": 3.435,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 126,
+  "t": 2540.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 164.5
+  },
+  "segmentos_media": {
+   "sopa": 2.75
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 49,
+   "grande": 21
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 205,
+   "3": 164,
+   "1": 41,
+   "7": 10,
+   "4": 50,
+   "5": 21,
+   "6": 8,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.391,
+   "3": 1.422,
+   "1": 1.237,
+   "7": 1.339,
+   "4": 1.343,
+   "5": 1.392,
+   "6": 1.362,
+   "9": 1.203
+  },
+  "umbral_nado": 3.35,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 127,
+  "t": 2560.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 170.5
+  },
+  "segmentos_media": {
+   "sopa": 2.77
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 35,
+   "grande": 26
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "2": 205,
+   "3": 163,
+   "1": 41,
+   "7": 10,
+   "4": 50,
+   "5": 21,
+   "6": 8,
+   "9": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.483,
+   "3": 1.409,
+   "1": 1.255,
+   "7": 1.391,
+   "4": 1.534,
+   "5": 1.29,
+   "6": 1.307,
+   "9": 1.25,
+   "12": 2.211
+  },
+  "umbral_nado": 3.509,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 128,
+  "t": 2580.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 171.8
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 28,
+   "grande": 15
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 204,
+   "7": 10,
+   "1": 40,
+   "3": 164,
+   "4": 51,
+   "5": 21,
+   "6": 8,
+   "9": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.402,
+   "7": 1.271,
+   "1": 1.329,
+   "3": 1.423,
+   "4": 1.204,
+   "5": 1.466,
+   "6": 1.37,
+   "9": 0.768,
+   "12": 0.826
+  },
+  "umbral_nado": 3.279,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 129,
+  "t": 2600.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 173.2
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 4,
+  "muertes": 4,
+  "comidas": {
+   "chica": 25,
+   "grande": 10
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 202,
+   "7": 10,
+   "1": 40,
+   "3": 164,
+   "4": 53,
+   "5": 21,
+   "6": 8,
+   "9": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.443,
+   "7": 1.172,
+   "1": 1.372,
+   "3": 1.416,
+   "4": 1.484,
+   "5": 1.271,
+   "6": 1.394,
+   "9": 1.448,
+   "12": 2.647
+  },
+  "umbral_nado": 3.456,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 130,
+  "t": 2620.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 175.4
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 25,
+   "grande": 16
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 200,
+   "1": 40,
+   "3": 167,
+   "4": 52,
+   "5": 22,
+   "7": 9,
+   "6": 8,
+   "9": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.447,
+   "1": 1.446,
+   "3": 1.459,
+   "4": 1.351,
+   "5": 1.496,
+   "7": 1.567,
+   "6": 1.814,
+   "9": 1.1,
+   "12": 1.272
+  },
+  "umbral_nado": 4.132,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 131,
+  "t": 2640.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 180.4
+  },
+  "segmentos_media": {
+   "sopa": 2.76
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 49,
+   "grande": 15
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 198,
+   "1": 41,
+   "3": 169,
+   "4": 53,
+   "5": 22,
+   "7": 9,
+   "6": 7,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.388,
+   "1": 1.306,
+   "3": 1.413,
+   "4": 1.276,
+   "5": 1.527,
+   "7": 1.561,
+   "6": 1.376,
+   "9": 0.821
+  },
+  "umbral_nado": 3.473,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 132,
+  "t": 2660.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 186.3
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 4,
+  "muertes": 4,
+  "comidas": {
+   "chica": 32,
+   "grande": 23
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 196,
+   "3": 170,
+   "1": 40,
+   "4": 54,
+   "5": 22,
+   "7": 9,
+   "6": 8,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.403,
+   "3": 1.391,
+   "1": 1.462,
+   "4": 1.333,
+   "5": 1.526,
+   "7": 1.415,
+   "6": 1.051,
+   "9": 1.833
+  },
+  "umbral_nado": 3.49,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 133,
+  "t": 2680.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 192.1
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 5,
+  "muertes": 5,
+  "comidas": {
+   "chica": 36,
+   "grande": 22
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "2": 195,
+   "1": 40,
+   "3": 169,
+   "4": 55,
+   "5": 23,
+   "7": 9,
+   "6": 8,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.361,
+   "1": 1.544,
+   "3": 1.488,
+   "4": 1.316,
+   "5": 1.525,
+   "7": 1.322,
+   "6": 1.552,
+   "9": 1.766
+  },
+  "umbral_nado": 3.527,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 134,
+  "t": 2700.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 195.4
+  },
+  "segmentos_media": {
+   "sopa": 2.79
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 20,
+   "grande": 16
+  },
+  "segundos": 5.5,
+  "por_segmentos": {
+   "1": 40,
+   "3": 169,
+   "2": 193,
+   "4": 58,
+   "5": 23,
+   "7": 8,
+   "6": 8,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.508,
+   "3": 1.394,
+   "2": 1.414,
+   "4": 1.523,
+   "5": 1.496,
+   "7": 1.219,
+   "6": 1.63,
+   "9": 1.206
+  },
+  "umbral_nado": 3.44,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 135,
+  "t": 2720.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 199.7
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 43,
+   "grande": 12
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "1": 40,
+   "3": 170,
+   "2": 192,
+   "4": 59,
+   "5": 23,
+   "7": 7,
+   "6": 8,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.549,
+   "3": 1.488,
+   "2": 1.417,
+   "4": 1.52,
+   "5": 1.241,
+   "7": 1.465,
+   "6": 1.21,
+   "9": 1.509
+  },
+  "umbral_nado": 3.78,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 136,
+  "t": 2740.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 208.1
+  },
+  "segmentos_media": {
+   "sopa": 2.78
+  },
+  "nacimientos": 2,
+  "muertes": 2,
+  "comidas": {
+   "chica": 42,
+   "grande": 26
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "1": 40,
+   "3": 171,
+   "2": 192,
+   "4": 58,
+   "5": 23,
+   "7": 7,
+   "6": 8,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.49,
+   "3": 1.365,
+   "2": 1.493,
+   "4": 1.533,
+   "5": 1.354,
+   "7": 1.653,
+   "6": 1.172,
+   "9": 1.093
+  },
+  "umbral_nado": 3.444,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 137,
+  "t": 2760.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 173.5
+  },
+  "segmentos_media": {
+   "sopa": 2.84
+  },
+  "nacimientos": 70,
+  "muertes": 70,
+  "comidas": {
+   "chica": 25,
+   "grande": 12
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 194,
+   "3": 166,
+   "4": 58,
+   "5": 28,
+   "1": 35,
+   "6": 10,
+   "7": 8,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.367,
+   "3": 1.346,
+   "4": 1.367,
+   "5": 1.455,
+   "1": 1.268,
+   "6": 1.46,
+   "7": 1.466,
+   "9": 0.19
+  },
+  "umbral_nado": 3.627,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 138,
+  "t": 2780.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 161.8
+  },
+  "segmentos_media": {
+   "sopa": 2.89
+  },
+  "nacimientos": 44,
+  "muertes": 44,
+  "comidas": {
+   "chica": 40,
+   "grande": 32
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 194,
+   "3": 161,
+   "1": 34,
+   "4": 58,
+   "6": 12,
+   "5": 30,
+   "7": 9,
+   "9": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.393,
+   "3": 1.314,
+   "1": 1.341,
+   "4": 1.566,
+   "6": 1.562,
+   "5": 1.259,
+   "7": 1.861,
+   "9": 2.907,
+   "12": 1.099
+  },
+  "umbral_nado": 3.841,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 139,
+  "t": 2800.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 146.6
+  },
+  "segmentos_media": {
+   "sopa": 2.93
+  },
+  "nacimientos": 39,
+  "muertes": 39,
+  "comidas": {
+   "chica": 39,
+   "grande": 14
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "6": 15,
+   "4": 59,
+   "3": 157,
+   "2": 190,
+   "1": 35,
+   "5": 31,
+   "7": 10,
+   "9": 2,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "6": 1.431,
+   "4": 1.338,
+   "3": 1.484,
+   "2": 1.436,
+   "1": 1.374,
+   "5": 1.535,
+   "7": 1.288,
+   "9": 1.282,
+   "12": 0.651
+  },
+  "umbral_nado": 3.453,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 140,
+  "t": 2820.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 137.5
+  },
+  "segmentos_media": {
+   "sopa": 2.98
+  },
+  "nacimientos": 35,
+  "muertes": 35,
+  "comidas": {
+   "chica": 43,
+   "grande": 14
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 183,
+   "6": 14,
+   "3": 161,
+   "1": 34,
+   "4": 60,
+   "7": 12,
+   "5": 32,
+   "9": 2,
+   "12": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.556,
+   "6": 1.663,
+   "3": 1.405,
+   "1": 1.46,
+   "4": 1.466,
+   "7": 1.69,
+   "5": 1.508,
+   "9": 0.882,
+   "12": 4.373,
+   "11": 2.238
+  },
+  "umbral_nado": 3.701,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 141,
+  "t": 2840.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 137.7
+  },
+  "segmentos_media": {
+   "sopa": 3.01
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 37,
+   "grande": 26
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 162,
+   "2": 178,
+   "1": 34,
+   "4": 62,
+   "6": 14,
+   "7": 12,
+   "5": 34,
+   "9": 2,
+   "12": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.421,
+   "2": 1.426,
+   "1": 1.446,
+   "4": 1.268,
+   "6": 1.476,
+   "7": 1.585,
+   "5": 1.473,
+   "9": 1.769,
+   "12": 0.832,
+   "11": 0.958
+  },
+  "umbral_nado": 3.617,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 142,
+  "t": 2860.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 139.7
+  },
+  "segmentos_media": {
+   "sopa": 3.0
+  },
+  "nacimientos": 18,
+  "muertes": 18,
+  "comidas": {
+   "chica": 39,
+   "grande": 24
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 165,
+   "2": 177,
+   "1": 34,
+   "4": 59,
+   "5": 35,
+   "6": 15,
+   "7": 11,
+   "9": 2,
+   "12": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.327,
+   "2": 1.351,
+   "1": 1.249,
+   "4": 1.53,
+   "5": 1.408,
+   "6": 1.437,
+   "7": 0.984,
+   "9": 0.968,
+   "12": 1.571,
+   "11": 1.581
+  },
+  "umbral_nado": 3.033,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 143,
+  "t": 2880.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 138.4
+  },
+  "segmentos_media": {
+   "sopa": 3.04
+  },
+  "nacimientos": 18,
+  "muertes": 18,
+  "comidas": {
+   "chica": 40,
+   "grande": 19
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "3": 162,
+   "2": 175,
+   "5": 39,
+   "1": 33,
+   "4": 60,
+   "6": 14,
+   "7": 11,
+   "9": 2,
+   "12": 1,
+   "11": 1,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.428,
+   "2": 1.378,
+   "5": 1.438,
+   "1": 1.462,
+   "4": 1.595,
+   "6": 1.597,
+   "7": 1.31,
+   "9": 1.303,
+   "12": 0.171,
+   "11": 0.701,
+   "8": 1.476
+  },
+  "umbral_nado": 3.607,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 144,
+  "t": 2900.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 137.6
+  },
+  "segmentos_media": {
+   "sopa": 3.01
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 29,
+   "grande": 7
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "3": 161,
+   "5": 39,
+   "2": 177,
+   "1": 34,
+   "4": 60,
+   "6": 13,
+   "7": 11,
+   "9": 2,
+   "12": 1,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.377,
+   "5": 1.512,
+   "2": 1.345,
+   "1": 1.81,
+   "4": 1.292,
+   "6": 1.202,
+   "7": 1.625,
+   "9": 1.344,
+   "12": 0.662,
+   "8": 1.886
+  },
+  "umbral_nado": 4.571,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 145,
+  "t": 2920.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 138.6
+  },
+  "segmentos_media": {
+   "sopa": 2.98
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 28,
+   "grande": 17
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "1": 35,
+   "2": 181,
+   "3": 159,
+   "4": 60,
+   "6": 13,
+   "5": 37,
+   "7": 11,
+   "9": 2,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.349,
+   "2": 1.403,
+   "3": 1.423,
+   "4": 1.551,
+   "6": 1.353,
+   "5": 1.579,
+   "7": 1.668,
+   "9": 0.911,
+   "8": 1.369
+  },
+  "umbral_nado": 3.84,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 146,
+  "t": 2940.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 142.5
+  },
+  "segmentos_media": {
+   "sopa": 2.96
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 32,
+   "grande": 20
+  },
+  "segundos": 4.6,
+  "por_segmentos": {
+   "2": 184,
+   "3": 159,
+   "6": 13,
+   "1": 34,
+   "4": 59,
+   "5": 37,
+   "7": 10,
+   "9": 2,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.475,
+   "3": 1.436,
+   "6": 1.428,
+   "1": 1.491,
+   "4": 1.524,
+   "5": 1.458,
+   "7": 1.42,
+   "9": 0.976,
+   "8": 1.041
+  },
+  "umbral_nado": 4.007,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 147,
+  "t": 2960.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 146.5
+  },
+  "segmentos_media": {
+   "sopa": 2.94
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 26,
+   "grande": 26
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "3": 159,
+   "1": 34,
+   "4": 59,
+   "2": 187,
+   "5": 37,
+   "7": 10,
+   "6": 11,
+   "9": 2,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.487,
+   "1": 1.491,
+   "4": 1.449,
+   "2": 1.438,
+   "5": 1.562,
+   "7": 1.327,
+   "6": 1.269,
+   "9": 0.367,
+   "8": 2.013
+  },
+  "umbral_nado": 3.437,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 148,
+  "t": 2980.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 147.5
+  },
+  "segmentos_media": {
+   "sopa": 2.94
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 28,
+   "grande": 12
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 189,
+   "3": 157,
+   "1": 33,
+   "4": 59,
+   "5": 38,
+   "7": 10,
+   "6": 11,
+   "9": 2,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.36,
+   "3": 1.445,
+   "1": 1.451,
+   "4": 1.382,
+   "5": 1.233,
+   "7": 1.396,
+   "6": 1.294,
+   "9": 1.996,
+   "8": 0.394
+  },
+  "umbral_nado": 3.917,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 149,
+  "t": 3000.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 147.7
+  },
+  "segmentos_media": {
+   "sopa": 2.94
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 26,
+   "grande": 19
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "4": 61,
+   "1": 32,
+   "5": 38,
+   "2": 191,
+   "7": 9,
+   "3": 155,
+   "6": 11,
+   "9": 2,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.429,
+   "1": 1.4,
+   "5": 1.473,
+   "2": 1.336,
+   "7": 1.489,
+   "3": 1.404,
+   "6": 1.652,
+   "9": 1.32,
+   "8": 1.434
+  },
+  "umbral_nado": 3.795,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 150,
+  "t": 3020.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 147.7
+  },
+  "segmentos_media": {
+   "sopa": 2.93
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 47,
+   "grande": 20
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "5": 37,
+   "1": 30,
+   "2": 194,
+   "4": 63,
+   "3": 154,
+   "6": 11,
+   "7": 8,
+   "9": 2,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.814,
+   "1": 1.421,
+   "2": 1.432,
+   "4": 1.427,
+   "3": 1.407,
+   "6": 1.636,
+   "7": 1.472,
+   "9": 1.13,
+   "8": 1.687
+  },
+  "umbral_nado": 3.181,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 151,
+  "t": 3040.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 153.0
+  },
+  "segmentos_media": {
+   "sopa": 2.95
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 49,
+   "grande": 21
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 196,
+   "1": 29,
+   "4": 64,
+   "3": 151,
+   "5": 37,
+   "6": 11,
+   "7": 8,
+   "9": 2,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.407,
+   "1": 1.398,
+   "4": 1.433,
+   "3": 1.468,
+   "5": 1.242,
+   "6": 1.759,
+   "7": 1.412,
+   "9": 0.977,
+   "8": 1.73,
+   "11": 1.336
+  },
+  "umbral_nado": 4.202,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 152,
+  "t": 3060.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 152.7
+  },
+  "segmentos_media": {
+   "sopa": 2.96
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 44,
+   "grande": 18
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "4": 63,
+   "2": 196,
+   "1": 28,
+   "5": 39,
+   "3": 151,
+   "6": 11,
+   "7": 8,
+   "9": 2,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.177,
+   "2": 1.392,
+   "1": 1.433,
+   "5": 1.508,
+   "3": 1.368,
+   "6": 1.374,
+   "7": 1.618,
+   "9": 0.266,
+   "8": 1.478,
+   "11": 0.657
+  },
+  "umbral_nado": 3.254,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 153,
+  "t": 3080.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 150.1
+  },
+  "segmentos_media": {
+   "sopa": 2.94
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 37,
+   "grande": 15
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 202,
+   "3": 150,
+   "6": 10,
+   "1": 27,
+   "5": 39,
+   "4": 60,
+   "7": 8,
+   "9": 2,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.431,
+   "3": 1.35,
+   "6": 1.476,
+   "1": 1.511,
+   "5": 1.341,
+   "4": 1.365,
+   "7": 1.609,
+   "9": 0.594,
+   "8": 0.707,
+   "11": 1.491
+  },
+  "umbral_nado": 3.874,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 154,
+  "t": 3100.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 151.7
+  },
+  "segmentos_media": {
+   "sopa": 2.94
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 32,
+   "grande": 18
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 202,
+   "5": 40,
+   "3": 151,
+   "4": 59,
+   "1": 26,
+   "7": 8,
+   "9": 2,
+   "6": 10,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.359,
+   "5": 1.428,
+   "3": 1.484,
+   "4": 1.331,
+   "1": 1.406,
+   "7": 1.36,
+   "9": 1.565,
+   "6": 1.577,
+   "8": 0.478,
+   "11": 2.53
+  },
+  "umbral_nado": 3.085,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 155,
+  "t": 3120.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 155.8
+  },
+  "segmentos_media": {
+   "sopa": 2.95
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 35,
+   "grande": 21
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "5": 41,
+   "3": 150,
+   "1": 26,
+   "2": 203,
+   "7": 9,
+   "4": 57,
+   "9": 2,
+   "6": 10,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.236,
+   "3": 1.424,
+   "1": 1.467,
+   "2": 1.397,
+   "7": 1.357,
+   "4": 1.431,
+   "9": 2.036,
+   "6": 1.541,
+   "8": 1.075,
+   "11": 1.8
+  },
+  "umbral_nado": 3.415,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 156,
+  "t": 3140.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 157.5
+  },
+  "segmentos_media": {
+   "sopa": 2.93
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 32,
+   "grande": 11
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 206,
+   "3": 151,
+   "5": 41,
+   "7": 8,
+   "1": 25,
+   "4": 57,
+   "9": 2,
+   "6": 8,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.299,
+   "3": 1.354,
+   "5": 1.372,
+   "7": 1.021,
+   "1": 1.424,
+   "4": 1.39,
+   "9": 0.995,
+   "6": 1.347,
+   "8": 0.412,
+   "11": 1.831
+  },
+  "umbral_nado": 3.554,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 157,
+  "t": 3160.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 158.0
+  },
+  "segmentos_media": {
+   "sopa": 2.92
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 46,
+   "grande": 7
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 207,
+   "3": 151,
+   "7": 8,
+   "1": 25,
+   "4": 57,
+   "5": 40,
+   "9": 2,
+   "6": 8,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.416,
+   "3": 1.387,
+   "7": 1.191,
+   "1": 1.58,
+   "4": 1.365,
+   "5": 1.478,
+   "9": 1.532,
+   "6": 1.37,
+   "8": 0.992,
+   "11": 1.17
+  },
+  "umbral_nado": 3.505,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 158,
+  "t": 3180.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 156.8
+  },
+  "segmentos_media": {
+   "sopa": 2.93
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 30,
+   "grande": 18
+  },
+  "segundos": 5.6,
+  "por_segmentos": {
+   "2": 204,
+   "4": 55,
+   "1": 24,
+   "3": 157,
+   "5": 40,
+   "7": 7,
+   "9": 4,
+   "6": 8,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.396,
+   "4": 1.44,
+   "1": 1.278,
+   "3": 1.338,
+   "5": 1.313,
+   "7": 1.036,
+   "9": 2.06,
+   "6": 1.092,
+   "8": 1.62
+  },
+  "umbral_nado": 3.071,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 159,
+  "t": 3200.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 160.7
+  },
+  "segmentos_media": {
+   "sopa": 2.93
+  },
+  "nacimientos": 5,
+  "muertes": 5,
+  "comidas": {
+   "chica": 33,
+   "grande": 14
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "1": 24,
+   "2": 203,
+   "3": 159,
+   "4": 55,
+   "5": 39,
+   "7": 7,
+   "9": 4,
+   "6": 8,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.37,
+   "2": 1.369,
+   "3": 1.428,
+   "4": 1.355,
+   "5": 1.658,
+   "7": 1.025,
+   "9": 0.994,
+   "6": 1.329,
+   "8": 1.992
+  },
+  "umbral_nado": 3.365,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 160,
+  "t": 3220.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 159.7
+  },
+  "segmentos_media": {
+   "sopa": 3.0
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 36,
+   "grande": 19
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 196,
+   "3": 161,
+   "4": 57,
+   "1": 22,
+   "5": 40,
+   "7": 8,
+   "9": 4,
+   "6": 10,
+   "8": 1,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.363,
+   "3": 1.391,
+   "4": 1.336,
+   "1": 1.62,
+   "5": 1.397,
+   "7": 2.0,
+   "9": 0.681,
+   "6": 1.389,
+   "8": 0.665,
+   "15": 0.693
+  },
+  "umbral_nado": 3.271,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 161,
+  "t": 3240.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 164.0
+  },
+  "segmentos_media": {
+   "sopa": 3.0
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 48,
+   "grande": 21
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "4": 58,
+   "2": 195,
+   "3": 160,
+   "1": 23,
+   "5": 40,
+   "7": 8,
+   "9": 4,
+   "6": 10,
+   "8": 1,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.407,
+   "2": 1.392,
+   "3": 1.285,
+   "1": 1.337,
+   "5": 1.381,
+   "7": 1.744,
+   "9": 1.578,
+   "6": 1.553,
+   "8": 0.372,
+   "15": 2.523
+  },
+  "umbral_nado": 3.515,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 162,
+  "t": 3260.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 166.2
+  },
+  "segmentos_media": {
+   "sopa": 3.03
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 33,
+   "grande": 18
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 192,
+   "3": 161,
+   "1": 23,
+   "5": 40,
+   "4": 59,
+   "7": 8,
+   "9": 4,
+   "6": 10,
+   "8": 1,
+   "15": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.456,
+   "3": 1.408,
+   "1": 1.289,
+   "5": 1.507,
+   "4": 1.332,
+   "7": 1.293,
+   "9": 1.722,
+   "6": 1.489,
+   "8": 0.632,
+   "15": 1.313,
+   "12": 1.74
+  },
+  "umbral_nado": 3.221,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 163,
+  "t": 3280.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 172.6
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 32,
+   "grande": 25
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "3": 163,
+   "2": 191,
+   "1": 23,
+   "5": 40,
+   "4": 58,
+   "7": 9,
+   "9": 3,
+   "6": 10,
+   "8": 1,
+   "15": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.317,
+   "2": 1.374,
+   "1": 1.392,
+   "5": 1.364,
+   "4": 1.369,
+   "7": 1.761,
+   "9": 2.065,
+   "6": 1.328,
+   "8": 1.816,
+   "15": 1.362,
+   "12": 1.285
+  },
+  "umbral_nado": 3.198,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 164,
+  "t": 3300.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 174.4
+  },
+  "segmentos_media": {
+   "sopa": 3.05
+  },
+  "nacimientos": 5,
+  "muertes": 5,
+  "comidas": {
+   "chica": 32,
+   "grande": 14
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "1": 23,
+   "2": 190,
+   "3": 161,
+   "5": 41,
+   "4": 58,
+   "7": 9,
+   "9": 4,
+   "6": 10,
+   "8": 2,
+   "15": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.231,
+   "2": 1.412,
+   "3": 1.387,
+   "5": 1.219,
+   "4": 1.34,
+   "7": 1.609,
+   "9": 1.552,
+   "6": 1.047,
+   "8": 1.516,
+   "15": 1.322,
+   "12": 0.523
+  },
+  "umbral_nado": 2.934,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 165,
+  "t": 3320.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 172.7
+  },
+  "segmentos_media": {
+   "sopa": 3.06
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 44,
+   "grande": 8
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "4": 58,
+   "2": 187,
+   "3": 164,
+   "9": 5,
+   "1": 22,
+   "5": 42,
+   "7": 9,
+   "6": 10,
+   "8": 2,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.328,
+   "2": 1.337,
+   "3": 1.421,
+   "9": 1.329,
+   "1": 1.419,
+   "5": 1.328,
+   "7": 1.156,
+   "6": 1.068,
+   "8": 1.543,
+   "15": 1.068
+  },
+  "umbral_nado": 3.423,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 166,
+  "t": 3340.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 175.9
+  },
+  "segmentos_media": {
+   "sopa": 3.06
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 39,
+   "grande": 15
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "4": 56,
+   "2": 185,
+   "3": 168,
+   "9": 5,
+   "1": 22,
+   "5": 42,
+   "7": 8,
+   "6": 11,
+   "8": 2,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.412,
+   "2": 1.437,
+   "3": 1.384,
+   "9": 2.08,
+   "1": 1.445,
+   "5": 1.502,
+   "7": 1.841,
+   "6": 1.703,
+   "8": 2.31,
+   "15": 0.431
+  },
+  "umbral_nado": 4.032,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 167,
+  "t": 3360.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 179.2
+  },
+  "segmentos_media": {
+   "sopa": 3.05
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 47,
+   "grande": 18
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 183,
+   "3": 169,
+   "9": 5,
+   "4": 55,
+   "1": 23,
+   "5": 44,
+   "7": 8,
+   "6": 11,
+   "15": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.315,
+   "3": 1.425,
+   "9": 1.219,
+   "4": 1.524,
+   "1": 1.869,
+   "5": 1.17,
+   "7": 1.566,
+   "6": 1.585,
+   "15": 1.767,
+   "8": 0.729
+  },
+  "umbral_nado": 4.781,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 168,
+  "t": 3380.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 180.1
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 24,
+   "grande": 15
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 184,
+   "9": 4,
+   "3": 166,
+   "4": 57,
+   "1": 24,
+   "5": 45,
+   "7": 8,
+   "6": 11,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.494,
+   "9": 1.232,
+   "3": 1.326,
+   "4": 1.494,
+   "1": 1.406,
+   "5": 1.456,
+   "7": 1.651,
+   "6": 1.495,
+   "8": 0.169
+  },
+  "umbral_nado": 3.572,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 169,
+  "t": 3400.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 185.8
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 43,
+   "grande": 23
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 182,
+   "3": 168,
+   "1": 24,
+   "5": 45,
+   "7": 9,
+   "4": 57,
+   "6": 11,
+   "9": 3,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.339,
+   "3": 1.423,
+   "1": 1.442,
+   "5": 1.578,
+   "7": 1.565,
+   "4": 1.359,
+   "6": 1.156,
+   "9": 1.409,
+   "8": 1.28
+  },
+  "umbral_nado": 3.692,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 170,
+  "t": 3420.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 185.9
+  },
+  "segmentos_media": {
+   "sopa": 3.04
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 31,
+   "grande": 14
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 180,
+   "5": 46,
+   "3": 167,
+   "7": 9,
+   "4": 60,
+   "1": 23,
+   "6": 11,
+   "9": 3,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.368,
+   "5": 1.471,
+   "3": 1.359,
+   "7": 1.403,
+   "4": 1.432,
+   "1": 1.506,
+   "6": 1.193,
+   "9": 0.829,
+   "8": 0.828
+  },
+  "umbral_nado": 3.877,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 171,
+  "t": 3440.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 186.8
+  },
+  "segmentos_media": {
+   "sopa": 3.06
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 32,
+   "grande": 14
+  },
+  "segundos": 4.6,
+  "por_segmentos": {
+   "2": 178,
+   "3": 167,
+   "7": 9,
+   "4": 61,
+   "5": 46,
+   "1": 23,
+   "6": 11,
+   "9": 3,
+   "8": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.404,
+   "3": 1.358,
+   "7": 1.486,
+   "4": 1.388,
+   "5": 1.332,
+   "1": 1.589,
+   "6": 1.724,
+   "9": 1.603,
+   "8": 0.376,
+   "12": 1.647
+  },
+  "umbral_nado": 4.801,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 172,
+  "t": 3460.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 186.0
+  },
+  "segmentos_media": {
+   "sopa": 3.06
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 31,
+   "grande": 8
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 166,
+   "2": 177,
+   "7": 8,
+   "4": 64,
+   "5": 46,
+   "1": 23,
+   "6": 11,
+   "9": 3,
+   "8": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.405,
+   "2": 1.466,
+   "7": 1.432,
+   "4": 1.288,
+   "5": 1.406,
+   "1": 1.327,
+   "6": 1.474,
+   "9": 2.219,
+   "8": 1.155,
+   "12": 0.544
+  },
+  "umbral_nado": 3.657,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 173,
+  "t": 3480.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 186.9
+  },
+  "segmentos_media": {
+   "sopa": 3.07
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 33,
+   "grande": 13
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 166,
+   "7": 9,
+   "4": 64,
+   "2": 176,
+   "5": 46,
+   "1": 23,
+   "6": 11,
+   "9": 3,
+   "8": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.449,
+   "7": 1.731,
+   "4": 1.276,
+   "2": 1.457,
+   "5": 1.449,
+   "1": 1.594,
+   "6": 1.772,
+   "9": 1.029,
+   "8": 0.524,
+   "12": 0.791
+  },
+  "umbral_nado": 3.693,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 174,
+  "t": 3500.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 189.4
+  },
+  "segmentos_media": {
+   "sopa": 3.06
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 44,
+   "grande": 19
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "3": 161,
+   "4": 66,
+   "5": 47,
+   "2": 178,
+   "7": 8,
+   "1": 24,
+   "6": 11,
+   "9": 3,
+   "8": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.344,
+   "4": 1.449,
+   "5": 1.292,
+   "2": 1.382,
+   "7": 1.493,
+   "1": 1.338,
+   "6": 1.489,
+   "9": 1.696,
+   "8": 2.18,
+   "12": 1.317
+  },
+  "umbral_nado": 3.362,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 175,
+  "t": 3520.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 192.0
+  },
+  "segmentos_media": {
+   "sopa": 3.04
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 45,
+   "grande": 17
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "3": 160,
+   "5": 48,
+   "2": 180,
+   "7": 8,
+   "4": 66,
+   "1": 24,
+   "6": 10,
+   "9": 2,
+   "8": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.513,
+   "5": 1.403,
+   "2": 1.383,
+   "7": 1.751,
+   "4": 1.241,
+   "1": 1.361,
+   "6": 1.243,
+   "9": 0.93,
+   "8": 1.41,
+   "12": 1.024
+  },
+  "umbral_nado": 3.578,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 176,
+  "t": 3540.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 194.9
+  },
+  "segmentos_media": {
+   "sopa": 3.03
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 41,
+   "grande": 24
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "4": 67,
+   "2": 180,
+   "3": 161,
+   "1": 24,
+   "6": 10,
+   "5": 47,
+   "7": 7,
+   "9": 2,
+   "8": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.528,
+   "2": 1.441,
+   "3": 1.342,
+   "1": 1.338,
+   "6": 2.057,
+   "5": 1.35,
+   "7": 1.184,
+   "9": 0.985,
+   "8": 1.195,
+   "12": 2.793
+  },
+  "umbral_nado": 3.476,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 177,
+  "t": 3560.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 196.4
+  },
+  "segmentos_media": {
+   "sopa": 3.05
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 38,
+   "grande": 16
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "3": 162,
+   "6": 10,
+   "4": 65,
+   "2": 181,
+   "5": 47,
+   "1": 23,
+   "7": 7,
+   "9": 2,
+   "8": 1,
+   "12": 1,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.338,
+   "6": 1.31,
+   "4": 1.559,
+   "2": 1.445,
+   "5": 1.355,
+   "1": 1.698,
+   "7": 1.388,
+   "9": 0.651,
+   "8": 1.236,
+   "12": 2.003,
+   "14": 2.432
+  },
+  "umbral_nado": 3.622,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 178,
+  "t": 3580.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 197.1
+  },
+  "segmentos_media": {
+   "sopa": 3.04
+  },
+  "nacimientos": 5,
+  "muertes": 5,
+  "comidas": {
+   "chica": 42,
+   "grande": 11
+  },
+  "segundos": 5.5,
+  "por_segmentos": {
+   "4": 64,
+   "2": 183,
+   "3": 161,
+   "5": 47,
+   "1": 24,
+   "7": 7,
+   "6": 9,
+   "9": 2,
+   "8": 1,
+   "12": 1,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.28,
+   "2": 1.493,
+   "3": 1.43,
+   "5": 1.227,
+   "1": 1.434,
+   "7": 1.026,
+   "6": 1.392,
+   "9": 0.937,
+   "8": 1.193,
+   "12": 1.359,
+   "14": 1.006
+  },
+  "umbral_nado": 3.315,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 179,
+  "t": 3600.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 200.1
+  },
+  "segmentos_media": {
+   "sopa": 3.0
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 49,
+   "grande": 9
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 185,
+   "4": 62,
+   "3": 162,
+   "5": 47,
+   "1": 24,
+   "7": 7,
+   "6": 10,
+   "9": 2,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.389,
+   "4": 1.434,
+   "3": 1.382,
+   "5": 1.59,
+   "1": 1.326,
+   "7": 1.499,
+   "6": 1.401,
+   "9": 1.197,
+   "12": 3.321
+  },
+  "umbral_nado": 3.641,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 180,
+  "t": 3620.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 201.4
+  },
+  "segmentos_media": {
+   "sopa": 2.99
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 41,
+   "grande": 16
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 188,
+   "3": 162,
+   "4": 60,
+   "5": 47,
+   "1": 24,
+   "7": 6,
+   "6": 10,
+   "9": 2,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.394,
+   "3": 1.5,
+   "4": 1.364,
+   "5": 1.538,
+   "1": 1.196,
+   "7": 1.541,
+   "6": 1.258,
+   "9": 2.59,
+   "12": 1.444
+  },
+  "umbral_nado": 3.435,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 181,
+  "t": 3640.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 201.4
+  },
+  "segmentos_media": {
+   "sopa": 2.99
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 35,
+   "grande": 13
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 188,
+   "4": 60,
+   "5": 50,
+   "1": 24,
+   "3": 160,
+   "7": 6,
+   "6": 10,
+   "9": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.482,
+   "4": 1.364,
+   "5": 1.435,
+   "1": 1.614,
+   "3": 1.483,
+   "7": 0.99,
+   "6": 1.844,
+   "9": 2.003,
+   "12": 1.157
+  },
+  "umbral_nado": 3.6,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 182,
+  "t": 3660.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 207.9
+  },
+  "segmentos_media": {
+   "sopa": 2.99
+  },
+  "nacimientos": 2,
+  "muertes": 2,
+  "comidas": {
+   "chica": 32,
+   "grande": 22
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "4": 60,
+   "5": 51,
+   "1": 24,
+   "3": 160,
+   "2": 187,
+   "7": 6,
+   "6": 10,
+   "9": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.482,
+   "5": 1.381,
+   "1": 1.382,
+   "3": 1.382,
+   "2": 1.395,
+   "7": 1.619,
+   "6": 1.225,
+   "9": 0.684,
+   "12": 3.02
+  },
+  "umbral_nado": 3.23,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 183,
+  "t": 3680.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 176.6
+  },
+  "segmentos_media": {
+   "sopa": 3.03
+  },
+  "nacimientos": 60,
+  "muertes": 60,
+  "comidas": {
+   "chica": 31,
+   "grande": 14
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 185,
+   "3": 152,
+   "4": 65,
+   "6": 12,
+   "5": 53,
+   "1": 25,
+   "7": 5,
+   "9": 1,
+   "12": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.396,
+   "3": 1.501,
+   "4": 1.346,
+   "6": 1.1,
+   "5": 1.275,
+   "1": 1.391,
+   "7": 1.157,
+   "9": 1.713,
+   "12": 1.914
+  },
+  "umbral_nado": 3.478,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 184,
+  "t": 3700.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 165.7
+  },
+  "segmentos_media": {
+   "sopa": 3.1
+  },
+  "nacimientos": 35,
+  "muertes": 35,
+  "comidas": {
+   "chica": 40,
+   "grande": 14
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 182,
+   "3": 153,
+   "1": 25,
+   "5": 50,
+   "6": 11,
+   "7": 6,
+   "4": 66,
+   "9": 2,
+   "12": 2,
+   "13": 1,
+   "10": 1,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.379,
+   "3": 1.352,
+   "1": 1.351,
+   "5": 1.456,
+   "6": 1.236,
+   "7": 1.631,
+   "4": 1.335,
+   "9": 1.015,
+   "12": 1.08,
+   "13": 2.165,
+   "10": 0.47,
+   "15": 1.54
+  },
+  "umbral_nado": 3.468,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 185,
+  "t": 3720.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 150.6
+  },
+  "segmentos_media": {
+   "sopa": 3.14
+  },
+  "nacimientos": 35,
+  "muertes": 35,
+  "comidas": {
+   "chica": 37,
+   "grande": 6
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "3": 153,
+   "4": 68,
+   "2": 177,
+   "1": 24,
+   "5": 53,
+   "6": 12,
+   "7": 5,
+   "9": 2,
+   "12": 2,
+   "13": 1,
+   "10": 1,
+   "15": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.394,
+   "4": 1.394,
+   "2": 1.432,
+   "1": 1.346,
+   "5": 1.209,
+   "6": 1.411,
+   "7": 1.397,
+   "9": 1.509,
+   "12": 0.915,
+   "13": 1.857,
+   "10": 2.096,
+   "15": 0.858,
+   "8": 0.628
+  },
+  "umbral_nado": 3.532,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 186,
+  "t": 3740.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 143.2
+  },
+  "segmentos_media": {
+   "sopa": 3.13
+  },
+  "nacimientos": 28,
+  "muertes": 28,
+  "comidas": {
+   "chica": 42,
+   "grande": 20
+  },
+  "segundos": 5.5,
+  "por_segmentos": {
+   "5": 57,
+   "2": 179,
+   "3": 149,
+   "4": 67,
+   "1": 24,
+   "6": 12,
+   "7": 5,
+   "9": 2,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "15": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.566,
+   "2": 1.349,
+   "3": 1.472,
+   "4": 1.437,
+   "1": 1.189,
+   "6": 1.447,
+   "7": 1.801,
+   "9": 1.067,
+   "12": 1.361,
+   "13": 1.073,
+   "10": 1.496,
+   "15": 3.379,
+   "8": 1.595
+  },
+  "umbral_nado": 2.715,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 187,
+  "t": 3760.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 141.4
+  },
+  "segmentos_media": {
+   "sopa": 3.13
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 25,
+   "grande": 10
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "3": 146,
+   "4": 67,
+   "5": 57,
+   "2": 182,
+   "6": 13,
+   "1": 23,
+   "7": 5,
+   "9": 2,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "15": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.317,
+   "4": 1.401,
+   "5": 1.44,
+   "2": 1.372,
+   "6": 1.629,
+   "1": 1.646,
+   "7": 1.949,
+   "9": 2.016,
+   "12": 2.226,
+   "13": 0.771,
+   "10": 0.98,
+   "15": 1.359,
+   "8": 0.874
+  },
+  "umbral_nado": 4.525,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 188,
+  "t": 3780.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 135.7
+  },
+  "segmentos_media": {
+   "sopa": 3.14
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 22,
+   "grande": 4
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "3": 141,
+   "5": 58,
+   "4": 66,
+   "2": 186,
+   "1": 23,
+   "6": 13,
+   "7": 5,
+   "9": 2,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "15": 1,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.482,
+   "5": 1.334,
+   "4": 1.32,
+   "2": 1.408,
+   "1": 1.308,
+   "6": 1.222,
+   "7": 0.974,
+   "9": 1.005,
+   "12": 1.029,
+   "13": 1.642,
+   "10": 1.855,
+   "15": 0.422,
+   "8": 0.948,
+   "11": 1.202
+  },
+  "umbral_nado": 3.128,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 189,
+  "t": 3800.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 133.4
+  },
+  "segmentos_media": {
+   "sopa": 3.14
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 32,
+   "grande": 14
+  },
+  "segundos": 5.5,
+  "por_segmentos": {
+   "3": 139,
+   "2": 188,
+   "1": 23,
+   "4": 66,
+   "5": 56,
+   "6": 14,
+   "7": 6,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "15": 1,
+   "8": 2,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.355,
+   "2": 1.348,
+   "1": 1.632,
+   "4": 1.27,
+   "5": 1.481,
+   "6": 1.013,
+   "7": 1.809,
+   "9": 1.711,
+   "12": 0.553,
+   "13": 1.09,
+   "10": 0.431,
+   "15": 2.564,
+   "8": 1.182,
+   "11": 1.832
+  },
+  "umbral_nado": 3.819,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 190,
+  "t": 3820.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 133.2
+  },
+  "segmentos_media": {
+   "sopa": 3.1
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 45,
+   "grande": 4
+  },
+  "segundos": 5.5,
+  "por_segmentos": {
+   "3": 142,
+   "2": 188,
+   "1": 24,
+   "4": 65,
+   "5": 55,
+   "6": 14,
+   "7": 5,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "8": 2,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.461,
+   "2": 1.431,
+   "1": 1.355,
+   "4": 1.37,
+   "5": 1.365,
+   "6": 1.141,
+   "7": 0.942,
+   "9": 2.694,
+   "12": 0.488,
+   "13": 0.704,
+   "10": 1.721,
+   "8": 1.497,
+   "11": 2.089
+  },
+  "umbral_nado": 3.077,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 191,
+  "t": 3840.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 129.3
+  },
+  "segmentos_media": {
+   "sopa": 3.11
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 27,
+   "grande": 5
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 187,
+   "4": 67,
+   "5": 55,
+   "1": 23,
+   "3": 142,
+   "6": 15,
+   "7": 3,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "8": 3,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.345,
+   "4": 1.372,
+   "5": 1.242,
+   "1": 1.62,
+   "3": 1.361,
+   "6": 1.374,
+   "7": 1.313,
+   "9": 1.661,
+   "12": 1.698,
+   "13": 1.112,
+   "10": 2.227,
+   "8": 1.072,
+   "11": 2.051
+  },
+  "umbral_nado": 3.681,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 192,
+  "t": 3860.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 130.9
+  },
+  "segmentos_media": {
+   "sopa": 3.1
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 44,
+   "grande": 12
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 185,
+   "3": 146,
+   "5": 53,
+   "4": 66,
+   "6": 15,
+   "1": 24,
+   "7": 3,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "8": 3,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.4,
+   "3": 1.319,
+   "5": 1.48,
+   "4": 1.264,
+   "6": 1.447,
+   "1": 1.25,
+   "7": 1.244,
+   "9": 1.022,
+   "12": 1.491,
+   "13": 0.691,
+   "10": 1.587,
+   "8": 1.991,
+   "11": 1.654
+  },
+  "umbral_nado": 3.484,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 193,
+  "t": 3880.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 134.5
+  },
+  "segmentos_media": {
+   "sopa": 3.1
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 45,
+   "grande": 21
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 184,
+   "3": 147,
+   "5": 54,
+   "4": 64,
+   "6": 15,
+   "1": 25,
+   "7": 3,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "8": 3,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.366,
+   "3": 1.43,
+   "5": 1.35,
+   "4": 1.515,
+   "6": 1.638,
+   "1": 1.353,
+   "7": 0.803,
+   "9": 2.45,
+   "12": 0.272,
+   "13": 0.975,
+   "10": 2.556,
+   "8": 1.44,
+   "11": 3.59
+  },
+  "umbral_nado": 3.261,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 194,
+  "t": 3900.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 134.4
+  },
+  "segmentos_media": {
+   "sopa": 3.09
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 31,
+   "grande": 12
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 185,
+   "3": 148,
+   "4": 62,
+   "6": 16,
+   "5": 52,
+   "1": 26,
+   "7": 3,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "8": 3,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.314,
+   "3": 1.37,
+   "4": 1.393,
+   "6": 1.414,
+   "5": 1.594,
+   "1": 1.295,
+   "7": 0.873,
+   "9": 0.141,
+   "12": 1.846,
+   "13": 0.938,
+   "10": 2.26,
+   "8": 2.065,
+   "11": 1.229
+  },
+  "umbral_nado": 3.117,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 195,
+  "t": 3920.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 135.7
+  },
+  "segmentos_media": {
+   "sopa": 3.09
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 31,
+   "grande": 18
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "4": 62,
+   "2": 182,
+   "3": 150,
+   "6": 16,
+   "5": 50,
+   "1": 28,
+   "7": 3,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "10": 1,
+   "8": 3,
+   "11": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.456,
+   "2": 1.388,
+   "3": 1.398,
+   "6": 1.337,
+   "5": 1.51,
+   "1": 1.474,
+   "7": 1.136,
+   "9": 0.129,
+   "12": 2.409,
+   "13": 1.947,
+   "10": 0.456,
+   "8": 1.365,
+   "11": 1.484
+  },
+  "umbral_nado": 3.283,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 196,
+  "t": 3940.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 132.2
+  },
+  "segmentos_media": {
+   "sopa": 3.06
+  },
+  "nacimientos": 17,
+  "muertes": 17,
+  "comidas": {
+   "chica": 29,
+   "grande": 9
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 181,
+   "3": 154,
+   "6": 15,
+   "5": 52,
+   "4": 59,
+   "1": 29,
+   "7": 3,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "8": 3,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.429,
+   "3": 1.393,
+   "6": 1.307,
+   "5": 1.396,
+   "4": 1.265,
+   "1": 1.474,
+   "7": 0.956,
+   "9": 2.095,
+   "12": 0.808,
+   "13": 1.362,
+   "8": 0.791,
+   "11": 0.23
+  },
+  "umbral_nado": 3.91,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 197,
+  "t": 3960.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 131.8
+  },
+  "segmentos_media": {
+   "sopa": 3.08
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 45,
+   "grande": 12
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 180,
+   "3": 155,
+   "5": 51,
+   "4": 59,
+   "1": 29,
+   "6": 15,
+   "7": 3,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "8": 3,
+   "11": 1,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.353,
+   "3": 1.453,
+   "5": 1.383,
+   "4": 1.505,
+   "1": 1.044,
+   "6": 1.525,
+   "7": 1.138,
+   "9": 3.065,
+   "12": 2.124,
+   "13": 1.034,
+   "8": 2.042,
+   "11": 1.54,
+   "15": 1.685
+  },
+  "umbral_nado": 2.423,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 198,
+  "t": 3980.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 129.9
+  },
+  "segmentos_media": {
+   "sopa": 3.11
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 42,
+   "grande": 12
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 175,
+   "4": 59,
+   "5": 50,
+   "1": 30,
+   "3": 157,
+   "6": 15,
+   "7": 4,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "8": 5,
+   "11": 1,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.332,
+   "4": 1.606,
+   "5": 1.451,
+   "1": 1.462,
+   "3": 1.376,
+   "6": 1.282,
+   "7": 1.204,
+   "9": 0.254,
+   "12": 0.676,
+   "13": 2.223,
+   "8": 1.662,
+   "11": 0.85,
+   "15": 2.644
+  },
+  "umbral_nado": 3.109,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 199,
+  "t": 4000.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 129.1
+  },
+  "segmentos_media": {
+   "sopa": 3.13
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 46,
+   "grande": 10
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "5": 50,
+   "1": 31,
+   "2": 170,
+   "3": 159,
+   "6": 15,
+   "4": 59,
+   "7": 5,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "8": 6,
+   "11": 1,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.269,
+   "1": 1.145,
+   "2": 1.438,
+   "3": 1.41,
+   "6": 1.215,
+   "4": 1.38,
+   "7": 1.267,
+   "9": 1.056,
+   "12": 3.166,
+   "13": 0.798,
+   "8": 1.678,
+   "11": 2.894,
+   "15": 0.98
+  },
+  "umbral_nado": 3.269,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 200,
+  "t": 4020.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 129.7
+  },
+  "segmentos_media": {
+   "sopa": 3.14
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 28,
+   "grande": 16
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 170,
+   "3": 159,
+   "4": 60,
+   "5": 51,
+   "1": 30,
+   "6": 14,
+   "7": 5,
+   "9": 1,
+   "12": 1,
+   "13": 1,
+   "8": 6,
+   "11": 1,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.388,
+   "3": 1.453,
+   "4": 1.393,
+   "5": 1.357,
+   "1": 1.38,
+   "6": 1.351,
+   "7": 1.939,
+   "9": 2.544,
+   "12": 0.88,
+   "13": 1.387,
+   "8": 0.934,
+   "11": 2.723,
+   "15": 0.6
+  },
+  "umbral_nado": 3.546,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 201,
+  "t": 4040.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 133.8
+  },
+  "segmentos_media": {
+   "sopa": 3.09
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 41,
+   "grande": 21
+  },
+  "segundos": 5.7,
+  "por_segmentos": {
+   "4": 60,
+   "2": 171,
+   "3": 162,
+   "5": 50,
+   "1": 30,
+   "6": 13,
+   "7": 5,
+   "9": 1,
+   "12": 1,
+   "8": 6,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.316,
+   "2": 1.352,
+   "3": 1.461,
+   "5": 1.457,
+   "1": 1.665,
+   "6": 1.027,
+   "7": 1.108,
+   "9": 0.223,
+   "12": 2.793,
+   "8": 1.407,
+   "15": 2.199
+  },
+  "umbral_nado": 3.97,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 202,
+  "t": 4060.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 133.2
+  },
+  "segmentos_media": {
+   "sopa": 3.08
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 24,
+   "grande": 10
+  },
+  "segundos": 5.5,
+  "por_segmentos": {
+   "2": 171,
+   "3": 162,
+   "4": 59,
+   "5": 49,
+   "1": 32,
+   "6": 13,
+   "7": 5,
+   "9": 1,
+   "12": 1,
+   "8": 6,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.469,
+   "3": 1.394,
+   "4": 1.472,
+   "5": 1.415,
+   "1": 1.481,
+   "6": 1.435,
+   "7": 1.335,
+   "9": 1.165,
+   "12": 0.348,
+   "8": 1.425,
+   "15": 1.604
+  },
+  "umbral_nado": 3.545,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 203,
+  "t": 4080.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 136.5
+  },
+  "segmentos_media": {
+   "sopa": 3.07
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 43,
+   "grande": 20
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 162,
+   "4": 60,
+   "2": 171,
+   "1": 32,
+   "6": 13,
+   "5": 48,
+   "7": 5,
+   "9": 1,
+   "12": 1,
+   "8": 6,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.454,
+   "4": 1.487,
+   "2": 1.42,
+   "1": 1.26,
+   "6": 1.33,
+   "5": 1.479,
+   "7": 1.929,
+   "9": 2.253,
+   "12": 0.157,
+   "8": 1.793,
+   "15": 0.717
+  },
+  "umbral_nado": 3.335,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 204,
+  "t": 4100.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 136.0
+  },
+  "segmentos_media": {
+   "sopa": 3.07
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 32,
+   "grande": 15
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 175,
+   "3": 157,
+   "4": 60,
+   "1": 32,
+   "6": 14,
+   "5": 48,
+   "7": 5,
+   "9": 1,
+   "12": 1,
+   "8": 6,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.359,
+   "3": 1.316,
+   "4": 1.277,
+   "1": 1.233,
+   "6": 1.664,
+   "5": 1.438,
+   "7": 1.925,
+   "9": 1.437,
+   "12": 1.854,
+   "8": 0.928,
+   "15": 1.322
+  },
+  "umbral_nado": 3.289,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 205,
+  "t": 4120.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 143.6
+  },
+  "segmentos_media": {
+   "sopa": 3.06
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 47,
+   "grande": 27
+  },
+  "segundos": 5.7,
+  "por_segmentos": {
+   "4": 60,
+   "3": 155,
+   "1": 32,
+   "6": 14,
+   "5": 47,
+   "7": 5,
+   "2": 178,
+   "9": 1,
+   "12": 1,
+   "8": 6,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.313,
+   "3": 1.418,
+   "1": 1.39,
+   "6": 1.453,
+   "5": 1.258,
+   "7": 0.693,
+   "2": 1.356,
+   "9": 1.591,
+   "12": 0.654,
+   "8": 2.013,
+   "15": 0.677
+  },
+  "umbral_nado": 3.324,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 206,
+  "t": 4140.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 147.5
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 47,
+   "grande": 21
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "4": 61,
+   "2": 182,
+   "3": 154,
+   "1": 32,
+   "5": 47,
+   "9": 1,
+   "12": 1,
+   "6": 13,
+   "8": 5,
+   "7": 3,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.377,
+   "2": 1.36,
+   "3": 1.514,
+   "1": 1.467,
+   "5": 1.436,
+   "9": 0.573,
+   "12": 0.335,
+   "6": 1.326,
+   "8": 1.483,
+   "7": 1.407,
+   "15": 1.634
+  },
+  "umbral_nado": 4.159,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 207,
+  "t": 4160.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 150.8
+  },
+  "segmentos_media": {
+   "sopa": 3.01
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 45,
+   "grande": 20
+  },
+  "segundos": 5.5,
+  "por_segmentos": {
+   "3": 155,
+   "4": 57,
+   "2": 183,
+   "5": 48,
+   "9": 1,
+   "1": 33,
+   "12": 1,
+   "6": 13,
+   "8": 5,
+   "7": 3,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.416,
+   "4": 1.298,
+   "2": 1.38,
+   "5": 1.304,
+   "9": 2.599,
+   "1": 1.511,
+   "12": 1.029,
+   "6": 1.896,
+   "8": 1.744,
+   "7": 1.395,
+   "15": 1.546
+  },
+  "umbral_nado": 3.405,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 208,
+  "t": 4180.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 153.5
+  },
+  "segmentos_media": {
+   "sopa": 3.01
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 45,
+   "grande": 10
+  },
+  "segundos": 5.6,
+  "por_segmentos": {
+   "2": 183,
+   "3": 154,
+   "5": 49,
+   "9": 1,
+   "4": 56,
+   "1": 34,
+   "12": 1,
+   "6": 13,
+   "8": 5,
+   "7": 3,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.491,
+   "3": 1.45,
+   "5": 1.565,
+   "9": 1.906,
+   "4": 1.36,
+   "1": 1.187,
+   "12": 2.432,
+   "6": 1.546,
+   "8": 1.668,
+   "7": 1.463,
+   "15": 1.288
+  },
+  "umbral_nado": 3.176,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 209,
+  "t": 4200.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 157.0
+  },
+  "segmentos_media": {
+   "sopa": 3.01
+  },
+  "nacimientos": 4,
+  "muertes": 4,
+  "comidas": {
+   "chica": 41,
+   "grande": 13
+  },
+  "segundos": 5.7,
+  "por_segmentos": {
+   "5": 49,
+   "3": 155,
+   "2": 181,
+   "9": 1,
+   "4": 56,
+   "1": 35,
+   "12": 1,
+   "6": 13,
+   "8": 5,
+   "7": 3,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.377,
+   "3": 1.387,
+   "2": 1.454,
+   "9": 0.908,
+   "4": 1.423,
+   "1": 1.195,
+   "12": 1.203,
+   "6": 1.271,
+   "8": 1.357,
+   "7": 1.262,
+   "15": 1.395
+  },
+  "umbral_nado": 3.479,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 210,
+  "t": 4220.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 161.2
+  },
+  "segmentos_media": {
+   "sopa": 3.0
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 30,
+   "grande": 16
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "2": 184,
+   "5": 48,
+   "3": 153,
+   "9": 1,
+   "4": 56,
+   "1": 35,
+   "12": 1,
+   "6": 13,
+   "8": 5,
+   "7": 3,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.335,
+   "5": 1.298,
+   "3": 1.387,
+   "9": 0.623,
+   "4": 1.408,
+   "1": 1.518,
+   "12": 1.421,
+   "6": 1.302,
+   "8": 1.94,
+   "7": 1.139,
+   "15": 3.473
+  },
+  "umbral_nado": 3.692,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 211,
+  "t": 4240.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 159.0
+  },
+  "segmentos_media": {
+   "sopa": 2.98
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 32,
+   "grande": 7
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "3": 158,
+   "5": 47,
+   "2": 182,
+   "1": 36,
+   "4": 55,
+   "12": 1,
+   "6": 12,
+   "8": 5,
+   "7": 3,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.518,
+   "5": 1.467,
+   "2": 1.375,
+   "1": 1.489,
+   "4": 1.497,
+   "12": 1.734,
+   "6": 1.208,
+   "8": 1.628,
+   "7": 1.262,
+   "15": 0.825
+  },
+  "umbral_nado": 4.219,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 212,
+  "t": 4260.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 161.2
+  },
+  "segmentos_media": {
+   "sopa": 2.97
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 51,
+   "grande": 14
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 156,
+   "1": 37,
+   "4": 55,
+   "2": 183,
+   "5": 46,
+   "12": 1,
+   "6": 13,
+   "8": 5,
+   "7": 3,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.467,
+   "1": 1.465,
+   "4": 1.337,
+   "2": 1.391,
+   "5": 1.595,
+   "12": 2.21,
+   "6": 1.557,
+   "8": 1.652,
+   "7": 1.77,
+   "15": 0.255
+  },
+  "umbral_nado": 3.984,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 213,
+  "t": 4280.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 163.2
+  },
+  "segmentos_media": {
+   "sopa": 2.96
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 46,
+   "grande": 13
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "3": 155,
+   "5": 45,
+   "2": 187,
+   "1": 36,
+   "4": 54,
+   "12": 1,
+   "6": 13,
+   "8": 5,
+   "7": 3,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.335,
+   "5": 1.374,
+   "2": 1.416,
+   "1": 1.611,
+   "4": 1.606,
+   "12": 1.004,
+   "6": 1.468,
+   "8": 1.954,
+   "7": 1.684,
+   "15": 1.592
+  },
+  "umbral_nado": 4.33,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 214,
+  "t": 4300.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 167.1
+  },
+  "segmentos_media": {
+   "sopa": 2.97
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 36,
+   "grande": 20
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "3": 158,
+   "5": 44,
+   "4": 53,
+   "2": 185,
+   "12": 1,
+   "1": 36,
+   "6": 12,
+   "8": 5,
+   "7": 5,
+   "15": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.515,
+   "5": 1.441,
+   "4": 1.276,
+   "2": 1.411,
+   "12": 0.74,
+   "1": 1.568,
+   "6": 1.566,
+   "8": 0.875,
+   "7": 1.87,
+   "15": 1.106
+  },
+  "umbral_nado": 3.711,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 215,
+  "t": 4320.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 172.9
+  },
+  "segmentos_media": {
+   "sopa": 2.96
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 31,
+   "grande": 23
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "3": 156,
+   "4": 53,
+   "2": 189,
+   "5": 40,
+   "12": 1,
+   "1": 37,
+   "6": 12,
+   "8": 5,
+   "7": 5,
+   "15": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.41,
+   "4": 1.421,
+   "2": 1.36,
+   "5": 1.472,
+   "12": 0.388,
+   "1": 1.513,
+   "6": 1.468,
+   "8": 1.234,
+   "7": 1.048,
+   "15": 2.262,
+   "11": 1.737
+  },
+  "umbral_nado": 3.848,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 216,
+  "t": 4340.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 172.8
+  },
+  "segmentos_media": {
+   "sopa": 2.96
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 35,
+   "grande": 12
+  },
+  "segundos": 5.5,
+  "por_segmentos": {
+   "3": 155,
+   "2": 191,
+   "5": 41,
+   "4": 51,
+   "12": 1,
+   "1": 37,
+   "6": 12,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.403,
+   "2": 1.43,
+   "5": 1.411,
+   "4": 1.516,
+   "12": 1.4,
+   "1": 1.295,
+   "6": 1.13,
+   "8": 1.817,
+   "7": 1.283,
+   "15": 0.932,
+   "11": 1.966
+  },
+  "umbral_nado": 3.029,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 217,
+  "t": 4360.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 176.0
+  },
+  "segmentos_media": {
+   "sopa": 2.94
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 36,
+   "grande": 23
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 159,
+   "2": 190,
+   "4": 50,
+   "5": 40,
+   "1": 37,
+   "6": 12,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.383,
+   "2": 1.321,
+   "4": 1.452,
+   "5": 1.397,
+   "1": 1.518,
+   "6": 1.518,
+   "8": 1.27,
+   "7": 1.321,
+   "15": 1.521,
+   "11": 1.114
+  },
+  "umbral_nado": 4.098,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 218,
+  "t": 4380.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 179.6
+  },
+  "segmentos_media": {
+   "sopa": 2.92
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 45,
+   "grande": 15
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "3": 159,
+   "5": 39,
+   "2": 192,
+   "4": 48,
+   "1": 38,
+   "6": 12,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.368,
+   "5": 1.493,
+   "2": 1.387,
+   "4": 1.442,
+   "1": 1.233,
+   "6": 1.595,
+   "8": 1.502,
+   "7": 1.352,
+   "15": 1.349,
+   "11": 1.218
+  },
+  "umbral_nado": 3.103,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 219,
+  "t": 4400.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 181.6
+  },
+  "segmentos_media": {
+   "sopa": 2.92
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 56,
+   "grande": 7
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "4": 47,
+   "3": 158,
+   "1": 38,
+   "2": 194,
+   "5": 39,
+   "6": 12,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.306,
+   "3": 1.357,
+   "1": 1.526,
+   "2": 1.399,
+   "5": 1.26,
+   "6": 1.491,
+   "8": 1.182,
+   "7": 1.425,
+   "15": 1.167,
+   "11": 0.822
+  },
+  "umbral_nado": 4.154,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 220,
+  "t": 4420.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 184.7
+  },
+  "segmentos_media": {
+   "sopa": 2.92
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 43,
+   "grande": 22
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "3": 158,
+   "2": 195,
+   "5": 41,
+   "4": 45,
+   "1": 37,
+   "6": 12,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.35,
+   "2": 1.376,
+   "5": 1.485,
+   "4": 1.198,
+   "1": 1.401,
+   "6": 1.583,
+   "8": 1.051,
+   "7": 1.435,
+   "15": 1.638,
+   "11": 1.018
+  },
+  "umbral_nado": 3.984,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 221,
+  "t": 4440.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 187.2
+  },
+  "segmentos_media": {
+   "sopa": 2.91
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 39,
+   "grande": 18
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 158,
+   "2": 195,
+   "1": 37,
+   "6": 12,
+   "4": 45,
+   "5": 42,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.41,
+   "2": 1.352,
+   "1": 1.37,
+   "6": 1.609,
+   "4": 1.485,
+   "5": 1.494,
+   "8": 1.795,
+   "7": 1.698,
+   "15": 1.828,
+   "11": 1.139
+  },
+  "umbral_nado": 3.353,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 222,
+  "t": 4460.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 192.3
+  },
+  "segmentos_media": {
+   "sopa": 2.94
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 40,
+   "grande": 21
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "3": 155,
+   "2": 195,
+   "1": 37,
+   "6": 12,
+   "4": 45,
+   "5": 44,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.461,
+   "2": 1.355,
+   "1": 1.706,
+   "6": 1.625,
+   "4": 1.544,
+   "5": 1.384,
+   "8": 1.676,
+   "7": 1.312,
+   "15": 2.669,
+   "11": 1.343,
+   "12": 0.737
+  },
+  "umbral_nado": 4.457,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 223,
+  "t": 4480.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 192.9
+  },
+  "segmentos_media": {
+   "sopa": 2.96
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 33,
+   "grande": 14
+  },
+  "segundos": 5.5,
+  "por_segmentos": {
+   "2": 193,
+   "1": 37,
+   "3": 154,
+   "6": 14,
+   "4": 46,
+   "5": 44,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.443,
+   "1": 1.326,
+   "3": 1.489,
+   "6": 1.251,
+   "4": 1.411,
+   "5": 1.563,
+   "8": 1.467,
+   "7": 1.039,
+   "15": 0.374,
+   "11": 0.683,
+   "12": 1.187
+  },
+  "umbral_nado": 3.415,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 224,
+  "t": 4500.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 195.9
+  },
+  "segmentos_media": {
+   "sopa": 2.96
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 51,
+   "grande": 13
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 155,
+   "6": 14,
+   "2": 192,
+   "4": 47,
+   "5": 45,
+   "1": 36,
+   "8": 3,
+   "7": 5,
+   "15": 1,
+   "11": 1,
+   "12": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.423,
+   "6": 1.419,
+   "2": 1.386,
+   "4": 1.617,
+   "5": 1.386,
+   "1": 1.364,
+   "8": 1.594,
+   "7": 1.436,
+   "15": 1.542,
+   "11": 2.568,
+   "12": 0.788
+  },
+  "umbral_nado": 3.473,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 225,
+  "t": 4520.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 203.6
+  },
+  "segmentos_media": {
+   "sopa": 2.97
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 42,
+   "grande": 31
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 190,
+   "4": 50,
+   "5": 44,
+   "3": 155,
+   "1": 36,
+   "6": 13,
+   "8": 3,
+   "7": 5,
+   "15": 1,
+   "11": 1,
+   "12": 1,
+   "10": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.434,
+   "4": 1.411,
+   "5": 1.425,
+   "3": 1.395,
+   "1": 1.504,
+   "6": 1.354,
+   "8": 1.832,
+   "7": 1.511,
+   "15": 2.083,
+   "11": 3.185,
+   "12": 0.568,
+   "10": 1.034
+  },
+  "umbral_nado": 3.911,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 226,
+  "t": 4540.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 207.7
+  },
+  "segmentos_media": {
+   "sopa": 2.98
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 31,
+   "grande": 21
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "5": 44,
+   "2": 188,
+   "3": 158,
+   "1": 36,
+   "4": 48,
+   "6": 13,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 1,
+   "12": 1,
+   "10": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.384,
+   "2": 1.454,
+   "3": 1.431,
+   "1": 1.457,
+   "4": 1.46,
+   "6": 1.318,
+   "8": 1.325,
+   "7": 1.694,
+   "15": 0.583,
+   "11": 0.746,
+   "12": 1.966,
+   "10": 0.901
+  },
+  "umbral_nado": 3.361,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 227,
+  "t": 4560.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 210.3
+  },
+  "segmentos_media": {
+   "sopa": 2.97
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 58,
+   "grande": 16
+  },
+  "segundos": 5.6,
+  "por_segmentos": {
+   "5": 43,
+   "2": 186,
+   "1": 37,
+   "3": 160,
+   "4": 48,
+   "6": 14,
+   "8": 4,
+   "7": 5,
+   "15": 1,
+   "11": 1,
+   "10": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.504,
+   "2": 1.353,
+   "1": 1.394,
+   "3": 1.426,
+   "4": 1.403,
+   "6": 1.291,
+   "8": 0.793,
+   "7": 1.642,
+   "15": 1.76,
+   "11": 0.781,
+   "10": 0.966
+  },
+  "umbral_nado": 3.219,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 228,
+  "t": 4580.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 214.3
+  },
+  "segmentos_media": {
+   "sopa": 2.97
+  },
+  "nacimientos": 5,
+  "muertes": 5,
+  "comidas": {
+   "chica": 37,
+   "grande": 12
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "5": 41,
+   "2": 188,
+   "1": 37,
+   "3": 158,
+   "4": 48,
+   "6": 14,
+   "8": 4,
+   "7": 6,
+   "15": 1,
+   "11": 1,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.601,
+   "2": 1.402,
+   "1": 1.53,
+   "3": 1.406,
+   "4": 1.314,
+   "6": 1.346,
+   "8": 1.274,
+   "7": 1.091,
+   "15": 0.561,
+   "11": 0.859,
+   "10": 1.053,
+   "9": 1.33
+  },
+  "umbral_nado": 4.01,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 229,
+  "t": 4600.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 192.7
+  },
+  "segmentos_media": {
+   "sopa": 2.98
+  },
+  "nacimientos": 50,
+  "muertes": 50,
+  "comidas": {
+   "chica": 51,
+   "grande": 8
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 185,
+   "3": 166,
+   "1": 36,
+   "4": 45,
+   "5": 38,
+   "8": 4,
+   "6": 14,
+   "7": 8,
+   "15": 1,
+   "11": 1,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.382,
+   "3": 1.38,
+   "1": 1.35,
+   "4": 1.495,
+   "5": 1.329,
+   "8": 1.566,
+   "6": 1.073,
+   "7": 0.924,
+   "15": 1.143,
+   "11": 1.219,
+   "10": 2.752,
+   "9": 1.004
+  },
+  "umbral_nado": 3.678,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 230,
+  "t": 4620.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 183.5
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 25,
+  "muertes": 25,
+  "comidas": {
+   "chica": 38,
+   "grande": 16
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "1": 35,
+   "2": 181,
+   "3": 168,
+   "5": 41,
+   "4": 42,
+   "8": 4,
+   "6": 16,
+   "7": 9,
+   "15": 1,
+   "11": 1,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.262,
+   "2": 1.378,
+   "3": 1.454,
+   "5": 1.331,
+   "4": 1.543,
+   "8": 1.025,
+   "6": 1.687,
+   "7": 1.608,
+   "15": 3.961,
+   "11": 0.259,
+   "10": 2.154,
+   "9": 1.071
+  },
+  "umbral_nado": 3.176,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 231,
+  "t": 4640.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 172.8
+  },
+  "segmentos_media": {
+   "sopa": 3.0
+  },
+  "nacimientos": 30,
+  "muertes": 30,
+  "comidas": {
+   "chica": 37,
+   "grande": 19
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 183,
+   "5": 40,
+   "3": 170,
+   "1": 35,
+   "6": 16,
+   "7": 10,
+   "8": 3,
+   "4": 39,
+   "15": 1,
+   "11": 1,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.417,
+   "5": 1.398,
+   "3": 1.521,
+   "1": 1.234,
+   "6": 1.332,
+   "7": 1.116,
+   "8": 1.06,
+   "4": 1.403,
+   "15": 3.024,
+   "11": 1.816,
+   "10": 3.674,
+   "9": 1.895
+  },
+  "umbral_nado": 3.216,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 232,
+  "t": 4660.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 163.9
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 25,
+  "muertes": 25,
+  "comidas": {
+   "chica": 41,
+   "grande": 8
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 186,
+   "5": 37,
+   "3": 170,
+   "6": 18,
+   "1": 32,
+   "7": 10,
+   "8": 4,
+   "4": 39,
+   "15": 1,
+   "11": 1,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.474,
+   "5": 1.275,
+   "3": 1.396,
+   "6": 1.443,
+   "1": 1.563,
+   "7": 1.704,
+   "8": 1.937,
+   "4": 1.592,
+   "15": 0.319,
+   "11": 0.303,
+   "10": 0.495,
+   "9": 1.665
+  },
+  "umbral_nado": 4.106,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 233,
+  "t": 4680.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 164.9
+  },
+  "segmentos_media": {
+   "sopa": 3.01
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 43,
+   "grande": 21
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 184,
+   "3": 174,
+   "5": 36,
+   "1": 32,
+   "6": 17,
+   "7": 10,
+   "8": 5,
+   "4": 39,
+   "15": 1,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.504,
+   "3": 1.441,
+   "5": 1.507,
+   "1": 1.232,
+   "6": 1.392,
+   "7": 1.661,
+   "8": 1.198,
+   "4": 1.472,
+   "15": 1.772,
+   "10": 0.868,
+   "9": 1.536
+  },
+  "umbral_nado": 3.655,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 234,
+  "t": 4700.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 163.7
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 38,
+   "grande": 10
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 182,
+   "3": 176,
+   "7": 10,
+   "5": 35,
+   "8": 5,
+   "4": 41,
+   "6": 16,
+   "1": 31,
+   "15": 1,
+   "10": 2,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.458,
+   "3": 1.489,
+   "7": 1.127,
+   "5": 1.414,
+   "8": 1.425,
+   "4": 1.465,
+   "6": 1.592,
+   "1": 1.453,
+   "15": 2.602,
+   "10": 1.528,
+   "9": 1.069
+  },
+  "umbral_nado": 3.963,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 235,
+  "t": 4720.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 161.3
+  },
+  "segmentos_media": {
+   "sopa": 2.98
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 34,
+   "grande": 17
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 180,
+   "1": 34,
+   "2": 180,
+   "4": 40,
+   "6": 14,
+   "5": 36,
+   "7": 9,
+   "15": 1,
+   "8": 3,
+   "10": 2,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.27,
+   "1": 1.347,
+   "2": 1.426,
+   "4": 1.513,
+   "6": 1.774,
+   "5": 1.226,
+   "7": 0.948,
+   "15": 1.613,
+   "8": 1.655,
+   "10": 1.734,
+   "9": 1.597
+  },
+  "umbral_nado": 3.308,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 236,
+  "t": 4740.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 161.5
+  },
+  "segmentos_media": {
+   "sopa": 3.01
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 28,
+   "grande": 22
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "2": 179,
+   "4": 39,
+   "3": 180,
+   "6": 15,
+   "1": 32,
+   "5": 38,
+   "7": 10,
+   "15": 1,
+   "8": 3,
+   "10": 2,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.378,
+   "4": 1.474,
+   "3": 1.298,
+   "6": 1.327,
+   "1": 1.39,
+   "5": 1.413,
+   "7": 1.757,
+   "15": 1.222,
+   "8": 1.614,
+   "10": 0.885,
+   "9": 1.546
+  },
+  "umbral_nado": 3.743,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 237,
+  "t": 4760.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 165.7
+  },
+  "segmentos_media": {
+   "sopa": 3.0
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 35,
+   "grande": 29
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 176,
+   "3": 184,
+   "1": 32,
+   "4": 40,
+   "5": 37,
+   "7": 9,
+   "6": 15,
+   "15": 1,
+   "8": 3,
+   "10": 2,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.541,
+   "3": 1.33,
+   "1": 1.501,
+   "4": 1.287,
+   "5": 1.484,
+   "7": 1.045,
+   "6": 1.386,
+   "15": 2.088,
+   "8": 1.01,
+   "10": 1.636,
+   "9": 1.273
+  },
+  "umbral_nado": 3.865,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 238,
+  "t": 4780.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 168.3
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 34,
+   "grande": 24
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 175,
+   "3": 184,
+   "5": 40,
+   "1": 30,
+   "7": 8,
+   "4": 41,
+   "6": 15,
+   "15": 1,
+   "8": 3,
+   "10": 2,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.349,
+   "3": 1.427,
+   "5": 1.316,
+   "1": 1.487,
+   "7": 1.408,
+   "4": 1.493,
+   "6": 1.298,
+   "15": 1.665,
+   "8": 0.732,
+   "10": 1.412,
+   "9": 1.8
+  },
+  "umbral_nado": 3.923,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 239,
+  "t": 4800.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 169.3
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 34,
+   "grande": 22
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "7": 8,
+   "4": 42,
+   "3": 183,
+   "6": 15,
+   "2": 175,
+   "1": 29,
+   "5": 42,
+   "15": 1,
+   "8": 3,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "7": 1.331,
+   "4": 1.364,
+   "3": 1.387,
+   "6": 1.429,
+   "2": 1.333,
+   "1": 1.571,
+   "5": 1.371,
+   "15": 1.039,
+   "8": 1.703,
+   "10": 1.86,
+   "9": 1.595
+  },
+  "umbral_nado": 3.618,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 240,
+  "t": 4820.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 170.0
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 48,
+   "grande": 15
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "3": 186,
+   "2": 175,
+   "1": 28,
+   "4": 41,
+   "5": 42,
+   "6": 14,
+   "15": 1,
+   "8": 4,
+   "7": 7,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.379,
+   "2": 1.305,
+   "1": 1.305,
+   "4": 1.368,
+   "5": 1.359,
+   "6": 1.35,
+   "15": 2.172,
+   "8": 1.229,
+   "7": 0.982,
+   "10": 0.865,
+   "9": 0.77
+  },
+  "umbral_nado": 3.18,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 241,
+  "t": 4840.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 167.7
+  },
+  "segmentos_media": {
+   "sopa": 3.03
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 47,
+   "grande": 9
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 174,
+   "3": 186,
+   "1": 27,
+   "5": 45,
+   "4": 41,
+   "6": 14,
+   "15": 1,
+   "8": 4,
+   "7": 6,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.521,
+   "3": 1.35,
+   "1": 1.596,
+   "5": 1.558,
+   "4": 1.268,
+   "6": 1.271,
+   "15": 0.989,
+   "8": 1.035,
+   "7": 1.87,
+   "10": 1.598,
+   "9": 2.421
+  },
+  "umbral_nado": 3.71,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 242,
+  "t": 4860.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 167.7
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 34,
+   "grande": 23
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 173,
+   "4": 42,
+   "3": 184,
+   "5": 45,
+   "6": 15,
+   "15": 1,
+   "8": 3,
+   "1": 29,
+   "7": 6,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.457,
+   "4": 1.397,
+   "3": 1.433,
+   "5": 1.417,
+   "6": 1.81,
+   "15": 0.914,
+   "8": 1.098,
+   "1": 1.429,
+   "7": 0.868,
+   "10": 1.165,
+   "9": 3.422
+  },
+  "umbral_nado": 3.146,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 243,
+  "t": 4880.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 166.7
+  },
+  "segmentos_media": {
+   "sopa": 2.97
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 35,
+   "grande": 19
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 175,
+   "3": 184,
+   "5": 44,
+   "8": 2,
+   "4": 42,
+   "1": 30,
+   "7": 6,
+   "6": 15,
+   "10": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.39,
+   "3": 1.37,
+   "5": 1.244,
+   "8": 1.089,
+   "4": 1.574,
+   "1": 1.439,
+   "7": 1.315,
+   "6": 1.117,
+   "10": 2.099,
+   "9": 0.582
+  },
+  "umbral_nado": 3.842,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 244,
+  "t": 4900.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 167.3
+  },
+  "segmentos_media": {
+   "sopa": 2.96
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 35,
+   "grande": 24
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 182,
+   "4": 42,
+   "7": 5,
+   "2": 178,
+   "1": 30,
+   "5": 44,
+   "6": 16,
+   "10": 1,
+   "9": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.398,
+   "4": 1.444,
+   "7": 1.159,
+   "2": 1.367,
+   "1": 1.282,
+   "5": 1.461,
+   "6": 1.331,
+   "10": 2.631,
+   "9": 1.286,
+   "8": 0.892
+  },
+  "umbral_nado": 3.392,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 245,
+  "t": 4920.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 169.1
+  },
+  "segmentos_media": {
+   "sopa": 2.98
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 50,
+   "grande": 22
+  },
+  "segundos": 4.6,
+  "por_segmentos": {
+   "2": 178,
+   "3": 181,
+   "4": 43,
+   "1": 29,
+   "5": 43,
+   "6": 17,
+   "7": 5,
+   "10": 1,
+   "9": 1,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.401,
+   "3": 1.395,
+   "4": 1.507,
+   "1": 1.333,
+   "5": 1.442,
+   "6": 1.466,
+   "7": 1.603,
+   "10": 0.458,
+   "9": 2.148,
+   "8": 2.056,
+   "11": 0.042
+  },
+  "umbral_nado": 3.944,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 246,
+  "t": 4940.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 168.4
+  },
+  "segmentos_media": {
+   "sopa": 3.0
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 33,
+   "grande": 11
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 174,
+   "3": 181,
+   "1": 29,
+   "5": 45,
+   "4": 44,
+   "6": 19,
+   "7": 5,
+   "10": 1,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.396,
+   "3": 1.341,
+   "1": 1.38,
+   "5": 1.417,
+   "4": 1.52,
+   "6": 1.215,
+   "7": 1.129,
+   "10": 1.674,
+   "8": 1.736,
+   "11": 1.155
+  },
+  "umbral_nado": 3.471,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 247,
+  "t": 4960.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 171.2
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 46,
+   "grande": 24
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "1": 29,
+   "2": 173,
+   "3": 179,
+   "5": 46,
+   "4": 44,
+   "6": 21,
+   "7": 5,
+   "10": 1,
+   "8": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.507,
+   "2": 1.319,
+   "3": 1.454,
+   "5": 1.616,
+   "4": 1.512,
+   "6": 1.221,
+   "7": 0.878,
+   "10": 2.21,
+   "8": 0.215,
+   "11": 0.942
+  },
+  "umbral_nado": 3.944,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 248,
+  "t": 4980.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 178.0
+  },
+  "segmentos_media": {
+   "sopa": 3.01
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 42,
+   "grande": 33
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 174,
+   "4": 45,
+   "3": 180,
+   "6": 22,
+   "5": 45,
+   "1": 27,
+   "7": 5,
+   "10": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.341,
+   "4": 1.414,
+   "3": 1.388,
+   "6": 1.073,
+   "5": 1.544,
+   "1": 1.537,
+   "7": 1.022,
+   "10": 1.229,
+   "8": 2.651
+  },
+  "umbral_nado": 3.795,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 249,
+  "t": 5000.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 178.8
+  },
+  "segmentos_media": {
+   "sopa": 3.02
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 40,
+   "grande": 16
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 171,
+   "4": 44,
+   "6": 22,
+   "3": 182,
+   "5": 45,
+   "1": 28,
+   "7": 6,
+   "10": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.409,
+   "4": 1.556,
+   "6": 1.401,
+   "3": 1.43,
+   "5": 1.336,
+   "1": 1.356,
+   "7": 0.962,
+   "10": 0.552,
+   "8": 2.112
+  },
+  "umbral_nado": 3.291,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 250,
+  "t": 5020.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 177.9
+  },
+  "segmentos_media": {
+   "sopa": 3.03
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 40,
+   "grande": 14
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 169,
+   "4": 42,
+   "3": 184,
+   "5": 47,
+   "1": 28,
+   "6": 21,
+   "7": 7,
+   "10": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.393,
+   "4": 1.296,
+   "3": 1.499,
+   "5": 1.45,
+   "1": 1.34,
+   "6": 1.787,
+   "7": 1.802,
+   "10": 1.31,
+   "8": 1.08
+  },
+  "umbral_nado": 3.758,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 251,
+  "t": 5040.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 178.2
+  },
+  "segmentos_media": {
+   "sopa": 3.04
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 51,
+   "grande": 12
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "4": 42,
+   "1": 28,
+   "3": 185,
+   "2": 167,
+   "5": 47,
+   "6": 22,
+   "7": 7,
+   "10": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.41,
+   "1": 1.278,
+   "3": 1.373,
+   "2": 1.265,
+   "5": 1.393,
+   "6": 1.18,
+   "7": 1.396,
+   "10": 3.867,
+   "8": 1.117
+  },
+  "umbral_nado": 3.246,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 252,
+  "t": 5060.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 179.1
+  },
+  "segmentos_media": {
+   "sopa": 3.05
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 41,
+   "grande": 17
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "1": 27,
+   "2": 168,
+   "3": 185,
+   "4": 40,
+   "5": 48,
+   "6": 22,
+   "7": 7,
+   "10": 1,
+   "8": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.39,
+   "2": 1.423,
+   "3": 1.451,
+   "4": 1.376,
+   "5": 1.35,
+   "6": 1.522,
+   "7": 1.158,
+   "10": 3.816,
+   "8": 0.936,
+   "9": 2.653
+  },
+  "umbral_nado": 3.347,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 253,
+  "t": 5080.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 183.0
+  },
+  "segmentos_media": {
+   "sopa": 3.08
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 50,
+   "grande": 24
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "4": 40,
+   "2": 167,
+   "3": 187,
+   "5": 48,
+   "1": 25,
+   "6": 22,
+   "7": 7,
+   "10": 1,
+   "8": 1,
+   "9": 1,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.414,
+   "2": 1.369,
+   "3": 1.405,
+   "5": 1.416,
+   "1": 1.382,
+   "6": 1.615,
+   "7": 1.253,
+   "10": 0.55,
+   "8": 2.877,
+   "9": 0.501,
+   "14": 0.195
+  },
+  "umbral_nado": 3.415,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 254,
+  "t": 5100.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 185.2
+  },
+  "segmentos_media": {
+   "sopa": 3.1
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 42,
+   "grande": 16
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "3": 190,
+   "1": 24,
+   "2": 166,
+   "5": 48,
+   "6": 22,
+   "7": 7,
+   "4": 38,
+   "10": 1,
+   "8": 1,
+   "9": 2,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.418,
+   "1": 1.475,
+   "2": 1.255,
+   "5": 1.407,
+   "6": 1.418,
+   "7": 1.472,
+   "4": 1.46,
+   "10": 2.439,
+   "8": 1.125,
+   "9": 1.524,
+   "14": 1.19
+  },
+  "umbral_nado": 3.646,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 255,
+  "t": 5120.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 191.2
+  },
+  "segmentos_media": {
+   "sopa": 3.09
+  },
+  "nacimientos": 3,
+  "muertes": 3,
+  "comidas": {
+   "chica": 33,
+   "grande": 22
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "2": 167,
+   "3": 189,
+   "1": 24,
+   "5": 47,
+   "6": 22,
+   "7": 7,
+   "4": 39,
+   "10": 1,
+   "8": 1,
+   "9": 2,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.397,
+   "3": 1.382,
+   "1": 1.328,
+   "5": 1.435,
+   "6": 1.291,
+   "7": 1.46,
+   "4": 1.48,
+   "10": 1.029,
+   "8": 1.66,
+   "9": 1.123,
+   "14": 1.34
+  },
+  "umbral_nado": 3.85,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 256,
+  "t": 5140.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 193.5
+  },
+  "segmentos_media": {
+   "sopa": 3.08
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 29,
+   "grande": 20
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "1": 24,
+   "3": 190,
+   "2": 168,
+   "5": 47,
+   "6": 22,
+   "7": 6,
+   "4": 38,
+   "10": 1,
+   "8": 1,
+   "9": 2,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.189,
+   "3": 1.439,
+   "2": 1.402,
+   "5": 1.307,
+   "6": 1.306,
+   "7": 1.221,
+   "4": 1.526,
+   "10": 3.067,
+   "8": 2.514,
+   "9": 0.458,
+   "14": 0.978
+  },
+  "umbral_nado": 3.657,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 257,
+  "t": 5160.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 193.8
+  },
+  "segmentos_media": {
+   "sopa": 3.08
+  },
+  "nacimientos": 18,
+  "muertes": 18,
+  "comidas": {
+   "chica": 48,
+   "grande": 27
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "1": 23,
+   "3": 185,
+   "2": 174,
+   "6": 23,
+   "7": 6,
+   "5": 46,
+   "4": 38,
+   "10": 1,
+   "8": 1,
+   "9": 2,
+   "14": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.569,
+   "3": 1.541,
+   "2": 1.353,
+   "6": 1.597,
+   "7": 1.555,
+   "5": 1.302,
+   "4": 1.196,
+   "10": 0.724,
+   "8": 1.036,
+   "9": 1.767,
+   "14": 0.901
+  },
+  "umbral_nado": 3.629,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 258,
+  "t": 5180.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 195.6
+  },
+  "segmentos_media": {
+   "sopa": 3.09
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 43,
+   "grande": 19
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 173,
+   "3": 185,
+   "7": 6,
+   "1": 23,
+   "5": 46,
+   "6": 22,
+   "4": 39,
+   "10": 1,
+   "8": 1,
+   "9": 2,
+   "14": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.448,
+   "3": 1.387,
+   "7": 1.579,
+   "1": 1.481,
+   "5": 1.428,
+   "6": 1.39,
+   "4": 1.485,
+   "10": 0.948,
+   "8": 1.218,
+   "9": 1.045,
+   "14": 1.346,
+   "13": 1.072
+  },
+  "umbral_nado": 3.43,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 259,
+  "t": 5200.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 198.6
+  },
+  "segmentos_media": {
+   "sopa": 3.1
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 48,
+   "grande": 24
+  },
+  "segundos": 6.0,
+  "por_segmentos": {
+   "7": 6,
+   "2": 169,
+   "3": 186,
+   "1": 24,
+   "5": 46,
+   "6": 24,
+   "4": 40,
+   "10": 1,
+   "8": 1,
+   "9": 1,
+   "14": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "7": 1.006,
+   "2": 1.354,
+   "3": 1.443,
+   "1": 1.078,
+   "5": 1.288,
+   "6": 1.204,
+   "4": 1.27,
+   "10": 1.23,
+   "8": 2.157,
+   "9": 1.159,
+   "14": 3.073,
+   "13": 2.176
+  },
+  "umbral_nado": 2.189,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 260,
+  "t": 5220.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 198.7
+  },
+  "segmentos_media": {
+   "sopa": 3.09
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 36,
+   "grande": 14
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 173,
+   "3": 182,
+   "1": 24,
+   "5": 46,
+   "6": 26,
+   "4": 40,
+   "10": 1,
+   "7": 4,
+   "8": 1,
+   "9": 1,
+   "14": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.395,
+   "3": 1.376,
+   "1": 1.432,
+   "5": 1.513,
+   "6": 1.258,
+   "4": 1.533,
+   "10": 1.002,
+   "7": 1.96,
+   "8": 0.529,
+   "9": 1.501,
+   "14": 1.684,
+   "13": 0.155
+  },
+  "umbral_nado": 3.706,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 261,
+  "t": 5240.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 199.6
+  },
+  "segmentos_media": {
+   "sopa": 3.1
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 34,
+   "grande": 21
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 171,
+   "5": 48,
+   "3": 183,
+   "1": 23,
+   "6": 25,
+   "4": 41,
+   "10": 1,
+   "7": 5,
+   "9": 1,
+   "14": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.37,
+   "5": 1.57,
+   "3": 1.387,
+   "1": 1.473,
+   "6": 1.368,
+   "4": 1.365,
+   "10": 1.936,
+   "7": 1.04,
+   "9": 1.192,
+   "14": 1.044,
+   "13": 1.015
+  },
+  "umbral_nado": 4.004,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 262,
+  "t": 5260.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 198.2
+  },
+  "segmentos_media": {
+   "sopa": 3.11
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 31,
+   "grande": 14
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "3": 182,
+   "2": 171,
+   "5": 47,
+   "1": 23,
+   "6": 27,
+   "4": 41,
+   "10": 1,
+   "7": 5,
+   "9": 1,
+   "14": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.421,
+   "2": 1.388,
+   "5": 1.531,
+   "1": 1.366,
+   "6": 1.155,
+   "4": 1.341,
+   "10": 0.553,
+   "7": 1.107,
+   "9": 1.607,
+   "14": 1.06,
+   "13": 0.591
+  },
+  "umbral_nado": 3.618,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 263,
+  "t": 5280.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 200.2
+  },
+  "segmentos_media": {
+   "sopa": 3.1
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 42,
+   "grande": 19
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "1": 23,
+   "2": 172,
+   "3": 179,
+   "6": 29,
+   "5": 47,
+   "4": 42,
+   "7": 5,
+   "9": 1,
+   "14": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.552,
+   "2": 1.44,
+   "3": 1.381,
+   "6": 1.476,
+   "5": 1.412,
+   "4": 1.555,
+   "7": 1.456,
+   "9": 0.617,
+   "14": 1.651,
+   "13": 2.162
+  },
+  "umbral_nado": 4.144,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 264,
+  "t": 5300.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 206.3
+  },
+  "segmentos_media": {
+   "sopa": 3.13
+  },
+  "nacimientos": 5,
+  "muertes": 5,
+  "comidas": {
+   "chica": 41,
+   "grande": 23
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 169,
+   "6": 32,
+   "3": 178,
+   "5": 47,
+   "4": 43,
+   "1": 23,
+   "7": 5,
+   "9": 1,
+   "14": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.366,
+   "6": 1.47,
+   "3": 1.386,
+   "5": 1.388,
+   "4": 1.451,
+   "1": 1.205,
+   "7": 1.21,
+   "9": 0.948,
+   "14": 2.293,
+   "13": 1.136
+  },
+  "umbral_nado": 3.329,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 265,
+  "t": 5320.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 211.6
+  },
+  "segmentos_media": {
+   "sopa": 3.13
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 42,
+   "grande": 26
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "5": 49,
+   "2": 168,
+   "3": 178,
+   "4": 43,
+   "6": 31,
+   "1": 23,
+   "7": 5,
+   "9": 1,
+   "14": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.395,
+   "2": 1.411,
+   "3": 1.378,
+   "4": 1.403,
+   "6": 1.333,
+   "1": 1.3,
+   "7": 1.19,
+   "9": 0.74,
+   "14": 0.784,
+   "13": 0.099
+  },
+  "umbral_nado": 3.298,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 266,
+  "t": 5340.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 211.1
+  },
+  "segmentos_media": {
+   "sopa": 3.14
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 47,
+   "grande": 19
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "4": 44,
+   "3": 180,
+   "2": 165,
+   "5": 46,
+   "6": 32,
+   "1": 24,
+   "7": 5,
+   "9": 1,
+   "14": 1,
+   "13": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.465,
+   "3": 1.322,
+   "2": 1.443,
+   "5": 1.22,
+   "6": 1.332,
+   "1": 1.562,
+   "7": 1.357,
+   "9": 0.259,
+   "14": 1.533,
+   "13": 1.222,
+   "8": 2.524
+  },
+  "umbral_nado": 4.486,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 267,
+  "t": 5360.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 213.5
+  },
+  "segmentos_media": {
+   "sopa": 3.15
+  },
+  "nacimientos": 7,
+  "muertes": 7,
+  "comidas": {
+   "chica": 38,
+   "grande": 16
+  },
+  "segundos": 4.7,
+  "por_segmentos": {
+   "3": 181,
+   "2": 164,
+   "5": 47,
+   "4": 42,
+   "6": 32,
+   "1": 24,
+   "7": 6,
+   "9": 1,
+   "14": 1,
+   "13": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.499,
+   "2": 1.501,
+   "5": 1.425,
+   "4": 1.228,
+   "6": 1.598,
+   "1": 1.552,
+   "7": 1.356,
+   "9": 2.016,
+   "14": 0.803,
+   "13": 1.168,
+   "8": 2.175
+  },
+  "umbral_nado": 3.606,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 268,
+  "t": 5380.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 214.4
+  },
+  "segmentos_media": {
+   "sopa": 3.17
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 42,
+   "grande": 14
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "4": 43,
+   "6": 32,
+   "3": 180,
+   "2": 162,
+   "5": 48,
+   "1": 25,
+   "7": 6,
+   "14": 1,
+   "13": 2,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.347,
+   "6": 1.434,
+   "3": 1.439,
+   "2": 1.323,
+   "5": 1.394,
+   "1": 1.409,
+   "7": 1.683,
+   "14": 1.483,
+   "13": 1.921,
+   "8": 2.168
+  },
+  "umbral_nado": 3.422,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 269,
+  "t": 5400.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 213.9
+  },
+  "segmentos_media": {
+   "sopa": 3.18
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 36,
+   "grande": 13
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "3": 181,
+   "2": 160,
+   "5": 49,
+   "4": 41,
+   "1": 25,
+   "6": 34,
+   "7": 6,
+   "14": 1,
+   "13": 2,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.421,
+   "2": 1.401,
+   "5": 1.265,
+   "4": 1.462,
+   "1": 1.388,
+   "6": 1.465,
+   "7": 1.783,
+   "14": 1.777,
+   "13": 1.801,
+   "8": 1.419
+  },
+  "umbral_nado": 3.377,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 270,
+  "t": 5420.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 213.3
+  },
+  "segmentos_media": {
+   "sopa": 3.18
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 40,
+   "grande": 10
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "3": 182,
+   "2": 160,
+   "4": 40,
+   "1": 25,
+   "5": 47,
+   "6": 37,
+   "7": 5,
+   "14": 1,
+   "13": 2,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.361,
+   "2": 1.393,
+   "4": 1.364,
+   "1": 1.359,
+   "5": 1.16,
+   "6": 1.529,
+   "7": 1.185,
+   "14": 2.328,
+   "13": 2.245,
+   "8": 2.213
+  },
+  "umbral_nado": 3.536,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 271,
+  "t": 5440.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 216.8
+  },
+  "segmentos_media": {
+   "sopa": 3.19
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 43,
+   "grande": 17
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 160,
+   "3": 180,
+   "1": 26,
+   "5": 48,
+   "6": 38,
+   "4": 38,
+   "7": 6,
+   "14": 1,
+   "13": 2,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.344,
+   "3": 1.479,
+   "1": 1.073,
+   "5": 1.456,
+   "6": 1.429,
+   "4": 1.306,
+   "7": 1.527,
+   "14": 0.287,
+   "13": 1.745,
+   "8": 1.012
+  },
+  "umbral_nado": 3.584,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 272,
+  "t": 5460.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 217.5
+  },
+  "segmentos_media": {
+   "sopa": 3.18
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 38,
+   "grande": 15
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "1": 28,
+   "5": 49,
+   "6": 36,
+   "2": 159,
+   "3": 178,
+   "4": 40,
+   "7": 6,
+   "14": 1,
+   "13": 2,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "1": 1.294,
+   "5": 1.429,
+   "6": 1.295,
+   "2": 1.506,
+   "3": 1.466,
+   "4": 1.2,
+   "7": 1.484,
+   "14": 2.342,
+   "13": 1.662,
+   "8": 0.586
+  },
+  "umbral_nado": 3.402,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 273,
+  "t": 5480.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 215.1
+  },
+  "segmentos_media": {
+   "sopa": 3.15
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 24,
+   "grande": 8
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 158,
+   "4": 40,
+   "3": 182,
+   "5": 48,
+   "1": 28,
+   "6": 35,
+   "7": 6,
+   "14": 1,
+   "8": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.432,
+   "4": 1.423,
+   "3": 1.332,
+   "5": 1.536,
+   "1": 1.247,
+   "6": 1.271,
+   "7": 1.31,
+   "14": 1.156,
+   "8": 1.661,
+   "13": 0.886
+  },
+  "umbral_nado": 3.401,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 274,
+  "t": 5500.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 217.8
+  },
+  "segmentos_media": {
+   "sopa": 3.16
+  },
+  "nacimientos": 4,
+  "muertes": 4,
+  "comidas": {
+   "chica": 31,
+   "grande": 16
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 185,
+   "2": 156,
+   "5": 48,
+   "1": 28,
+   "4": 39,
+   "6": 35,
+   "7": 6,
+   "14": 1,
+   "8": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.381,
+   "2": 1.431,
+   "5": 1.439,
+   "1": 1.328,
+   "4": 1.432,
+   "6": 1.439,
+   "7": 1.322,
+   "14": 1.456,
+   "8": 0.772,
+   "13": 2.364
+  },
+  "umbral_nado": 3.203,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 275,
+  "t": 5520.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 196.9
+  },
+  "segmentos_media": {
+   "sopa": 3.17
+  },
+  "nacimientos": 43,
+  "muertes": 43,
+  "comidas": {
+   "chica": 41,
+   "grande": 18
+  },
+  "segundos": 5.3,
+  "por_segmentos": {
+   "2": 162,
+   "3": 181,
+   "6": 37,
+   "5": 47,
+   "1": 25,
+   "4": 38,
+   "7": 6,
+   "14": 1,
+   "8": 1,
+   "13": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.38,
+   "3": 1.296,
+   "6": 1.365,
+   "5": 1.552,
+   "1": 1.028,
+   "4": 1.461,
+   "7": 1.985,
+   "14": 1.01,
+   "8": 3.423,
+   "13": 1.813,
+   "9": 0.514
+  },
+  "umbral_nado": 2.759,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 276,
+  "t": 5540.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 187.0
+  },
+  "segmentos_media": {
+   "sopa": 3.17
+  },
+  "nacimientos": 25,
+  "muertes": 25,
+  "comidas": {
+   "chica": 34,
+   "grande": 16
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 164,
+   "1": 26,
+   "3": 178,
+   "6": 37,
+   "5": 45,
+   "4": 39,
+   "7": 6,
+   "14": 1,
+   "8": 2,
+   "13": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.4,
+   "1": 1.037,
+   "3": 1.39,
+   "6": 1.525,
+   "5": 1.372,
+   "4": 1.381,
+   "7": 1.852,
+   "14": 0.799,
+   "8": 1.393,
+   "13": 0.953,
+   "9": 1.133
+  },
+  "umbral_nado": 2.691,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 277,
+  "t": 5560.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 172.4
+  },
+  "segmentos_media": {
+   "sopa": 3.23
+  },
+  "nacimientos": 31,
+  "muertes": 31,
+  "comidas": {
+   "chica": 38,
+   "grande": 11
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "2": 164,
+   "5": 46,
+   "3": 178,
+   "6": 38,
+   "4": 38,
+   "1": 23,
+   "7": 6,
+   "14": 3,
+   "8": 2,
+   "13": 1,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.303,
+   "5": 1.18,
+   "3": 1.404,
+   "6": 1.544,
+   "4": 1.349,
+   "1": 1.389,
+   "7": 1.188,
+   "14": 0.595,
+   "8": 1.404,
+   "13": 0.776,
+   "9": 1.854
+  },
+  "umbral_nado": 3.452,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 278,
+  "t": 5580.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 165.3
+  },
+  "segmentos_media": {
+   "sopa": 3.21
+  },
+  "nacimientos": 25,
+  "muertes": 25,
+  "comidas": {
+   "chica": 24,
+   "grande": 20
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 161,
+   "3": 184,
+   "4": 40,
+   "5": 42,
+   "1": 23,
+   "7": 6,
+   "6": 38,
+   "14": 3,
+   "8": 2,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.488,
+   "3": 1.402,
+   "4": 1.331,
+   "5": 1.417,
+   "1": 1.623,
+   "7": 0.643,
+   "6": 1.461,
+   "14": 1.604,
+   "8": 0.45,
+   "9": 0.652
+  },
+  "umbral_nado": 4.203,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 279,
+  "t": 5600.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 163.0
+  },
+  "segmentos_media": {
+   "sopa": 3.23
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 33,
+   "grande": 12
+  },
+  "segundos": 4.6,
+  "por_segmentos": {
+   "2": 161,
+   "3": 180,
+   "4": 40,
+   "5": 43,
+   "1": 23,
+   "7": 6,
+   "6": 40,
+   "14": 3,
+   "8": 3,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.316,
+   "3": 1.378,
+   "4": 1.263,
+   "5": 1.226,
+   "1": 1.491,
+   "7": 1.414,
+   "6": 1.523,
+   "14": 1.518,
+   "8": 1.314,
+   "9": 0.835
+  },
+  "umbral_nado": 3.39,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 280,
+  "t": 5620.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 160.2
+  },
+  "segmentos_media": {
+   "sopa": 3.27
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 26,
+   "grande": 7
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 178,
+   "5": 44,
+   "2": 160,
+   "1": 24,
+   "7": 6,
+   "4": 39,
+   "6": 40,
+   "14": 4,
+   "8": 4,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.388,
+   "5": 1.51,
+   "2": 1.325,
+   "1": 1.628,
+   "7": 0.896,
+   "4": 1.25,
+   "6": 1.446,
+   "14": 1.582,
+   "8": 1.372,
+   "9": 2.096
+  },
+  "umbral_nado": 3.503,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 281,
+  "t": 5640.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 153.5
+  },
+  "segmentos_media": {
+   "sopa": 3.28
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 31,
+   "grande": 5
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "3": 175,
+   "2": 164,
+   "7": 6,
+   "4": 41,
+   "6": 41,
+   "5": 43,
+   "1": 21,
+   "14": 4,
+   "8": 4,
+   "9": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.5,
+   "2": 1.507,
+   "7": 1.321,
+   "4": 1.287,
+   "6": 1.567,
+   "5": 1.163,
+   "1": 1.167,
+   "14": 1.684,
+   "8": 2.001,
+   "9": 1.042
+  },
+  "umbral_nado": 3.139,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 282,
+  "t": 5660.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 151.5
+  },
+  "segmentos_media": {
+   "sopa": 3.26
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 12,
+   "grande": 12
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "3": 175,
+   "4": 41,
+   "2": 165,
+   "6": 39,
+   "5": 45,
+   "1": 21,
+   "7": 6,
+   "14": 4,
+   "9": 1,
+   "8": 3
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.379,
+   "4": 1.421,
+   "2": 1.349,
+   "6": 1.545,
+   "5": 1.347,
+   "1": 1.418,
+   "7": 1.433,
+   "14": 1.738,
+   "9": 1.035,
+   "8": 2.065
+  },
+  "umbral_nado": 3.343,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 283,
+  "t": 5680.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 151.8
+  },
+  "segmentos_media": {
+   "sopa": 3.25
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 27,
+   "grande": 18
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "4": 40,
+   "5": 46,
+   "3": 174,
+   "2": 166,
+   "1": 22,
+   "6": 38,
+   "7": 7,
+   "14": 4,
+   "9": 1,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "4": 1.323,
+   "5": 1.339,
+   "3": 1.421,
+   "2": 1.401,
+   "1": 1.303,
+   "6": 1.453,
+   "7": 1.134,
+   "14": 1.187,
+   "9": 2.421,
+   "8": 0.866
+  },
+  "umbral_nado": 2.865,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 284,
+  "t": 5700.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 153.0
+  },
+  "segmentos_media": {
+   "sopa": 3.22
+  },
+  "nacimientos": 11,
+  "muertes": 11,
+  "comidas": {
+   "chica": 55,
+   "grande": 13
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "2": 169,
+   "3": 178,
+   "5": 42,
+   "4": 37,
+   "1": 22,
+   "6": 38,
+   "7": 7,
+   "14": 4,
+   "9": 1,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.538,
+   "3": 1.369,
+   "5": 1.396,
+   "4": 1.583,
+   "1": 1.467,
+   "6": 1.675,
+   "7": 1.699,
+   "14": 1.505,
+   "9": 2.679,
+   "8": 0.38
+  },
+  "umbral_nado": 4.032,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 285,
+  "t": 5720.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 153.6
+  },
+  "segmentos_media": {
+   "sopa": 3.19
+  },
+  "nacimientos": 14,
+  "muertes": 14,
+  "comidas": {
+   "chica": 41,
+   "grande": 12
+  },
+  "segundos": 5.4,
+  "por_segmentos": {
+   "3": 181,
+   "2": 170,
+   "5": 41,
+   "4": 37,
+   "1": 23,
+   "6": 34,
+   "7": 7,
+   "14": 4,
+   "9": 1,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.456,
+   "2": 1.303,
+   "5": 1.408,
+   "4": 1.415,
+   "1": 1.159,
+   "6": 1.559,
+   "7": 1.343,
+   "14": 1.39,
+   "9": 1.217,
+   "8": 1.595
+  },
+  "umbral_nado": 2.683,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 286,
+  "t": 5740.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 156.2
+  },
+  "segmentos_media": {
+   "sopa": 3.2
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 36,
+   "grande": 20
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "5": 41,
+   "2": 168,
+   "4": 39,
+   "3": 180,
+   "1": 23,
+   "6": 34,
+   "7": 8,
+   "14": 4,
+   "9": 1,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.492,
+   "2": 1.345,
+   "4": 1.411,
+   "3": 1.328,
+   "1": 1.474,
+   "6": 1.233,
+   "7": 1.016,
+   "14": 1.218,
+   "9": 1.338,
+   "8": 2.18
+  },
+  "umbral_nado": 3.15,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 287,
+  "t": 5760.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 154.4
+  },
+  "segmentos_media": {
+   "sopa": 3.22
+  },
+  "nacimientos": 13,
+  "muertes": 13,
+  "comidas": {
+   "chica": 28,
+   "grande": 16
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "3": 180,
+   "1": 22,
+   "2": 168,
+   "6": 35,
+   "4": 39,
+   "5": 40,
+   "7": 9,
+   "14": 4,
+   "9": 1,
+   "8": 2
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.446,
+   "1": 1.248,
+   "2": 1.336,
+   "6": 1.503,
+   "4": 1.214,
+   "5": 1.344,
+   "7": 1.582,
+   "14": 1.06,
+   "9": 1.168,
+   "8": 1.352
+  },
+  "umbral_nado": 3.218,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 288,
+  "t": 5780.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 152.3
+  },
+  "segmentos_media": {
+   "sopa": 3.23
+  },
+  "nacimientos": 17,
+  "muertes": 17,
+  "comidas": {
+   "chica": 35,
+   "grande": 17
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "2": 171,
+   "1": 19,
+   "6": 35,
+   "3": 179,
+   "5": 41,
+   "4": 38,
+   "7": 11,
+   "14": 4,
+   "9": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.382,
+   "1": 1.278,
+   "6": 1.486,
+   "3": 1.438,
+   "5": 1.652,
+   "4": 1.391,
+   "7": 1.787,
+   "14": 1.761,
+   "9": 1.996,
+   "8": 0.939
+  },
+  "umbral_nado": 3.565,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 289,
+  "t": 5800.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 154.6
+  },
+  "segmentos_media": {
+   "sopa": 3.22
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 41,
+   "grande": 27
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "6": 34,
+   "2": 170,
+   "1": 18,
+   "3": 183,
+   "4": 39,
+   "5": 39,
+   "7": 11,
+   "14": 4,
+   "9": 1,
+   "8": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "6": 1.399,
+   "2": 1.377,
+   "1": 1.263,
+   "3": 1.4,
+   "4": 1.507,
+   "5": 1.333,
+   "7": 1.564,
+   "14": 1.733,
+   "9": 1.5,
+   "8": 0.576
+  },
+  "umbral_nado": 3.081,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 290,
+  "t": 5820.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 156.9
+  },
+  "segmentos_media": {
+   "sopa": 3.24
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 44,
+   "grande": 25
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "3": 185,
+   "5": 39,
+   "4": 39,
+   "2": 169,
+   "7": 11,
+   "6": 33,
+   "1": 17,
+   "14": 4,
+   "9": 1,
+   "8": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.442,
+   "5": 1.531,
+   "4": 1.577,
+   "2": 1.428,
+   "7": 1.627,
+   "6": 1.517,
+   "1": 1.558,
+   "14": 1.051,
+   "9": 2.514,
+   "8": 1.121,
+   "13": 0.324
+  },
+  "umbral_nado": 4.583,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 291,
+  "t": 5840.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 157.1
+  },
+  "segmentos_media": {
+   "sopa": 3.23
+  },
+  "nacimientos": 18,
+  "muertes": 18,
+  "comidas": {
+   "chica": 48,
+   "grande": 20
+  },
+  "segundos": 5.0,
+  "por_segmentos": {
+   "3": 184,
+   "6": 33,
+   "4": 37,
+   "5": 39,
+   "2": 171,
+   "7": 11,
+   "1": 18,
+   "14": 4,
+   "9": 1,
+   "8": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.361,
+   "6": 1.354,
+   "4": 1.478,
+   "5": 1.559,
+   "2": 1.514,
+   "7": 1.773,
+   "1": 1.329,
+   "14": 0.824,
+   "9": 1.481,
+   "8": 0.905,
+   "13": 1.482
+  },
+  "umbral_nado": 3.454,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 292,
+  "t": 5860.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 160.8
+  },
+  "segmentos_media": {
+   "sopa": 3.21
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 42,
+   "grande": 22
+  },
+  "segundos": 5.1,
+  "por_segmentos": {
+   "3": 185,
+   "6": 32,
+   "2": 174,
+   "5": 36,
+   "7": 11,
+   "1": 18,
+   "4": 37,
+   "14": 4,
+   "9": 1,
+   "8": 1,
+   "13": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.298,
+   "6": 1.302,
+   "2": 1.421,
+   "5": 1.46,
+   "7": 0.862,
+   "1": 1.55,
+   "4": 1.259,
+   "14": 1.328,
+   "9": 1.423,
+   "8": 1.472,
+   "13": 2.147
+  },
+  "umbral_nado": 4.268,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 293,
+  "t": 5880.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 158.2
+  },
+  "segmentos_media": {
+   "sopa": 3.2
+  },
+  "nacimientos": 12,
+  "muertes": 12,
+  "comidas": {
+   "chica": 30,
+   "grande": 10
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "3": 185,
+   "2": 176,
+   "1": 18,
+   "4": 38,
+   "5": 34,
+   "6": 32,
+   "14": 4,
+   "7": 9,
+   "9": 1,
+   "8": 1,
+   "13": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.451,
+   "2": 1.394,
+   "1": 1.567,
+   "4": 1.331,
+   "5": 1.519,
+   "6": 1.371,
+   "14": 2.262,
+   "7": 1.346,
+   "9": 2.742,
+   "8": 3.101,
+   "13": 0.638,
+   "11": 3.016
+  },
+  "umbral_nado": 4.158,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 294,
+  "t": 5900.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 161.9
+  },
+  "segmentos_media": {
+   "sopa": 3.2
+  },
+  "nacimientos": 6,
+  "muertes": 6,
+  "comidas": {
+   "chica": 32,
+   "grande": 21
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 185,
+   "1": 18,
+   "2": 174,
+   "4": 41,
+   "5": 34,
+   "6": 32,
+   "14": 4,
+   "7": 8,
+   "9": 1,
+   "8": 1,
+   "13": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.389,
+   "1": 1.466,
+   "2": 1.531,
+   "4": 1.454,
+   "5": 1.436,
+   "6": 1.432,
+   "14": 0.757,
+   "7": 1.72,
+   "9": 1.531,
+   "8": 2.365,
+   "13": 1.675,
+   "11": 1.147
+  },
+  "umbral_nado": 4.337,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 295,
+  "t": 5920.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 165.4
+  },
+  "segmentos_media": {
+   "sopa": 3.19
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 19,
+   "grande": 24
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 186,
+   "5": 34,
+   "2": 177,
+   "4": 38,
+   "6": 32,
+   "14": 4,
+   "1": 17,
+   "7": 8,
+   "9": 1,
+   "8": 1,
+   "13": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.44,
+   "5": 1.168,
+   "2": 1.37,
+   "4": 1.281,
+   "6": 1.349,
+   "14": 1.613,
+   "1": 1.289,
+   "7": 1.229,
+   "9": 0.561,
+   "8": 1.796,
+   "13": 1.474,
+   "11": 2.53
+  },
+  "umbral_nado": 3.328,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 296,
+  "t": 5940.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 167.1
+  },
+  "segmentos_media": {
+   "sopa": 3.18
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 38,
+   "grande": 19
+  },
+  "segundos": 4.8,
+  "por_segmentos": {
+   "5": 33,
+   "2": 175,
+   "4": 38,
+   "3": 188,
+   "6": 34,
+   "14": 3,
+   "1": 17,
+   "7": 8,
+   "9": 1,
+   "8": 1,
+   "13": 1,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "5": 1.521,
+   "2": 1.46,
+   "4": 1.414,
+   "3": 1.331,
+   "6": 1.39,
+   "14": 1.882,
+   "1": 1.473,
+   "7": 1.294,
+   "9": 1.005,
+   "8": 1.08,
+   "13": 3.264,
+   "11": 0.689
+  },
+  "umbral_nado": 3.77,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 297,
+  "t": 5960.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 169.0
+  },
+  "segmentos_media": {
+   "sopa": 3.19
+  },
+  "nacimientos": 10,
+  "muertes": 10,
+  "comidas": {
+   "chica": 37,
+   "grande": 20
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 189,
+   "2": 174,
+   "5": 32,
+   "14": 3,
+   "1": 18,
+   "4": 39,
+   "6": 32,
+   "7": 8,
+   "9": 1,
+   "8": 1,
+   "13": 2,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.424,
+   "2": 1.481,
+   "5": 1.248,
+   "14": 1.278,
+   "1": 1.603,
+   "4": 1.279,
+   "6": 1.379,
+   "7": 1.547,
+   "9": 0.604,
+   "8": 1.324,
+   "13": 2.242,
+   "11": 1.596
+  },
+  "umbral_nado": 3.847,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 298,
+  "t": 5980.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 168.8
+  },
+  "segmentos_media": {
+   "sopa": 3.2
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 26,
+   "grande": 17
+  },
+  "segundos": 4.9,
+  "por_segmentos": {
+   "3": 192,
+   "2": 170,
+   "14": 3,
+   "1": 18,
+   "4": 40,
+   "6": 33,
+   "5": 31,
+   "7": 8,
+   "9": 1,
+   "8": 1,
+   "13": 2,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "3": 1.417,
+   "2": 1.35,
+   "14": 0.953,
+   "1": 1.668,
+   "4": 1.303,
+   "6": 1.492,
+   "5": 1.23,
+   "7": 1.087,
+   "9": 0.578,
+   "8": 1.48,
+   "13": 1.566,
+   "11": 2.244
+  },
+  "umbral_nado": 4.208,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
+ },
+ {
+  "epoca": 299,
+  "t": 6000.0,
+  "poblacion": 500,
+  "conteo": {
+   "sopa": 500
+  },
+  "energia_media": {
+   "sopa": 166.9
+  },
+  "segmentos_media": {
+   "sopa": 3.18
+  },
+  "nacimientos": 9,
+  "muertes": 9,
+  "comidas": {
+   "chica": 22,
+   "grande": 15
+  },
+  "segundos": 5.2,
+  "por_segmentos": {
+   "2": 170,
+   "3": 192,
+   "1": 18,
+   "4": 40,
+   "6": 34,
+   "5": 31,
+   "7": 8,
+   "9": 1,
+   "8": 1,
+   "14": 2,
+   "13": 2,
+   "11": 1
+  },
+  "desplazamiento_por_segmentos": {
+   "2": 1.455,
+   "3": 1.45,
+   "1": 1.512,
+   "4": 1.379,
+   "6": 1.249,
+   "5": 1.151,
+   "7": 1.464,
+   "9": 2.48,
+   "8": 1.119,
+   "14": 1.315,
+   "13": 0.773,
+   "11": 0.192
+  },
+  "umbral_nado": 3.126,
+  "nadadores_confirmados": 0,
+  "nadadores_acumulados": 0
  }
 ]
