@@ -553,3 +553,51 @@ seguimiento de luz; se reorganiza en dos experimentos con el mismo ancestro.
 menos Sims). Aptitud de luz con premio por distancia final (redundante con la
 velocidad media). Correr luz y caminata a la vez (duplica el tiempo de cada
 uno en los 16 hilos; se encadenaron).
+
+---
+
+## 0015 · 2026-10-05 · Pez fuera del agua: resultados
+
+**Corrida.** Ancestro pez sembrado en caminata, cinco semillas, 200 × 60.
+Distancias a 1/480, 1/960 y 1/1920 s; "reflejadas" cuenta las piezas que
+nacen de una conexión con reflexión (el par de aletas y lo que cuelga de él).
+
+| corrida | aptitud | 1/480 | 1/960 | 1/1920 | piezas | dof | gen del mejor |
+|---|---|---|---|---|---|---|---|
+| pez-cam01 | 6.91 | 4.81 m | 5.18 m | 3.84 m | 5 (1 reflejada) | 8 | 55 |
+| pez-cam02 | 9.58 | 6.81 m | 6.83 m | 6.58 m | 11 (5 reflejadas) | 20 | 60 |
+| pez-cam03 | 7.78 | 5.44 m | 5.45 m | 3.08 m | 15 (7 reflejadas) | 18 | 57 |
+| pez-cam04 | 5.69 | 3.99 m | 4.01 m | 4.07 m | 3 (0 reflejadas) | 2 | 38 |
+| pez-cam05 | 6.42 | 4.42 m | 4.49 m | 2.32 m | 5 (1 reflejada) | 7 | 49 |
+
+**Qué se vio.**
+- **Las aletas se vuelven extremidades.** En `pez-cam02`, el mejor resultado
+  de caminata de todo el proyecto (6.8 m, convergente), la cola desapareció y
+  cada aleta pectoral es ahora una cadena de cinco segmentos articulados que
+  se afinan hacia la punta, con articulaciones de dos grados de libertad, una
+  espejo de la otra. Dos brazos remando en simetría bilateral: la recursión y
+  la reflexión del genoma de Sims, que en la Etapa 3 no ganaban, aquí ganan.
+  `pez-cam03` hizo lo mismo con 15 piezas (el tope) y 7 reflejadas.
+- **La cola es lo primero que se pierde.** En las cinco corridas el linaje
+  muestra lo mismo: entre la generación 5 y la 10 el campeón pasa de 9 piezas
+  a 3 o 5, descartando segmentos de cola, antes de que crezca nada nuevo. En
+  tierra la cola ondulante del pez no empuja; solo pesa.
+- **Dos caminos.** Semillas 2 y 3: cuerpo grande con extremidades
+  articuladas. Semillas 1, 4 y 5: cuerpo chico (3 a 5 piezas) que se balancea
+  con una o ninguna aleta, como los caminantes de la Etapa 3. Partir del pez
+  no garantiza extremidades, pero las hace alcanzables: en la Etapa 3, desde
+  cuerpos al azar, nunca aparecieron.
+- **Mejor que desde cero.** Los cinco campeones (4.0 a 6.8 m) igualan o
+  superan a los cinco de la Etapa 3 partidos de cuerpos al azar (3.1 a 4.7 m).
+  Un ancestro con simetría bilateral y partes repetidas es un mejor punto de
+  partida que el azar, aunque sea un pez en el suelo.
+- **Convergencia.** Semillas 2 y 4 convergen al afinar el paso; 1, 3 y 5
+  bajan a 1/1920 s (3.8, 3.1 y 2.3 m): son caminantes con saltos, que la
+  aptitud robusta (mínimo entre 1/480 y 1/960) acota pero no elimina (0010).
+  Lo que se afirma es la jerarquía, no el segundo decimal.
+
+**Consecuencias.** El linaje queda en el visor (`Etapa 4 · linaje`), con el
+mejor de las generaciones 1, 10, 20, 30, 40, 50 y 60 de cada semilla en
+carriles, y la carrera «pez en tierra» junto a los campeones de la Etapa 3.
+Los archivos del visor crecieron (linaje 6.5 MB); si molesta en Pages, se
+bajan a cinco generaciones por linaje.
