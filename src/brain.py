@@ -22,6 +22,18 @@ def _clip(v: float) -> float:
     return VAL_MAX if v > VAL_MAX else (-VAL_MAX if v < -VAL_MAX else v)
 
 
+def crear(genoma: dict, dt: float):
+    """Cerebro compilado con Numba si está disponible (CRIATURAS_CEREBRO=lento lo desactiva)."""
+    import os
+    if os.environ.get("CRIATURAS_CEREBRO", "") != "lento":
+        try:
+            from brain_rapido import CerebroRapido
+            return CerebroRapido(genoma, dt)
+        except Exception:   # Numba bloqueado o ausente: se sigue con el intérprete
+            pass
+    return Cerebro(genoma, dt)
+
+
 class Cerebro:
     """Compila un genoma neuronal y lo ejecuta paso a paso."""
 
@@ -47,6 +59,13 @@ class Cerebro:
         self.val = [0.0] * n
         self.estado = [0.0] * n
         self.estado2 = [0.0] * n
+
+    def pasos(self, k: int, sensores) -> list[float]:
+        """k pasos con los sensores fijos; devuelve la salida del último."""
+        salida = None
+        for _ in range(k):
+            salida = self.paso(sensores)
+        return salida
 
     def _leer(self, e: tuple, sens, val) -> float:
         t, i, w = e

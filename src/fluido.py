@@ -26,6 +26,37 @@ import numpy as np
 
 K_ARRASTRE = 400.0  # N·s/m³  (fuerza por unidad de área y de velocidad normal)
 
+try:
+    from numba import njit
+except Exception:   # sin Numba: versión NumPy
+    njit = None
+
+
+def _nucleo_py(cvel, xpos, com, xmat, dlin, drot, F, T):
+    n = cvel.shape[0]
+    for k in range(n):
+        wx, wy, wz = cvel[k, 0], cvel[k, 1], cvel[k, 2]
+        rx, ry, rz = xpos[k, 0] - com[k, 0], xpos[k, 1] - com[k, 1], xpos[k, 2] - com[k, 2]
+        vx = cvel[k, 3] + (wy * rz - wz * ry)
+        vy = cvel[k, 4] + (wz * rx - wx * rz)
+        vz = cvel[k, 5] + (wx * ry - wy * rx)
+        # columnas de R = ejes locales; v_loc = Rᵀ v ; w_loc = Rᵀ w
+        for i in range(3):
+            r0, r1, r2 = xmat[k, i], xmat[k, 3 + i], xmat[k, 6 + i]
+            vl = r0 * vx + r1 * vy + r2 * vz
+            wl = r0 * wx + r1 * wy + r2 * wz
+            fl = -dlin[k, i] * vl
+            tl = -drot[k, i] * wl
+            F[k, 0] += r0 * fl
+            F[k, 1] += r1 * fl
+            F[k, 2] += r2 * fl
+            T[k, 0] += r0 * tl
+            T[k, 1] += r1 * tl
+            T[k, 2] += r2 * tl
+
+
+_nucleo = njit(cache=True)(_nucleo_py) if njit else _nucleo_py
+
 
 class ArrastrePorCara:
     """Precalcula los coeficientes de cada caja y aplica el arrastre en cada paso."""
@@ -51,22 +82,27 @@ class ArrastrePorCara:
             dlin.append(k * lin)
             drot.append(k * rot)
         self.ids = np.array(ids)
+        self.raices = model.body_rootid[self.ids]
+        # Índices contiguos (una criatura sola): rebanadas, sin copias.
+        contiguos = len(ids) > 0 and ids == list(range(ids[0], ids[0] + len(ids)))
+        self.sel = slice(ids[0], ids[0] + len(ids)) if contiguos else self.ids
+        r0 = int(self.raices[0]) if len(ids) else 0
+        self.sel_r = slice(r0, r0 + 1) if contiguos and np.all(self.raices == r0) else self.raices
+        self._com = np.zeros((len(ids), 3))
         self.dlin = np.array(dlin)
         self.drot = np.array(drot)
-        self._vel = np.zeros(6)
-        self._v = np.zeros((len(ids), 3))
-        self._w = np.zeros((len(ids), 3))
+        self._F = np.zeros((len(ids), 3))
+        self._T = np.zeros((len(ids), 3))
 
     def aplicar(self, model: mujoco.MjModel, data: mujoco.MjData) -> None:
-        vel, v, w = self._vel, self._v, self._w
-        for n, b in enumerate(self.ids):
-            mujoco.mj_objectVelocity(model, data, mujoco.mjtObj.mjOBJ_BODY, int(b), vel, 0)
-            w[n] = vel[:3]
-            v[n] = vel[3:]
-        R = data.xmat[self.ids].reshape(-1, 3, 3)          # columnas = ejes locales
-        v_loc = np.einsum("nji,nj->ni", R, v)              # Rᵀ v
-        w_loc = np.einsum("nji,nj->ni", R, w)
-        F = np.einsum("nij,nj->ni", R, -self.dlin * v_loc)
-        T = np.einsum("nij,nj->ni", R, -self.drot * w_loc)
-        data.xfrc_applied[self.ids, :3] = F
-        data.xfrc_applied[self.ids, 3:] = T
+        # Velocidad de cada cuerpo en su origen, a partir de cvel (expresada en el
+        # centro de masa del subárbol raíz): v = v_c + w × (x − c). Igual que
+        # mj_objectVelocity, pero para todos los cuerpos de una vez (BITACORA 0019).
+        F, T = self._F, self._T
+        F[:] = 0.0
+        T[:] = 0.0
+        com = self._com
+        com[:] = data.subtree_com[self.sel_r]
+        _nucleo(data.cvel[self.sel], data.xpos[self.sel], com, data.xmat[self.sel], self.dlin, self.drot, F, T)
+        data.xfrc_applied[self.sel, :3] = F
+        data.xfrc_applied[self.sel, 3:] = T

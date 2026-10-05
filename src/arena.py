@@ -18,7 +18,7 @@ import mujoco
 import numpy as np
 
 import develop_morfo as dm
-from brain import Cerebro
+import brain
 from fitness import PASOS_CEREBRO_POR_FISICA
 from tareas import ALTURA_INICIAL, K_FUERZA_CAMINATA, T_ASENTAMIENTO_MAX, TAU_ACTIVACION, UMBRAL_ASENTADA
 
@@ -141,15 +141,13 @@ def enfrentar(genomas: list[dict], paso: float = PASOS[0], grabar_cada: int = 0,
     data.qvel[:] = 0.0
     mujoco.mj_forward(model, data)
     t0 = float(data.time)
-    cerebros = [Cerebro(c.cerebro_plano, dt / PASOS_CEREBRO_POR_FISICA) for c in comps]
+    cerebros = [brain.crear(c.cerebro_plano, dt / PASOS_CEREBRO_POR_FISICA) for c in comps]
     sens = [c.sensores(data) for c in comps]
     cuadros = []
     n_pasos = int(round(duracion / dt))
     for k in range(n_pasos):
         for c, cer, s in zip(comps, cerebros, sens):
-            salida = None
-            for _ in range(PASOS_CEREBRO_POR_FISICA):
-                salida = cer.paso(s)
+            salida = cer.pasos(PASOS_CEREBRO_POR_FISICA, s)
             data.ctrl[c.ctrl_idx] += (np.asarray(salida) - data.ctrl[c.ctrl_idx]) * min(1.0, dt / TAU_ACTIVACION)
         mujoco.mj_step(model, data)
         sens = [c.sensores(data) for c in comps]

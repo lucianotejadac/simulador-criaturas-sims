@@ -744,3 +744,45 @@ tocaron el cubo en la última generación.
 extensiones no hechas: el mundo compartido con recursos (varias criaturas y
 varios cubos a la vez) y "todos contra varios" (contra los tres mejores del
 rival, que Sims recomienda para reducir el ruido de un solo campeón).
+
+---
+
+## 0019 · 2026-10-05 · Optimización en CPU: dónde estaba el tiempo
+
+**Contexto.** Antes de armar un ecosistema con decenas de criaturas en un
+mismo mundo, medir. El perfil de una evaluación de nado de 0.20 s (cuerpo de
+5 piezas, 9 grados de libertad, 5 neuronas) dio: cerebro en Python puro
+0.14 s, arrastre por cara 0.07 s (24 000 llamadas a `mj_objectVelocity`),
+física de MuJoCo 0.02 s. **El motor era el 10 % del tiempo.**
+
+**Cambios.**
+- **Cerebro compilado** (`src/brain_rapido.py`): el grafo se convierte en
+  arreglos y el paso se compila con Numba. Mismas funciones, mismo recorte,
+  mismos casos límite: los cinco campeones de prueba dan la misma aptitud con
+  seis decimales. `brain.crear` elige el compilado si Numba carga;
+  `CRIATURAS_CEREBRO=lento` fuerza el intérprete para comparar.
+- **Arrastre compilado**: la velocidad de todos los cuerpos sale de `cvel`
+  con la fórmula v = v_c + w × (x − c) (verificada contra MuJoCo con error
+  cero) y el núcleo es una función Numba. `np.cross` sobre arreglos chicos
+  costaba más que la física entera.
+- **Caché de aptitud** en `evolve_morfo.py`: los sobrevivientes (un quinto de
+  cada generación) y las crías idénticas no se reevalúan; la física es
+  determinista.
+- Numba: 0.68 queda bloqueado por el control de aplicaciones de Windows, como
+  MuJoCo 3.4; 0.61.2 pasa. Fijado en `requirements.txt`.
+
+| evaluación | antes | después |
+|---|---|---|
+| nado, 5 piezas | 0.21 s | 0.07 s |
+| nado, 3 placas | 0.21 s | 0.07 s |
+| caminata, 11 piezas | 0.15 s | 0.12 s |
+| luz, 3 ensayos | 0.70 s | 0.30 s |
+
+**Qué queda.** En nado, el piso es el bucle de Python que llama a `mj_step`
+4800 veces, unos 0.05 s; en caminata manda el solver de contactos, que no
+depende de nosotros. Más allá de esto, solo la GPU con cuerpos fijos (0010).
+
+**Lección.** Tres veces en el proyecto el tiempo estuvo donde no se miraba:
+en el fluido (0004), en el cerebro interpretado y en una función de NumPy
+pensada para arreglos grandes. Perfilar antes de optimizar, y verificar bit a
+bit después, porque una optimización que cambia el resultado es otra trampa.

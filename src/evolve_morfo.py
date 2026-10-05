@@ -159,10 +159,18 @@ def correr(nombre: str, tarea: str, generaciones: int, poblacion: int, semilla: 
                                 "rechazadas", "piezas_media", "segundos"])
     mejor_global = {"aptitud": -1.0}
     t0 = time.time()
+    cache: dict[str, dict] = {}   # aptitud por genoma: la física es determinista (BITACORA 0019)
     with Pool(processes=procesos) as pool:
         for gen in range(generaciones):
             t_gen = time.time()
-            res = pool.map(_evaluar, [(g, tarea, duracion) for g in pob], chunksize=2)
+            claves = [json.dumps(g, sort_keys=True, separators=(",", ":")) for g in pob]
+            nuevos = [i for i, c in enumerate(claves) if c not in cache]
+            calculados = pool.map(_evaluar, [(pob[i], tarea, duracion) for i in nuevos], chunksize=2)
+            for i, r in zip(nuevos, calculados):
+                cache[claves[i]] = r
+            res = [cache[c] for c in claves]
+            if len(cache) > 20 * poblacion:
+                cache = {c: cache[c] for c in claves}
             apt = [r["aptitud"] for r in res]
             with open(os.path.join(carpeta, "poblacion", f"gen_{gen:03d}.json"), "w", encoding="utf-8") as f:
                 json.dump([{"indice": i, "aptitud": r["aptitud"], "distancia": r["distancia"], "motivo": r["motivo"],

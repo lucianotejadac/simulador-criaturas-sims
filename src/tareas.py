@@ -22,7 +22,7 @@ import mujoco
 import numpy as np
 
 import fitness
-from brain import Cerebro
+import brain
 from fitness import PASOS_CEREBRO_POR_FISICA, PESO_FINAL, T_SIN_MOVIMIENTO, UMBRAL_SIN_MOVIMIENTO
 from fitness import centro_de_masa, limites_articulares, sensores_angulo
 
@@ -81,7 +81,7 @@ def evaluar_caminata(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
     mujoco.mj_forward(model, data)
     # --- medición ---
     lim = limites_articulares(model)
-    cerebro = Cerebro(genoma, dt / PASOS_CEREBRO_POR_FISICA)
+    cerebro = brain.crear(genoma, dt / PASOS_CEREBRO_POR_FISICA)
     com0 = centro_de_masa(model, data).copy()
     z0 = float(com0[2])
     n_pasos = int(round(duracion / dt))
@@ -98,9 +98,7 @@ def evaluar_caminata(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
         return float(math.hypot(c[0] - com0[0], c[1] - com0[1]))
 
     for k in range(n_pasos):
-        salida = None
-        for _ in range(PASOS_CEREBRO_POR_FISICA):
-            salida = cerebro.paso(sens)
+        salida = cerebro.pasos(PASOS_CEREBRO_POR_FISICA, sens)
         if tau_activacion > 0:
             data.ctrl[:] += (np.asarray(salida) - data.ctrl) * min(1.0, dt / tau_activacion)
         else:

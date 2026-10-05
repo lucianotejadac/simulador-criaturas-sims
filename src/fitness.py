@@ -21,7 +21,7 @@ import math
 import mujoco
 import numpy as np
 
-from brain import Cerebro
+import brain
 from fluido import ArrastrePorCara
 
 PASOS_CEREBRO_POR_FISICA = 2   # Sims: dos pasos de cerebro por paso de física
@@ -37,12 +37,11 @@ def centro_de_masa(model: mujoco.MjModel, data: mujoco.MjData) -> np.ndarray:
 
 def sensores_angulo(model: mujoco.MjModel, data: mujoco.MjData, limites: np.ndarray) -> list[float]:
     """Ángulo de cada bisagra normalizado por su límite a [-1, 1]."""
-    q = data.qpos[7:]  # saltar la articulación libre (7 coordenadas)
-    out = []
-    for k in range(len(q)):
-        v = q[k] / limites[k]
-        out.append(1.0 if v > 1 else (-1.0 if v < -1 else float(v)))
-    return out
+    n = len(limites)
+    q = data.qpos[7:7 + n] / limites  # saltar la articulación libre (7 coordenadas)
+    np.minimum(q, 1.0, out=q)
+    np.maximum(q, -1.0, out=q)
+    return q.tolist()
 
 
 def limites_articulares(model: mujoco.MjModel) -> np.ndarray:
@@ -65,7 +64,7 @@ def evaluar_nado(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
     dt = model.opt.timestep
     dt_cerebro = dt / PASOS_CEREBRO_POR_FISICA
     lim = limites_articulares(model)
-    cerebro = Cerebro(genoma, dt_cerebro)
+    cerebro = brain.crear(genoma, dt_cerebro)
     arrastre = arrastre or ArrastrePorCara(model)
     mujoco.mj_forward(model, data)
     com0 = centro_de_masa(model, data).copy()
@@ -78,9 +77,7 @@ def evaluar_nado(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict,
     sens = sensores_angulo(model, data, lim) + relleno
     motivo = "completa"
     for k in range(n_pasos):
-        salida = None
-        for _ in range(PASOS_CEREBRO_POR_FISICA):
-            salida = cerebro.paso(sens)
+        salida = cerebro.pasos(PASOS_CEREBRO_POR_FISICA, sens)
         if tau_activacion > 0:
             # Activación muscular de primer orden: el torque no cambia de golpe.
             data.ctrl[:] += (np.asarray(salida) - data.ctrl) * min(1.0, dt / tau_activacion)

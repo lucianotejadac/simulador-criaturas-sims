@@ -20,7 +20,7 @@ import math
 import mujoco
 import numpy as np
 
-from brain import Cerebro
+import brain
 from fitness import PASOS_CEREBRO_POR_FISICA, T_SIN_MOVIMIENTO, UMBRAL_SIN_MOVIMIENTO
 from fitness import centro_de_masa, limites_articulares, sensores_angulo
 from fluido import ArrastrePorCara
@@ -61,15 +61,13 @@ def evaluar_luz(model: mujoco.MjModel, data: mujoco.MjData, genoma: dict, espejo
         luz = np.asarray(luz, dtype=float)
         mujoco.mj_resetData(model, data)
         mujoco.mj_forward(model, data)
-        cerebro = Cerebro(genoma, dt / PASOS_CEREBRO_POR_FISICA)
+        cerebro = brain.crear(genoma, dt / PASOS_CEREBRO_POR_FISICA)
         com0 = centro_de_masa(model, data).copy()
         d0 = float(np.linalg.norm(luz - com0))
         sens = list(sensores_angulo(model, data, lim)) + list(sensores_luz(model, data, luz, espejos_arr))
         cortada = False
         for k in range(n_pasos):
-            salida = None
-            for _ in range(PASOS_CEREBRO_POR_FISICA):
-                salida = cerebro.paso(sens)
+            salida = cerebro.pasos(PASOS_CEREBRO_POR_FISICA, sens)
             if tau_activacion > 0:
                 data.ctrl[:] += (np.asarray(salida) - data.ctrl) * min(1.0, dt / tau_activacion)
             else:
