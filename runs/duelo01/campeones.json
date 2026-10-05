@@ -1,0 +1,495 @@
+{
+ "generacion": 0,
+ "A": {
+  "siguiente_id": 10,
+  "raiz": 0,
+  "nodos": [
+   {
+    "dims": [
+     0.3,
+     0.18,
+     0.16
+    ],
+    "art": "rigida",
+    "limite": 60.0,
+    "rec": 1,
+    "neuronas": [
+     {
+      "id": 0,
+      "f": "oscillate-wave",
+      "in": [
+       [
+        "c",
+        0,
+        1.0
+       ],
+       [
+        "c",
+        0,
+        1.6
+       ],
+       [
+        "c",
+        0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": 1,
+      "f": "oscillate-wave",
+      "in": [
+       [
+        "c",
+        0,
+        1.0
+       ],
+       [
+        "c",
+        0,
+        1.6
+       ],
+       [
+        "c",
+        0,
+        1.5708
+       ]
+      ]
+     }
+    ],
+    "efectores": [],
+    "conexiones": [
+     {
+      "a": 1,
+      "cara": 0,
+      "u": 0.0,
+      "v": 0.0,
+      "rot": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "escala": 1.0,
+      "reflejo": false,
+      "terminal": false
+     },
+     {
+      "a": 3,
+      "cara": 2,
+      "u": 0.2,
+      "v": -0.3,
+      "rot": [
+       0,
+       0,
+       -25
+      ],
+      "escala": 1.0,
+      "reflejo": false,
+      "terminal": false
+     }
+    ]
+   },
+   {
+    "dims": [
+     0.26,
+     0.15,
+     0.13
+    ],
+    "art": "bisagra",
+    "limite": 60.0,
+    "rec": 5,
+    "neuronas": [
+     {
+      "id": 2,
+      "f": "sum",
+      "in": [
+       [
+        "p",
+        0,
+        2.2
+       ],
+       [
+        "p",
+        3,
+        2.2
+       ],
+       [
+        "c",
+        0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": 3,
+      "f": "smooth",
+      "in": [
+       [
+        "n",
+        2,
+        1.0
+       ],
+       [
+        "c",
+        0,
+        0.0065
+       ]
+      ]
+     }
+    ],
+    "efectores": [
+     [
+      "n",
+      3,
+      1.0
+     ]
+    ],
+    "conexiones": [
+     {
+      "a": 1,
+      "cara": 0,
+      "u": 0.0,
+      "v": 0.0,
+      "rot": [
+       9.594720043727667,
+       0.0,
+       0.0
+      ],
+      "escala": 0.85,
+      "reflejo": false,
+      "terminal": false
+     },
+     {
+      "a": 2,
+      "cara": 0,
+      "u": 0.0,
+      "v": 0.0,
+      "rot": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "escala": 1.0,
+      "reflejo": false,
+      "terminal": true
+     },
+     {
+      "a": 0,
+      "cara": 1,
+      "u": -0.3186286817532171,
+      "v": -0.07860953525378345,
+      "rot": [
+       79.40483714300927,
+       17.175224213333166,
+       22.337791720260398
+      ],
+      "escala": 1.0235822199125568,
+      "reflejo": false,
+      "terminal": true
+     }
+    ]
+   },
+   {
+    "dims": [
+     0.7566728428433881,
+     0.04,
+     0.34
+    ],
+    "art": "flex-tors",
+    "limite": 35.0,
+    "rec": 2,
+    "neuronas": [],
+    "efectores": [
+     [
+      "p",
+      3,
+      1.3
+     ],
+     [
+      "l",
+      1,
+      -3.4456621050828353
+     ]
+    ],
+    "conexiones": []
+   },
+   {
+    "dims": [
+     0.2,
+     0.16,
+     0.04
+    ],
+    "art": "universal",
+    "limite": 40.0,
+    "rec": 1,
+    "neuronas": [],
+    "efectores": [
+     [
+      "p",
+      1,
+      0.8
+     ],
+     [
+      "p",
+      0,
+      0.8
+     ]
+    ],
+    "conexiones": []
+   }
+  ],
+  "central": []
+ },
+ "B": {
+  "siguiente_id": 11,
+  "raiz": 0,
+  "nodos": [
+   {
+    "dims": [
+     0.3,
+     0.18,
+     0.16
+    ],
+    "art": "rigida",
+    "limite": 60.0,
+    "rec": 1,
+    "neuronas": [
+     {
+      "id": 0,
+      "f": "oscillate-wave",
+      "in": [
+       [
+        "c",
+        0,
+        1.0
+       ],
+       [
+        "c",
+        0,
+        1.6
+       ],
+       [
+        "c",
+        0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": 1,
+      "f": "oscillate-wave",
+      "in": [
+       [
+        "c",
+        0,
+        1.0
+       ],
+       [
+        "c",
+        0,
+        1.6
+       ],
+       [
+        "c",
+        0,
+        1.5708
+       ]
+      ]
+     }
+    ],
+    "efectores": [],
+    "conexiones": [
+     {
+      "a": 1,
+      "cara": 0,
+      "u": 0.0,
+      "v": 0.0,
+      "rot": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "escala": 1.0,
+      "reflejo": false,
+      "terminal": false
+     },
+     {
+      "a": 3,
+      "cara": 2,
+      "u": 0.2,
+      "v": -0.3,
+      "rot": [
+       0,
+       0,
+       -25
+      ],
+      "escala": 1.0,
+      "reflejo": false,
+      "terminal": false
+     },
+     {
+      "a": 3,
+      "cara": 2,
+      "u": 0.2,
+      "v": -0.12413690568799884,
+      "rot": [
+       0,
+       0,
+       -25
+      ],
+      "escala": 1.0,
+      "reflejo": true,
+      "terminal": false
+     }
+    ]
+   },
+   {
+    "dims": [
+     0.26,
+     0.15,
+     0.13
+    ],
+    "art": "bisagra",
+    "limite": 60.0,
+    "rec": 5,
+    "neuronas": [
+     {
+      "id": 2,
+      "f": "sum",
+      "in": [
+       [
+        "p",
+        0,
+        2.2
+       ],
+       [
+        "p",
+        3,
+        2.2
+       ],
+       [
+        "c",
+        0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": 3,
+      "f": "smooth",
+      "in": [
+       [
+        "n",
+        2,
+        1.0
+       ],
+       [
+        "c",
+        0,
+        0.0065
+       ]
+      ]
+     }
+    ],
+    "efectores": [
+     [
+      "n",
+      3,
+      1.0
+     ]
+    ],
+    "conexiones": [
+     {
+      "a": 2,
+      "cara": 0,
+      "u": -0.11710548261258379,
+      "v": 0.0,
+      "rot": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "escala": 0.85,
+      "reflejo": false,
+      "terminal": false
+     },
+     {
+      "a": 2,
+      "cara": 0,
+      "u": 0.0,
+      "v": 0.0,
+      "rot": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "escala": 1.0,
+      "reflejo": false,
+      "terminal": true
+     }
+    ]
+   },
+   {
+    "dims": [
+     0.16,
+     0.04,
+     0.34
+    ],
+    "art": "bisagra",
+    "limite": 35.0,
+    "rec": 1,
+    "neuronas": [],
+    "efectores": [
+     [
+      "p",
+      3,
+      1.3
+     ]
+    ],
+    "conexiones": [
+     {
+      "a": 2,
+      "cara": 2,
+      "u": -0.5481369457158578,
+      "v": -0.21318482078648493,
+      "rot": [
+       -88.45809742781093,
+       3.6375384221074896,
+       34.548217224057964
+      ],
+      "escala": 1.0154960389247996,
+      "reflejo": false,
+      "terminal": false
+     }
+    ]
+   },
+   {
+    "dims": [
+     0.2,
+     0.16,
+     0.04
+    ],
+    "art": "universal",
+    "limite": 40.0,
+    "rec": 1,
+    "neuronas": [],
+    "efectores": [
+     [
+      "p",
+      1,
+      0.8
+     ],
+     [
+      "p",
+      0,
+      0.8
+     ]
+    ],
+    "conexiones": []
+   }
+  ],
+  "central": []
+ },
+ "aptitud_A": 0.7638456139508563,
+ "aptitud_B": 0.21066173514498807
+}

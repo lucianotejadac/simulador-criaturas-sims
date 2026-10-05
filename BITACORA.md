@@ -646,3 +646,54 @@ pez: en tierra (0015) y con luz. Queda para la Etapa 5 la competencia por un
 cubo entre dos especies, que en Sims es el paso siguiente. Dos cosas quedan
 anotadas: el seguimiento de luz en tierra (no corrido, por costo) y reducir
 `linaje.json` si Pages tarda en cargarlo.
+
+---
+
+## 0017 · 2026-10-05 · Etapa 5: competencia por el cubo, decisiones
+
+**Contexto.** Último paso de la hoja de ruta: la competencia de *Evolving 3D
+Morphology and Behavior by Competition* (Sims, Artificial Life IV, 1994). Dos
+especies coevolucionan; cada enfrentamiento pone a dos criaturas en el mismo
+mundo, con un cubo entre ellas, y gana la que termina más cerca del cubo.
+
+**Decisiones.**
+- **Arena** (`src/arena.py`). Suelo con fricción, gravedad, cubo de 0.25 m y
+  1 kg con articulación libre (se puede empujar) en el origen; la criatura A a
+  1.5 m en +X y la B a 1.5 m en −X, girada 180°, de modo que la cara −X de la
+  cabeza (la de los ojos) apunta al cubo. Las dos se asientan sin torques en
+  la misma simulación; si en 2 s no están quietas se arranca igual, porque
+  con dos cuerpos grandes el criterio de quietud conjunta castigaría al rival.
+  Después, 10 s de enfrentamiento con contactos reales entre todo: criaturas,
+  cubo y suelo.
+- **Aptitud.** `(d_rival − d_propia) / (d_rival + d_propia)`, con las
+  distancias horizontales del centro de masa de cada una al centro del cubo al
+  final, más 0.5 si la criatura tocó el cubo en algún momento. Va de −1 a +1
+  más el bono; dos quietas empatan en 0; una quieta contra una que se acerca
+  queda en negativo. Robusta: el mínimo entre dos pasos de integración (1/480
+  y 1/720 s), como en caminata (0010).
+- **Emparejamiento "todos contra el mejor".** Cada individuo de A se enfrenta
+  al campeón de B de la generación anterior, y cada individuo de B al campeón
+  de A. Es el esquema que Sims eligió por costo; "todos contra todos" serían
+  10 000 enfrentamientos por generación. Los campeones iniciales son el
+  ancestro. Cada generación se registra además el duelo de cabeza, campeón
+  contra campeón.
+- **Punto de partida.** Las dos especies parten del ancestro pez (0014), con
+  flujos aleatorios distintos (semilla·1000+1 y +2), para que diverjan por la
+  competencia y no por el origen. Se descartó sembrarlas con los campeones del
+  pez en tierra: ya caminan, pero en una dirección arbitraria (el campeón de
+  `pez-cam02` se aleja del cubo a 8.4 m en 10 s), y la pregunta de la etapa es
+  qué inventa la competencia, no qué heredan.
+- **Presupuesto.** 100 por especie, 50 generaciones, cinco semillas; un
+  enfrentamiento robusto tarda 1 s, unos 15 s por generación, 12 minutos por
+  semilla. Se guardan las poblaciones de ambas especies por generación, y para
+  el visor los duelos entre campeones de las generaciones 1, 10, 25 y 50.
+- **Visor.** Vista "duelo por el cubo": las dos criaturas (A celeste, B naranja)
+  y el cubo amarillo en la misma escena, animado con la trayectoria; curva de
+  la especie del campeón mostrado. Las aptitudes de coevolución no son
+  comparables entre generaciones (el rival cambia), y la bitácora de
+  resultados tendrá que leer las curvas con esa cautela.
+
+**Trampas esperadas, no corregibles.** Sims describió criaturas que bloquean
+al rival, lo apartan del cubo o se apoyan en él. En esta tarea todo eso es
+parte del juego y se documenta como estrategia; solo se corrigen artefactos
+físicos, con la verificación a medio paso de siempre.
