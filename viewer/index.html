@@ -192,10 +192,17 @@ footer a{color:var(--accent)}
       var pl=new THREE.PointLight(0xffe9a0,1.2,8); pl.position.copy(foco.position); mundo.add(pl); grupo.userData.extras=[foco,halo,pl]; }
     var matBody=new THREE.MeshStandardMaterial({color:0xd9e4ea,roughness:0.55,metalness:0.05});
     var matHead=new THREE.MeshStandardMaterial({color:color,roughness:0.5,metalness:0.05});
+    var matFin=new THREE.MeshStandardMaterial({color:color,roughness:0.6,metalness:0.0,transparent:true,opacity:0.55,side:THREE.DoubleSide});
+    var matEye=new THREE.MeshStandardMaterial({color:0x0b1a22,roughness:0.3});
     var meshes=piezas.map(function(p,i){
       var geo=new THREE.BoxGeometry(p.size[0],p.size[1],p.size[2]);
-      var m=new THREE.Mesh(geo,i===0?matHead:matBody);
+      var fina=Math.min(p.size[0],p.size[1],p.size[2])<=0.05&&i>0;   // placa delgada: aleta
+      var m=new THREE.Mesh(geo,i===0?matHead:(fina?matFin:matBody));
       m.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo),edgeMat));
+      if(i===0){ // dos ojos en la cara -X de la cabeza
+        var r=Math.min(p.size[1],p.size[2])*0.12;
+        [-1,1].forEach(function(sgn){ var ojo=new THREE.Mesh(new THREE.SphereGeometry(r,12,10),matEye); ojo.position.set(-p.size[0]/2,sgn*p.size[1]*0.28,p.size[2]*0.22); m.add(ojo); });
+      }
       grupo.add(m); return m;
     });
     bisagras.forEach(function(b,i){
@@ -421,7 +428,7 @@ footer a{color:var(--accent)}
     if(cs.length===1){
       actualizarBarras(cs[0]);
       var a=activas[0], c=cs[0], dx=c.com[0]-a.com0[0], dy=c.com[1]-a.com0[1], dz=c.com[2]-a.com0[2];
-      hud.innerHTML=a.info.etiqueta+' · gen <b>'+a.info.gen+'</b><br>desplazamiento del centro de masa <b>'+Math.sqrt(dx*dx+dy*dy+dz*dz).toFixed(2)+' m</b><br>cuadro <b>'+Math.floor(t*a.fps)+'</b> / '+a.cuadros.length;
+      hud.innerHTML=a.info.etiqueta+' · <b>'+a.info.gen+'</b><br>desplazamiento del centro de masa <b>'+Math.sqrt(dx*dx+dy*dy+dz*dz).toFixed(2)+' m</b><br>cuadro <b>'+Math.floor(t*a.fps)+'</b> / '+a.cuadros.length;
     } else if(cs.length>1){
       var lider=0, dmax=-1;
       cs.forEach(function(c,i){var a=activas[i], dx=c.com[0]-a.com0[0], dy=c.com[1]-a.com0[1], dz=c.com[2]-a.com0[2], d=Math.sqrt(dx*dx+dy*dy+dz*dz); if(d>dmax){dmax=d;lider=i;}});

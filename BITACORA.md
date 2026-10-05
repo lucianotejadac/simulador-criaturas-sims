@@ -501,3 +501,55 @@ Resultado final (distancias a 1/480, 1/960 y 1/1920 s):
 Etapa 4 dos preguntas abiertas: si conviene premiar en largos de cuerpo, y si
 la recursión está sirviendo (los campeones usan pocos nodos; los cuerpos
 repetitivos aparecen en la población pero no ganan).
+
+---
+
+## 0014 · 2026-10-05 · Etapa 4: un ancestro reconocible, el pez fuera del agua y la luz
+
+**Contexto.** El usuario pidió criaturas con una forma más conocida ("partir
+con gusanos", después "algo que pueda evolucionar en pez") y propuso el
+experimento de "un pez recién salido del agua". La Etapa 4 original era solo
+seguimiento de luz; se reorganiza en dos experimentos con el mismo ancestro.
+
+**Decisiones.**
+- **Sembrar, no restringir.** La población inicial es el ancestro más 199
+  mutantes suyos (1 a 3 mutaciones); la mutación morfológica sigue completa.
+  Se descartó restringir la gramática a "solo gusanos" porque se perdería lo
+  que queremos ver: qué hace la selección con las aletas. Si los cuerpos
+  degeneran, la restricción queda como alternativa (`--ancestro` en
+  `evolve_morfo.py`).
+- **Ancestro pez** (`genome/ejemplos.py: pez`): cabeza rígida con dos
+  osciladores en cuadratura (1.6 Hz); cola de 5 segmentos recursivos con
+  escala 0.85 (se afina) y bisagras verticales ±60° con la cadena de retardo
+  de la Etapa 2; aleta caudal vertical por conexión *solo terminal* (el
+  mecanismo de Sims para "algo distinto en la última instancia"); par de
+  aletas pectorales reflejadas con articulación universal que baten en
+  cuadratura. 9 piezas, 10 grados de libertad. Nada 0.77 m en 10 s con el
+  cerebro a mano, menos que la cadena de ejemplo (1.66 m): el cuerpo que se
+  afina y la cabeza ancha tienen menos empuje y más arrastre. Para que quepan
+  5 segmentos, `REC_MAX` pasa de 4 a 6.
+- **Pez fuera del agua.** El mismo ancestro sembrado en la tarea de caminata
+  de la Etapa 3, sin ningún cambio en la tarea: cinco semillas, 200 × 60. El
+  ancestro avanza 0.69 m a los tumbos; la pregunta es qué hace la selección
+  con las aletas pectorales y la cola.
+- **Fotosensores.** Cada pieza tiene un sensor en su centro que da las tres
+  componentes de la dirección unitaria a la luz en su propio marco (entradas
+  "l" 0, 1, 2 en el genoma). En piezas reflejadas se invierte la componente Y,
+  como el signo de los sensores articulares, para que el mismo cerebro dé la
+  conducta espejo. Los sensores se aplanan después de los ángulos
+  (`n_sensores = n_dof + 3·n_piezas`); en nado y caminata valen cero.
+- **Aptitud de luz.** Tres ensayos de 6 s con la luz a 4 m en direcciones
+  90°, 210° y 330°; aptitud = velocidad media de acercamiento (m/s)
+  promediada. Cuatro ensayos de 8 s costaban 45 s por generación; con tres
+  de 6 s, unos 25. Si la criatura no se mueve en el primer ensayo, no corre
+  los demás. Verificación incondicional a medio paso como en nado.
+- **Linaje en el visor.** La mejor criatura de las generaciones 1, 10, 20,
+  30, 40, 50 y 60 de una corrida, en carriles, para ver cómo se deforma el
+  ancestro. Sale de las poblaciones guardadas por generación (0007).
+- **Piel.** Pendiente: ojo en la cabeza y aletas dibujadas como placas. Por
+  ahora el visor dibuja las cajas tal cual.
+
+**Alternativas descartadas.** Un sensor de luz solo en la raíz (más simple,
+menos Sims). Aptitud de luz con premio por distancia final (redundante con la
+velocidad media). Correr luz y caminata a la vez (duplica el tiempo de cada
+uno en los 16 hilos; se encadenaron).
