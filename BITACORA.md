@@ -601,3 +601,48 @@ mejor de las generaciones 1, 10, 20, 30, 40, 50 y 60 de cada semilla en
 carriles, y la carrera «pez en tierra» junto a los campeones de la Etapa 3.
 Los archivos del visor crecieron (linaje 6.5 MB); si molesta en Pages, se
 bajan a cinco generaciones por linaje.
+
+---
+
+## 0016 · 2026-10-05 · Cierre de la Etapa 4: el pez que sigue la luz
+
+**Corrida.** Ancestro pez sembrado en la tarea de luz (tres ensayos de 6 s,
+luz a 4 m en 90°, 210° y 330°), cinco semillas, 200 × 50. Aptitud en m/s de
+acercamiento; "8 direcciones" es una prueba posterior con la luz cada 45°,
+incluida una posición que no se usó en la evolución y otra justo detrás.
+
+| corrida | aptitud (m/s) | a medio paso | 8 direcciones: mín · media · máx | piezas | dof | entradas de fotosensor |
+|---|---|---|---|---|---|---|
+| pez-luz01 | 0.206 | 0.207 | 0.12 · 0.18 · 0.24 | 10 | 14 | 3 |
+| pez-luz02 | 0.204 | 0.218 | 0.02 · 0.15 · 0.30 | 8 | 12 | 2 |
+| pez-luz03 | 0.127 | 0.127 | −0.01 · 0.10 · 0.14 | 10 | 18 | 7 |
+| pez-luz04 | 0.110 | 0.110 | 0.01 · 0.10 · 0.17 | 8 | 8 | 1 |
+| pez-luz05 | 0.123 | 0.138 | 0.04 · 0.11 · 0.17 | 9 | 16 | 4 |
+
+**Qué se vio.**
+- **Fototaxis real, no suerte.** Las cinco campeonas se acercan a la luz desde
+  las ocho direcciones (solo `pez-luz03` queda en cero en una). El ancestro
+  daba exactamente 0 (nadaba recto, sin saber dónde estaba la luz). Las dos
+  mejores llegan a 0.2 m/s de media, 1.2 m de acercamiento en 6 s.
+- **El mecanismo es modulación de amplitud, no un timón.** En `pez-luz01`
+  el fotosensor entra en la amplitud del oscilador de la cabeza:
+  `n0 = oscillate-wave(l0 × −1.31, 1.6 Hz, 0)`. La criatura coletea más o
+  menos fuerte según de qué lado le llega la luz, y la trayectoria se curva
+  hacia ella. Es la estrategia de los organismos sin sistema nervioso
+  direccional (klinoquinesis), y es lo que la evolución encontró primero en
+  las cinco semillas: entre 1 y 7 entradas de fotosensor, casi siempre en la
+  amplitud o la fase de un oscilador.
+- **Cuerpos.** De 8 a 10 piezas: menos cola que el ancestro (9), y en varias
+  el par reflejado de aletas crece o se duplica. Ninguna llegó al tope de
+  piezas; la tarea premia girar, no masa.
+- **Convergencia.** Las cinco cambian menos de 12 % a medio paso.
+- **Costo.** 35 a 58 s por generación de 200 (tres ensayos más la
+  verificación a medio paso): 2 h 50 min las cinco semillas. Es la tarea más
+  cara del proyecto; la verificación incondicional (0013) duplica el costo y
+  no se negocia.
+
+**Decisión.** La Etapa 4 cierra con dos experimentos desde el mismo ancestro
+pez: en tierra (0015) y con luz. Queda para la Etapa 5 la competencia por un
+cubo entre dos especies, que en Sims es el paso siguiente. Dos cosas quedan
+anotadas: el seguimiento de luz en tierra (no corrido, por costo) y reducir
+`linaje.json` si Pages tarda en cargarlo.

@@ -8,7 +8,7 @@ población.
 
 **Visor en vivo:** <https://lucianotejadac.github.io/simulador-criaturas-sims/viewer/>
 
-## Estado: Etapa 3
+## Estado: Etapa 4
 
 **Etapa 1 (cerrada):** cuerpo fijo (cadena de cuatro cajas unidas por tres
 bisagras) en agua sin gravedad. Solo evoluciona el cerebro: un grafo de neuronas
@@ -21,6 +21,13 @@ recursión, reflexión, escala y conexiones terminales, y desarrollo a MJCF con 
 siete tipos de articulación de Sims. Los cerebros anidados (uno por nodo, más
 centrales) se aplanan al desarrollar. Verificado con tres genomas escritos a
 mano que se ven en el visor (`Etapa 2 · los tres cuerpos juntos`).
+
+**Etapa 4 (cerrada):** un ancestro pez escrito a mano (cola recursiva que se
+afina, aleta caudal terminal, aletas pectorales reflejadas) sembrado en dos
+experimentos: *pez fuera del agua* (caminata: en dos de cinco semillas las
+aletas se vuelven extremidades articuladas) y *seguimiento de luz* con
+fotosensores por pieza (las cinco campeonas giran hacia la luz modulando la
+amplitud de su oscilador). Linajes por generación y carreras en el visor.
 
 **Etapa 3 (cerrada):** coevolución de cuerpo y cerebro para nado y caminata
 (`src/evolve_morfo.py`). En caminata la criatura se asienta antes de medir y la
@@ -64,6 +71,11 @@ python src/ejemplos.py
 python src/evolve_morfo.py --nombre morfo-cam01 --tarea caminata --semilla 1 --generaciones 60 --poblacion 200
 python src/etapa3.py --nado morfo-nado01,morfo-nado02 --caminata morfo-cam01
 
+# Etapa 4: sembrar con el ancestro pez (caminata o luz) y ver el linaje
+python src/evolve_morfo.py --nombre pez-cam01 --tarea caminata --ancestro pez --semilla 1
+python src/evolve_morfo.py --nombre pez-luz01 --tarea luz --ancestro pez --semilla 1 --generaciones 50
+python src/linaje.py --corridas pez-cam01 --generaciones 1,10,20,30,40,50,60
+
 # tests
 python -m pytest -q tests
 
@@ -93,6 +105,8 @@ src/
   evolve_morfo.py    coevolución cuerpo + cerebro con multiprocessing (Etapa 3)
   etapa3.py          campeones de varias corridas -> viewer/etapa3.json
   semillas.py        campeones de nado01..05 -> viewer/semillas.json
+  luz.py             fotosensores y aptitud de seguimiento de luz (Etapa 4)
+  linaje.py          el mejor de varias generaciones de una corrida -> viewer/linaje.json
   brain.py           ejecución del grafo neuronal
   fluido.py          arrastre viscoso por cara (modelo de agua de Sims)
   fitness.py         evaluación y aptitud de nado
@@ -110,8 +124,8 @@ BITACORA.md          decisiones de diseño y trampas detectadas
 1. **Etapa 1**: cuerpo fijo, cerebro evolucionado, nado. *(cerrada)*
 2. **Etapa 2**: genoma morfológico de grafo dirigido con recursión y desarrollo a MJCF. *(cerrada)*
 3. **Etapa 3**: coevolución cuerpo + cerebro para nado y caminata. *(cerrada)*
-4. Etapa 4: seguimiento de luz con fotosensores.
-5. Etapa 5: competencia por un cubo y mundo compartido.
+4. **Etapa 4**: ancestro pez, pez fuera del agua y seguimiento de luz. *(cerrada)*
+5. Etapa 5: competencia por un cubo y mundo compartido. *(siguiente)*
 
 ## Referencias
 

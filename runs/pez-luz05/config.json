@@ -1,0 +1,16 @@
+{
+  "nombre": "pez-luz05",
+  "etapa": 3,
+  "tarea": "luz",
+  "generaciones": 50,
+  "poblacion": 200,
+  "semilla": 5,
+  "procesos": 14,
+  "duracion": 10.0,
+  "cuerpo": "genoma morfológico",
+  "ancestro": "pez",
+  "k_fuerza": 1000.0,
+  "paso_fisica": 0.0020833333333333333,
+  "pasos_cerebro_por_fisica": 2,
+  "mujoco": "3.3.2"
+}

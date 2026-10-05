@@ -31,7 +31,7 @@ def grupo(tarea: str, corridas: list[str], numero: int) -> dict | None:
         criaturas.append({"etiqueta": f"semilla {meta['semilla']}", "indice": k, "puesto": k + 1,
                           "aptitud": meta["aptitud"], "distancia": meta["distancia"], "motivo": "completa",
                           "n_neuronas": meta["n_neuronas"], "n_piezas": meta["n_piezas"], "n_dof": meta["n_dof"],
-                          "corrida": nombre, "tarea": tarea,
+                          "corrida": nombre, "tarea": tarea, "luz": meta.get("luz"),
                           "descripcion": f"Campeón de {nombre} ({tarea}, semilla {meta['semilla']}, "
                                          f"generación {meta['generacion'] + 1} de {meta['generaciones']}): "
                                          f"{meta['n_piezas']} piezas, {meta['n_dof']} grados de libertad.",

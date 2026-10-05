@@ -1,0 +1,62 @@
+<mujoco model="criatura">
+  <compiler angle="degree" autolimits="true"/>
+  <option timestep="0.002083" gravity="0 0 0" integrator="implicitfast"/>
+  <default>
+    <geom type="box" density="300.0" rgba="0.85 0.89 0.92 1"/>
+    <joint type="hinge"/>
+    <motor ctrlrange="-1 1"/>
+  </default>
+  <worldbody>
+    <body name="p0_n0" pos="0.00000 0.00000 0.00000" quat="1.000000 0.000000 0.000000 0.000000">
+      <freejoint name="raiz"/>
+      <geom name="g_p0_n0" size="0.15000 0.09000 0.08000" rgba="0.25 0.72 0.8 1"/>
+      <body name="p1_n1" pos="0.22404 -0.02089 -0.09233" quat="0.901553 0.000000 0.432669 0.000000">
+        <joint name="p1_n1_j0" axis="1.0000 0.0000 0.0000" pos="-0.11835 0 0" range="-76.66 76.66" damping="0.3200"/>
+        <joint name="p1_n1_j1" axis="0.0000 0.0000 1.0000" pos="-0.11835 0 0" range="-76.66 76.66" damping="0.3200"/>
+        <geom name="g_p1_n1" size="0.09835 0.08000 0.02000"/>
+      </body>
+      <body name="p2_n1" pos="-0.04500 0.20167 -0.03988" quat="0.596368 0.379928 0.596368 0.379928">
+        <joint name="p2_n1_j0" axis="1.0000 0.0000 0.0000" pos="-0.12321 0 0" range="-76.66 76.66" damping="0.3524"/>
+        <joint name="p2_n1_j1" axis="0.0000 0.0000 1.0000" pos="-0.12321 0 0" range="-76.66 76.66" damping="0.3524"/>
+        <geom name="g_p2_n1" size="0.10321 0.08396 0.02099"/>
+      </body>
+      <body name="p3_n1" pos="-0.05031 -0.19726 -0.03402" quat="0.596368 -0.379928 0.596368 -0.379928">
+        <joint name="p3_n1_j0" axis="1.0000 0.0000 0.0000" pos="-0.11835 0 0" range="-76.66 76.66" damping="0.3200"/>
+        <joint name="p3_n1_j1" axis="0.0000 0.0000 1.0000" pos="-0.11835 0 0" range="-76.66 76.66" damping="0.3200"/>
+        <geom name="g_p3_n1" size="0.09835 0.08000 0.02000"/>
+      </body>
+      <body name="p4_n2" pos="-0.33681 -0.07641 -0.04448" quat="0.146196 -0.120462 0.937788 -0.290981">
+        <geom name="g_p4_n2" size="0.18126 0.10875 0.09667"/>
+        <body name="p5_n3" pos="0.23119 -0.02525 -0.07656" quat="0.901553 0.000000 0.432669 0.000000">
+          <joint name="p5_n3_j0" axis="1.0000 0.0000 0.0000" pos="-0.07983 0 0" range="-76.66 76.66" damping="0.1721"/>
+          <joint name="p5_n3_j1" axis="0.0000 0.0000 1.0000" pos="-0.07983 0 0" range="-76.66 76.66" damping="0.1721"/>
+          <geom name="g_p5_n3" size="0.05983 0.04302 0.02000"/>
+        </body>
+        <body name="p6_n3" pos="-0.05438 0.23715 -0.04054" quat="0.596368 0.379928 0.596368 0.379928">
+          <joint name="p6_n3_j0" axis="1.0000 0.0000 0.0000" pos="-0.14167 0 0" range="-76.66 76.66" damping="0.4438"/>
+          <joint name="p6_n3_j1" axis="0.0000 0.0000 1.0000" pos="-0.14167 0 0" range="-76.66 76.66" damping="0.4438"/>
+          <geom name="g_p6_n3" size="0.12167 0.08748 0.02536"/>
+        </body>
+        <body name="p7_n3" pos="-0.05438 -0.23195 -0.03812" quat="0.596368 -0.379928 0.596368 -0.379928">
+          <joint name="p7_n3_j0" axis="1.0000 0.0000 0.0000" pos="-0.13594 0 0" range="-76.66 76.66" damping="0.4029"/>
+          <joint name="p7_n3_j1" axis="0.0000 0.0000 1.0000" pos="-0.13594 0 0" range="-76.66 76.66" damping="0.4029"/>
+          <geom name="g_p7_n3" size="0.11594 0.08336 0.02417"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="m_p1_n1_j0" joint="p1_n1_j0" gear="-6.4000"/>
+    <motor name="m_p1_n1_j1" joint="p1_n1_j1" gear="-6.4000"/>
+    <motor name="m_p2_n1_j0" joint="p2_n1_j0" gear="7.0488"/>
+    <motor name="m_p2_n1_j1" joint="p2_n1_j1" gear="7.0488"/>
+    <motor name="m_p3_n1_j0" joint="p3_n1_j0" gear="-6.4000"/>
+    <motor name="m_p3_n1_j1" joint="p3_n1_j1" gear="-6.4000"/>
+    <motor name="m_p5_n3_j0" joint="p5_n3_j0" gear="-3.4413"/>
+    <motor name="m_p5_n3_j1" joint="p5_n3_j1" gear="-3.4413"/>
+    <motor name="m_p6_n3_j0" joint="p6_n3_j0" gear="8.8754"/>
+    <motor name="m_p6_n3_j1" joint="p6_n3_j1" gear="8.8754"/>
+    <motor name="m_p7_n3_j0" joint="p7_n3_j0" gear="-8.0585"/>
+    <motor name="m_p7_n3_j1" joint="p7_n3_j1" gear="-8.0585"/>
+  </actuator>
+</mujoco>

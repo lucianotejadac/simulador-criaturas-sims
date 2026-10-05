@@ -1,0 +1,72 @@
+<mujoco model="criatura">
+  <compiler angle="degree" autolimits="true"/>
+  <option timestep="0.002083" gravity="0 0 0" integrator="implicitfast"/>
+  <default>
+    <geom type="box" density="300.0" rgba="0.85 0.89 0.92 1"/>
+    <joint type="hinge"/>
+    <motor ctrlrange="-1 1"/>
+  </default>
+  <worldbody>
+    <body name="p0_n0" pos="0.00000 0.00000 0.00000" quat="1.000000 0.000000 0.000000 0.000000">
+      <freejoint name="raiz"/>
+      <geom name="g_p0_n0" size="0.15495 0.09000 0.08000" rgba="0.25 0.72 0.8 1"/>
+      <body name="p1_n4" pos="0.32990 0.00000 0.03558" quat="0.990826 0.135142 0.000000 0.000000">
+        <geom name="g_p1_n4" size="0.15495 0.13887 0.02634"/>
+        <body name="p2_n5" pos="0.26666 0.01537 -0.04104" quat="0.966846 0.175151 0.182848 0.033124">
+          <joint name="p2_n5_j0" axis="0.0000 0.0000 1.0000" pos="-0.12000 0 0" range="-55.06 55.06" damping="0.4640"/>
+          <joint name="p2_n5_j1" axis="1.0000 0.0000 0.0000" pos="-0.12000 0 0" range="-55.06 55.06" damping="0.4640"/>
+          <geom name="g_p2_n5" size="0.10000 0.11600 0.02000"/>
+        </body>
+        <body name="p3_n5" pos="-0.04649 0.24763 -0.04545" quat="0.596368 0.379928 0.596368 0.379928">
+          <joint name="p3_n5_j0" axis="0.0000 0.0000 1.0000" pos="-0.12000 0 0" range="-55.06 55.06" damping="0.4640"/>
+          <joint name="p3_n5_j1" axis="1.0000 0.0000 0.0000" pos="-0.12000 0 0" range="-55.06 55.06" damping="0.4640"/>
+          <geom name="g_p3_n5" size="0.10000 0.11600 0.02000"/>
+        </body>
+        <body name="p4_n5" pos="0.00900 -0.24542 -0.06885" quat="0.737142 -0.253698 0.505208 -0.370167">
+          <joint name="p4_n5_j0" axis="0.0000 0.0000 1.0000" pos="-0.13284 0 0" range="-55.06 55.06" damping="0.5908"/>
+          <joint name="p4_n5_j1" axis="1.0000 0.0000 0.0000" pos="-0.13284 0 0" range="-55.06 55.06" damping="0.5908"/>
+          <geom name="g_p4_n5" size="0.11284 0.13089 0.02257"/>
+        </body>
+      </body>
+      <body name="p5_n1" pos="-0.04649 0.19876 -0.03471" quat="0.596368 0.379928 0.596368 0.379928">
+        <joint name="p5_n1_j0" axis="0.0000 0.0000 1.0000" pos="-0.12000 0 0" range="-57.75 57.75" damping="0.4640"/>
+        <joint name="p5_n1_j1" axis="1.0000 0.0000 0.0000" pos="-0.12000 0 0" range="-57.75 57.75" damping="0.4640"/>
+        <geom name="g_p5_n1" size="0.10000 0.11600 0.02000"/>
+      </body>
+      <body name="p6_n2" pos="0.02944 -0.25746 -0.04948" quat="0.714129 -0.348779 0.446662 -0.410934">
+        <geom name="g_p6_n2" size="0.16638 0.10891 0.02829"/>
+        <body name="p7_n3" pos="0.29376 0.00000 0.00000" quat="0.983984 -0.178256 0.000000 0.000000">
+          <joint name="p7_n3_j0" axis="0.0000 0.0000 1.0000" pos="-0.12738 0 0" range="-55.06 55.06" damping="0.5350"/>
+          <joint name="p7_n3_j1" axis="1.0000 0.0000 0.0000" pos="-0.12738 0 0" range="-55.06 55.06" damping="0.5350"/>
+          <geom name="g_p7_n3" size="0.10738 0.12456 0.02148"/>
+        </body>
+        <body name="p8_n3" pos="-0.04991 -0.22435 -0.04817" quat="0.596368 -0.379928 0.596368 -0.379928">
+          <joint name="p8_n3_j0" axis="0.0000 0.0000 1.0000" pos="-0.12738 0 0" range="-55.06 55.06" damping="0.5350"/>
+          <joint name="p8_n3_j1" axis="1.0000 0.0000 0.0000" pos="-0.12738 0 0" range="-55.06 55.06" damping="0.5350"/>
+          <geom name="g_p8_n3" size="0.10738 0.12456 0.02148"/>
+        </body>
+        <body name="p9_n3" pos="0.00934 0.22213 -0.07311" quat="0.737142 0.253698 0.505208 0.370167">
+          <joint name="p9_n3_j0" axis="0.0000 0.0000 1.0000" pos="-0.14116 0 0" range="-55.06 55.06" damping="0.6161"/>
+          <joint name="p9_n3_j1" axis="1.0000 0.0000 0.0000" pos="-0.14116 0 0" range="-55.06 55.06" damping="0.6161"/>
+          <geom name="g_p9_n3" size="0.12116 0.14055 0.02423"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="m_p2_n5_j0" joint="p2_n5_j0" gear="9.2799"/>
+    <motor name="m_p2_n5_j1" joint="p2_n5_j1" gear="9.2799"/>
+    <motor name="m_p3_n5_j0" joint="p3_n5_j0" gear="9.2799"/>
+    <motor name="m_p3_n5_j1" joint="p3_n5_j1" gear="9.2799"/>
+    <motor name="m_p4_n5_j0" joint="p4_n5_j0" gear="-11.8160"/>
+    <motor name="m_p4_n5_j1" joint="p4_n5_j1" gear="-11.8160"/>
+    <motor name="m_p5_n1_j0" joint="p5_n1_j0" gear="9.2799"/>
+    <motor name="m_p5_n1_j1" joint="p5_n1_j1" gear="9.2799"/>
+    <motor name="m_p7_n3_j0" joint="p7_n3_j0" gear="-10.6996"/>
+    <motor name="m_p7_n3_j1" joint="p7_n3_j1" gear="-10.6996"/>
+    <motor name="m_p8_n3_j0" joint="p8_n3_j0" gear="-10.6996"/>
+    <motor name="m_p8_n3_j1" joint="p8_n3_j1" gear="-10.6996"/>
+    <motor name="m_p9_n3_j0" joint="p9_n3_j0" gear="12.3225"/>
+    <motor name="m_p9_n3_j1" joint="p9_n3_j1" gear="12.3225"/>
+  </actuator>
+</mujoco>
