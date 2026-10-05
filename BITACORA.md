@@ -904,3 +904,60 @@ que sigue, si se sigue: un segundo acuario con comida de dos tipos (una que
 solo pueden comer los cuerpos chicos, otra los grandes) para ver si aparece
 coexistencia; y más tiempo, para ver si del monocultivo de anguilas sale
 algo nuevo.
+
+---
+
+## 0022 · 2026-10-05 · Mundo 2D viscoso sin inercia: la física que escala
+
+**Contexto.** Para un ecosistema de cientos de criaturas y horas de vida, la
+física 3D con contactos de MuJoCo es el cuello de botella (0021: 1.3 veces el
+tiempo real con 36 criaturas). El usuario pidió "escala más grande pero 2D".
+
+**Modelo** (`src/mundo2d.py`). Árboles de segmentos rígidos en el plano,
+unidos por bisagras, en agua de arrastre lineal **sin inercia**: en el régimen
+de Stokes las fuerzas se equilibran en cada instante, R(q)·q̇ = τ, con R la
+matriz de resistencia generalizada (suma de jacobianos por arrastre de cada
+segmento) y τ los torques musculares menos la amortiguación. Es la teoría de
+la fuerza resistiva de Gray y Hancock (1955) para cuerpos articulados, con el
+mismo coeficiente de arrastre por área que el fluido 3D (0004). Numba,
+criatura por criatura con su número real de segmentos, con un solver
+gaussiano propio porque el de Numba exige SciPy.
+
+**Tres artefactos cerrados antes de confiar en él.**
+1. Recortar los ángulos al tope después de resolver rompía la reciprocidad:
+   la cadena de dos eslabones, que no puede nadar (teorema de la vieira),
+   avanzaba 2.1 m en 10 s. Ahora el tope es un resorte rígido implícito y,
+   sobre todo, el músculo tiene relación fuerza-longitud: el torque hacia el
+   tope se apaga con 1 − (θ/lím)², así la articulación no lo golpea.
+2. Euler explícito en articulaciones rápidas daba error de primer orden: la
+   distancia cambiaba 10 % por cada duplicación del paso. Integración de
+   punto medio (dos resoluciones por paso): ahora cambia 2 % entre 1/60 y
+   1/240 s. Con el paso de 1/60 s, ocho veces mayor que en 3D.
+3. El cerebro tiene reloj propio: 1/960 s, como en 3D, 16 pasos por paso de
+   física. Con el reloj del cerebro ligado al de la física, las neuronas de
+   retardo (`smooth`) cambiaban de comportamiento y la anguila nadaba 0.05 m.
+
+**Verificación contra la física 3D** (bestiario, 10 s, nado libre):
+
+| especie | 3D (MuJoCo) | 2D | luz 3D | luz 2D |
+|---|---|---|---|---|
+| anguila | 2.99 m | 2.97 m | +0.097 | +0.067 |
+| pez | 0.73 m | 0.86 m | +0.017 | +0.010 |
+| renacuajo | 0.44 m | 1.14 m | +0.003 | +0.025 |
+| raya | 0.72 m | 0.21 m | −0.003 | −0.001 |
+| ciempiés | 0.15 m | 0.17 m | +0.004 | +0.001 |
+| remador | 0.20 m | 0.25 m | +0.024 | 0.000 |
+
+Las jerarquías coinciden; las placas de la raya pierden en 2D el empuje
+vertical que tenían en 3D, y el remador pierde la cuadratura de sus aletas
+(en 2D una aleta universal es una bisagra). Pruebas de principio: dos
+eslabones 0.007 m, cinco en fase 0.027 m (ambos "cero" de Purcell), tres
+eslabones en cuadratura 0.84 m (el nadador de Purcell nada).
+
+**Costo.** 500 cadenas de 5 segmentos: 14 veces el tiempo real; de 16
+segmentos: 2.6 veces. Las seis especies del bestiario, 10 s, en 0.2 s.
+
+**Consecuencias.** Todo lo demás se reutiliza: genoma (proyectado al plano
+por `develop2d.py`: bisagras, caras ±X ±Y, reflexión respecto del eje X),
+cerebro (en lote, `brain_lote.py`), fototaxis, reglas de vida, bitácora. Lo
+que se pierde: choques entre criaturas y toda la tercera dimensión.
