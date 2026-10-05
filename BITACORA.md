@@ -697,3 +697,50 @@ mundo, con un cubo entre ellas, y gana la que termina más cerca del cubo.
 al rival, lo apartan del cubo o se apoyan en él. En esta tarea todo eso es
 parte del juego y se documenta como estrategia; solo se corrigen artefactos
 físicos, con la verificación a medio paso de siempre.
+
+---
+
+## 0018 · 2026-10-05 · Cierre de la Etapa 5: la carrera armamentista por el cubo
+
+**Corrida.** Cinco semillas, dos especies de 100 desde el ancestro pez, 50
+generaciones, "todos contra el mejor". La tabla muestra el duelo de cabeza
+(campeón A contra campeón B) en generaciones elegidas, como aptitud A/B y
+distancias finales al cubo; "tocan" es cuántos de los 100 de cada especie
+tocaron el cubo en la última generación.
+
+| corrida | gen 1 | gen 10 | gen 25 | gen 50 | tocan A/B | piezas A/B | cubo movido |
+|---|---|---|---|---|---|---|---|
+| duelo01 | −0.20/+0.20 (1.70/1.12 m) | +0.32/+0.68 (0.71/0.49) | +0.77/+0.23 (0.26/0.45) | +0.23/+0.27 (0.32/0.50) | 72/77 | 12/6 | 0.12 m |
+| duelo02 | 0.00/0.00 (1.26/1.26) | +0.59/+0.41 (0.40/0.48) | +0.16/+0.84 (0.68/0.33) | +0.46/+0.54 (0.67/0.62) | 26/51 | 13/10 | 0.09 m |
+| duelo03 | −0.17/+0.17 (1.37/0.98) | +0.47/+0.53 (0.45/0.42) | +0.46/+0.54 (0.42/0.39) | +0.53/+0.47 (0.38/0.40) | 61/70 | 4/7 | 0.12 m |
+| duelo04 | +0.08/−0.08 (1.03/1.21) | −0.49/+0.99 (1.09/0.38) | +0.66/+0.34 (0.34/0.46) | −0.31/+0.81 (0.75/0.40) | 16/60 | 13/12 | 0.58 m |
+| duelo05 | −0.24/+0.74 (0.86/0.53) | +0.62/+0.38 (0.39/0.50) | +0.68/+0.32 (0.40/0.58) | +0.60/+0.40 (0.38/0.47) | 61/69 | 6/10 | 0.06 m |
+
+**Qué se vio.**
+- **Llegar al cubo se aprende rápido.** En la generación 1 ninguna de las
+  diez campeonas lo toca (la más cercana queda a 0.53 m); en la 10, en las
+  cinco semillas ambas campeonas lo tocan y más de la mitad de cada población
+  también. El pez, que en tierra avanzaba a los tumbos, en diez generaciones
+  recorre 1.5 m en la dirección correcta, porque ahora la aptitud tiene
+  dirección (el cubo) y rival.
+- **Ventaja que va y viene.** En `duelo01` el duelo de cabeza pasa de
+  −0.20 a +0.25, +0.68 y +0.23; en `duelo04`, de +0.08 a −0.49, +0.66 y −0.31.
+  Es la dinámica de la Reina Roja que Sims describe: cada especie se adapta
+  al campeón del rival y el rival responde. Por eso las curvas de aptitud de
+  esta etapa no son comparables entre generaciones: un 0.5 en la generación
+  40 es contra un rival mucho mejor que el de la 10.
+- **Dos tamaños de respuesta.** En tres semillas una especie creció (12 o 13
+  piezas) y la otra se quedó chica (6, 7, 4); en `duelo04` las dos crecieron.
+  Las grandes cubren el cubo con el cuerpo; las chicas llegan antes. Ninguna
+  estrategia gana siempre: en la generación 50 la especie chica gana en
+  `duelo01` y `duelo02`, la grande en `duelo05`.
+- **El cubo se empuja poco.** Salvo en `duelo04` (0.58 m), el cubo termina a
+  menos de 0.12 m de donde estaba. Las campeonas no lo arrastran lejos del
+  rival: se quedan sobre él. Las estrategias de bloqueo que Sims describió
+  aparecen como "cuerpo grande sobre el cubo", no como empujones.
+- **Costo.** 26 a 31 minutos por semilla (1538 a 1882 s); 2 h 20 min el lote.
+
+**Decisión.** La Etapa 5 cierra la hoja de ruta de Sims. Quedan anotadas dos
+extensiones no hechas: el mundo compartido con recursos (varias criaturas y
+varios cubos a la vez) y "todos contra varios" (contra los tres mejores del
+rival, que Sims recomienda para reducir el ruido de un solo campeón).

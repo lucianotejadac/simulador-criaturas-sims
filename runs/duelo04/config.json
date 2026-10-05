@@ -1,0 +1,15 @@
+{
+  "nombre": "duelo04",
+  "etapa": 5,
+  "tarea": "duelo",
+  "generaciones": 50,
+  "poblacion": 100,
+  "semilla": 4,
+  "procesos": 14,
+  "ancestro": "pez",
+  "duracion": 10.0,
+  "distancia_cubo": 1.5,
+  "lado_cubo": 0.25,
+  "bono_contacto": 0.5,
+  "mujoco": "3.3.2"
+}

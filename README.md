@@ -8,7 +8,7 @@ población.
 
 **Visor en vivo:** <https://lucianotejadac.github.io/simulador-criaturas-sims/viewer/>
 
-## Estado: Etapa 4
+## Estado: hoja de ruta completa
 
 **Etapa 1 (cerrada):** cuerpo fijo (cadena de cuatro cajas unidas por tres
 bisagras) en agua sin gravedad. Solo evoluciona el cerebro: un grafo de neuronas
@@ -21,6 +21,13 @@ recursión, reflexión, escala y conexiones terminales, y desarrollo a MJCF con 
 siete tipos de articulación de Sims. Los cerebros anidados (uno por nodo, más
 centrales) se aplanan al desarrollar. Verificado con tres genomas escritos a
 mano que se ven en el visor (`Etapa 2 · los tres cuerpos juntos`).
+
+**Etapa 5 (cerrada):** competencia por un cubo entre dos especies que
+coevolucionan (`src/arena.py`, `src/evolve_duelo.py`): dos criaturas en el mismo
+mundo, cada una a 1.5 m del cubo, aptitud por distancia relativa más bono por
+tocarlo, emparejamiento "todos contra el mejor". En diez generaciones ambas
+especies llegan al cubo; después la ventaja va y viene (Reina Roja). Duelos
+entre campeones en el visor (`Etapa 5 · duelo por el cubo`).
 
 **Etapa 4 (cerrada):** un ancestro pez escrito a mano (cola recursiva que se
 afina, aleta caudal terminal, aletas pectorales reflejadas) sembrado en dos
@@ -76,6 +83,9 @@ python src/evolve_morfo.py --nombre pez-cam01 --tarea caminata --ancestro pez --
 python src/evolve_morfo.py --nombre pez-luz01 --tarea luz --ancestro pez --semilla 1 --generaciones 50
 python src/linaje.py --corridas pez-cam01 --generaciones 1,10,20,30,40,50,60
 
+# Etapa 5: dos especies por el cubo
+python src/evolve_duelo.py --nombre duelo01 --semilla 1 --ancestro pez --generaciones 50 --poblacion 100
+
 # tests
 python -m pytest -q tests
 
@@ -107,6 +117,8 @@ src/
   semillas.py        campeones de nado01..05 -> viewer/semillas.json
   luz.py             fotosensores y aptitud de seguimiento de luz (Etapa 4)
   linaje.py          el mejor de varias generaciones de una corrida -> viewer/linaje.json
+  arena.py           dos criaturas y un cubo en el mismo mundo; aptitud del duelo (Etapa 5)
+  evolve_duelo.py    coevolución de dos especies, todos contra el mejor -> viewer/duelos.json
   brain.py           ejecución del grafo neuronal
   fluido.py          arrastre viscoso por cara (modelo de agua de Sims)
   fitness.py         evaluación y aptitud de nado
@@ -125,7 +137,7 @@ BITACORA.md          decisiones de diseño y trampas detectadas
 2. **Etapa 2**: genoma morfológico de grafo dirigido con recursión y desarrollo a MJCF. *(cerrada)*
 3. **Etapa 3**: coevolución cuerpo + cerebro para nado y caminata. *(cerrada)*
 4. **Etapa 4**: ancestro pez, pez fuera del agua y seguimiento de luz. *(cerrada)*
-5. Etapa 5: competencia por un cubo y mundo compartido. *(siguiente)*
+5. **Etapa 5**: competencia por un cubo entre dos especies. *(cerrada; el mundo compartido con recursos queda como extensión)*
 
 ## Referencias
 
