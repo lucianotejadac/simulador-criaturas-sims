@@ -142,36 +142,44 @@ def _mjcf(piezas: list, gravedad: bool, paso: float = PASO_FISICA, k_fuerza: flo
     if gravedad:
         out.append('    <geom name="suelo" type="plane" size="0 0 1" friction="1 0.005 0.0001" rgba="0.3 0.35 0.3 1"/>\n')
     actuadores: list[str] = []
-
-    def escribir(p, nivel: int) -> None:
-        ind = "    " + "  " * nivel
-        q = _quat(p.R)
-        out.append(f'{ind}<body name="{p.nombre}" pos="{p.pos[0]:.5f} {p.pos[1]:.5f} {p.pos[2]:.5f}" '
-                   f'quat="{q[0]:.6f} {q[1]:.6f} {q[2]:.6f} {q[3]:.6f}">\n')
-        if p.madre is None:
-            out.append(f'{ind}  <freejoint name="raiz"/>\n')
-        else:
-            anc = -(SEPARACION + p.dims[0] / 2.0)
-            area = min(p.dims[1] * p.dims[2], p.madre.dims[1] * p.madre.dims[2])
-            torque = k_fuerza * area * (-1.0 if p.espejo else 1.0)
-            for k, eje in enumerate(p.ejes):
-                nombre = f"{p.nombre}_j{k}"
-                out.append(f'{ind}  <joint name="{nombre}" axis="{eje[0]:.4f} {eje[1]:.4f} {eje[2]:.4f}" '
-                           f'pos="{anc:.5f} 0 0" range="-{p.limite:.2f} {p.limite:.2f}" '
-                           f'damping="{C_AMORTIGUACION * abs(torque):.4f}"/>\n')
-                actuadores.append(f'    <motor name="m_{nombre}" joint="{nombre}" gear="{torque:.4f}"/>\n')
-        rgba = ' rgba="0.25 0.72 0.8 1"' if p.madre is None else ""
-        out.append(f'{ind}  <geom name="g_{p.nombre}" size="{p.dims[0] / 2:.5f} {p.dims[1] / 2:.5f} '
-                   f'{p.dims[2] / 2:.5f}"{rgba}/>\n')
-        for h in p.hijas:
-            escribir(h, nivel + 1)
-        out.append(f'{ind}</body>\n')
-
-    escribir(piezas[0], 0)
+    escribir_cuerpo(out, actuadores, piezas[0], 0, "", k_fuerza)
     out.append("  </worldbody>\n  <actuator>\n")
     out.extend(actuadores)
     out.append("  </actuator>\n</mujoco>\n")
     return "".join(out)
+
+
+def escribir_cuerpo(out: list, actuadores: list, p, nivel: int, prefijo: str = "",
+                    k_fuerza: float = K_FUERZA, pos_raiz=(0.0, 0.0, 0.0), quat_raiz=(1.0, 0.0, 0.0, 0.0),
+                    rgba_cabeza: str = "0.25 0.72 0.8 1") -> None:
+    """Escribe una pieza y sus hijas como cuerpos anidados de MJCF. `prefijo`
+    distingue a varias criaturas en el mismo mundo; la raíz va en `pos_raiz`
+    con orientación `quat_raiz`."""
+    ind = "    " + "  " * nivel
+    if p.madre is None:
+        pos, q = pos_raiz, quat_raiz
+    else:
+        pos, q = p.pos, _quat(p.R)
+    out.append(f'{ind}<body name="{prefijo}{p.nombre}" pos="{pos[0]:.5f} {pos[1]:.5f} {pos[2]:.5f}" '
+               f'quat="{q[0]:.6f} {q[1]:.6f} {q[2]:.6f} {q[3]:.6f}">\n')
+    if p.madre is None:
+        out.append(f'{ind}  <freejoint name="{prefijo}raiz"/>\n')
+    else:
+        anc = -(SEPARACION + p.dims[0] / 2.0)
+        area = min(p.dims[1] * p.dims[2], p.madre.dims[1] * p.madre.dims[2])
+        torque = k_fuerza * area * (-1.0 if p.espejo else 1.0)
+        for k, eje in enumerate(p.ejes):
+            nombre = f"{prefijo}{p.nombre}_j{k}"
+            out.append(f'{ind}  <joint name="{nombre}" axis="{eje[0]:.4f} {eje[1]:.4f} {eje[2]:.4f}" '
+                       f'pos="{anc:.5f} 0 0" range="-{p.limite:.2f} {p.limite:.2f}" '
+                       f'damping="{C_AMORTIGUACION * abs(torque):.4f}"/>\n')
+            actuadores.append(f'    <motor name="m_{nombre}" joint="{nombre}" gear="{torque:.4f}"/>\n')
+    rgba = f' rgba="{rgba_cabeza}"' if p.madre is None else ""
+    out.append(f'{ind}  <geom name="g_{prefijo}{p.nombre}" size="{p.dims[0] / 2:.5f} {p.dims[1] / 2:.5f} '
+               f'{p.dims[2] / 2:.5f}"{rgba}/>\n')
+    for h in p.hijas:
+        escribir_cuerpo(out, actuadores, h, nivel + 1, prefijo, k_fuerza)
+    out.append(f'{ind}</body>\n')
 
 
 def _aplanar_cerebro(g: dict, piezas: list) -> dict:
@@ -252,7 +260,7 @@ def desarrollar(g: dict, gravedad: bool = False, paso: float = PASO_FISICA,
     cerebro = _aplanar_cerebro(g, piezas)
     info = [{"nombre": p.nombre, "nodo": p.nodo_idx, "dims": p.dims, "espejo": p.espejo,
              "madre": p.madre.nombre if p.madre else None, "dof": len(p.ejes)} for p in piezas]
-    return {"xml": xml, "cerebro": cerebro, "piezas": info, "n_dof": n_dof}
+    return {"xml": xml, "cerebro": cerebro, "piezas": info, "n_dof": n_dof, "_piezas": piezas}
 
 
 def interpenetra(model, data) -> bool:
