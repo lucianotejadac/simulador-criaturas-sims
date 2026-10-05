@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acuario en vivo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#eef2f4;--panel:#ffffff;--ink:#15232c;--muted:#5a6b76;--line:#d3dde3;--accent:#177f93;--accent-ink:#fff;--soft:#dcebef;
+  --body:"IBM Plex Sans",system-ui,sans-serif;--disp:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e171d;--panel:#152129;--ink:#e3ebf0;--muted:#8fa1ab;--line:#263540;--accent:#3fb7cc;--accent-ink:#06161b;--soft:#1a2f37}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0e171d;--panel:#152129;--ink:#e3ebf0;--muted:#8fa1ab;--line:#263540;--accent:#3fb7cc;--accent-ink:#06161b;--soft:#1a2f37}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:14px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:18px 40px;display:grid;gap:16px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+h1{font-family:var(--disp);font-weight:600;font-size:26px;margin:0}
+.tag{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.note{background:var(--soft);border-left:3px solid var(--accent);padding:8px 12px;border-radius:0 6px 6px 0;max-width:72ch;margin:0}
+.stage{position:relative;background:#071a24;border-radius:8px;overflow:hidden;aspect-ratio:1/1;max-width:100%}
+.stage canvas{display:block;width:100%;height:100%}
+.hud{position:absolute;left:12px;top:10px;font-family:var(--mono);font-size:12px;color:#bfe3ec;line-height:1.6;pointer-events:none;text-shadow:0 1px 2px #000}
+.hud b{color:#fff;font-weight:500}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.bar .lbl{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+button{font:500 13px var(--body);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);min-width:88px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=number]{width:6em;font:13px var(--mono);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:4px 6px}
+select{font:13px var(--body);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 8px}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;gap:10px;align-content:start}
+.card h2{font-family:var(--disp);font-weight:600;font-size:16px;margin:0;display:flex;justify-content:space-between;gap:10px}
+.card h2 small{font:400 11px var(--mono);color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+svg.chart{width:100%;height:auto;display:block}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+th{font:500 11px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.04em;text-align:left;padding:4px 6px;border-bottom:1px solid var(--line)}
+td{padding:5px 6px;border-bottom:1px solid var(--line)}td.n{text-align:right;font-family:var(--mono)}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+pre{margin:0;font:12px/1.5 var(--mono);background:var(--soft);padding:10px 12px;border-radius:6px;overflow-x:auto;max-height:200px}
+footer{font-size:12px;color:var(--muted);max-width:72ch}footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1>Acuario en vivo</h1><span class="tag">Etapa 7 · el mundo 2D corre aquí, en tu navegador, con las mismas reglas del laboratorio</span></header>
+  <p class="note" id="nota">Agua viscosa sin inercia, toroidal. Quien come se reproduce con mutación; quien no, muere. Puedes cambiar las reglas mientras corre.</p>
+  <div class="stage" id="stage"><canvas id="c"></canvas><div class="hud" id="hud"></div></div>
+  <div class="bar">
+    <button class="primary" id="play">Pausar</button>
+    <span class="lbl">Velocidad</span><select id="speed"><option value="1">1×</option><option value="2">2×</option><option value="4" selected>4×</option><option value="8">8×</option><option value="16">16×</option></select>
+    <span class="lbl">Semilla</span><input type="number" id="semilla" value="1" min="0">
+    <span class="lbl">Partida</span><select id="partida"><option value="bestiario">bestiario (6 especies × 20)</option><option value="sopa">sopa primitiva (300 cajas)</option><option value="anguila">solo anguilas (60)</option></select>
+    <button id="reiniciar">Reiniciar</button>
+    <label><input type="checkbox" id="rastro"> Rastros</label>
+    <label><input type="checkbox" id="seguir"> Seguir al más viejo</label>
+  </div>
+  <div class="bar">
+    <span class="lbl">Comida chica</span><input type="number" id="nchica" value="90" min="0" max="400">
+    <span class="lbl">Comida grande</span><input type="number" id="ngrande" value="30" min="0" max="200">
+    <span class="lbl">Energía repro.</span><input type="number" id="erepro" value="160" min="80" max="400">
+    <span class="lbl">Costo masa</span><input type="number" id="cmasa" value="0.03" step="0.005" min="0">
+    <span class="lbl">Agitación</span><input type="number" id="agit" value="0" step="0.05" min="0">
+    <span class="lbl">Tope</span><input type="number" id="tope" value="400" min="20" max="1000">
+    <button id="aplicar">Aplicar reglas</button>
+  </div>
+  <div class="grid">
+    <div class="card"><h2>Población por especie <small>gris: total · cada 20 s</small></h2><svg class="chart" id="chart" viewBox="0 0 520 240"></svg></div>
+    <div class="card"><h2>Especies y cuerpos <small id="sub"></small></h2><table><thead><tr><th>especie</th><th class="n">vivas</th><th class="n">energía</th><th class="n">segm.</th><th class="n">nacidas</th></tr></thead><tbody id="tabla"></tbody></table>
+      <h2>Criatura seguida <small>clic en el acuario para elegir</small></h2><pre id="ficha">—</pre></div>
+  </div>
+  <footer>Misma física (`mundo2d.py`), mismo genoma y mismas reglas que el laboratorio en Python, portados a JavaScript; los números no coinciden bit a bit porque la aritmética y el azar difieren, sí las estadísticas. Código y bitácora en <a href="https://github.com/lucianotejadac/simulador-criaturas-sims">github.com/lucianotejadac/simulador-criaturas-sims</a>.</footer>
+</div>
+<script>
+(function(){
+'use strict';
+// ---------- azar reproducible ----------
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+var R={f:mulberry32(1)};
+R.uniform=function(a,b){return a+(b-a)*R.f();}; R.randint=function(a,b){return a+Math.floor(R.f()*(b-a+1));}; R.choice=function(arr){return arr[Math.floor(R.f()*arr.length)];};
+R.gauss=function(mu,sg){var u=1-R.f(),v=R.f();return mu+sg*Math.sqrt(-2*Math.log(u))*Math.cos(6.283185307*v);};
+R.weighted=function(items,w){var s=0;for(var i=0;i<w.length;i++)s+=w[i];var r=R.f()*s;for(var i=0;i<w.length;i++){r-=w[i];if(r<=0)return items[i];}return items[items.length-1];};
+// ---------- genoma (puerto de genome/morph.py y neural.py) ----------
+var FUN={"sum":3,"product":3,"divide":2,"sum-threshold":3,"greater-than":2,"sign-of":1,"min":3,"max":3,"abs":1,"if":3,"interpolate":3,"sin":1,"cos":1,"atan":1,"log":1,"expt":1,"sigmoid":1,"integrate":1,"differentiate":1,"smooth":2,"memory":2,"oscillate-wave":3,"oscillate-saw":3};
+var NOMBRES=Object.keys(FUN).sort();
+var ART={"rigida":0,"bisagra":1,"torsion":1,"universal":2,"flex-tors":2,"tors-flex":2,"esferica":3}; var NART=Object.keys(ART).sort();
+var MAX_NODOS=8,MAX_CONEX=4,MAX_PIEZAS=16,MAX_NEU=12,MAX_CENT=8,DIM_MIN=0.04,DIM_MAX=0.8,REC_MAX=6,PESO_MAX=4,PESO_SIG=0.5;
+function ndof(a){return ART[a];}
+function nuevoId(g){return g.siguiente_id++;}
+function ids(l){return l.map(function(n){return n.id;});}
+function entradaAleatoria(g,nodo,central){
+  var w=R.uniform(-PESO_MAX,PESO_MAX);
+  if(central){var op=[];if(g.central.length)op.push(["g",ids(g.central)]);var raiz=g.nodos[g.raiz];if(raiz&&raiz.neuronas.length)op.push(["r",ids(raiz.neuronas)]);
+    if(!op.length||R.f()<0.25)return["c",0,R.uniform(-2,2)];var o=R.choice(op);return[o[0],R.choice(o[1]),w];}
+  var op=[];var nd=ndof(nodo.art);if(nd){op.push(["s",[0]]);op.push(["s",[0]]);}
+  if(nodo.neuronas.length){op.push(["n",ids(nodo.neuronas)]);op.push(["n",ids(nodo.neuronas)]);}
+  op.push(["l",[0,1,2]]);
+  var idsP=[];g.nodos.forEach(function(x){x.neuronas.forEach(function(n){idsP.push(n.id);});});if(idsP.length)op.push(["p",idsP]);
+  if(g.central.length)op.push(["g",ids(g.central)]);
+  if(!op.length||R.f()<0.2)return["c",0,R.uniform(-2,2)];var o=R.choice(op);return[o[0],R.choice(o[1]),w];}
+function neuronaAleatoria(g,nodo,central){var f=R.choice(NOMBRES);var ins=[];for(var i=0;i<FUN[f];i++)ins.push(entradaAleatoria(g,nodo,central));return{id:nuevoId(g),f:f,"in":ins};}
+function conexionAleatoria(n){return{a:Math.floor(R.f()*n),cara:Math.floor(R.f()*6),u:R.uniform(-0.8,0.8),v:R.uniform(-0.8,0.8),rot:[R.uniform(-90,90),R.uniform(-60,60),R.uniform(-60,60)],escala:R.uniform(0.6,1.3),reflejo:R.f()<0.3,terminal:R.f()<0.2};}
+function nodoAleatorio(g){var art=R.choice(NART);var nodo={dims:[R.uniform(0.08,0.5),R.uniform(0.08,0.5),R.uniform(0.08,0.5)],art:art,limite:R.uniform(20,80),rec:R.randint(1,REC_MAX),neuronas:[],efectores:[],conexiones:[]};
+  var k=R.randint(0,3);for(var i=0;i<k;i++)nodo.neuronas.push(neuronaAleatoria(g,nodo,false));for(var i=0;i<ndof(art);i++)nodo.efectores.push(entradaAleatoria(g,nodo,false));return nodo;}
+function clonar(o){return JSON.parse(JSON.stringify(o));}
+function alcanzables(g){var vistos=[],pila=[g.raiz];while(pila.length){var i=pila.pop();if(vistos.indexOf(i)>=0)continue;vistos.push(i);g.nodos[i].conexiones.forEach(function(c){pila.push(c.a);});}return vistos.sort(function(a,b){return a-b;});}
+function recolectar(g){g=clonar(g);var alc=alcanzables(g),nuevo={};alc.forEach(function(v,k){nuevo[v]=k;});
+  var nodos=alc.map(function(i){return g.nodos[i];});nodos.forEach(function(x){x.conexiones.forEach(function(c){c.a=nuevo[c.a];});});g.nodos=nodos;g.raiz=nuevo[g.raiz];
+  var refP={},refG={};nodos.forEach(function(x){var ents=[];x.neuronas.forEach(function(n){ents=ents.concat(n["in"]);});ents=ents.concat(x.efectores);ents.forEach(function(e){if(e[0]==="p")refP[e[1]]=1;else if(e[0]==="g")refG[e[1]]=1;});});
+  nodos.forEach(function(x){var porId={};x.neuronas.forEach(function(n){porId[n.id]=n;});var vivas={},pila=[];x.efectores.forEach(function(e){if(e[0]==="n")pila.push(e[1]);});Object.keys(porId).forEach(function(i){if(refP[i])pila.push(+i);});
+    while(pila.length){var i=pila.pop();if(vivas[i]||!porId[i])continue;vivas[i]=1;porId[i]["in"].forEach(function(e){if(e[0]==="n")pila.push(e[1]);});}
+    x.neuronas=x.neuronas.filter(function(n){return vivas[n.id];});});
+  var porC={};g.central.forEach(function(n){porC[n.id]=n;});var vc={},pila=Object.keys(porC).filter(function(i){return refG[i];}).map(Number);
+  while(pila.length){var i=pila.pop();if(vc[i]||!porC[i])continue;vc[i]=1;porC[i]["in"].forEach(function(e){if(e[0]==="g")pila.push(e[1]);});}
+  g.central=g.central.filter(function(n){return vc[n.id];});return g;}
+function perturbar(v,sg,lo,hi){if(R.f()<0.15)return R.uniform(lo,hi);return Math.max(lo,Math.min(hi,v+R.gauss(0,sg)));}
+function mutarEntrada(g,nodo,e,central){if(R.f()<0.5){var e2=e.slice();e2[2]=perturbar(e[2],PESO_SIG,-PESO_MAX,PESO_MAX);return e2;}return entradaAleatoria(g,nodo,central);}
+function mutarNeurona(g,nodo,neu,central){if(R.f()<0.3){var f=R.choice(NOMBRES),ar=FUN[f],ins=neu["in"].slice(0,ar);while(ins.length<ar)ins.push(entradaAleatoria(g,nodo,central));neu.f=f;neu["in"]=ins;}else{var k=Math.floor(R.f()*neu["in"].length);neu["in"][k]=mutarEntrada(g,nodo,neu["in"][k],central);}}
+function contarElementos(g){var n=g.central.length;g.central.forEach(function(x){n+=x["in"].length;});g.nodos.forEach(function(x){n+=4+x.neuronas.length;x.neuronas.forEach(function(q){n+=q["in"].length;});n+=x.efectores.length+7*x.conexiones.length;});return Math.max(1,n);}
+function mutar(g){g=clonar(g);var p=1/contarElementos(g),nodos=g.nodos;
+  nodos.forEach(function(x){
+    if(R.f()<p){var k=Math.floor(R.f()*3);x.dims[k]=perturbar(x.dims[k],0.05,DIM_MIN,DIM_MAX);}
+    if(R.f()<p){x.art=R.choice(NART);var nd=ndof(x.art);x.efectores=x.efectores.slice(0,nd);while(x.efectores.length<nd)x.efectores.push(entradaAleatoria(g,x,false));
+      var ents=[];x.neuronas.forEach(function(n){ents=ents.concat(n["in"]);});ents.concat(x.efectores).forEach(function(e){if(e[0]==="s"&&e[1]>=Math.max(1,nd))e[1]=Math.floor(R.f()*Math.max(1,nd));});}
+    if(R.f()<p)x.limite=perturbar(x.limite,10,10,90);
+    if(R.f()<p)x.rec=Math.max(1,Math.min(REC_MAX,x.rec+(R.f()<0.5?-1:1)));
+    x.neuronas.forEach(function(neu){if(R.f()<p)mutarNeurona(g,x,neu,false);});
+    if(x.neuronas.length<MAX_NEU&&R.f()<3*p){var nueva=neuronaAleatoria(g,x,false);x.neuronas.push(nueva);if(R.f()<0.6){var dest=[];x.neuronas.slice(0,-1).forEach(function(n){dest=dest.concat(n["in"]);});dest=dest.concat(x.efectores);if(dest.length){var e=R.choice(dest);e[0]="n";e[1]=nueva.id;}}}
+    x.efectores.forEach(function(e,k){if(R.f()<p)x.efectores[k]=mutarEntrada(g,x,e,false);});
+  });
+  g.central.forEach(function(neu){if(R.f()<p)mutarNeurona(g,null,neu,true);});
+  if(g.central.length<MAX_CENT&&R.f()<2*p){var nueva=neuronaAleatoria(g,null,true);g.central.push(nueva);var dest=[];nodos.forEach(function(x){x.neuronas.forEach(function(n){dest=dest.concat(n["in"]);});dest=dest.concat(x.efectores);});if(dest.length){var e=R.choice(dest);e[0]="g";e[1]=nueva.id;}}
+  if(nodos.length<MAX_NODOS&&R.f()<4*p){nodos.push(nodoAleatorio(g));if(R.f()<0.7){var madre=R.choice(nodos.slice(0,-1));if(madre.conexiones.length<MAX_CONEX){var c=conexionAleatoria(nodos.length);c.a=nodos.length-1;madre.conexiones.push(c);}}}
+  nodos.forEach(function(x){x.conexiones.forEach(function(c){
+    if(R.f()<p)c.a=Math.floor(R.f()*nodos.length);if(R.f()<p)c.cara=Math.floor(R.f()*6);if(R.f()<p)c.u=perturbar(c.u,0.2,-0.9,0.9);if(R.f()<p)c.v=perturbar(c.v,0.2,-0.9,0.9);
+    if(R.f()<p){var k=Math.floor(R.f()*3);c.rot[k]=perturbar(c.rot[k],20,k===0?-180:-90,k===0?180:90);}if(R.f()<p)c.escala=perturbar(c.escala,0.1,0.5,1.5);if(R.f()<p)c.reflejo=!c.reflejo;if(R.f()<p)c.terminal=!c.terminal;});});
+  nodos.forEach(function(x){if(x.conexiones.length<MAX_CONEX&&R.f()<2*p)x.conexiones.push(conexionAleatoria(nodos.length));if(x.conexiones.length&&R.f()<2*p)x.conexiones.splice(Math.floor(R.f()*x.conexiones.length),1);});
+  return recolectar(g);}
+function genomaCaja(){return{siguiente_id:1,raiz:0,central:[],nodos:[{dims:[R.uniform(0.12,0.3),R.uniform(0.06,0.15),0.08],art:"rigida",limite:60,rec:1,neuronas:[],efectores:[],conexiones:[]}]};}
+// ---------- desarrollo 2D (puerto de develop2d.py) ----------
+var K_FUERZA=1000,ESPESOR=0.08,DENSIDAD=300;
+function desarrollar(g){var segs=[];
+  function inst(idx,madre,con,contador,espejo,escala){if(segs.length>=MAX_PIEZAS)return;var nodo=g.nodos[idx];
+    var largo=Math.min(DIM_MAX,Math.max(DIM_MIN,nodo.dims[0]*escala)),ancho=Math.min(DIM_MAX,Math.max(DIM_MIN,nodo.dims[1]*escala)),seg;
+    if(!madre){seg={nodo:idx,madre:-1,ax:0,ay:0,desvio:0,largo:largo,ancho:ancho,torque:0,limite:nodo.limite*Math.PI/180,espejo:false};}
+    else{var cara=con.cara;if(cara>=4)cara=2+(cara-4);var u=con.u,hl=madre.largo/2,hw=madre.ancho/2,ax,ay,base;
+      if(cara===0){ax=hl;ay=u*hw;base=0;}else if(cara===1){ax=-hl;ay=-u*hw;base=Math.PI;}else if(cara===2){ax=-u*hl;ay=hw;base=Math.PI/2;}else{ax=u*hl;ay=-hw;base=-Math.PI/2;}
+      var desvio=base+con.rot[2]*Math.PI/180;if(espejo){ay=-ay;desvio=-desvio;}
+      var rig=nodo.art==="rigida",area=Math.min(ancho,madre.ancho)*ESPESOR;
+      seg={nodo:idx,madre:madre.indice,ax:ax,ay:ay,desvio:desvio,largo:largo,ancho:ancho,torque:rig?0:K_FUERZA*area*(espejo?-1:1),limite:rig?0:nodo.limite*Math.PI/180,espejo:espejo};}
+    seg.indice=segs.length;segs.push(seg);var cont={};for(var k in contador)cont[k]=contador[k];cont[idx]=(cont[idx]||0)+1;var ultima=cont[idx]>=nodo.rec;
+    nodo.conexiones.forEach(function(c){if(c.terminal&&!ultima)return;if((cont[c.a]||0)>=g.nodos[c.a].rec)return;inst(c.a,seg,c,cont,espejo!==!!c.reflejo,escala*c.escala);});}
+  inst(g.raiz,null,null,{},false,1);
+  if(segs.length>=MAX_PIEZAS)throw new Error("demasiadas piezas");
+  // cerebro plano
+  var neuronas=[],centIdx={};g.central.forEach(function(n){centIdx[n.id]=neuronas.length;neuronas.push([n,null]);});
+  var sensor=0;segs.forEach(function(s){var nodo=g.nodos[s.nodo];s.ids={};s.baseS=sensor;nodo.neuronas.forEach(function(n){s.ids[n.id]=neuronas.length;neuronas.push([n,s]);});if(s.madre>=0)sensor++;});
+  var ndofT=sensor;segs.forEach(function(s,k){s.baseL=ndofT+2*k;});var nsens=ndofT+2*segs.length,raiz=segs[0],nada=[2,0,0];
+  function res(e,s){var t=e[0],r=e[1],w=e[2];if(t==="c")return[2,0,w];if(t==="g")return centIdx[r]!==undefined?[1,centIdx[r],w]:nada;if(t==="r")return raiz.ids[r]!==undefined?[1,raiz.ids[r],w]:nada;if(!s)return nada;
+    if(t==="s")return(r===0&&s.madre>=0)?[0,s.baseS,s.espejo?-w:w]:nada;if(t==="l"){if(r===0)return[0,s.baseL,w];if(r===1)return[0,s.baseL+1,s.espejo?-w:w];return nada;}
+    if(t==="n")return s.ids[r]!==undefined?[1,s.ids[r],w]:nada;if(t==="p"){var m=segs[s.madre];if(s.madre>=0&&m.ids[r]!==undefined)return[1,m.ids[r],w];return nada;}return nada;}
+  var plano=neuronas.map(function(ns){return{f:ns[0].f,"in":ns[0]["in"].map(function(e){return res(e,ns[1]);})};});
+  var efect=[];segs.forEach(function(s){if(s.madre>=0){var nodo=g.nodos[s.nodo];efect.push(nodo.efectores.length?res(nodo.efectores[0],s):nada);}});
+  return{segs:segs,n:segs.length,ndof:ndofT,nsens:nsens,neuronas:plano,efectores:efect};}
+// ---------- cerebro ----------
+var VAL_MAX=10,EPS=1e-6;function clip(v){if(v!==v)return 0;return v>VAL_MAX?VAL_MAX:(v<-VAL_MAX?-VAL_MAX:v);}
+function Cerebro(d,dt){this.dt=dt;this.t=0;this.n=d.neuronas.length;this.f=new Array(this.n);this.it=[];this.ii=[];this.iw=[];this.ar=[];
+  for(var j=0;j<this.n;j++){var x=d.neuronas[j];this.f[j]=x.f;this.ar[j]=x["in"].length;this.it[j]=[2,2,2];this.ii[j]=[0,0,0];this.iw[j]=[0,0,0];for(var k=0;k<x["in"].length;k++){this.it[j][k]=x["in"][k][0];this.ii[j][k]=x["in"][k][1];this.iw[j][k]=x["in"][k][2];}}
+  this.ef=d.efectores;this.val=new Float64Array(this.n);this.nuevo=new Float64Array(this.n);this.est=new Float64Array(this.n);this.salida=new Float64Array(this.ef.length);this.sens=new Float64Array(Math.max(1,d.nsens));}
+Cerebro.prototype.leer=function(t,i,w){if(t===0)return w*this.sens[i];if(t===1)return w*this.val[i];return w;};
+Cerebro.prototype.pasos=function(k){var dt=this.dt;for(var s=0;s<k;s++){var t=this.t;
+  for(var j=0;j<this.n;j++){var f=this.f[j],a=this.leer(this.it[j][0],this.ii[j][0],this.iw[j][0]),b=this.ar[j]>1?this.leer(this.it[j][1],this.ii[j][1],this.iw[j][1]):0,c=this.ar[j]>2?this.leer(this.it[j][2],this.ii[j][2],this.iw[j][2]):0,r;
+    switch(f){case"sum":r=a+b+c;break;case"product":r=a*b*c;break;case"divide":r=Math.abs(b)>EPS?a/b:(b>=0?a/EPS:-a/EPS);break;case"sum-threshold":r=(a+b)>c?1:0;break;case"greater-than":r=a>b?1:0;break;case"sign-of":r=a>0?1:(a<0?-1:0);break;
+      case"min":r=Math.min(a,b,c);break;case"max":r=Math.max(a,b,c);break;case"abs":r=Math.abs(a);break;case"if":r=a>0?b:c;break;case"interpolate":var u=c<0?0:(c>1?1:c);r=a+(b-a)*u;break;case"sin":r=Math.sin(a);break;case"cos":r=Math.cos(a);break;case"atan":r=Math.atan(a);break;
+      case"log":r=Math.log(Math.abs(a)+EPS);break;case"expt":r=Math.exp(a<2.3?a:2.3);break;case"sigmoid":r=a>-30?1/(1+Math.exp(-a)):0;break;case"integrate":this.est[j]=clip(this.est[j]+a*dt);r=this.est[j];break;case"differentiate":r=(a-this.est[j])/dt;this.est[j]=a;break;
+      case"smooth":var ta=b<0?0:(b>1?1:b);this.est[j]=this.est[j]+(a-this.est[j])*ta;r=this.est[j];break;case"memory":if(b>0)this.est[j]=a;r=this.est[j];break;case"oscillate-wave":r=a*Math.sin(6.283185307*b*t+c);break;case"oscillate-saw":var fa=((b*t+c)%1+1)%1;r=a*(2*fa-1);break;default:r=0;}
+    this.nuevo[j]=clip(r);}
+  for(var j=0;j<this.n;j++)this.val[j]=this.nuevo[j];this.t+=dt;}
+  for(var e=0;e<this.ef.length;e++){var v=this.leer(this.ef[e][0],this.ef[e][1],this.ef[e][2]);this.salida[e]=v>1?1:(v<-1?-1:v);}return this.salida;};
+// ---------- física 2D viscosa sin inercia (puerto de mundo2d.py) ----------
+var K_ARR=400,C_AMORT=0.05,K_LIM=40;
+function Cuerpo(d){var n=d.n;this.n=n;this.segs=d.segs;this.madre=new Int32Array(n);this.ax=new Float64Array(n);this.ay=new Float64Array(n);this.desvio=new Float64Array(n);this.largo=new Float64Array(n);this.ancho=new Float64Array(n);this.tmax=new Float64Array(n);this.lim=new Float64Array(n);this.dA=new Float64Array(n);this.dN=new Float64Array(n);this.dR=new Float64Array(n);this.masa=new Float64Array(n);this.signo=new Float64Array(n);
+  var c=ESPESOR/2;for(var i=0;i<n;i++){var s=d.segs[i];this.madre[i]=s.madre;this.ax[i]=s.ax;this.ay[i]=s.ay;this.desvio[i]=s.desvio;this.largo[i]=s.largo;this.ancho[i]=s.ancho;this.tmax[i]=Math.abs(s.torque);this.lim[i]=s.limite;this.signo[i]=s.espejo?-1:1;
+    var a=s.largo/2,b=s.ancho/2;this.dA[i]=K_ARR*8*b*c;this.dN[i]=K_ARR*8*a*c;this.dR[i]=K_ARR*((8/3)*(a*c*c*c+a*a*a*c)+(8/3)*(b*c*c*c+b*b*b*c));this.masa[i]=s.largo*s.ancho*ESPESOR*DENSIDAD;}
+  this.theta=new Float64Array(n);this.pose=[0,0,0];this.cx=new Float64Array(n);this.cy=new Float64Array(n);this.phi=new Float64Array(n);this.artx=new Float64Array(n);this.arty=new Float64Array(n);
+  var nd=3+n;this.R=new Float64Array(nd*nd);this.tau=new Float64Array(nd);this.Jx=new Float64Array(nd);this.Jy=new Float64Array(nd);this.Ja=new Float64Array(nd);this.anc=[];for(var i=0;i<n;i++){this.anc.push([]);var j=i;while(j>=1){this.anc[i].push(j);j=this.madre[j];}}
+  this.masaTotal=0;for(var i=0;i<n;i++)this.masaTotal+=this.masa[i];}
+Cuerpo.prototype.cinematica=function(pose,theta){var n=this.n;this.cx[0]=pose[0];this.cy[0]=pose[1];this.phi[0]=pose[2];this.artx[0]=pose[0];this.arty[0]=pose[1];
+  for(var i=1;i<n;i++){var m=this.madre[i],pm=this.phi[m],cs=Math.cos(pm),sn=Math.sin(pm),pax=this.cx[m]+cs*this.ax[i]-sn*this.ay[i],pay=this.cy[m]+sn*this.ax[i]+cs*this.ay[i],ph=pm+this.desvio[i]+theta[i];
+    this.artx[i]=pax;this.arty[i]=pay;this.phi[i]=ph;this.cx[i]=pax+Math.cos(ph)*this.largo[i]/2;this.cy[i]=pay+Math.sin(ph)*this.largo[i]/2;}};
+function resolver(A,b,n){var M=A.slice(0),x=b.slice(0);for(var c=0;c<n;c++){var p=c,mx=Math.abs(M[c*n+c]);for(var r=c+1;r<n;r++){var v=Math.abs(M[r*n+c]);if(v>mx){mx=v;p=r;}}
+    if(p!==c){for(var q=0;q<n;q++){var t=M[c*n+q];M[c*n+q]=M[p*n+q];M[p*n+q]=t;}var t2=x[c];x[c]=x[p];x[p]=t2;}var piv=M[c*n+c]||1e-30;
+    for(var r=c+1;r<n;r++){var f=M[r*n+c]/piv;if(f!==0){for(var q=c;q<n;q++)M[r*n+q]-=f*M[c*n+q];x[r]-=f*x[c];}}}
+  for(var c=n-1;c>=0;c--){var s=x[c];for(var q=c+1;q<n;q++)s-=M[c*n+q]*x[q];x[c]=s/(M[c*n+c]||1e-30);}return x;}
+Cuerpo.prototype.qdot=function(pose,theta,ctrl,dt){var n=this.n,nd=3+n,R=this.R,tau=this.tau,Jx=this.Jx,Jy=this.Jy,Ja=this.Ja;this.cinematica(pose,theta);
+  for(var p=0;p<nd*nd;p++)R[p]=0;for(var p=0;p<nd;p++)tau[p]=0;
+  for(var i=0;i<n;i++){var cs=Math.cos(this.phi[i]),sn=Math.sin(this.phi[i]);for(var d=0;d<nd;d++){Jx[d]=0;Jy[d]=0;Ja[d]=0;}
+    Jx[0]=cs;Jy[0]=-sn;Jx[1]=sn;Jy[1]=cs;var px=-(this.cy[i]-this.cy[0]),py=this.cx[i]-this.cx[0];Jx[2]=px*cs+py*sn;Jy[2]=-px*sn+py*cs;Ja[2]=1;
+    var an=this.anc[i];for(var q=0;q<an.length;q++){var k=an[q],qx=-(this.cy[i]-this.arty[k]),qy=this.cx[i]-this.artx[k];Jx[3+k]=qx*cs+qy*sn;Jy[3+k]=-qx*sn+qy*cs;Ja[3+k]=1;}
+    var da=this.dA[i],dn=this.dN[i],dr=this.dR[i];
+    for(var p=0;p<nd;p++){var jxp=Jx[p],jyp=Jy[p],jap=Ja[p];if(jxp===0&&jyp===0&&jap===0)continue;for(var q=0;q<nd;q++)R[p*nd+q]+=da*jxp*Jx[q]+dn*jyp*Jy[q]+dr*jap*Ja[q];}}
+  for(var k=1;k<n;k++){var tq=ctrl[k]*this.signo[k];tq=tq>1?1:(tq<-1?-1:tq);var th=theta[k],lim=this.lim[k],tm=this.tmax[k];
+    if(lim>0&&tq*th>0){var r=th/lim,fac=1-r*r;if(fac<0)fac=0;R[(3+k)*nd+3+k]+=dt*Math.abs(tq*tm)*2*Math.abs(th)/(lim*lim);tq*=fac;}
+    tau[3+k]=tq*tm;R[(3+k)*nd+3+k]+=C_AMORT*tm+1e-9;var K=K_LIM*Math.max(tm,1e-3);
+    if(th>lim){tau[3+k]+=-K*(th-lim);R[(3+k)*nd+3+k]+=K*dt;}else if(th<-lim){tau[3+k]+=-K*(th+lim);R[(3+k)*nd+3+k]+=K*dt;}}
+  R[3*nd+3]+=1e9;return resolver(R,tau,nd);};
+Cuerpo.prototype.paso=function(ctrl,dt){var n=this.n,k1=this.qdot(this.pose,this.theta,ctrl,dt),pm=[this.pose[0]+0.5*dt*k1[0],this.pose[1]+0.5*dt*k1[1],this.pose[2]+0.5*dt*k1[2]],tm=new Float64Array(n);
+  for(var k=1;k<n;k++)tm[k]=this.theta[k]+0.5*dt*k1[3+k];var k2=this.qdot(pm,tm,ctrl,dt);this.pose[0]+=dt*k2[0];this.pose[1]+=dt*k2[1];this.pose[2]+=dt*k2[2];for(var k=1;k<n;k++)this.theta[k]+=dt*k2[3+k];};
+Cuerpo.prototype.com=function(){this.cinematica(this.pose,this.theta);var mx=0,my=0;for(var i=0;i<this.n;i++){mx+=this.masa[i]*this.cx[i];my+=this.masa[i]*this.cy[i];}return[mx/this.masaTotal,my/this.masaTotal];};
+// ---------- mundo ----------
+var MUNDO=50,DT=1/60,DT_CER=1/960,K_CER=16,TAU=0.05,RADIO_COMER=0.45,E_CHICA=40,E_GRANDE=150,LARGO_CHICO=1.3,MASA_GRANDE=2,E0=100,E_CRIA=60,COSTO_TORQUE=0.004,EDAD_MAX=400;
+var reglas={nchica:90,ngrande:30,erepro:160,cmasa:0.03,agit:0,tope:400};
+var PALETA=['#3fb7cc','#ffc94d','#ff6f91','#9be36b','#c59bff','#ff9f43','#e0e6ea','#6fd3a7'];
+var mundo={t:0,crias:[],comida:[],ids:0,nacidas:{},historia:[],especies:[],colores:{},seguido:null,bestiario:null};
+function env(x){return ((x+MUNDO/2)%MUNDO+MUNDO)%MUNDO-MUNDO/2;}
+function nuevaCriatura(especie,genoma,pose,energia,madre){var d;try{d=desarrollar(genoma);}catch(e){return null;}var c={id:mundo.ids++,especie:especie,genoma:genoma,des:d,cuerpo:new Cuerpo(d),cer:new Cerebro(d,DT_CER),ctrl:new Float64Array(d.n),energia:energia,madre:madre,nacimiento:mundo.t,comidas:0,hijas:0,rastro:[]};
+  c.cuerpo.pose=[pose[0],pose[1],pose[2]];c.largo=0;d.segs.forEach(function(s){c.largo+=s.largo;});c.masa=c.cuerpo.masaTotal;c.comeChica=c.largo<=LARGO_CHICO;c.comeGrande=c.masa>=MASA_GRANDE;mundo.nacidas[especie]=(mundo.nacidas[especie]||0)+1;return c;}
+function colocarComida(f){f.x=R.uniform(-MUNDO/2,MUNDO/2);f.y=R.uniform(-MUNDO/2,MUNDO/2);}
+function ajustarComida(){while(mundo.comida.filter(function(f){return f.tipo===0;}).length<reglas.nchica){var f={tipo:0};colocarComida(f);mundo.comida.push(f);}while(mundo.comida.filter(function(f){return f.tipo===1;}).length<reglas.ngrande){var g={tipo:1};colocarComida(g);mundo.comida.push(g);}
+  var nc=0,ng=0;mundo.comida=mundo.comida.filter(function(f){if(f.tipo===0){nc++;return nc<=reglas.nchica;}ng++;return ng<=reglas.ngrande;});}
+function iniciar(){R.f=mulberry32(parseInt(document.getElementById('semilla').value,10)||1);mundo.t=0;mundo.crias=[];mundo.comida=[];mundo.ids=0;mundo.nacidas={};mundo.historia=[];mundo.seguido=null;mundo.ultimoRegistro=0;
+  var partida=document.getElementById('partida').value;
+  if(partida==='sopa'||!mundo.bestiario){mundo.especies=['sopa'];for(var i=0;i<300;i++){var c=nuevaCriatura('sopa',genomaCaja(),[R.uniform(-MUNDO/2,MUNDO/2),R.uniform(-MUNDO/2,MUNDO/2),R.uniform(-Math.PI,Math.PI)],E0,null);if(c)mundo.crias.push(c);}
+    if(partida==='sopa'&&reglas.agit===0){reglas.agit=0.25;document.getElementById('agit').value=0.25;}}
+  else{var lista=partida==='anguila'?['anguila']:Object.keys(mundo.bestiario);mundo.especies=lista;var porEsp=partida==='anguila'?60:20;
+    lista.forEach(function(e){for(var i=0;i<porEsp;i++){var c=nuevaCriatura(e,mundo.bestiario[e],[R.uniform(-MUNDO/2,MUNDO/2),R.uniform(-MUNDO/2,MUNDO/2),R.uniform(-Math.PI,Math.PI)],E0,null);if(c)mundo.crias.push(c);}});}
+  mundo.especies.forEach(function(e,i){mundo.colores[e]=PALETA[i%PALETA.length];});ajustarComida();registrar();}
+function pasoMundo(){var cr=mundo.crias,com=mundo.comida;
+  for(var b=0;b<cr.length;b++){var c=cr[b],cu=c.cuerpo,cm=cu.com();
+    // comida comestible más cercana
+    var best=-1,bd=Infinity;for(var f=0;f<com.length;f++){var fo=com[f];if(fo.tipo===0?!c.comeChica:!c.comeGrande)continue;var dx=env(fo.x-cm[0]),dy=env(fo.y-cm[1]),d=dx*dx+dy*dy;if(d<bd){bd=d;best=f;}}
+    if(best>=0&&Math.sqrt(bd)<RADIO_COMER){var fo=com[best];c.energia+=fo.tipo===0?E_CHICA:E_GRANDE;c.comidas++;colocarComida(fo);best=-1;bd=Infinity;for(var f=0;f<com.length;f++){var fo2=com[f];if(fo2.tipo===0?!c.comeChica:!c.comeGrande)continue;var dx=env(fo2.x-cm[0]),dy=env(fo2.y-cm[1]),d=dx*dx+dy*dy;if(d<bd){bd=d;best=f;}}}
+    // sensores
+    var d=c.des,sens=c.cer.sens,j=0;for(var i=0;i<d.n;i++){var s=d.segs[i];if(s.madre>=0){var th=cu.theta[i]/Math.max(1e-3,cu.lim[i]);sens[j++]=th>1?1:(th<-1?-1:th);}}
+    var lx=best>=0?com[best].x:cm[0],ly=best>=0?com[best].y:cm[1];
+    for(var i=0;i<d.n;i++){var dx=env(lx-cu.cx[i]),dy=env(ly-cu.cy[i]),r=Math.hypot(dx,dy)||1e-9,cs=Math.cos(cu.phi[i]),sn=Math.sin(cu.phi[i]);sens[d.ndof+2*i]=(cs*dx+sn*dy)/r;sens[d.ndof+2*i+1]=(-sn*dx+cs*dy)/r;}
+    var sal=c.cer.pasos(K_CER);j=0;var torque=0;for(var i=0;i<d.n;i++){if(d.segs[i].madre>=0){c.ctrl[i]+=(sal[j++]-c.ctrl[i])*Math.min(1,DT/TAU);torque+=Math.abs(c.ctrl[i]*cu.tmax[i]);}}
+    cu.paso(c.ctrl,DT);if(reglas.agit>0){cu.pose[0]+=R.gauss(0,reglas.agit*Math.sqrt(DT));cu.pose[1]+=R.gauss(0,reglas.agit*Math.sqrt(DT));cu.pose[2]+=R.gauss(0,0.5*reglas.agit*Math.sqrt(DT));}
+    cu.pose[0]=env(cu.pose[0]);cu.pose[1]=env(cu.pose[1]);
+    c.energia-=(reglas.cmasa*c.masa+COSTO_TORQUE*torque)*DT;}
+  mundo.t+=DT;
+  // muertes y nacimientos (en vivo, sin épocas)
+  var vivas=[];for(var b=0;b<cr.length;b++){var c=cr[b];if(c.energia<=0||mundo.t-c.nacimiento>EDAD_MAX){if(mundo.seguido===c)mundo.seguido=null;continue;}vivas.push(c);}
+  var nuevas=[];for(var b=0;b<vivas.length;b++){var c=vivas[b];if(c.energia>=reglas.erepro&&vivas.length+nuevas.length<reglas.tope){var g=c.genoma,k=R.randint(1,2);for(var i=0;i<k;i++)g=mutar(g);var ang=R.uniform(0,6.283);
+      var h=nuevaCriatura(c.especie,g,[env(c.cuerpo.pose[0]+1.5*Math.cos(ang)),env(c.cuerpo.pose[1]+1.5*Math.sin(ang)),R.uniform(-Math.PI,Math.PI)],E_CRIA,c.id);if(h){c.energia-=E_CRIA;c.hijas++;nuevas.push(h);}}}
+  mundo.crias=vivas.concat(nuevas);
+  if(mundo.t-mundo.ultimoRegistro>=20){mundo.ultimoRegistro=mundo.t;registrar();}}
+function registrar(){var conteo={},energia={},segs={};mundo.especies.forEach(function(e){conteo[e]=0;energia[e]=0;segs[e]=0;});mundo.crias.forEach(function(c){conteo[c.especie]++;energia[c.especie]+=c.energia;segs[c.especie]+=c.des.n;});
+  mundo.especies.forEach(function(e){if(conteo[e]){energia[e]/=conteo[e];segs[e]/=conteo[e];}});mundo.historia.push({t:mundo.t,poblacion:mundo.crias.length,conteo:conteo});
+  var tb=document.getElementById('tabla');tb.innerHTML='';mundo.especies.forEach(function(e){var tr=document.createElement('tr');tr.innerHTML='<td><span class="sw" style="background:'+mundo.colores[e]+'"></span>'+e+'</td><td class="n">'+conteo[e]+'</td><td class="n">'+energia[e].toFixed(0)+'</td><td class="n">'+segs[e].toFixed(2)+'</td><td class="n">'+(mundo.nacidas[e]||0)+'</td>';tb.appendChild(tr);});
+  document.getElementById('sub').textContent='t = '+mundo.t.toFixed(0)+' s';dibujarPoblaciones();}
+// ---------- dibujo ----------
+var canvas=document.getElementById('c'),ctx=canvas.getContext('2d'),stage=document.getElementById('stage'),dpr=Math.min(window.devicePixelRatio||1,2);
+function dibujar(){var w=stage.clientWidth,h=stage.clientHeight;if(canvas.width!==Math.floor(w*dpr)){canvas.width=Math.floor(w*dpr);canvas.height=Math.floor(h*dpr);}var W=canvas.width,H=canvas.height,esc=W/MUNDO;
+  ctx.fillStyle='#071a24';ctx.fillRect(0,0,W,H);var X=function(x){return (x+MUNDO/2)*esc;},Y=function(y){return H-(y+MUNDO/2)*esc;};
+  ctx.strokeStyle='#123842';ctx.lineWidth=1;for(var g=0;g<=MUNDO;g+=5){ctx.beginPath();ctx.moveTo(X(g-MUNDO/2),0);ctx.lineTo(X(g-MUNDO/2),H);ctx.stroke();ctx.beginPath();ctx.moveTo(0,Y(g-MUNDO/2));ctx.lineTo(W,Y(g-MUNDO/2));ctx.stroke();}
+  mundo.comida.forEach(function(f){ctx.beginPath();ctx.arc(X(f.x),Y(f.y),(f.tipo?0.35:0.18)*esc,0,6.283);ctx.fillStyle=f.tipo?'rgba(255,230,120,0.9)':'rgba(180,240,200,0.9)';ctx.fill();});
+  var rastro=document.getElementById('rastro').checked;
+  mundo.crias.forEach(function(c){var cu=c.cuerpo;cu.cinematica(cu.pose,cu.theta);if(rastro){c.rastro.push([cu.cx[0],cu.cy[0]]);if(c.rastro.length>40)c.rastro.shift();ctx.strokeStyle=mundo.colores[c.especie]+'55';ctx.beginPath();for(var k=0;k<c.rastro.length;k++){var p=c.rastro[k];if(k===0)ctx.moveTo(X(p[0]),Y(p[1]));else{var q=c.rastro[k-1];if(Math.abs(p[0]-q[0])>MUNDO/2||Math.abs(p[1]-q[1])>MUNDO/2)ctx.moveTo(X(p[0]),Y(p[1]));else ctx.lineTo(X(p[0]),Y(p[1]));}}ctx.stroke();}else c.rastro=[];
+    ctx.fillStyle=mundo.colores[c.especie];for(var i=0;i<cu.n;i++){ctx.save();ctx.translate(X(cu.cx[i]),Y(cu.cy[i]));ctx.rotate(-cu.phi[i]);ctx.globalAlpha=i===0?1:0.75;ctx.fillRect(-cu.largo[i]/2*esc,-cu.ancho[i]/2*esc,cu.largo[i]*esc,cu.ancho[i]*esc);ctx.restore();}ctx.globalAlpha=1;
+    if(mundo.seguido===c){ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.beginPath();ctx.arc(X(cu.cx[0]),Y(cu.cy[0]),1.2*esc,0,6.283);ctx.stroke();}});
+  var s=mundo.seguido;document.getElementById('hud').innerHTML='t = <b>'+mundo.t.toFixed(0)+' s</b> · <b>'+mundo.crias.length+'</b> criaturas · <b>'+mundo.comida.length+'</b> comidas · semilla <b>'+document.getElementById('semilla').value+'</b>';
+  if(s){document.getElementById('ficha').textContent=s.especie+' #'+s.id+(s.madre!==null?' (hija de #'+s.madre+')':' (fundadora)')+'\nedad '+(mundo.t-s.nacimiento).toFixed(0)+' s · energía '+s.energia.toFixed(0)+' · '+s.comidas+' comidas · '+s.hijas+' hijas\n'+s.des.n+' segmentos, '+s.des.ndof+' articulaciones, '+s.des.neuronas.length+' neuronas, '+s.masa.toFixed(2)+' kg, '+s.largo.toFixed(2)+' m\ncome: '+(s.comeChica?'chica ':'')+(s.comeGrande?'grande':'')+'\n\n'+JSON.stringify(s.genoma.nodos.map(function(n){return{art:n.art,dims:n.dims.map(function(v){return +v.toFixed(2);}),rec:n.rec,neuronas:n.neuronas.length,conexiones:n.conexiones.length};}),null,1);}}
+stage.addEventListener('click',function(ev){var r=canvas.getBoundingClientRect(),esc=canvas.width/MUNDO,x=(ev.clientX-r.left)*dpr/esc-MUNDO/2,y=-((ev.clientY-r.top)*dpr/esc-MUNDO/2),best=null,bd=4;mundo.crias.forEach(function(c){var d=Math.hypot(env(c.cuerpo.pose[0]-x),env(c.cuerpo.pose[1]-y));if(d<bd){bd=d;best=c;}});mundo.seguido=best;});
+function dibujarPoblaciones(){var hist=mundo.historia,svg=document.getElementById('chart'),W=520,H=240,m={l:44,r:44,t:12,b:30};if(hist.length<2){svg.innerHTML='';return;}
+  var G=hist.length-1,ymax=Math.max(1,Math.max.apply(null,hist.map(function(r){return r.poblacion;})))*1.1,x=function(g){return m.l+(W-m.l-m.r)*g/G;},y=function(v){return m.t+(H-m.t-m.b)*(1-v/ymax);},paso=ymax>200?100:(ymax>50?25:(ymax>20?10:5)),out='';
+  for(var v=0;v<=ymax;v+=paso){out+='<line x1="'+m.l+'" x2="'+(W-m.r)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="var(--line)"/><text x="'+(m.l-8)+'" y="'+(y(v)+4)+'" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="11" fill="var(--muted)">'+v+'</text>';}
+  var pasoG=Math.max(1,Math.round(G/8));for(var g=0;g<=G;g+=pasoG){out+='<text x="'+x(g)+'" y="'+(H-10)+'" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" fill="var(--muted)">'+hist[g].t.toFixed(0)+'</text>';}
+  var d='';for(var g=0;g<=G;g++){d+=(g?'L':'M')+x(g).toFixed(1)+' '+y(hist[g].poblacion).toFixed(1)+' ';}out+='<path d="'+d+'" fill="none" stroke="var(--ink)" stroke-width="2" opacity="0.4"/>';
+  mundo.especies.forEach(function(e){var col=mundo.colores[e],d='';for(var g=0;g<=G;g++){d+=(g?'L':'M')+x(g).toFixed(1)+' '+y(hist[g].conteo[e]||0).toFixed(1)+' ';}out+='<path d="'+d+'" fill="none" stroke="'+col+'" stroke-width="2"/><text x="'+(x(G)+4)+'" y="'+(y(hist[G].conteo[e]||0)+4)+'" font-family="IBM Plex Mono,monospace" font-size="10" fill="'+col+'">'+e.slice(0,5)+'</text>';});
+  out+='<text x="'+(W-m.r)+'" y="'+(H-10)+'" dy="-14" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="10" fill="var(--muted)">segundos</text>';svg.innerHTML=out;}
+// ---------- bucle ----------
+var playing=true,acum=0,ultimo=null;
+document.getElementById('play').addEventListener('click',function(){playing=!playing;this.textContent=playing?'Pausar':'Reproducir';});
+document.getElementById('reiniciar').addEventListener('click',function(){iniciar();});
+document.getElementById('aplicar').addEventListener('click',function(){reglas.nchica=+document.getElementById('nchica').value;reglas.ngrande=+document.getElementById('ngrande').value;reglas.erepro=+document.getElementById('erepro').value;reglas.cmasa=+document.getElementById('cmasa').value;reglas.agit=+document.getElementById('agit').value;reglas.tope=+document.getElementById('tope').value;ajustarComida();});
+function frame(now){requestAnimationFrame(frame);if(ultimo===null)ultimo=now;var dtReal=Math.min(0.1,(now-ultimo)/1000);ultimo=now;
+  if(playing){acum+=dtReal*parseFloat(document.getElementById('speed').value);var n=0,t0=performance.now();while(acum>=DT&&n<64&&performance.now()-t0<40){pasoMundo();acum-=DT;n++;}if(acum>DT*4)acum=0;}
+  dibujar();}
+fetch('bestiario_genomas.json').then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(b){mundo.bestiario=b;iniciar();requestAnimationFrame(frame);})
+  .catch(function(){document.getElementById('nota').textContent='Sin bestiario_genomas.json: arranca como sopa primitiva.';document.getElementById('partida').value='sopa';iniciar();requestAnimationFrame(frame);});
+})();
+</script>
+</body>
+</html>
