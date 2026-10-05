@@ -1115,3 +1115,52 @@ diez veces más nacimientos (población más grande o más tiempo) para que
 aparezcan las tres mutaciones del nadador de Purcell. La partida "sopa" del
 acuario en vivo (`vivo.html`) permite probar esas reglas a mano.
 
+
+---
+
+## 0025 · 2026-10-05 · Tres semillas, dos horas: la radiación es estable
+
+**Corrida.** Tres semillas del acuario 2D (`eco2d02`, `03`, `04`), seis
+especies × 40, 360 épocas = 2 horas de vida cada una, en paralelo, 50 a 53
+minutos de cómputo por semilla. La pregunta de 0023: ¿los cuerpos cortos que
+aparecieron dentro de la anguila son estables o transitorios?
+
+| | eco2d02 | eco2d03 | eco2d04 |
+|---|---|---|---|
+| monocultivo de anguila desde | 900 s | 840 s | 620 s |
+| comida chica por época a los 1200 s | 51 | 8 | 1 |
+| a los 3000 s | 112 | 102 | 42 |
+| a los 7200 s | 171 | 107 | 147 |
+| comida grande por época (constante) | 57–79 | 47–86 | 41–66 |
+| anguilas de 2–3 segmentos al final | 39 | 33 | 44 |
+| de 7 segmentos | 312 | 430 | 356 |
+| de 13–14 | 11 | 16 | 11 |
+
+**Qué se vio.**
+- **Monocultivo en las tres, antes del cuarto de hora.** Igual que en 3D
+  (0021) y en la primera corrida 2D (0023). Con esta comida y estas reglas,
+  la exclusión competitiva no depende de la semilla.
+- **La radiación se repite y se sostiene.** En las tres semillas, entre los
+  1200 y los 3000 s aparecen anguilas de 2 segmentos, de menos de un metro,
+  y el consumo de comida chica pasa de casi nada a 100–170 por época, más
+  que la grande. Y se queda ahí durante la última hora: al final hay 33 a 44
+  cuerpos cortos conviviendo con 310 a 430 de 7 segmentos y 11 a 16 de 13.
+  No es transitorio: es un polimorfismo mantenido por dos recursos.
+- **Proporciones estables, y una pregunta.** Los cortos son el 7–9 % de la
+  población en las tres semillas, aunque comen más de la mitad de toda la
+  comida. Cada corto come mucho pero son pocos; probablemente porque un
+  cuerpo de 2 segmentos nada peor (dos eslabones no nadan, 0022: viven de la
+  deriva y de estar donde reaparece la comida) y porque sus crías mutan
+  fácilmente de vuelta a 3 o más segmentos, con lo que salen del nicho. Es
+  una hipótesis; medirla pediría seguir los linajes de los cortos.
+- **El tope regula todo.** Las tres poblaciones viven saturadas en 500 desde
+  los 200 s; la composición cambia por reemplazo.
+
+**Decisión.** La hipótesis de 0021 queda respondida: dos recursos que exigen
+cuerpos distintos sostienen dos cuerpos, pero no dos especies fundadoras,
+sino dos formas de la que ganó. Para la bitácora del magíster, la lección es
+que la diversidad que estas reglas producen es *dentro* de un linaje, y que
+el visor, que colorea por especie fundadora, no la muestra: las 500 son
+"anguila". Falta colorear por tamaño o por linaje. El visor 2D publicado
+muestra ahora `eco2d02` (épocas 1, 181 y 360); los archivos completos
+quedan en `runs/`.
