@@ -50,8 +50,15 @@ def grupo(tarea: str, corridas: list[str], numero: int) -> dict | None:
             "criaturas": criaturas}
 
 
-def exportar_etapa3(nado: list[str], caminata: list[str], copiar_a_viewer: bool = True) -> str:
+def exportar_etapa3(nado: list[str], caminata: list[str], copiar_a_viewer: bool = True,
+                    extras: list[tuple[str, str, list[str]]] | None = None) -> str:
+    """`extras`: grupos adicionales (etiqueta, tarea, corridas), p. ej. los peces en tierra."""
     grupos = [g for g in (grupo("nado", nado, 1), grupo("caminata", caminata, 2)) if g]
+    for k, (etiqueta, tarea, corridas) in enumerate(extras or []):
+        g = grupo(tarea, corridas, 3 + k)
+        if g:
+            g["etiqueta"] = etiqueta
+            grupos.append(g)
     salida = {"meta": {"corrida": "etapa3", "semilla": 0, "generaciones": 0, "poblacion": 0,
                        "duracion": 10.0, "fps": 30, "cuales": "campeones", "fuente": "etapa3", "etapa": 3},
               "log": [], "generaciones": grupos}
@@ -68,5 +75,10 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--nado", default="")
     ap.add_argument("--caminata", default="")
+    ap.add_argument("--extra", action="append", default=[], help='"etiqueta:tarea:corrida1,corrida2"')
     a = ap.parse_args()
-    exportar_etapa3([x for x in a.nado.split(",") if x], [x for x in a.caminata.split(",") if x])
+    extras = []
+    for e in a.extra:
+        etiqueta, tarea, corridas = e.split(":")
+        extras.append((etiqueta, tarea, corridas.split(",")))
+    exportar_etapa3([x for x in a.nado.split(",") if x], [x for x in a.caminata.split(",") if x], extras=extras)
