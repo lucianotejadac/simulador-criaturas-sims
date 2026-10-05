@@ -22,6 +22,13 @@ siete tipos de articulación de Sims. Los cerebros anidados (uno por nodo, más
 centrales) se aplanan al desarrollar. Verificado con tres genomas escritos a
 mano que se ven en el visor (`Etapa 2 · los tres cuerpos juntos`).
 
+**Etapa 7 (abierta):** el mismo ecosistema a escala en un mundo 2D viscoso sin
+inercia (`src/mundo2d.py`, `src/ecosistema2d.py`, visor `viewer/acuario2d.html`):
+500 criaturas, mundo de 50 m, comida de dos tamaños que exigen cuerpos distintos.
+Primera corrida: monocultivo de anguilas a los 10 min, y después, dentro de la
+anguila, radiación hacia cuerpos cortos que ocupan el nicho de la comida chica
+(BITACORA 0022-0023).
+
 **Etapa 6 (abierta, laboratorio):** ecosistema. Un bestiario de seis especies
 acuáticas escritas a mano con fototaxis cableada (`src/genome/bestiario.py`) convive
 en un acuario con luces-comida, energía, reproducción y muerte, sin generaciones ni
@@ -98,6 +105,9 @@ python src/evolve_duelo.py --nombre duelo01 --semilla 1 --ancestro pez --generac
 python src/bestiario_export.py
 python src/ecosistema.py --nombre eco01 --semilla 1 --epocas 30 --especies anguila,pez,renacuajo,raya,ciempies_acuatico,remador --por-especie 4
 
+# Etapa 7: acuario 2D a escala (240 fundadoras, 90 épocas de 20 s, tope 500)
+python src/ecosistema2d.py --nombre eco2d01 --semilla 1 --epocas 90 --por-especie 40
+
 # tests
 python -m pytest -q tests
 
@@ -135,6 +145,10 @@ src/
   genome/bestiario.py seis especies a mano con fototaxis cableada
   bestiario_export.py bestiario -> viewer/bestiario.json
   ecosistema.py      acuario con energía, comida, reproducción y muerte -> viewer/acuario.json
+  mundo2d.py         física 2D viscosa sin inercia (Stokes), Numba, punto medio
+  develop2d.py       genoma morfológico proyectado al plano
+  brain_lote.py      cerebros de muchas criaturas en un solo núcleo
+  ecosistema2d.py    acuario a escala en 2D -> viewer/acuario2d.json (visor: viewer/acuario2d.html)
   brain.py           ejecución del grafo neuronal
   fluido.py          arrastre viscoso por cara (modelo de agua de Sims)
   fitness.py         evaluación y aptitud de nado
@@ -155,6 +169,7 @@ BITACORA.md          decisiones de diseño y trampas detectadas
 4. **Etapa 4**: ancestro pez, pez fuera del agua y seguimiento de luz. *(cerrada)*
 5. **Etapa 5**: competencia por un cubo entre dos especies. *(cerrada)*
 6. **Etapa 6**: bestiario y ecosistema con energía y comida. *(abierta como laboratorio)*
+7. **Etapa 7**: mundo 2D viscoso sin inercia y ecosistema a escala. *(abierta)*
 
 ## Referencias
 

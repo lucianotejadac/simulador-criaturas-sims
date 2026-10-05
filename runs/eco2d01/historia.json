@@ -718,5 +718,2525 @@
    "grande": 40
   },
   "segundos": 8.1
+ },
+ {
+  "epoca": 20,
+  "t": 420.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 486,
+   "pez": 0,
+   "renacuajo": 14,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 123.1,
+   "pez": 0.0,
+   "renacuajo": 50.5,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.45,
+   "pez": 0.0,
+   "renacuajo": 5.86,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 100,
+  "muertes": 100,
+  "comidas": {
+   "chica": 4,
+   "grande": 45
+  },
+  "segundos": 8.2
+ },
+ {
+  "epoca": 21,
+  "t": 440.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 487,
+   "pez": 0,
+   "renacuajo": 13,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 128.7,
+   "pez": 0.0,
+   "renacuajo": 39.4,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.44,
+   "pez": 0.0,
+   "renacuajo": 5.77,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 17,
+  "muertes": 17,
+  "comidas": {
+   "chica": 2,
+   "grande": 46
+  },
+  "segundos": 8.5
+ },
+ {
+  "epoca": 22,
+  "t": 460.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 488,
+   "pez": 0,
+   "renacuajo": 12,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 133.2,
+   "pez": 0.0,
+   "renacuajo": 37.5,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.44,
+   "pez": 0.0,
+   "renacuajo": 5.83,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 19,
+  "muertes": 19,
+  "comidas": {
+   "chica": 2,
+   "grande": 45
+  },
+  "segundos": 9.2
+ },
+ {
+  "epoca": 23,
+  "t": 480.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 490,
+   "pez": 0,
+   "renacuajo": 10,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 136.6,
+   "pez": 0.0,
+   "renacuajo": 32.9,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.49,
+   "pez": 0.0,
+   "renacuajo": 5.8,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 24,
+  "muertes": 24,
+  "comidas": {
+   "chica": 0,
+   "grande": 43
+  },
+  "segundos": 8.1
+ },
+ {
+  "epoca": 24,
+  "t": 500.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 492,
+   "pez": 0,
+   "renacuajo": 8,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 138.5,
+   "pez": 0.0,
+   "renacuajo": 37.6,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.5,
+   "pez": 0.0,
+   "renacuajo": 5.75,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 24,
+  "muertes": 24,
+  "comidas": {
+   "chica": 3,
+   "grande": 42
+  },
+  "segundos": 8.1
+ },
+ {
+  "epoca": 25,
+  "t": 520.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 494,
+   "pez": 0,
+   "renacuajo": 6,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 141.0,
+   "pez": 0.0,
+   "renacuajo": 40.9,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.49,
+   "pez": 0.0,
+   "renacuajo": 6.33,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 23,
+  "muertes": 23,
+  "comidas": {
+   "chica": 2,
+   "grande": 40
+  },
+  "segundos": 8.0
+ },
+ {
+  "epoca": 26,
+  "t": 540.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 495,
+   "pez": 0,
+   "renacuajo": 5,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 142.7,
+   "pez": 0.0,
+   "renacuajo": 37.9,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.46,
+   "pez": 0.0,
+   "renacuajo": 6.4,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 28,
+  "muertes": 28,
+  "comidas": {
+   "chica": 3,
+   "grande": 45
+  },
+  "segundos": 8.1
+ },
+ {
+  "epoca": 27,
+  "t": 560.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 497,
+   "pez": 0,
+   "renacuajo": 3,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 141.5,
+   "pez": 0.0,
+   "renacuajo": 59.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.41,
+   "pez": 0.0,
+   "renacuajo": 6.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 29,
+  "muertes": 29,
+  "comidas": {
+   "chica": 3,
+   "grande": 34
+  },
+  "segundos": 8.0
+ },
+ {
+  "epoca": 28,
+  "t": 580.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 497,
+   "pez": 0,
+   "renacuajo": 3,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 139.8,
+   "pez": 0.0,
+   "renacuajo": 56.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.54,
+   "pez": 0.0,
+   "renacuajo": 6.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 30,
+  "muertes": 30,
+  "comidas": {
+   "chica": 1,
+   "grande": 43
+  },
+  "segundos": 8.0
+ },
+ {
+  "epoca": 29,
+  "t": 600.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 498,
+   "pez": 0,
+   "renacuajo": 2,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 132.0,
+   "pez": 0.0,
+   "renacuajo": 79.9,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.58,
+   "pez": 0.0,
+   "renacuajo": 6.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 35,
+  "muertes": 35,
+  "comidas": {
+   "chica": 5,
+   "grande": 36
+  },
+  "segundos": 8.2
+ },
+ {
+  "epoca": 30,
+  "t": 620.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 498,
+   "pez": 0,
+   "renacuajo": 2,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 123.3,
+   "pez": 0.0,
+   "renacuajo": 151.9,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.59,
+   "pez": 0.0,
+   "renacuajo": 6.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 37,
+  "muertes": 37,
+  "comidas": {
+   "chica": 1,
+   "grande": 37
+  },
+  "segundos": 8.4
+ },
+ {
+  "epoca": 31,
+  "t": 640.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 499,
+   "pez": 0,
+   "renacuajo": 1,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 121.3,
+   "pez": 0.0,
+   "renacuajo": 42.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.61,
+   "pez": 0.0,
+   "renacuajo": 6.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 36,
+  "muertes": 36,
+  "comidas": {
+   "chica": 4,
+   "grande": 51
+  },
+  "segundos": 8.1
+ },
+ {
+  "epoca": 32,
+  "t": 660.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 499,
+   "pez": 0,
+   "renacuajo": 1,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 128.5,
+   "pez": 0.0,
+   "renacuajo": 39.1,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.57,
+   "pez": 0.0,
+   "renacuajo": 6.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 1,
+   "grande": 44
+  },
+  "segundos": 8.3
+ },
+ {
+  "epoca": 33,
+  "t": 680.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 131.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.64,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 27,
+  "muertes": 27,
+  "comidas": {
+   "chica": 1,
+   "grande": 57
+  },
+  "segundos": 8.4
+ },
+ {
+  "epoca": 34,
+  "t": 700.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 138.2,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.63,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 4,
+   "grande": 37
+  },
+  "segundos": 8.5
+ },
+ {
+  "epoca": 35,
+  "t": 720.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 148.7,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.6,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 23,
+  "muertes": 23,
+  "comidas": {
+   "chica": 1,
+   "grande": 56
+  },
+  "segundos": 8.4
+ },
+ {
+  "epoca": 36,
+  "t": 740.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 157.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.61,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 8,
+  "muertes": 8,
+  "comidas": {
+   "chica": 2,
+   "grande": 44
+  },
+  "segundos": 8.3
+ },
+ {
+  "epoca": 37,
+  "t": 760.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 156.3,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.62,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 18,
+  "muertes": 18,
+  "comidas": {
+   "chica": 1,
+   "grande": 35
+  },
+  "segundos": 8.3
+ },
+ {
+  "epoca": 38,
+  "t": 780.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 155.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.68,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 30,
+  "muertes": 30,
+  "comidas": {
+   "chica": 2,
+   "grande": 46
+  },
+  "segundos": 8.3
+ },
+ {
+  "epoca": 39,
+  "t": 800.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 164.9,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.66,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 0,
+   "grande": 52
+  },
+  "segundos": 8.3
+ },
+ {
+  "epoca": 40,
+  "t": 820.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 164.1,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.65,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 1,
+   "grande": 30
+  },
+  "segundos": 8.2
+ },
+ {
+  "epoca": 41,
+  "t": 840.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 135.9,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.65,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 77,
+  "muertes": 77,
+  "comidas": {
+   "chica": 0,
+   "grande": 34
+  },
+  "segundos": 7.9
+ },
+ {
+  "epoca": 42,
+  "t": 860.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 138.3,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.65,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 28,
+  "muertes": 28,
+  "comidas": {
+   "chica": 4,
+   "grande": 46
+  },
+  "segundos": 8.0
+ },
+ {
+  "epoca": 43,
+  "t": 880.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 140.2,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.69,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 19,
+  "muertes": 19,
+  "comidas": {
+   "chica": 3,
+   "grande": 35
+  },
+  "segundos": 8.1
+ },
+ {
+  "epoca": 44,
+  "t": 900.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 142.7,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.72,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 32,
+  "muertes": 32,
+  "comidas": {
+   "chica": 7,
+   "grande": 47
+  },
+  "segundos": 8.2
+ },
+ {
+  "epoca": 45,
+  "t": 920.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 142.8,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.71,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 22,
+  "muertes": 22,
+  "comidas": {
+   "chica": 3,
+   "grande": 40
+  },
+  "segundos": 8.6
+ },
+ {
+  "epoca": 46,
+  "t": 940.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 142.0,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.76,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 22,
+  "muertes": 22,
+  "comidas": {
+   "chica": 5,
+   "grande": 35
+  },
+  "segundos": 8.2
+ },
+ {
+  "epoca": 47,
+  "t": 960.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 140.7,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.76,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 26,
+  "muertes": 26,
+  "comidas": {
+   "chica": 1,
+   "grande": 33
+  },
+  "segundos": 8.2
+ },
+ {
+  "epoca": 48,
+  "t": 980.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 139.7,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.74,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 28,
+  "muertes": 28,
+  "comidas": {
+   "chica": 6,
+   "grande": 54
+  },
+  "segundos": 8.3
+ },
+ {
+  "epoca": 49,
+  "t": 1000.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 138.8,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.75,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 27,
+  "muertes": 27,
+  "comidas": {
+   "chica": 5,
+   "grande": 43
+  },
+  "segundos": 8.4
+ },
+ {
+  "epoca": 50,
+  "t": 1020.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 140.0,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.78,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 31,
+  "muertes": 31,
+  "comidas": {
+   "chica": 6,
+   "grande": 50
+  },
+  "segundos": 8.4
+ },
+ {
+  "epoca": 51,
+  "t": 1040.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 130.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.82,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 35,
+  "muertes": 35,
+  "comidas": {
+   "chica": 9,
+   "grande": 31
+  },
+  "segundos": 8.4
+ },
+ {
+  "epoca": 52,
+  "t": 1060.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 129.3,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.8,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 29,
+  "muertes": 29,
+  "comidas": {
+   "chica": 7,
+   "grande": 40
+  },
+  "segundos": 8.4
+ },
+ {
+  "epoca": 53,
+  "t": 1080.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 134.8,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.82,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 16,
+  "muertes": 16,
+  "comidas": {
+   "chica": 10,
+   "grande": 46
+  },
+  "segundos": 8.4
+ },
+ {
+  "epoca": 54,
+  "t": 1100.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 137.6,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.82,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 28,
+  "muertes": 28,
+  "comidas": {
+   "chica": 11,
+   "grande": 51
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 55,
+  "t": 1120.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 143.9,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.78,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 26,
+  "muertes": 26,
+  "comidas": {
+   "chica": 15,
+   "grande": 49
+  },
+  "segundos": 8.5
+ },
+ {
+  "epoca": 56,
+  "t": 1140.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 145.0,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.84,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 26,
+  "muertes": 26,
+  "comidas": {
+   "chica": 13,
+   "grande": 43
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 57,
+  "t": 1160.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 156.3,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.84,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 20,
+  "muertes": 20,
+  "comidas": {
+   "chica": 12,
+   "grande": 56
+  },
+  "segundos": 9.0
+ },
+ {
+  "epoca": 58,
+  "t": 1180.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 159.6,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.86,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 19,
+  "muertes": 19,
+  "comidas": {
+   "chica": 7,
+   "grande": 40
+  },
+  "segundos": 9.1
+ },
+ {
+  "epoca": 59,
+  "t": 1200.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 156.6,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.86,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 27,
+  "muertes": 27,
+  "comidas": {
+   "chica": 9,
+   "grande": 41
+  },
+  "segundos": 9.0
+ },
+ {
+  "epoca": 60,
+  "t": 1220.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 160.6,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.88,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 21,
+  "muertes": 21,
+  "comidas": {
+   "chica": 7,
+   "grande": 46
+  },
+  "segundos": 9.3
+ },
+ {
+  "epoca": 61,
+  "t": 1240.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 163.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.86,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 15,
+  "muertes": 15,
+  "comidas": {
+   "chica": 12,
+   "grande": 37
+  },
+  "segundos": 8.5
+ },
+ {
+  "epoca": 62,
+  "t": 1260.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 152.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.94,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 54,
+  "muertes": 54,
+  "comidas": {
+   "chica": 10,
+   "grande": 54
+  },
+  "segundos": 9.1
+ },
+ {
+  "epoca": 63,
+  "t": 1280.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 153.5,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.89,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 28,
+  "muertes": 28,
+  "comidas": {
+   "chica": 7,
+   "grande": 48
+  },
+  "segundos": 9.1
+ },
+ {
+  "epoca": 64,
+  "t": 1300.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 156.8,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.9,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 21,
+  "muertes": 21,
+  "comidas": {
+   "chica": 12,
+   "grande": 47
+  },
+  "segundos": 9.0
+ },
+ {
+  "epoca": 65,
+  "t": 1320.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 152.6,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.83,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 36,
+  "muertes": 36,
+  "comidas": {
+   "chica": 9,
+   "grande": 45
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 66,
+  "t": 1340.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 153.6,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.8,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 24,
+  "muertes": 24,
+  "comidas": {
+   "chica": 10,
+   "grande": 37
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 67,
+  "t": 1360.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 159.5,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.75,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 21,
+  "muertes": 21,
+  "comidas": {
+   "chica": 18,
+   "grande": 52
+  },
+  "segundos": 9.0
+ },
+ {
+  "epoca": 68,
+  "t": 1380.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 158.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.81,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 29,
+  "muertes": 29,
+  "comidas": {
+   "chica": 18,
+   "grande": 41
+  },
+  "segundos": 8.8
+ },
+ {
+  "epoca": 69,
+  "t": 1400.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 156.8,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.85,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 30,
+  "muertes": 30,
+  "comidas": {
+   "chica": 14,
+   "grande": 41
+  },
+  "segundos": 8.7
+ },
+ {
+  "epoca": 70,
+  "t": 1420.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 155.6,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.83,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 33,
+  "muertes": 33,
+  "comidas": {
+   "chica": 6,
+   "grande": 50
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 71,
+  "t": 1440.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 157.1,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.88,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 22,
+  "muertes": 22,
+  "comidas": {
+   "chica": 8,
+   "grande": 40
+  },
+  "segundos": 8.8
+ },
+ {
+  "epoca": 72,
+  "t": 1460.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 156.7,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.96,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 32,
+  "muertes": 32,
+  "comidas": {
+   "chica": 16,
+   "grande": 48
+  },
+  "segundos": 8.8
+ },
+ {
+  "epoca": 73,
+  "t": 1480.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 156.6,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 7.01,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 26,
+  "muertes": 26,
+  "comidas": {
+   "chica": 13,
+   "grande": 52
+  },
+  "segundos": 8.8
+ },
+ {
+  "epoca": 74,
+  "t": 1500.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 159.9,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.98,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 19,
+  "muertes": 19,
+  "comidas": {
+   "chica": 23,
+   "grande": 41
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 75,
+  "t": 1520.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 156.5,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 7.01,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 24,
+  "muertes": 24,
+  "comidas": {
+   "chica": 19,
+   "grande": 41
+  },
+  "segundos": 9.1
+ },
+ {
+  "epoca": 76,
+  "t": 1540.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 162.5,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.98,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 24,
+  "muertes": 24,
+  "comidas": {
+   "chica": 18,
+   "grande": 48
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 77,
+  "t": 1560.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 160.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.95,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 24,
+  "muertes": 24,
+  "comidas": {
+   "chica": 21,
+   "grande": 40
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 78,
+  "t": 1580.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 157.9,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.91,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 28,
+  "muertes": 28,
+  "comidas": {
+   "chica": 19,
+   "grande": 36
+  },
+  "segundos": 9.0
+ },
+ {
+  "epoca": 79,
+  "t": 1600.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 160.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.91,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 18,
+  "muertes": 18,
+  "comidas": {
+   "chica": 16,
+   "grande": 42
+  },
+  "segundos": 8.7
+ },
+ {
+  "epoca": 80,
+  "t": 1620.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 160.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.98,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 28,
+  "muertes": 28,
+  "comidas": {
+   "chica": 14,
+   "grande": 47
+  },
+  "segundos": 8.8
+ },
+ {
+  "epoca": 81,
+  "t": 1640.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 162.9,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.96,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 32,
+  "muertes": 32,
+  "comidas": {
+   "chica": 19,
+   "grande": 40
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 82,
+  "t": 1660.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 168.2,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 6.98,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 22,
+  "muertes": 22,
+  "comidas": {
+   "chica": 17,
+   "grande": 51
+  },
+  "segundos": 8.4
+ },
+ {
+  "epoca": 83,
+  "t": 1680.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 157.1,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 7.02,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 45,
+  "muertes": 45,
+  "comidas": {
+   "chica": 16,
+   "grande": 49
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 84,
+  "t": 1700.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 155.3,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 7.04,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 26,
+  "muertes": 26,
+  "comidas": {
+   "chica": 17,
+   "grande": 40
+  },
+  "segundos": 9.2
+ },
+ {
+  "epoca": 85,
+  "t": 1720.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 157.7,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 7.03,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 21,
+  "muertes": 21,
+  "comidas": {
+   "chica": 35,
+   "grande": 49
+  },
+  "segundos": 9.0
+ },
+ {
+  "epoca": 86,
+  "t": 1740.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 156.5,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 7.11,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 33,
+  "muertes": 33,
+  "comidas": {
+   "chica": 22,
+   "grande": 46
+  },
+  "segundos": 8.9
+ },
+ {
+  "epoca": 87,
+  "t": 1760.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 160.3,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 7.11,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 25,
+  "muertes": 25,
+  "comidas": {
+   "chica": 35,
+   "grande": 50
+  },
+  "segundos": 9.0
+ },
+ {
+  "epoca": 88,
+  "t": 1780.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 167.4,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 7.16,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 21,
+  "muertes": 21,
+  "comidas": {
+   "chica": 30,
+   "grande": 49
+  },
+  "segundos": 9.3
+ },
+ {
+  "epoca": 89,
+  "t": 1800.0,
+  "poblacion": 500,
+  "conteo": {
+   "anguila": 500,
+   "pez": 0,
+   "renacuajo": 0,
+   "raya": 0,
+   "ciempies_acuatico": 0,
+   "remador": 0
+  },
+  "energia_media": {
+   "anguila": 165.3,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "segmentos_media": {
+   "anguila": 7.16,
+   "pez": 0.0,
+   "renacuajo": 0.0,
+   "raya": 0.0,
+   "ciempies_acuatico": 0.0,
+   "remador": 0.0
+  },
+  "nacimientos": 31,
+  "muertes": 31,
+  "comidas": {
+   "chica": 19,
+   "grande": 35
+  },
+  "segundos": 9.1
  }
 ]

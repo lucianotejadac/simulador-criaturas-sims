@@ -961,3 +961,76 @@ segmentos: 2.6 veces. Las seis especies del bestiario, 10 s, en 0.2 s.
 por `develop2d.py`: bisagras, caras ±X ±Y, reflexión respecto del eje X),
 cerebro (en lote, `brain_lote.py`), fototaxis, reglas de vida, bitácora. Lo
 que se pierde: choques entre criaturas y toda la tercera dimensión.
+
+---
+
+## 0023 · 2026-10-05 · Etapa 7: el acuario 2D a escala, reglas y primera corrida
+
+**Contexto.** Con la física 2D (0022), el ecosistema de la Etapa 6 se
+reescribe a escala (`src/ecosistema2d.py`): cientos de criaturas, un mundo
+de 50 × 50 m toroidal, y comida de dos tamaños, que es la hipótesis de
+coexistencia que quedó abierta en 0021: si hay dos recursos que exigen
+cuerpos distintos, ¿sobreviven dos tipos de cuerpo?
+
+**Reglas** (cada una es una decisión sobre qué vida es posible; el visor las
+muestra al pie):
+- Comida chica (90 puntos, vale 40) solo para cuerpos de largo total ≤ 1.3 m;
+  comida grande (30 puntos, vale 150) solo para cuerpos de masa ≥ 2 kg. Cada
+  criatura percibe la comida comestible más cercana; al comer, la comida
+  reaparece en otro lugar.
+- Energía inicial 100; cuesta 0.03 por kg y segundo existir y 0.004 por N·m y
+  segundo moverse. Reproducción con energía ≥ 160: una hija con 1 o 2
+  mutaciones a 1.5 m, con 60 de energía que la madre cede. Muerte a energía 0
+  o a los 400 s. Tope de 500 individuos.
+- Épocas de 20 s (nacimientos y muertes entre épocas, pose y ángulos
+  conservados, cerebro reiniciado). Paso de física 1/60 s; reloj del cerebro
+  1/960 s.
+- Sin choques: las criaturas se atraviesan. Lo que en 3D era bloqueo aquí no
+  existe.
+
+**Costo.** 6 a 8 s de cómputo por época de 20 s con 500 criaturas: 2.5 a 3
+veces el tiempo real con la población al tope, y 50 veces con pocas.
+
+**Primera corrida (`eco2d01`)**: seis especies, 40 de cada una, 90 épocas =
+30 minutos de vida, 12.5 minutos de cómputo.
+
+| época | t (s) | anguila | pez | renacuajo | raya | ciempiés | remador | total | comida chica | grande |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 20 | 50 | 41 | 42 | 40 | 42 | 41 | 256 | 0 | 17 |
+| 5 | 100 | 134 | 46 | 49 | 25 | 49 | 44 | 347 | 3 | 26 |
+| 10 | 200 | 303 | 45 | 53 | 1 | 45 | 46 | 493 | 1 | 34 |
+| 20 | 400 | 430 | 9 | 55 | 0 | 1 | 5 | 500 | 4 | 40 |
+| 30 | 600 | 498 | 0 | 2 | 0 | 0 | 0 | 500 | 5 | 36 |
+| 60 | 1200 | 500 | 0 | 0 | 0 | 0 | 0 | 500 | 9 | 41 |
+| 90 | 1800 | 500 | 0 | 0 | 0 | 0 | 0 | 500 | 19 | 35 |
+
+**Qué se vio.**
+- **El mismo monocultivo que en 3D, más rápido.** La anguila, la más rápida
+  y la que mejor gira, llena el tope de 500 a los 200 s y es la única especie
+  a los 600 s. Con 240 fundadoras y comida abundante, la exclusión competitiva
+  tarda diez minutos.
+- **La comida chica quedó casi sin comer durante media hora**: 0 a 9 por
+  época. Ninguna fundadora cabía bien en ese nicho (la anguila mide 1.75 m;
+  el renacuajo, que sí cabe, nada despacio y come también la grande).
+- **Y después la anguila se diversifica.** Entre los 1200 y los 1800 s, el
+  consumo de comida chica sube de 9 a 23 por época. Al final hay 50 anguilas
+  de 2 segmentos y 18 de 3, cuerpos de menos de un metro que solo pueden
+  comer la chica, junto a 301 de 7 segmentos, 63 de 13 y 4 de 14, que solo
+  comen la grande. Dos nichos, dos cuerpos, un solo linaje: radiación
+  adaptativa dentro de la especie que ganó. Es el resultado que la hipótesis
+  de 0021 buscaba, pero no por coexistencia de especies fundadoras sino por
+  divergencia posterior.
+- **El tope de población es el regulador.** Desde la época 10 nacen y mueren
+  unos 30 por época: la población está saturada y la selección opera por
+  reemplazo, no por crecimiento.
+- **Lo que no se puede decir todavía:** si los cuerpos cortos y largos de
+  anguila son estables (dos poblaciones que se mantienen) o transitorios.
+  Hace falta más tiempo y más semillas; cada media hora de vida cuesta 12
+  minutos.
+
+**Decisión.** El acuario 2D es el laboratorio de aquí en adelante: mismo
+genoma, mismas reglas, cincuenta veces más barato. Siguiente paso: varias
+semillas, dos horas de vida, y la sopa primitiva (partir de cajas sueltas,
+sin bestiario), que ahora es viable. El archivo del visor se recorta a tres
+épocas grabadas (6.8 MB); las 34 MB completas quedan en `runs/`.
+
