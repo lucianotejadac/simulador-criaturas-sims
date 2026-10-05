@@ -54,13 +54,14 @@ footer{font-size:12px;color:var(--muted);max-width:72ch}footer a{color:var(--acc
     <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Tiempo">
     <select id="speed" aria-label="Velocidad"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option><option value="8">8×</option></select>
     <label><input type="checkbox" id="rastro" checked> Rastros</label>
+    <label><input type="checkbox" id="portam"> Colorear por segmentos</label>
   </div>
   <div class="grid">
     <div class="card"><h2>Población por especie <small>gris: total</small></h2><svg class="chart" id="chart" viewBox="0 0 520 240" role="img" aria-label="Población por especie por época"></svg></div>
     <div class="card"><h2>Especies <small id="sub"></small></h2><table><thead><tr><th>especie</th><th class="n">vivas</th><th class="n">energía media</th><th class="n">segmentos</th></tr></thead><tbody id="tabla"></tbody></table>
       <p class="note" style="font-size:13px" id="reglas"></p></div>
   </div>
-  <footer>Esta página reproduce corridas grabadas; en <a href="vivo.html">vivo.html</a> el mismo mundo corre en vivo en tu navegador. Mundo 2D de arrastre lineal sin inercia (régimen de Stokes), toroidal. Comida chica (puntos pequeños) solo para cuerpos cortos; comida grande (puntos grandes) solo para cuerpos pesados. Código y bitácora en <a href="https://github.com/lucianotejadac/simulador-criaturas-sims">github.com/lucianotejadac/simulador-criaturas-sims</a>.</footer>
+  <footer>Colorear por segmentos: verde ≤ 3, celeste 4–6, amarillo 7–9, rosa ≥ 10. Esta página reproduce corridas grabadas; en <a href="vivo.html">vivo.html</a> el mismo mundo corre en vivo en tu navegador. Mundo 2D de arrastre lineal sin inercia (régimen de Stokes), toroidal. Comida chica (puntos pequeños) solo para cuerpos cortos; comida grande (puntos grandes) solo para cuerpos pesados. Código y bitácora en <a href="https://github.com/lucianotejadac/simulador-criaturas-sims">github.com/lucianotejadac/simulador-criaturas-sims</a>.</footer>
 </div>
 <script>
 (function(){
@@ -98,7 +99,7 @@ footer{font-size:12px;color:var(--muted);max-width:72ch}footer a{color:var(--acc
     if($('rastro').checked&&f>0){ ctx.lineWidth=1; for(var b=0;b<ep.criaturas.length;b++){ ctx.strokeStyle=colores[ep.criaturas[b].especie]+'55'; ctx.beginPath(); var f0=Math.max(0,f-20); for(var k=f0;k<=f;k++){ var p=ep.cuadros[k][b][0]; if(k===f0)ctx.moveTo(X(p[0]),Y(p[1])); else { var q=ep.cuadros[k-1][b][0]; if(Math.abs(p[0]-q[0])>L/2||Math.abs(p[1]-q[1])>L/2) ctx.moveTo(X(p[0]),Y(p[1])); else ctx.lineTo(X(p[0]),Y(p[1])); } } ctx.stroke(); } }
     // criaturas: cada segmento es un rectángulo orientado
     var cu=ep.cuadros[f];
-    for(var b=0;b<ep.criaturas.length;b++){ var cr=ep.criaturas[b]; ctx.fillStyle=colores[cr.especie];
+    for(var b=0;b<ep.criaturas.length;b++){ var cr=ep.criaturas[b]; ctx.fillStyle=$('portam').checked?(cr.n<=3?'#9be36b':cr.n<=6?'#3fb7cc':cr.n<=9?'#ffc94d':'#ff6f91'):colores[cr.especie];
       for(var i=0;i<cr.n;i++){ var s=cu[b][i], seg=cr.segmentos[i]; ctx.save(); ctx.translate(X(s[0]),Y(s[1])); ctx.rotate(-s[2]); ctx.globalAlpha=i===0?1:0.75; ctx.fillRect(-seg[0]/2*esc,-seg[1]/2*esc,seg[0]*esc,seg[1]*esc); ctx.restore(); }
       ctx.globalAlpha=1; }
     $('hud').innerHTML='época <b>'+(ep.epoca+1)+'</b> · t = <b>'+(ep.t+t).toFixed(0)+' s</b> · <b>'+ep.criaturas.length+'</b> criaturas · <b>'+com.length+'</b> comidas';
