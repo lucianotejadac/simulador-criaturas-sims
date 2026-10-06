@@ -1,0 +1,36 @@
+{
+  "nombre": "cel-C3",
+  "etapa": 8,
+  "semilla": 3,
+  "epocas": 400,
+  "celulas": 150,
+  "mundo": 30.0,
+  "t_epoca": 20.0,
+  "depredador": {
+    "activo": false,
+    "radio": 1.5,
+    "masa_escape": 0.5,
+    "velocidad": 1.5
+  },
+  "comida_grande": 0,
+  "reglas": {
+    "n_chica": 80,
+    "tasa_chica": 2.0,
+    "tasa_grande": 0.2,
+    "e_chica": 50.0,
+    "e_grande": 200.0,
+    "masa_grande": 0.6,
+    "radio_comer": 0.4,
+    "e0": 60.0,
+    "e_div": 100.0,
+    "e_hija": 50.0,
+    "costo_masa": 0.6,
+    "costo_torque": 0.004,
+    "edad_maxima": 2000.0,
+    "max_celulas": 600,
+    "max_grupo": 16,
+    "agitacion": 0.22,
+    "radio_depredador": 1.5,
+    "masa_escape": 0.5
+  }
+}

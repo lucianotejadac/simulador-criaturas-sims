@@ -22,6 +22,19 @@ siete tipos de articulación de Sims. Los cerebros anidados (uno por nodo, más
 centrales) se aplanan al desarrollar. Verificado con tres genomas escritos a
 mano que se ven en el visor (`Etapa 2 · los tres cuerpos juntos`).
 
+**Etapa 8 (abierta):** de la célula al cuerpo (`src/celulas.py`, visor
+`viewer/celulas.html`). Cada célula es un segmento con flagelo propio y siete
+genes (adhesión, cilio, amplitud, frecuencia, desfase heredado, sesgo hacia la
+comida, largo); al dividirse, la hija puede nacer unida a la madre con la
+probabilidad que dice el gen de adhesión, y los árboles de células unidas son
+cuerpos articulados del mundo 2D que nadan en onda viajera si tienen tres o
+más células con cilio y desfase. Presiones activables: depredador que come lo
+que pese menos que un umbral, comida grande que exige masa. Medido antes de
+evolucionar nada: el par de células es un valle (come dos tercios de lo que
+come una sola) y el cuerpo de cuatro gana un 55 % (BITACORA 0026-0028). Con
+una prueba de invasión (la mitad de las fundadoras adhesivas) las colonias
+persisten; partiendo de adhesión cero, en 300 épocas con depredador la adhesión sube a 0.10 y aparecen cuerpos de 3 a 13 células (7 % de las células), y luego retrocede porque las solas aprenden a nadar más rápido y escapan sin unirse; sin presiones nada cambia (el tope congela la evolución).
+
 **Etapa 7 (abierta):** el mismo ecosistema a escala en un mundo 2D viscoso sin
 inercia (`src/mundo2d.py`, `src/ecosistema2d.py`, visor `viewer/acuario2d.html`):
 500 criaturas, mundo de 50 m, comida de dos tamaños que exigen cuerpos distintos.
@@ -112,6 +125,10 @@ python src/ecosistema.py --nombre eco01 --semilla 1 --epocas 30 --especies angui
 # Etapa 7: acuario 2D a escala (240 fundadoras, 90 épocas de 20 s, tope 500)
 python src/ecosistema2d.py --nombre eco2d01 --semilla 1 --epocas 90 --por-especie 40
 
+# Etapa 8: células -> cuerpos (150 fundadoras, 300 épocas de 20 s, tope 600); --depredador, --comida-grande 8,
+# --adhesivas 0.5 (prueba de invasión), --reparto (comida chica como bien público), --ancestro azar
+python src/celulas.py --nombre cel-L1 --semilla 1 --epocas 300 --celulas 150 --depredador --grabar-cada 6
+
 # tests
 python -m pytest -q tests
 
@@ -153,6 +170,7 @@ src/
   develop2d.py       genoma morfológico proyectado al plano
   brain_lote.py      cerebros de muchas criaturas en un solo núcleo
   ecosistema2d.py    acuario a escala en 2D -> viewer/acuario2d.json (visor: viewer/acuario2d.html)
+  celulas.py         células con flagelo que se dividen y se unen -> viewer/celulas-*.json (visor: viewer/celulas.html)
   brain.py           ejecución del grafo neuronal
   fluido.py          arrastre viscoso por cara (modelo de agua de Sims)
   fitness.py         evaluación y aptitud de nado
@@ -174,6 +192,7 @@ BITACORA.md          decisiones de diseño y trampas detectadas
 5. **Etapa 5**: competencia por un cubo entre dos especies. *(cerrada)*
 6. **Etapa 6**: bestiario y ecosistema con energía y comida. *(abierta como laboratorio)*
 7. **Etapa 7**: mundo 2D viscoso sin inercia y ecosistema a escala. *(abierta)*
+8. **Etapa 8**: de la célula al cuerpo: adhesión, cilios y depredador. *(abierta)*
 
 ## Referencias
 

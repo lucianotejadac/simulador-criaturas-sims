@@ -108,7 +108,7 @@ def _cinematica_una(n, madre, anclaje, desvio, largo, theta, pose, centro, phi, 
 
 
 @njit(cache=True)
-def _qdot_una(n, madre, anclaje, desvio, largo, d_along, d_norm, d_rot, torque_max, limite, torque,
+def _qdot_una(n, madre, anclaje, desvio, largo, d_along, d_norm, d_rot, torque_max, limite, torque, empuje,
               pose, theta, dt, c_amort, k_lim, centro, phi, art, anc, R, tau, Jx, Jy, Ja):
     """Velocidades generalizadas de una criatura en la configuración (pose, theta)."""
     _cinematica_una(n, madre, anclaje, desvio, largo, theta, pose, centro, phi, art)
@@ -150,12 +150,14 @@ def _qdot_una(n, madre, anclaje, desvio, largo, d_along, d_norm, d_rot, torque_m
         da = d_along[i]
         dn = d_norm[i]
         dr = d_rot[i]
+        fe = empuje[i]          # empuje externo a lo largo del eje del segmento (flagelo): trabajo generalizado F·Jx
         for p in range(nd):
             jxp = Jx[p]
             jyp = Jy[p]
             jap = Ja[p]
             if jxp == 0.0 and jyp == 0.0 and jap == 0.0:
                 continue
+            tau[p] += fe * jxp
             for q in range(nd):
                 R[p, q] += da * jxp * Jx[q] + dn * jyp * Jy[q] + dr * jap * Ja[q]
     for k in range(1, n):
@@ -174,7 +176,7 @@ def _qdot_una(n, madre, anclaje, desvio, largo, d_along, d_norm, d_rot, torque_m
                 fac = 0.0
             R[3 + k, 3 + k] += dt * abs(tq * tm) * 2.0 * abs(th) / (lim * lim)
             tq = tq * fac
-        tau[3 + k] = tq * tm
+        tau[3 + k] += tq * tm
         R[3 + k, 3 + k] += c_amort * tm + 1e-9
         K = k_lim * tm
         if th > lim:
@@ -189,7 +191,7 @@ def _qdot_una(n, madre, anclaje, desvio, largo, d_along, d_norm, d_rot, torque_m
 
 @njit(cache=True)
 def _paso_lote(B, nseg, madre, anclaje, desvio, largo, d_along, d_norm, d_rot, torque_max, limite,
-               torque, pose, theta, dt, c_amort, k_lim):
+               torque, empuje, pose, theta, dt, c_amort, k_lim):
     maxn = madre.shape[1]
     centro = np.zeros((maxn, 2))
     phi = np.zeros(maxn)
@@ -205,7 +207,7 @@ def _paso_lote(B, nseg, madre, anclaje, desvio, largo, d_along, d_norm, d_rot, t
     for b in range(B):
         n = nseg[b]
         k1 = _qdot_una(n, madre[b], anclaje[b], desvio[b], largo[b], d_along[b], d_norm[b], d_rot[b],
-                       torque_max[b], limite[b], torque[b], pose[b], theta[b], dt, c_amort, k_lim,
+                       torque_max[b], limite[b], torque[b], empuje[b], pose[b], theta[b], dt, c_amort, k_lim,
                        centro, phi, art, anc, R, tau, Jx, Jy, Ja)
         for p in range(3):
             pose_m[p] = pose[b, p] + 0.5 * dt * k1[p]
@@ -213,7 +215,7 @@ def _paso_lote(B, nseg, madre, anclaje, desvio, largo, d_along, d_norm, d_rot, t
             theta_m[k] = theta[b, k] + 0.5 * dt * k1[3 + k]
         theta_m[0] = 0.0
         k2 = _qdot_una(n, madre[b], anclaje[b], desvio[b], largo[b], d_along[b], d_norm[b], d_rot[b],
-                       torque_max[b], limite[b], torque[b], pose_m, theta_m, dt, c_amort, k_lim,
+                       torque_max[b], limite[b], torque[b], empuje[b], pose_m, theta_m, dt, c_amort, k_lim,
                        centro, phi, art, anc, R, tau, Jx, Jy, Ja)
         for p in range(3):
             pose[b, p] += dt * k2[p]
@@ -264,6 +266,7 @@ class Lote:
         self.d_rot = np.ascontiguousarray(K_ARRASTRE_2D * ((8 / 3) * (a * c ** 3 + a ** 3 * c) + (8 / 3) * (b * c ** 3 + b ** 3 * c)))
         self.masa = np.ascontiguousarray((self.largo * self.ancho * ESPESOR * DENSIDAD) * self.mascara)
         self.pose = np.zeros((self.B, 3))
+        self._sin_empuje = np.zeros((self.B, self.N))
         self.theta = np.zeros((self.B, self.N))
         lim = np.full((self.B, self.N), np.radians(limite_grados)) if np.isscalar(limite_grados) else np.radians(limite_grados)
         self.limite = np.ascontiguousarray(lim.astype(np.float64))
@@ -271,10 +274,14 @@ class Lote:
         self._phi = np.zeros((self.B, self.N))
         self._com = np.zeros((self.B, 2))
 
-    def paso(self, torque: np.ndarray, dt: float) -> None:
+    def paso(self, torque: np.ndarray, dt: float, empuje: np.ndarray | None = None) -> None:
+        """Avanza dt. `torque` (B, N) en [-1, 1] por articulación; `empuje` (B, N) en N a lo largo del eje de cada
+        segmento (flagelo propio de la pieza), opcional."""
+        if empuje is None:
+            empuje = self._sin_empuje
         _paso_lote(self.B, self.nseg, self.madre, self.anclaje, self.desvio, self.largo, self.d_along, self.d_norm,
                    self.d_rot, self.torque_max, self.limite, np.ascontiguousarray(torque, dtype=np.float64),
-                   self.pose, self.theta, dt, C_AMORTIGUACION, K_LIMITE)
+                   np.ascontiguousarray(empuje, dtype=np.float64), self.pose, self.theta, dt, C_AMORTIGUACION, K_LIMITE)
 
     def cinematica(self):
         """Centros (B, N, 2), orientaciones (B, N) y centro de masa (B, 2)."""

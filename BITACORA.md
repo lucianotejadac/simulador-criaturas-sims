@@ -1164,3 +1164,227 @@ el visor, que colorea por especie fundadora, no la muestra: las 500 son
 "anguila". Falta colorear por tamaño o por linaje. El visor 2D publicado
 muestra ahora `eco2d02` (épocas 1, 181 y 360); los archivos completos
 quedan en `runs/`.
+
+---
+
+## 0026 · 2026-10-06 · Etapa 8: de la célula al cuerpo (diseño y primera ronda)
+
+**Pregunta.** ¿Pueden células sueltas, en el mismo mundo 2D viscoso de la
+Etapa 7, volverse cuerpos articulados por selección, sin que nadie les
+escriba el cuerpo? Es la transición unicelular → multicelular en miniatura.
+
+**Diseño (`src/celulas.py`, visor `viewer/celulas.html`).**
+- Una célula es un segmento de 8 a 40 cm con siete genes: *adhesión*
+  (probabilidad de que la hija nazca unida a la madre), *cilio* (0/1),
+  amplitud, frecuencia, *retardo* (desfase del cilio respecto del de la
+  madre, heredado: en una cadena produce ondas viajeras), *sesgo* hacia la
+  comida y largo. Una mutación por nacimiento, en un gen al azar.
+- Un grupo es un árbol de células unidas: un cuerpo de `mundo2d`. La
+  división ocurre entre épocas, con la energía de la madre; una célula
+  muerta corta el árbol en subárboles, que siguen vivos como grupos.
+- La física impone la regla del juego desde 0022: una célula sola no puede
+  nadar (ni dos: 0.02 m en 20 s). Tres con cilios y desfase avanzan 1 m por
+  época; cuatro, 2.5–3.7 m; ocho, hasta 6.7 m. Sin desfase, 0.1–0.2 m:
+  el movimiento es casi recíproco. (`tests/test_celulas.py` lo fija.)
+- Las solas se mueven por agitación browniana (1.4 m por época, como en la
+  sopa 0024); un grupo de *n* deriva 1/√*n* de eso. Comer cuesta encontrar:
+  la comida que se come no reaparece al instante, sino a tasa fija (2 por
+  segundo, 80 presentes como máximo), así la regula el alimento y no el tope.
+- La comida que come una célula se reparte por igual entre su grupo (bien
+  público): una célula con adhesión y sin cilio viaja gratis.
+- Presiones a favor del grupo, cada una activable: comida grande que exige
+  masa (dos células), un depredador que come todo lo que pese menos que un
+  umbral, y la propia locomoción. En contra: cada célula cuesta energía.
+- La adhesión parte en 0 en todas. La medida de la transición: fracción de
+  células que vive en grupos de 3 o más; "transición" cuando pasa de 0.5.
+
+**Primera ronda** (200 épocas = 67 min de vida, 150 fundadoras, tope 600):
+
+| corrida | presión | nacimientos | nacidas unidas | adhesión final | máx. pares | máx. grupos ≥ 3 |
+|---|---|---|---|---|---|---|
+| A1, A2 | ninguna | 2505, 2484 | 30, 11 | 0.03, 0.01 | 9, 3 | 1, 0 |
+| B1, B2 | comida grande | 2583, 2471 | 13, 29 | 0.01, 0.02 | 4, 9 | 1, 1 |
+| C1 | depredador débil | 3218 | 17 | 0.01 | 4 | 1 |
+| D1 | grande + depredador | 3215 | 29 | 0.02 | 6 | 2 |
+
+**Qué se vio y por qué.**
+- **Nada de nada en las seis.** Ningún grupo de 3 duró más de una época.
+- **El valle de las dos células.** Un par deriva menos (1/√2), no nada, y
+  reparte cada comida entre dos: por célula come la mitad o menos que una
+  sola. La adhesión es levemente dañina en su primer paso, y la selección la
+  mantiene en cero. El beneficio de nadar recién aparece con tres, y para
+  llegar a tres hay que pasar por dos. Es el problema clásico de la
+  transición: el primer paso no paga.
+- **Pocas tiradas, otra vez (0024).** Con la población saturada en el tope,
+  nacen solo los que reemplazan a los muertos: 10–20 por época, 2500 en toda
+  la corrida, de las cuales 1 de 14 toca la adhesión. Y la cría unida nace
+  con probabilidad igual a la adhesión de la madre (0.1–0.2 tras una
+  mutación): 11 a 30 crías unidas en una hora.
+- **Las presiones eran demasiado suaves.** La comida grande (4 por época)
+  casi nunca cae cerca de un par que deriva; el depredador mató 1–3 % por
+  época y exigía tres células para escapar, es decir, no premiaba el par.
+- **Un gen que sube sin servir.** El sesgo hacia la comida subió de 0 a
+  0.2–0.5 en todas las corridas. En una célula sola no tiene efecto (su
+  cilio no mueve nada), así que es deriva mutacional pura, igual que la
+  complejidad sin función de la sopa. Sirve de control: lo que sube sin
+  presión es ruido.
+
+**Decisión.** Primera ronda registrada como resultado negativo con causa
+identificada. Segunda ronda con tres cambios que atacan el valle, no la
+física: (1) el depredador respeta al par (umbral de escape 0.5 kg) y es
+fuerte (radio 1.5 m, 1.5 m/s: barre un 10 % del mundo por época), (2) una
+mutación por nacimiento y adhesión con paso 0.3, (3) división con una sola
+comida (umbral 100). Un piloto de 60 épocas con esas reglas ya muestra
+adhesión 0.07 y 13–15 pares vivos.
+
+---
+
+## 0027 · 2026-10-06 · El valle de las dos células, medido; y por qué la célula sola tiene flagelo
+
+**Rondas 2 a 4** (todas sin transición; `runs/ronda2-*`, historias guardadas):
+depredador fuerte que respeta al par, mutación en cada nacimiento, comida
+individual (la come quien la toca), ancestro con cilio en todas y recambio
+triple. En 300–400 épocas la adhesión media nunca pasó de 0.07 y los grupos
+de 3 o más fueron siempre menos del 6 % de las células. Antes de seguir
+ajustando a ciegas, dos mediciones directas.
+
+**Prueba de invasión** (`--adhesivas 0.5`: la mitad de las fundadoras nace
+con adhesión 1). Si las adhesivas pierden incluso así, el problema no es el
+camino mutacional sino el beneficio. Perdieron en las tres semillas, con y
+sin depredador: adhesión media de 0.50 a 0.08 en 20 épocas.
+
+**Forrajeo por tamaño** (`scratch/forrajeo.py`: mismo mundo, densidad de
+comida fija, 10 épocas, cadenas bien afinadas con desfase 1 rad y sesgo 2):
+
+| células | comidas por célula y época (reglas de la ronda 4) | desplazamiento |
+|---|---|---|
+| 1 | 0.26 | 0.9 m (deriva) |
+| 2 | 0.13 | 0.6 |
+| 3 | 0.07 | 1.0 |
+| 4 | 0.24 | 2.0 |
+| 6 | 0.33 | 2.8 |
+| 8 | 0.37 | 3.1 |
+
+El valle es ancho y hondo: dos y tres células comen la mitad y la cuarta
+parte que una sola; recién con cuatro se empata y con ocho se gana un 40 %.
+Ninguna selección gradual cruza eso. Y había una causa escondida que
+empeoraba a los grupos reales: cada célula tenía su propia frecuencia de
+cilio, así que en un grupo evolucionado los desfases no formaban onda
+viajera (los cuerpos de 3 y 4 que aparecían se desplazaban 0.3–0.7 m,
+menos que la deriva). Corregido: un cuerpo tiene un solo reloj, el de la
+raíz, y cada célula hereda su desfase respecto de la madre.
+
+**La premisa estaba mal.** El teorema de la vieira (0022) prohíbe nadar a
+un *cuerpo rígido de una pieza*, no a una célula con flagelo: el flagelo es
+un filamento que bate de forma no recíproca. Los coanoflagelados, parientes
+más cercanos de los animales, nadan solos. Lo que la transición cambia no es
+"de inmóvil a móvil" sino "de nadar sola a nadar en cuerpo". Decisión: la
+célula con cilio tiene un empuje propio a lo largo de su eje (0.3 N, 1.2 m
+por época sola, con costo), implementado como fuerza generalizada en
+`mundo2d` (`Lote.paso(..., empuje)`); la onda viajera de un grupo se suma.
+La deriva browniana baja a 0.3 m por época para que nadar importe.
+
+Con eso, el forrajeo queda así (misma prueba):
+
+| células | comidas por célula y época | desplazamiento |
+|---|---|---|
+| 1 | 0.23 | 1.2 m |
+| 2 | 0.15 | 1.0 |
+| 3 | 0.22 | 1.6 |
+| 4 | 0.36 | 2.4 |
+| 6 | 0.35 | 3.0 |
+| 8 | 0.35 | 3.5 |
+
+El valle sigue (el par come dos tercios de lo que come una sola) pero es
+corto: con tres se empata y con cuatro se gana un 55 %. Un depredador que
+respeta al par puede pagar ese peaje. `tests/test_celulas.py` fija las
+proporciones: sola 0.8–1.6 m, par < sola, trío > 1.4 × sola, cuarteto > 2 ×.
+
+**Otras trampas de estas rondas.**
+- **Un mundo demasiado pobre extingue a todos.** Con 120 comidas en 900 m²
+  una nadadora barre 0.1 comidas por época y gastaba 0.15: cuatro rondas se
+  extinguieron por hambre antes de que nada evolucionara. La calibración
+  correcta es medir primero el forrajeo y después fijar el costo con margen:
+  240 comidas presentes, costo basal 0.4/kg·s y 0.3 por N·s de empuje.
+- **El tope de población frena la evolución** (igual que en 0025): en el
+  tope solo nace quien reemplaza a un muerto. El depredador, además de
+  presionar, aporta recambio.
+- **El sesgo saturaba.** Con sesgo 2 el torque de giro tapaba la oscilación
+  y el cuerpo ni siquiera llegaba a la comida de frente; escalado a un
+  cuarto, un cuerpo de 4 reduce de 3.0 a 1.3 m la distancia a una comida
+  lateral en 20 s (`scratch/prueba_sesgo.py`).
+
+---
+
+## 0028 · 2026-10-06 · Con flagelo: las colonias persisten si se las planta, y casi no nacen solas
+
+**Reglas finales de la Etapa 8** (`runs/cel-*/config.json`): célula con
+flagelo propio (0.3 N, costo 0.3 por N·s), un reloj por cuerpo, deriva 0.3 m
+por época, 240 comidas presentes repuestas a 6 por segundo, costo basal
+0.4/kg·s, división con una comida (umbral 100, hija con 50), una mutación
+por nacimiento, tope 600, depredador de radio 1.2 m a 1.2 m/s que respeta
+lo que pesa 0.5 kg o más (dos células medianas). Comida chica individual.
+
+**Prueba de invasión (`cel-K8`, 100 épocas, mitad de las fundadoras con
+adhesión 1, con depredador).** Las colonias no desaparecen ni dominan:
+
+| t (s) | células | solas | pares | cuerpos ≥ 3 (células en ellos) | adhesión media |
+|---|---|---|---|---|---|
+| 20 | 197 | 135 | 31 | 0 (0 %) | 0.51 |
+| 420 | 600 | 347 | 27 | 30 (33 %) | 0.41 |
+| 1220 | 600 | 402 | 29 | 24 (23 %) | 0.34 |
+| 2000 | 600 | 402 | 24 | 27 (25 %) | 0.36 |
+
+Coexistencia estable desde los 800 s: un cuarto de las células vive en
+cuerpos de 3 a 16 células y la adhesión media se queda en 0.35. Los cuerpos
+evolucionados nadan peor que las cadenas afinadas de 0027 (0.5 a 2.9 m por
+época, contra 0.8 de una sola con amplitud media): se ramifican a los
+lados, mezclan amplitudes y desfases, y la mitad de la ventaja teórica se
+pierde. Lo que sí hace el depredador: en el tope, casi todas las muertes son
+suyas y casi todas son células solas.
+
+**Desde adhesión cero** (300 épocas, 150 fundadoras):
+
+| corrida | presión | nacimientos | muertas por el depredador | adhesión máx. (t) | máx. células en cuerpos ≥ 3 | al final |
+|---|---|---|---|---|---|---|
+| M1 | ninguna | 1884 | – | 0.04 (4360 s) | 1 % | 598 solas, 1 par |
+| L1 | depredador | 4368 | 2584 | 0.10 (2660 s) | 7 % | 576 solas, 10 pares, 1 cuerpo de 4 |
+| L2 | depredador | 4547 | 2953 | 0.09 (3460 s) | 7 % | 570 solas, 10 pares, cuerpos de 4 y 6 |
+| L3 | depredador | 4686 | 3128 | 0.10 (3500 s) | 7 % | 580 solas, 4 pares, 4 tríos |
+| N1 | depredador + comida grande | 4481 | 2733 | 0.09 (1720 s) | 8 % | 591 solas, 3 pares, 1 trío |
+
+Con depredador la adhesión sube de 0 a 0.10 en los primeros 45 minutos y
+aparecen cuerpos de 3 a 13 células (hasta el 7 % de las células), y
+después **retrocede**: al final hay menos cuerpos que a la mitad. La causa
+está en la columna del depredador: mata 12–17 células solas por época al
+principio y 2–4 al final. Las solas se adaptaron por otro camino: su
+desplazamiento por época subió de 0.8 a 1.0 m (más amplitud de cilio), y
+con eso escapan del depredador sin unirse. Dos soluciones al mismo problema,
+y la más barata (nadar más rápido) le ganó a la más cara (hacer cuerpo).
+
+**Qué concluye la etapa.**
+- **La transición no es gratis ni en el modelo más favorable.** Con flagelo,
+  depredador que respeta al par, mutación en cada nacimiento y una presión
+  por época, la adhesión partiendo de cero sube a lo sumo a 0.10
+  en 100 minutos de vida. La colonia plantada persiste; la colonia
+  emergente apenas asoma. Es la diferencia entre "ser estable" y "poder
+  invadir desde raro", y el modelo la muestra con claridad.
+- **El tope de población congela la evolución sin depredador.** En `cel-M1`
+  (sin presiones) la población llega a 600 a la época 25 y desde ahí nacen
+  0 a 2 por época: nadie muere, nadie nace, no hay variación que
+  seleccionar. Con depredador, 10–30 muertes por época sostienen el recambio.
+  Lección para el magíster: en un mundo finito la mortalidad es la que da
+  tiradas a la evolución.
+- **Lo que haría falta para ver la transición completa**, en orden de
+  menor a mayor cambio: (1) más tiempo y más recambio (tope más bajo y
+  mortalidad basal), (2) que la hija herede la posición de unión de la madre
+  (cadenas en vez de ramas: los cuerpos nadarían como en 0027), (3) un
+  depredador proporcional (cuanto más chico, más probable morir) en lugar de
+  un umbral. Quedan como apertura de la etapa.
+
+**Decisión.** La etapa queda abierta con el simulador, las cuatro corridas
+publicadas en `viewer/celulas.html` (sin presiones, depredador, depredador
+con comida grande, invasión) y las mediciones de 0027 como método: antes de
+evolucionar, medir el paisaje (forrajeo por tamaño) e invadir con el
+fenotipo final. Las rondas 1–4 quedan en `runs/ronda1-*` y `runs/ronda2-*`
+(solo `historia.json` y `config.json`).

@@ -1,0 +1,31 @@
+{
+  "nombre": "cel-B1",
+  "etapa": 8,
+  "semilla": 1,
+  "epocas": 200,
+  "celulas": 150,
+  "mundo": 30.0,
+  "t_epoca": 20.0,
+  "depredador": false,
+  "comida_grande": 8,
+  "reglas": {
+    "n_chica": 80,
+    "tasa_chica": 2.0,
+    "tasa_grande": 0.2,
+    "e_chica": 50.0,
+    "e_grande": 200.0,
+    "masa_grande": 0.6,
+    "radio_comer": 0.4,
+    "e0": 60.0,
+    "e_div": 110.0,
+    "e_hija": 50.0,
+    "costo_masa": 0.6,
+    "costo_torque": 0.004,
+    "edad_maxima": 2000.0,
+    "max_celulas": 600,
+    "max_grupo": 16,
+    "agitacion": 0.22,
+    "radio_depredador": 1.0,
+    "masa_escape": 0.9
+  }
+}

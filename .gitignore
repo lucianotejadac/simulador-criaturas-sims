@@ -28,3 +28,5 @@ runs/lote_eco2d0*.log
 runs/lote_eco2d0*.err
 runs/lote_sopa*.log
 runs/lote_sopa*.err
+runs/cel-*/acuario2d.json
+runs/logs/

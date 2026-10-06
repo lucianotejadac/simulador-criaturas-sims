@@ -1,0 +1,7343 @@
+[
+ {
+  "epoca": 0,
+  "t": 20.0,
+  "celulas": 188,
+  "grupos": 188,
+  "tamanos": {
+   "1": 188
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.005,
+  "cilio_frac": 0.516,
+  "sesgo_medio": 0.015,
+  "nacimientos": 42,
+  "nacidas_unidas": 0,
+  "muertes": 4,
+  "muertas_por_depredador": 4,
+  "comidas": 47,
+  "desplazamiento_por_tamano": {
+   "1": 1.26
+  },
+  "segundos": 2.3
+ },
+ {
+  "epoca": 1,
+  "t": 40.0,
+  "celulas": 204,
+  "grupos": 204,
+  "tamanos": {
+   "1": 204
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.005,
+  "cilio_frac": 0.505,
+  "sesgo_medio": 0.017,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 3,
+  "muertas_por_depredador": 3,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.2
+  },
+  "segundos": 2.4
+ },
+ {
+  "epoca": 2,
+  "t": 60.0,
+  "celulas": 209,
+  "grupos": 209,
+  "tamanos": {
+   "1": 209
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.004,
+  "cilio_frac": 0.493,
+  "sesgo_medio": 0.031,
+  "nacimientos": 11,
+  "nacidas_unidas": 0,
+  "muertes": 6,
+  "muertas_por_depredador": 6,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.26
+  },
+  "segundos": 2.5
+ },
+ {
+  "epoca": 3,
+  "t": 80.0,
+  "celulas": 215,
+  "grupos": 214,
+  "tamanos": {
+   "1": 213,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.007,
+  "cilio_frac": 0.479,
+  "sesgo_medio": 0.037,
+  "nacimientos": 13,
+  "nacidas_unidas": 1,
+  "muertes": 7,
+  "muertas_por_depredador": 7,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.28
+  },
+  "segundos": 2.6
+ },
+ {
+  "epoca": 4,
+  "t": 100.0,
+  "celulas": 216,
+  "grupos": 215,
+  "tamanos": {
+   "1": 214,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.012,
+  "cilio_frac": 0.472,
+  "sesgo_medio": 0.039,
+  "nacimientos": 10,
+  "nacidas_unidas": 0,
+  "muertes": 9,
+  "muertas_por_depredador": 9,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.73
+  },
+  "segundos": 2.7
+ },
+ {
+  "epoca": 5,
+  "t": 120.0,
+  "celulas": 222,
+  "grupos": 221,
+  "tamanos": {
+   "1": 220,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.013,
+  "cilio_frac": 0.45,
+  "sesgo_medio": 0.041,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 9,
+  "muertas_por_depredador": 9,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 1.11
+  },
+  "segundos": 2.9
+ },
+ {
+  "epoca": 6,
+  "t": 140.0,
+  "celulas": 228,
+  "grupos": 227,
+  "tamanos": {
+   "1": 226,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.014,
+  "cilio_frac": 0.461,
+  "sesgo_medio": 0.041,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 12,
+  "muertas_por_depredador": 12,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.8
+  },
+  "segundos": 2.6
+ },
+ {
+  "epoca": 7,
+  "t": 160.0,
+  "celulas": 244,
+  "grupos": 243,
+  "tamanos": {
+   "1": 242,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.015,
+  "cilio_frac": 0.463,
+  "sesgo_medio": 0.054,
+  "nacimientos": 22,
+  "nacidas_unidas": 0,
+  "muertes": 6,
+  "muertas_por_depredador": 6,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 1.52
+  },
+  "segundos": 2.6
+ },
+ {
+  "epoca": 8,
+  "t": 180.0,
+  "celulas": 254,
+  "grupos": 253,
+  "tamanos": {
+   "1": 252,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.017,
+  "cilio_frac": 0.441,
+  "sesgo_medio": 0.072,
+  "nacimientos": 28,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 18,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.66
+  },
+  "segundos": 2.9
+ },
+ {
+  "epoca": 9,
+  "t": 200.0,
+  "celulas": 266,
+  "grupos": 265,
+  "tamanos": {
+   "1": 264,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.016,
+  "cilio_frac": 0.444,
+  "sesgo_medio": 0.074,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 7,
+  "muertas_por_depredador": 7,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.3,
+   "2": 1.67
+  },
+  "segundos": 2.9
+ },
+ {
+  "epoca": 10,
+  "t": 220.0,
+  "celulas": 282,
+  "grupos": 280,
+  "tamanos": {
+   "1": 278,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.016,
+  "cilio_frac": 0.443,
+  "sesgo_medio": 0.077,
+  "nacimientos": 27,
+  "nacidas_unidas": 1,
+  "muertes": 11,
+  "muertas_por_depredador": 9,
+  "comidas": 50,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.68
+  },
+  "segundos": 3.1
+ },
+ {
+  "epoca": 11,
+  "t": 240.0,
+  "celulas": 284,
+  "grupos": 282,
+  "tamanos": {
+   "1": 280,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.017,
+  "cilio_frac": 0.437,
+  "sesgo_medio": 0.085,
+  "nacimientos": 22,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 18,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.41
+  },
+  "segundos": 3.2
+ },
+ {
+  "epoca": 12,
+  "t": 260.0,
+  "celulas": 294,
+  "grupos": 292,
+  "tamanos": {
+   "1": 290,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.02,
+  "cilio_frac": 0.442,
+  "sesgo_medio": 0.096,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 8,
+  "muertas_por_depredador": 7,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.68
+  },
+  "segundos": 3.3
+ },
+ {
+  "epoca": 13,
+  "t": 280.0,
+  "celulas": 306,
+  "grupos": 304,
+  "tamanos": {
+   "1": 302,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.019,
+  "cilio_frac": 0.448,
+  "sesgo_medio": 0.108,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 7,
+  "muertas_por_depredador": 4,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 1.5
+  },
+  "segundos": 3.2
+ },
+ {
+  "epoca": 14,
+  "t": 300.0,
+  "celulas": 320,
+  "grupos": 318,
+  "tamanos": {
+   "1": 316,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.021,
+  "cilio_frac": 0.441,
+  "sesgo_medio": 0.119,
+  "nacimientos": 23,
+  "nacidas_unidas": 0,
+  "muertes": 9,
+  "muertas_por_depredador": 7,
+  "comidas": 45,
+  "desplazamiento_por_tamano": {
+   "1": 1.35,
+   "2": 0.89
+  },
+  "segundos": 3.3
+ },
+ {
+  "epoca": 15,
+  "t": 320.0,
+  "celulas": 323,
+  "grupos": 320,
+  "tamanos": {
+   "1": 317,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.023,
+  "cilio_frac": 0.433,
+  "sesgo_medio": 0.128,
+  "nacimientos": 21,
+  "nacidas_unidas": 1,
+  "muertes": 18,
+  "muertas_por_depredador": 16,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.96
+  },
+  "segundos": 3.4
+ },
+ {
+  "epoca": 16,
+  "t": 340.0,
+  "celulas": 330,
+  "grupos": 327,
+  "tamanos": {
+   "1": 324,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.025,
+  "cilio_frac": 0.436,
+  "sesgo_medio": 0.134,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 11,
+  "muertas_por_depredador": 8,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 1.36
+  },
+  "segundos": 3.5
+ },
+ {
+  "epoca": 17,
+  "t": 360.0,
+  "celulas": 332,
+  "grupos": 327,
+  "tamanos": {
+   "1": 322,
+   "2": 5
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.029,
+  "cilio_frac": 0.434,
+  "sesgo_medio": 0.143,
+  "nacimientos": 18,
+  "nacidas_unidas": 2,
+  "muertes": 16,
+  "muertas_por_depredador": 12,
+  "comidas": 51,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 1.22
+  },
+  "segundos": 3.6
+ },
+ {
+  "epoca": 18,
+  "t": 380.0,
+  "celulas": 332,
+  "grupos": 326,
+  "tamanos": {
+   "1": 321,
+   "2": 4,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.009,
+  "adhesion_media": 0.031,
+  "cilio_frac": 0.449,
+  "sesgo_medio": 0.148,
+  "nacimientos": 25,
+  "nacidas_unidas": 1,
+  "muertes": 25,
+  "muertas_por_depredador": 23,
+  "comidas": 45,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 1.09
+  },
+  "segundos": 3.6
+ },
+ {
+  "epoca": 19,
+  "t": 400.0,
+  "celulas": 339,
+  "grupos": 332,
+  "tamanos": {
+   "1": 327,
+   "2": 4,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.012,
+  "adhesion_media": 0.034,
+  "cilio_frac": 0.454,
+  "sesgo_medio": 0.148,
+  "nacimientos": 21,
+  "nacidas_unidas": 1,
+  "muertes": 14,
+  "muertas_por_depredador": 6,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.18,
+   "2": 0.82,
+   "3": 1.11
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 20,
+  "t": 420.0,
+  "celulas": 337,
+  "grupos": 330,
+  "tamanos": {
+   "1": 325,
+   "2": 4,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.012,
+  "adhesion_media": 0.035,
+  "cilio_frac": 0.472,
+  "sesgo_medio": 0.153,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 18,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.46,
+   "4": 0.38
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 21,
+  "t": 440.0,
+  "celulas": 336,
+  "grupos": 329,
+  "tamanos": {
+   "1": 324,
+   "2": 4,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.012,
+  "adhesion_media": 0.035,
+  "cilio_frac": 0.467,
+  "sesgo_medio": 0.161,
+  "nacimientos": 11,
+  "nacidas_unidas": 0,
+  "muertes": 12,
+  "muertas_por_depredador": 8,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.69,
+   "4": 0.63
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 22,
+  "t": 460.0,
+  "celulas": 345,
+  "grupos": 338,
+  "tamanos": {
+   "1": 333,
+   "2": 4,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.012,
+  "adhesion_media": 0.036,
+  "cilio_frac": 0.47,
+  "sesgo_medio": 0.185,
+  "nacimientos": 21,
+  "nacidas_unidas": 0,
+  "muertes": 12,
+  "muertas_por_depredador": 10,
+  "comidas": 54,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 1.25,
+   "4": 0.39
+  },
+  "segundos": 3.6
+ },
+ {
+  "epoca": 23,
+  "t": 480.0,
+  "celulas": 350,
+  "grupos": 343,
+  "tamanos": {
+   "1": 338,
+   "2": 4,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.011,
+  "adhesion_media": 0.04,
+  "cilio_frac": 0.46,
+  "sesgo_medio": 0.19,
+  "nacimientos": 16,
+  "nacidas_unidas": 0,
+  "muertes": 11,
+  "muertas_por_depredador": 9,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.94,
+   "4": 0.16
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 24,
+  "t": 500.0,
+  "celulas": 351,
+  "grupos": 344,
+  "tamanos": {
+   "1": 339,
+   "2": 4,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.011,
+  "adhesion_media": 0.041,
+  "cilio_frac": 0.459,
+  "sesgo_medio": 0.199,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 11,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.18,
+   "2": 1.0,
+   "4": 1.26
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 25,
+  "t": 520.0,
+  "celulas": 368,
+  "grupos": 361,
+  "tamanos": {
+   "1": 356,
+   "2": 4,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.011,
+  "adhesion_media": 0.04,
+  "cilio_frac": 0.459,
+  "sesgo_medio": 0.209,
+  "nacimientos": 22,
+  "nacidas_unidas": 0,
+  "muertes": 5,
+  "muertas_por_depredador": 1,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 1.09,
+   "4": 1.04
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 26,
+  "t": 540.0,
+  "celulas": 365,
+  "grupos": 358,
+  "tamanos": {
+   "1": 353,
+   "2": 4,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.011,
+  "adhesion_media": 0.041,
+  "cilio_frac": 0.463,
+  "sesgo_medio": 0.226,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 15,
+  "comidas": 29,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.57,
+   "4": 0.38
+  },
+  "segundos": 4.0
+ },
+ {
+  "epoca": 27,
+  "t": 560.0,
+  "celulas": 353,
+  "grupos": 347,
+  "tamanos": {
+   "1": 342,
+   "2": 4,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.008,
+  "adhesion_media": 0.037,
+  "cilio_frac": 0.462,
+  "sesgo_medio": 0.239,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 29,
+  "muertas_por_depredador": 20,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.79,
+   "4": 0.12
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 28,
+  "t": 580.0,
+  "celulas": 353,
+  "grupos": 349,
+  "tamanos": {
+   "1": 345,
+   "2": 4
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.031,
+  "cilio_frac": 0.456,
+  "sesgo_medio": 0.258,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 12,
+  "comidas": 26,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.64,
+   "3": 0.57
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 29,
+  "t": 600.0,
+  "celulas": 349,
+  "grupos": 346,
+  "tamanos": {
+   "1": 343,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.027,
+  "cilio_frac": 0.467,
+  "sesgo_medio": 0.259,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 10,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 1.04
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 30,
+  "t": 620.0,
+  "celulas": 352,
+  "grupos": 350,
+  "tamanos": {
+   "1": 348,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.022,
+  "cilio_frac": 0.466,
+  "sesgo_medio": 0.254,
+  "nacimientos": 22,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 14,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.44
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 31,
+  "t": 640.0,
+  "celulas": 349,
+  "grupos": 347,
+  "tamanos": {
+   "1": 345,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.02,
+  "cilio_frac": 0.481,
+  "sesgo_medio": 0.225,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 10,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 1.49
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 32,
+  "t": 660.0,
+  "celulas": 346,
+  "grupos": 344,
+  "tamanos": {
+   "1": 342,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.022,
+  "cilio_frac": 0.486,
+  "sesgo_medio": 0.225,
+  "nacimientos": 13,
+  "nacidas_unidas": 0,
+  "muertes": 16,
+  "muertas_por_depredador": 15,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.96
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 33,
+  "t": 680.0,
+  "celulas": 344,
+  "grupos": 342,
+  "tamanos": {
+   "1": 340,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.021,
+  "cilio_frac": 0.491,
+  "sesgo_medio": 0.232,
+  "nacimientos": 11,
+  "nacidas_unidas": 0,
+  "muertes": 13,
+  "muertas_por_depredador": 7,
+  "comidas": 31,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "2": 0.7
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 34,
+  "t": 700.0,
+  "celulas": 343,
+  "grupos": 341,
+  "tamanos": {
+   "1": 339,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.021,
+  "cilio_frac": 0.484,
+  "sesgo_medio": 0.248,
+  "nacimientos": 13,
+  "nacidas_unidas": 0,
+  "muertes": 14,
+  "muertas_por_depredador": 7,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 1.37
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 35,
+  "t": 720.0,
+  "celulas": 354,
+  "grupos": 354,
+  "tamanos": {
+   "1": 354
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.02,
+  "cilio_frac": 0.494,
+  "sesgo_medio": 0.266,
+  "nacimientos": 21,
+  "nacidas_unidas": 0,
+  "muertes": 10,
+  "muertas_por_depredador": 2,
+  "comidas": 52,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 1.19
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 36,
+  "t": 740.0,
+  "celulas": 362,
+  "grupos": 362,
+  "tamanos": {
+   "1": 362
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.019,
+  "cilio_frac": 0.503,
+  "sesgo_medio": 0.262,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 11,
+  "muertas_por_depredador": 6,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.22
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 37,
+  "t": 760.0,
+  "celulas": 363,
+  "grupos": 363,
+  "tamanos": {
+   "1": 363
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.018,
+  "cilio_frac": 0.51,
+  "sesgo_medio": 0.278,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 16,
+  "muertas_por_depredador": 7,
+  "comidas": 29,
+  "desplazamiento_por_tamano": {
+   "1": 1.26
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 38,
+  "t": 780.0,
+  "celulas": 361,
+  "grupos": 360,
+  "tamanos": {
+   "1": 359,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.021,
+  "cilio_frac": 0.518,
+  "sesgo_medio": 0.279,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 19,
+  "muertas_por_depredador": 10,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.25
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 39,
+  "t": 800.0,
+  "celulas": 362,
+  "grupos": 361,
+  "tamanos": {
+   "1": 360,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.026,
+  "cilio_frac": 0.511,
+  "sesgo_medio": 0.283,
+  "nacimientos": 23,
+  "nacidas_unidas": 0,
+  "muertes": 22,
+  "muertas_por_depredador": 17,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.9
+  },
+  "segundos": 4.0
+ },
+ {
+  "epoca": 40,
+  "t": 820.0,
+  "celulas": 356,
+  "grupos": 355,
+  "tamanos": {
+   "1": 354,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.024,
+  "cilio_frac": 0.508,
+  "sesgo_medio": 0.284,
+  "nacimientos": 13,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 15,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.33
+  },
+  "segundos": 4.0
+ },
+ {
+  "epoca": 41,
+  "t": 840.0,
+  "celulas": 350,
+  "grupos": 349,
+  "tamanos": {
+   "1": 348,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.022,
+  "cilio_frac": 0.503,
+  "sesgo_medio": 0.292,
+  "nacimientos": 11,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 9,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.68
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 42,
+  "t": 860.0,
+  "celulas": 350,
+  "grupos": 349,
+  "tamanos": {
+   "1": 348,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.025,
+  "cilio_frac": 0.506,
+  "sesgo_medio": 0.303,
+  "nacimientos": 12,
+  "nacidas_unidas": 0,
+  "muertes": 12,
+  "muertas_por_depredador": 2,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "2": 1.51
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 43,
+  "t": 880.0,
+  "celulas": 363,
+  "grupos": 362,
+  "tamanos": {
+   "1": 361,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.026,
+  "cilio_frac": 0.504,
+  "sesgo_medio": 0.311,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 6,
+  "muertas_por_depredador": 2,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.29,
+   "2": 0.41
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 44,
+  "t": 900.0,
+  "celulas": 358,
+  "grupos": 357,
+  "tamanos": {
+   "1": 356,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.028,
+  "cilio_frac": 0.497,
+  "sesgo_medio": 0.34,
+  "nacimientos": 22,
+  "nacidas_unidas": 0,
+  "muertes": 27,
+  "muertas_por_depredador": 22,
+  "comidas": 45,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 0.48
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 45,
+  "t": 920.0,
+  "celulas": 357,
+  "grupos": 356,
+  "tamanos": {
+   "1": 355,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.027,
+  "cilio_frac": 0.507,
+  "sesgo_medio": 0.352,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 16,
+  "muertas_por_depredador": 12,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.41
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 46,
+  "t": 940.0,
+  "celulas": 354,
+  "grupos": 353,
+  "tamanos": {
+   "1": 352,
+   "2": 1
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.028,
+  "cilio_frac": 0.514,
+  "sesgo_medio": 0.353,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 13,
+  "comidas": 32,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.93
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 47,
+  "t": 960.0,
+  "celulas": 359,
+  "grupos": 357,
+  "tamanos": {
+   "1": 355,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.027,
+  "cilio_frac": 0.513,
+  "sesgo_medio": 0.352,
+  "nacimientos": 14,
+  "nacidas_unidas": 1,
+  "muertes": 9,
+  "muertas_por_depredador": 4,
+  "comidas": 33,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.36
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 48,
+  "t": 980.0,
+  "celulas": 358,
+  "grupos": 355,
+  "tamanos": {
+   "1": 352,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.029,
+  "cilio_frac": 0.525,
+  "sesgo_medio": 0.347,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 18,
+  "muertas_por_depredador": 13,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.87
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 49,
+  "t": 1000.0,
+  "celulas": 359,
+  "grupos": 356,
+  "tamanos": {
+   "1": 353,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.03,
+  "cilio_frac": 0.526,
+  "sesgo_medio": 0.339,
+  "nacimientos": 11,
+  "nacidas_unidas": 0,
+  "muertes": 10,
+  "muertas_por_depredador": 3,
+  "comidas": 31,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 1.13
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 50,
+  "t": 1020.0,
+  "celulas": 362,
+  "grupos": 359,
+  "tamanos": {
+   "1": 356,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.028,
+  "cilio_frac": 0.53,
+  "sesgo_medio": 0.342,
+  "nacimientos": 12,
+  "nacidas_unidas": 0,
+  "muertes": 9,
+  "muertas_por_depredador": 6,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.85
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 51,
+  "t": 1040.0,
+  "celulas": 356,
+  "grupos": 354,
+  "tamanos": {
+   "1": 352,
+   "2": 2
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.026,
+  "cilio_frac": 0.531,
+  "sesgo_medio": 0.344,
+  "nacimientos": 10,
+  "nacidas_unidas": 0,
+  "muertes": 16,
+  "muertas_por_depredador": 7,
+  "comidas": 30,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.6
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 52,
+  "t": 1060.0,
+  "celulas": 353,
+  "grupos": 350,
+  "tamanos": {
+   "1": 347,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.027,
+  "cilio_frac": 0.533,
+  "sesgo_medio": 0.346,
+  "nacimientos": 11,
+  "nacidas_unidas": 1,
+  "muertes": 14,
+  "muertas_por_depredador": 1,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 0.73
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 53,
+  "t": 1080.0,
+  "celulas": 352,
+  "grupos": 349,
+  "tamanos": {
+   "1": 346,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.026,
+  "cilio_frac": 0.534,
+  "sesgo_medio": 0.35,
+  "nacimientos": 13,
+  "nacidas_unidas": 0,
+  "muertes": 14,
+  "muertas_por_depredador": 4,
+  "comidas": 49,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 1.02
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 54,
+  "t": 1100.0,
+  "celulas": 346,
+  "grupos": 343,
+  "tamanos": {
+   "1": 340,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.027,
+  "cilio_frac": 0.523,
+  "sesgo_medio": 0.341,
+  "nacimientos": 12,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 6,
+  "comidas": 32,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 1.46
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 55,
+  "t": 1120.0,
+  "celulas": 351,
+  "grupos": 348,
+  "tamanos": {
+   "1": 345,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.025,
+  "cilio_frac": 0.524,
+  "sesgo_medio": 0.333,
+  "nacimientos": 22,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 14,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.87
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 56,
+  "t": 1140.0,
+  "celulas": 360,
+  "grupos": 357,
+  "tamanos": {
+   "1": 354,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.028,
+  "cilio_frac": 0.519,
+  "sesgo_medio": 0.342,
+  "nacimientos": 24,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 9,
+  "comidas": 50,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 1.24
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 57,
+  "t": 1160.0,
+  "celulas": 364,
+  "grupos": 361,
+  "tamanos": {
+   "1": 358,
+   "2": 3
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.027,
+  "cilio_frac": 0.519,
+  "sesgo_medio": 0.356,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 9,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "2": 0.91
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 58,
+  "t": 1180.0,
+  "celulas": 361,
+  "grupos": 357,
+  "tamanos": {
+   "1": 353,
+   "2": 4
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.03,
+  "cilio_frac": 0.526,
+  "sesgo_medio": 0.363,
+  "nacimientos": 19,
+  "nacidas_unidas": 1,
+  "muertes": 22,
+  "muertas_por_depredador": 7,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 1.12
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 59,
+  "t": 1200.0,
+  "celulas": 369,
+  "grupos": 365,
+  "tamanos": {
+   "1": 361,
+   "2": 4
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.028,
+  "cilio_frac": 0.518,
+  "sesgo_medio": 0.374,
+  "nacimientos": 25,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 13,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.3,
+   "2": 0.74
+  },
+  "segundos": 4.0
+ },
+ {
+  "epoca": 60,
+  "t": 1220.0,
+  "celulas": 367,
+  "grupos": 363,
+  "tamanos": {
+   "1": 359,
+   "2": 4
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.028,
+  "cilio_frac": 0.504,
+  "sesgo_medio": 0.384,
+  "nacimientos": 22,
+  "nacidas_unidas": 2,
+  "muertes": 24,
+  "muertas_por_depredador": 14,
+  "comidas": 47,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 1.14
+  },
+  "segundos": 4.7
+ },
+ {
+  "epoca": 61,
+  "t": 1240.0,
+  "celulas": 368,
+  "grupos": 363,
+  "tamanos": {
+   "1": 358,
+   "2": 5
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.031,
+  "cilio_frac": 0.497,
+  "sesgo_medio": 0.387,
+  "nacimientos": 21,
+  "nacidas_unidas": 2,
+  "muertes": 20,
+  "muertas_por_depredador": 14,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.67
+  },
+  "segundos": 4.6
+ },
+ {
+  "epoca": 62,
+  "t": 1260.0,
+  "celulas": 377,
+  "grupos": 371,
+  "tamanos": {
+   "1": 365,
+   "2": 6
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.032,
+  "cilio_frac": 0.491,
+  "sesgo_medio": 0.396,
+  "nacimientos": 18,
+  "nacidas_unidas": 1,
+  "muertes": 9,
+  "muertas_por_depredador": 4,
+  "comidas": 50,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "2": 1.0
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 63,
+  "t": 1280.0,
+  "celulas": 374,
+  "grupos": 368,
+  "tamanos": {
+   "1": 362,
+   "2": 6
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.032,
+  "cilio_frac": 0.479,
+  "sesgo_medio": 0.421,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 14,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.81
+  },
+  "segundos": 4.7
+ },
+ {
+  "epoca": 64,
+  "t": 1300.0,
+  "celulas": 380,
+  "grupos": 374,
+  "tamanos": {
+   "1": 368,
+   "2": 6
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.031,
+  "cilio_frac": 0.474,
+  "sesgo_medio": 0.423,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 11,
+  "muertas_por_depredador": 9,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "2": 1.01
+  },
+  "segundos": 4.6
+ },
+ {
+  "epoca": 65,
+  "t": 1320.0,
+  "celulas": 378,
+  "grupos": 372,
+  "tamanos": {
+   "1": 366,
+   "2": 6
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.033,
+  "cilio_frac": 0.468,
+  "sesgo_medio": 0.444,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 9,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 1.09
+  },
+  "segundos": 4.7
+ },
+ {
+  "epoca": 66,
+  "t": 1340.0,
+  "celulas": 365,
+  "grupos": 357,
+  "tamanos": {
+   "1": 349,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.035,
+  "cilio_frac": 0.452,
+  "sesgo_medio": 0.453,
+  "nacimientos": 16,
+  "nacidas_unidas": 2,
+  "muertes": 29,
+  "muertas_por_depredador": 21,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.75
+  },
+  "segundos": 4.7
+ },
+ {
+  "epoca": 67,
+  "t": 1360.0,
+  "celulas": 367,
+  "grupos": 359,
+  "tamanos": {
+   "1": 351,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.036,
+  "cilio_frac": 0.436,
+  "sesgo_medio": 0.451,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 13,
+  "muertas_por_depredador": 8,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.62
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 68,
+  "t": 1380.0,
+  "celulas": 357,
+  "grupos": 349,
+  "tamanos": {
+   "1": 341,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.037,
+  "cilio_frac": 0.417,
+  "sesgo_medio": 0.444,
+  "nacimientos": 10,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 16,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.94
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 69,
+  "t": 1400.0,
+  "celulas": 362,
+  "grupos": 354,
+  "tamanos": {
+   "1": 346,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.04,
+  "cilio_frac": 0.428,
+  "sesgo_medio": 0.446,
+  "nacimientos": 25,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 9,
+  "comidas": 51,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.77
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 70,
+  "t": 1420.0,
+  "celulas": 365,
+  "grupos": 358,
+  "tamanos": {
+   "1": 351,
+   "2": 7
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.037,
+  "cilio_frac": 0.427,
+  "sesgo_medio": 0.45,
+  "nacimientos": 13,
+  "nacidas_unidas": 0,
+  "muertes": 10,
+  "muertas_por_depredador": 5,
+  "comidas": 31,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.82
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 71,
+  "t": 1440.0,
+  "celulas": 361,
+  "grupos": 354,
+  "tamanos": {
+   "1": 347,
+   "2": 7
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.036,
+  "cilio_frac": 0.418,
+  "sesgo_medio": 0.452,
+  "nacimientos": 13,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 9,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 1.01
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 72,
+  "t": 1460.0,
+  "celulas": 371,
+  "grupos": 364,
+  "tamanos": {
+   "1": 357,
+   "2": 7
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.036,
+  "cilio_frac": 0.42,
+  "sesgo_medio": 0.466,
+  "nacimientos": 24,
+  "nacidas_unidas": 0,
+  "muertes": 14,
+  "muertas_por_depredador": 10,
+  "comidas": 45,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "2": 0.83
+  },
+  "segundos": 4.0
+ },
+ {
+  "epoca": 73,
+  "t": 1480.0,
+  "celulas": 359,
+  "grupos": 352,
+  "tamanos": {
+   "1": 345,
+   "2": 7
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.035,
+  "cilio_frac": 0.421,
+  "sesgo_medio": 0.468,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 31,
+  "muertas_por_depredador": 27,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 1.06
+  },
+  "segundos": 4.0
+ },
+ {
+  "epoca": 74,
+  "t": 1500.0,
+  "celulas": 352,
+  "grupos": 347,
+  "tamanos": {
+   "1": 342,
+   "2": 5
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.033,
+  "cilio_frac": 0.418,
+  "sesgo_medio": 0.469,
+  "nacimientos": 12,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 13,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.31,
+   "2": 1.2
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 75,
+  "t": 1520.0,
+  "celulas": 336,
+  "grupos": 331,
+  "tamanos": {
+   "1": 326,
+   "2": 5
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.033,
+  "cilio_frac": 0.423,
+  "sesgo_medio": 0.464,
+  "nacimientos": 12,
+  "nacidas_unidas": 0,
+  "muertes": 28,
+  "muertas_por_depredador": 21,
+  "comidas": 29,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.85
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 76,
+  "t": 1540.0,
+  "celulas": 343,
+  "grupos": 338,
+  "tamanos": {
+   "1": 333,
+   "2": 5
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.034,
+  "cilio_frac": 0.408,
+  "sesgo_medio": 0.485,
+  "nacimientos": 16,
+  "nacidas_unidas": 0,
+  "muertes": 9,
+  "muertas_por_depredador": 5,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.65
+  },
+  "segundos": 4.4
+ },
+ {
+  "epoca": 77,
+  "t": 1560.0,
+  "celulas": 351,
+  "grupos": 346,
+  "tamanos": {
+   "1": 341,
+   "2": 5
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.035,
+  "cilio_frac": 0.41,
+  "sesgo_medio": 0.472,
+  "nacimientos": 20,
+  "nacidas_unidas": 1,
+  "muertes": 12,
+  "muertas_por_depredador": 7,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "2": 0.66
+  },
+  "segundos": 4.3
+ },
+ {
+  "epoca": 78,
+  "t": 1580.0,
+  "celulas": 353,
+  "grupos": 347,
+  "tamanos": {
+   "1": 341,
+   "2": 6
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.036,
+  "cilio_frac": 0.408,
+  "sesgo_medio": 0.478,
+  "nacimientos": 14,
+  "nacidas_unidas": 1,
+  "muertes": 12,
+  "muertas_por_depredador": 3,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.87
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 79,
+  "t": 1600.0,
+  "celulas": 362,
+  "grupos": 356,
+  "tamanos": {
+   "1": 350,
+   "2": 6
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.036,
+  "cilio_frac": 0.425,
+  "sesgo_medio": 0.47,
+  "nacimientos": 24,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 9,
+  "comidas": 56,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.74
+  },
+  "segundos": 4.4
+ },
+ {
+  "epoca": 80,
+  "t": 1620.0,
+  "celulas": 350,
+  "grupos": 343,
+  "tamanos": {
+   "1": 336,
+   "2": 7
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.037,
+  "cilio_frac": 0.423,
+  "sesgo_medio": 0.497,
+  "nacimientos": 18,
+  "nacidas_unidas": 3,
+  "muertes": 30,
+  "muertas_por_depredador": 19,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.93
+  },
+  "segundos": 4.4
+ },
+ {
+  "epoca": 81,
+  "t": 1640.0,
+  "celulas": 351,
+  "grupos": 344,
+  "tamanos": {
+   "1": 337,
+   "2": 7
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.037,
+  "cilio_frac": 0.425,
+  "sesgo_medio": 0.504,
+  "nacimientos": 16,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 6,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.88
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 82,
+  "t": 1660.0,
+  "celulas": 362,
+  "grupos": 354,
+  "tamanos": {
+   "1": 346,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.037,
+  "cilio_frac": 0.425,
+  "sesgo_medio": 0.51,
+  "nacimientos": 25,
+  "nacidas_unidas": 1,
+  "muertes": 14,
+  "muertas_por_depredador": 11,
+  "comidas": 49,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.7
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 83,
+  "t": 1680.0,
+  "celulas": 358,
+  "grupos": 350,
+  "tamanos": {
+   "1": 342,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.039,
+  "cilio_frac": 0.43,
+  "sesgo_medio": 0.522,
+  "nacimientos": 14,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 14,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 1.26
+  },
+  "segundos": 4.7
+ },
+ {
+  "epoca": 84,
+  "t": 1700.0,
+  "celulas": 340,
+  "grupos": 331,
+  "tamanos": {
+   "1": 322,
+   "2": 9
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.04,
+  "cilio_frac": 0.441,
+  "sesgo_medio": 0.518,
+  "nacimientos": 13,
+  "nacidas_unidas": 1,
+  "muertes": 31,
+  "muertas_por_depredador": 23,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.87
+  },
+  "segundos": 4.6
+ },
+ {
+  "epoca": 85,
+  "t": 1720.0,
+  "celulas": 337,
+  "grupos": 328,
+  "tamanos": {
+   "1": 319,
+   "2": 9
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.042,
+  "cilio_frac": 0.445,
+  "sesgo_medio": 0.514,
+  "nacimientos": 14,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 12,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.77
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 86,
+  "t": 1740.0,
+  "celulas": 329,
+  "grupos": 320,
+  "tamanos": {
+   "1": 311,
+   "2": 9
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.044,
+  "cilio_frac": 0.438,
+  "sesgo_medio": 0.504,
+  "nacimientos": 9,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 13,
+  "comidas": 29,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 1.03
+  },
+  "segundos": 4.2
+ },
+ {
+  "epoca": 87,
+  "t": 1760.0,
+  "celulas": 330,
+  "grupos": 321,
+  "tamanos": {
+   "1": 312,
+   "2": 9
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.044,
+  "cilio_frac": 0.433,
+  "sesgo_medio": 0.517,
+  "nacimientos": 12,
+  "nacidas_unidas": 0,
+  "muertes": 11,
+  "muertas_por_depredador": 8,
+  "comidas": 31,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.87
+  },
+  "segundos": 3.6
+ },
+ {
+  "epoca": 88,
+  "t": 1780.0,
+  "celulas": 333,
+  "grupos": 325,
+  "tamanos": {
+   "1": 317,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.044,
+  "cilio_frac": 0.426,
+  "sesgo_medio": 0.522,
+  "nacimientos": 16,
+  "nacidas_unidas": 0,
+  "muertes": 13,
+  "muertas_por_depredador": 8,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.79
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 89,
+  "t": 1800.0,
+  "celulas": 347,
+  "grupos": 338,
+  "tamanos": {
+   "1": 329,
+   "2": 9
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.043,
+  "cilio_frac": 0.438,
+  "sesgo_medio": 0.511,
+  "nacimientos": 21,
+  "nacidas_unidas": 1,
+  "muertes": 7,
+  "muertas_por_depredador": 3,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.59
+  },
+  "segundos": 4.2
+ },
+ {
+  "epoca": 90,
+  "t": 1820.0,
+  "celulas": 349,
+  "grupos": 341,
+  "tamanos": {
+   "1": 333,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.043,
+  "cilio_frac": 0.438,
+  "sesgo_medio": 0.519,
+  "nacimientos": 14,
+  "nacidas_unidas": 0,
+  "muertes": 12,
+  "muertas_por_depredador": 6,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.99
+  },
+  "segundos": 4.4
+ },
+ {
+  "epoca": 91,
+  "t": 1840.0,
+  "celulas": 347,
+  "grupos": 339,
+  "tamanos": {
+   "1": 331,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.043,
+  "cilio_frac": 0.447,
+  "sesgo_medio": 0.516,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 15,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.81
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 92,
+  "t": 1860.0,
+  "celulas": 342,
+  "grupos": 333,
+  "tamanos": {
+   "1": 324,
+   "2": 9
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.047,
+  "cilio_frac": 0.444,
+  "sesgo_medio": 0.536,
+  "nacimientos": 16,
+  "nacidas_unidas": 1,
+  "muertes": 21,
+  "muertas_por_depredador": 15,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.94
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 93,
+  "t": 1880.0,
+  "celulas": 354,
+  "grupos": 343,
+  "tamanos": {
+   "1": 334,
+   "2": 8,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.011,
+  "adhesion_media": 0.048,
+  "cilio_frac": 0.441,
+  "sesgo_medio": 0.537,
+  "nacimientos": 22,
+  "nacidas_unidas": 3,
+  "muertes": 10,
+  "muertas_por_depredador": 5,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "2": 1.04
+  },
+  "segundos": 3.6
+ },
+ {
+  "epoca": 94,
+  "t": 1900.0,
+  "celulas": 354,
+  "grupos": 341,
+  "tamanos": {
+   "1": 331,
+   "2": 9,
+   "5": 1
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.441,
+  "sesgo_medio": 0.545,
+  "nacimientos": 20,
+  "nacidas_unidas": 2,
+  "muertes": 20,
+  "muertas_por_depredador": 13,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.98,
+   "4": 0.9
+  },
+  "segundos": 3.7
+ },
+ {
+  "epoca": 95,
+  "t": 1920.0,
+  "celulas": 363,
+  "grupos": 348,
+  "tamanos": {
+   "1": 337,
+   "2": 9,
+   "5": 1,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.022,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.446,
+  "sesgo_medio": 0.553,
+  "nacimientos": 20,
+  "nacidas_unidas": 2,
+  "muertes": 11,
+  "muertas_por_depredador": 5,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 1.08,
+   "5": 0.85
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 96,
+  "t": 1940.0,
+  "celulas": 362,
+  "grupos": 346,
+  "tamanos": {
+   "1": 335,
+   "2": 9,
+   "6": 1,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.025,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.436,
+  "sesgo_medio": 0.565,
+  "nacimientos": 10,
+  "nacidas_unidas": 1,
+  "muertes": 11,
+  "muertas_por_depredador": 5,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "2": 0.73,
+   "5": 0.57,
+   "3": 0.44
+  },
+  "segundos": 4.0
+ },
+ {
+  "epoca": 97,
+  "t": 1960.0,
+  "celulas": 362,
+  "grupos": 345,
+  "tamanos": {
+   "1": 334,
+   "2": 9,
+   "7": 1,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.028,
+  "adhesion_media": 0.051,
+  "cilio_frac": 0.425,
+  "sesgo_medio": 0.571,
+  "nacimientos": 16,
+  "nacidas_unidas": 1,
+  "muertes": 16,
+  "muertas_por_depredador": 8,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.81,
+   "6": 0.56,
+   "3": 1.07
+  },
+  "segundos": 4.6
+ },
+ {
+  "epoca": 98,
+  "t": 1980.0,
+  "celulas": 359,
+  "grupos": 342,
+  "tamanos": {
+   "1": 331,
+   "2": 9,
+   "7": 1,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.028,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.429,
+  "sesgo_medio": 0.583,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 14,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.16,
+   "2": 0.69,
+   "7": 0.28,
+   "3": 1.0
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 99,
+  "t": 2000.0,
+  "celulas": 354,
+  "grupos": 339,
+  "tamanos": {
+   "1": 329,
+   "2": 9,
+   "7": 1
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.051,
+  "cilio_frac": 0.444,
+  "sesgo_medio": 0.606,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 22,
+  "muertas_por_depredador": 14,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.15,
+   "2": 0.92,
+   "7": 0.17,
+   "3": 1.38
+  },
+  "segundos": 3.9
+ },
+ {
+  "epoca": 100,
+  "t": 2020.0,
+  "celulas": 366,
+  "grupos": 350,
+  "tamanos": {
+   "1": 339,
+   "2": 10,
+   "7": 1
+  },
+  "fraccion_en_grupo": 0.019,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.434,
+  "sesgo_medio": 0.6,
+  "nacimientos": 27,
+  "nacidas_unidas": 1,
+  "muertes": 15,
+  "muertas_por_depredador": 9,
+  "comidas": 56,
+  "desplazamiento_por_tamano": {
+   "1": 1.17,
+   "2": 1.01,
+   "7": 0.13
+  },
+  "segundos": 4.2
+ },
+ {
+  "epoca": 101,
+  "t": 2040.0,
+  "celulas": 367,
+  "grupos": 351,
+  "tamanos": {
+   "1": 340,
+   "2": 10,
+   "7": 1
+  },
+  "fraccion_en_grupo": 0.019,
+  "adhesion_media": 0.052,
+  "cilio_frac": 0.441,
+  "sesgo_medio": 0.593,
+  "nacimientos": 18,
+  "nacidas_unidas": 1,
+  "muertes": 17,
+  "muertas_por_depredador": 13,
+  "comidas": 48,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.94,
+   "7": 0.19
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 102,
+  "t": 2060.0,
+  "celulas": 366,
+  "grupos": 349,
+  "tamanos": {
+   "1": 337,
+   "2": 11,
+   "7": 1
+  },
+  "fraccion_en_grupo": 0.019,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.456,
+  "sesgo_medio": 0.584,
+  "nacimientos": 22,
+  "nacidas_unidas": 2,
+  "muertes": 23,
+  "muertas_por_depredador": 14,
+  "comidas": 49,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 1.08,
+   "7": 0.14
+  },
+  "segundos": 3.8
+ },
+ {
+  "epoca": 103,
+  "t": 2080.0,
+  "celulas": 377,
+  "grupos": 360,
+  "tamanos": {
+   "1": 348,
+   "2": 11,
+   "7": 1
+  },
+  "fraccion_en_grupo": 0.019,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.454,
+  "sesgo_medio": 0.582,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 8,
+  "muertas_por_depredador": 4,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 1.04,
+   "7": 0.31
+  },
+  "segundos": 4.1
+ },
+ {
+  "epoca": 104,
+  "t": 2100.0,
+  "celulas": 381,
+  "grupos": 364,
+  "tamanos": {
+   "1": 351,
+   "2": 12,
+   "6": 1
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.459,
+  "sesgo_medio": 0.593,
+  "nacimientos": 16,
+  "nacidas_unidas": 1,
+  "muertes": 12,
+  "muertas_por_depredador": 8,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.75,
+   "7": 0.88
+  },
+  "segundos": 4.2
+ },
+ {
+  "epoca": 105,
+  "t": 2120.0,
+  "celulas": 393,
+  "grupos": 375,
+  "tamanos": {
+   "1": 361,
+   "2": 12,
+   "5": 1,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.051,
+  "cilio_frac": 0.476,
+  "sesgo_medio": 0.581,
+  "nacimientos": 22,
+  "nacidas_unidas": 2,
+  "muertes": 10,
+  "muertas_por_depredador": 4,
+  "comidas": 47,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.87,
+   "6": 1.22
+  },
+  "segundos": 4.2
+ },
+ {
+  "epoca": 106,
+  "t": 2140.0,
+  "celulas": 395,
+  "grupos": 376,
+  "tamanos": {
+   "1": 361,
+   "2": 13,
+   "5": 1,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.045,
+  "cilio_frac": 0.471,
+  "sesgo_medio": 0.599,
+  "nacimientos": 24,
+  "nacidas_unidas": 1,
+  "muertes": 22,
+  "muertas_por_depredador": 20,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.32,
+   "2": 1.13,
+   "5": 1.06,
+   "3": 0.41
+  },
+  "segundos": 4.2
+ },
+ {
+  "epoca": 107,
+  "t": 2160.0,
+  "celulas": 401,
+  "grupos": 383,
+  "tamanos": {
+   "1": 369,
+   "2": 12,
+   "5": 1,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.046,
+  "cilio_frac": 0.471,
+  "sesgo_medio": 0.59,
+  "nacimientos": 16,
+  "nacidas_unidas": 0,
+  "muertes": 10,
+  "muertas_por_depredador": 5,
+  "comidas": 33,
+  "desplazamiento_por_tamano": {
+   "1": 1.3,
+   "2": 0.79,
+   "5": 1.84,
+   "3": 0.21
+  },
+  "segundos": 4.1
+ },
+ {
+  "epoca": 108,
+  "t": 2180.0,
+  "celulas": 405,
+  "grupos": 387,
+  "tamanos": {
+   "1": 372,
+   "2": 13,
+   "4": 1,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.017,
+  "adhesion_media": 0.046,
+  "cilio_frac": 0.474,
+  "sesgo_medio": 0.572,
+  "nacimientos": 18,
+  "nacidas_unidas": 1,
+  "muertes": 14,
+  "muertas_por_depredador": 10,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 1.3,
+   "5": 0.6,
+   "3": 0.96
+  },
+  "segundos": 4.2
+ },
+ {
+  "epoca": 109,
+  "t": 2200.0,
+  "celulas": 402,
+  "grupos": 384,
+  "tamanos": {
+   "1": 370,
+   "2": 11,
+   "4": 1,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.025,
+  "adhesion_media": 0.048,
+  "cilio_frac": 0.47,
+  "sesgo_medio": 0.578,
+  "nacimientos": 12,
+  "nacidas_unidas": 1,
+  "muertes": 15,
+  "muertas_por_depredador": 8,
+  "comidas": 31,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 1.01,
+   "4": 1.22,
+   "3": 0.44
+  },
+  "segundos": 4.1
+ },
+ {
+  "epoca": 110,
+  "t": 2220.0,
+  "celulas": 393,
+  "grupos": 378,
+  "tamanos": {
+   "1": 365,
+   "2": 11,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.046,
+  "cilio_frac": 0.463,
+  "sesgo_medio": 0.563,
+  "nacimientos": 13,
+  "nacidas_unidas": 1,
+  "muertes": 22,
+  "muertas_por_depredador": 14,
+  "comidas": 31,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.86,
+   "4": 1.19,
+   "3": 0.71
+  },
+  "segundos": 4.0
+ },
+ {
+  "epoca": 111,
+  "t": 2240.0,
+  "celulas": 393,
+  "grupos": 378,
+  "tamanos": {
+   "1": 365,
+   "2": 11,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.048,
+  "cilio_frac": 0.461,
+  "sesgo_medio": 0.56,
+  "nacimientos": 13,
+  "nacidas_unidas": 0,
+  "muertes": 13,
+  "muertas_por_depredador": 9,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.29,
+   "2": 0.94,
+   "3": 0.82
+  },
+  "segundos": 4.1
+ },
+ {
+  "epoca": 112,
+  "t": 2260.0,
+  "celulas": 403,
+  "grupos": 386,
+  "tamanos": {
+   "1": 371,
+   "2": 13,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.051,
+  "cilio_frac": 0.462,
+  "sesgo_medio": 0.553,
+  "nacimientos": 21,
+  "nacidas_unidas": 2,
+  "muertes": 11,
+  "muertas_por_depredador": 4,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.9,
+   "3": 0.6
+  },
+  "segundos": 4.1
+ },
+ {
+  "epoca": 113,
+  "t": 2280.0,
+  "celulas": 408,
+  "grupos": 391,
+  "tamanos": {
+   "1": 376,
+   "2": 13,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.458,
+  "sesgo_medio": 0.56,
+  "nacimientos": 14,
+  "nacidas_unidas": 1,
+  "muertes": 9,
+  "muertas_por_depredador": 2,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 1.09,
+   "3": 0.83
+  },
+  "segundos": 4.1
+ },
+ {
+  "epoca": 114,
+  "t": 2300.0,
+  "celulas": 422,
+  "grupos": 406,
+  "tamanos": {
+   "1": 392,
+   "2": 12,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.051,
+  "cilio_frac": 0.455,
+  "sesgo_medio": 0.568,
+  "nacimientos": 23,
+  "nacidas_unidas": 0,
+  "muertes": 9,
+  "muertas_por_depredador": 6,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 1.03,
+   "3": 0.21
+  },
+  "segundos": 4.6
+ },
+ {
+  "epoca": 115,
+  "t": 2320.0,
+  "celulas": 434,
+  "grupos": 417,
+  "tamanos": {
+   "1": 403,
+   "2": 11,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.021,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.456,
+  "sesgo_medio": 0.561,
+  "nacimientos": 19,
+  "nacidas_unidas": 1,
+  "muertes": 7,
+  "muertas_por_depredador": 1,
+  "comidas": 47,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.85,
+   "3": 0.49
+  },
+  "segundos": 4.9
+ },
+ {
+  "epoca": 116,
+  "t": 2340.0,
+  "celulas": 446,
+  "grupos": 428,
+  "tamanos": {
+   "1": 413,
+   "2": 12,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.46,
+  "sesgo_medio": 0.552,
+  "nacimientos": 24,
+  "nacidas_unidas": 1,
+  "muertes": 12,
+  "muertas_por_depredador": 1,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 0.81,
+   "3": 0.58
+  },
+  "segundos": 5.1
+ },
+ {
+  "epoca": 117,
+  "t": 2360.0,
+  "celulas": 444,
+  "grupos": 426,
+  "tamanos": {
+   "1": 411,
+   "2": 12,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.457,
+  "sesgo_medio": 0.534,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 7,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.79,
+   "3": 0.33
+  },
+  "segundos": 4.6
+ },
+ {
+  "epoca": 118,
+  "t": 2380.0,
+  "celulas": 443,
+  "grupos": 425,
+  "tamanos": {
+   "1": 410,
+   "2": 12,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.465,
+  "sesgo_medio": 0.527,
+  "nacimientos": 13,
+  "nacidas_unidas": 1,
+  "muertes": 14,
+  "muertas_por_depredador": 2,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.3,
+   "2": 0.92,
+   "3": 0.8
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 119,
+  "t": 2400.0,
+  "celulas": 441,
+  "grupos": 422,
+  "tamanos": {
+   "1": 406,
+   "2": 13,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.469,
+  "sesgo_medio": 0.524,
+  "nacimientos": 12,
+  "nacidas_unidas": 2,
+  "muertes": 14,
+  "muertas_por_depredador": 3,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.84,
+   "3": 0.83
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 120,
+  "t": 2420.0,
+  "celulas": 442,
+  "grupos": 422,
+  "tamanos": {
+   "1": 406,
+   "2": 13,
+   "3": 2,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.023,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.473,
+  "sesgo_medio": 0.519,
+  "nacimientos": 14,
+  "nacidas_unidas": 2,
+  "muertes": 13,
+  "muertas_por_depredador": 4,
+  "comidas": 48,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.87,
+   "3": 0.64
+  },
+  "segundos": 5.1
+ },
+ {
+  "epoca": 121,
+  "t": 2440.0,
+  "celulas": 445,
+  "grupos": 423,
+  "tamanos": {
+   "1": 405,
+   "2": 15,
+   "4": 1,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.022,
+  "adhesion_media": 0.061,
+  "cilio_frac": 0.476,
+  "sesgo_medio": 0.517,
+  "nacimientos": 23,
+  "nacidas_unidas": 3,
+  "muertes": 20,
+  "muertas_por_depredador": 12,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.97,
+   "3": 0.68,
+   "4": 1.31
+  },
+  "segundos": 5.1
+ },
+ {
+  "epoca": 122,
+  "t": 2460.0,
+  "celulas": 453,
+  "grupos": 428,
+  "tamanos": {
+   "1": 408,
+   "2": 16,
+   "4": 1,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.029,
+  "adhesion_media": 0.066,
+  "cilio_frac": 0.483,
+  "sesgo_medio": 0.526,
+  "nacimientos": 18,
+  "nacidas_unidas": 3,
+  "muertes": 10,
+  "muertas_por_depredador": 5,
+  "comidas": 45,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 1.0,
+   "4": 0.29,
+   "3": 0.76
+  },
+  "segundos": 5.1
+ },
+ {
+  "epoca": 123,
+  "t": 2480.0,
+  "celulas": 437,
+  "grupos": 412,
+  "tamanos": {
+   "1": 393,
+   "2": 14,
+   "4": 1,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.037,
+  "adhesion_media": 0.069,
+  "cilio_frac": 0.49,
+  "sesgo_medio": 0.516,
+  "nacimientos": 13,
+  "nacidas_unidas": 1,
+  "muertes": 29,
+  "muertas_por_depredador": 15,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "2": 0.82,
+   "4": 0.54,
+   "3": 0.57
+  },
+  "segundos": 4.6
+ },
+ {
+  "epoca": 124,
+  "t": 2500.0,
+  "celulas": 432,
+  "grupos": 406,
+  "tamanos": {
+   "1": 387,
+   "2": 13,
+   "4": 1,
+   "3": 5
+  },
+  "fraccion_en_grupo": 0.044,
+  "adhesion_media": 0.071,
+  "cilio_frac": 0.491,
+  "sesgo_medio": 0.516,
+  "nacimientos": 20,
+  "nacidas_unidas": 2,
+  "muertes": 25,
+  "muertas_por_depredador": 17,
+  "comidas": 47,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.8,
+   "4": 0.29,
+   "3": 0.52
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 125,
+  "t": 2520.0,
+  "celulas": 415,
+  "grupos": 388,
+  "tamanos": {
+   "1": 369,
+   "3": 6,
+   "2": 12,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.053,
+  "adhesion_media": 0.072,
+  "cilio_frac": 0.496,
+  "sesgo_medio": 0.532,
+  "nacimientos": 9,
+  "nacidas_unidas": 1,
+  "muertes": 26,
+  "muertas_por_depredador": 21,
+  "comidas": 30,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.68,
+   "4": 0.67,
+   "3": 0.74
+  },
+  "segundos": 5.3
+ },
+ {
+  "epoca": 126,
+  "t": 2540.0,
+  "celulas": 406,
+  "grupos": 380,
+  "tamanos": {
+   "1": 361,
+   "3": 5,
+   "2": 13,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.047,
+  "adhesion_media": 0.07,
+  "cilio_frac": 0.5,
+  "sesgo_medio": 0.527,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 28,
+  "muertas_por_depredador": 23,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "3": 0.83,
+   "2": 0.58,
+   "4": 0.87
+  },
+  "segundos": 5.0
+ },
+ {
+  "epoca": 127,
+  "t": 2560.0,
+  "celulas": 412,
+  "grupos": 385,
+  "tamanos": {
+   "1": 366,
+   "3": 6,
+   "2": 12,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.053,
+  "adhesion_media": 0.071,
+  "cilio_frac": 0.505,
+  "sesgo_medio": 0.534,
+  "nacimientos": 14,
+  "nacidas_unidas": 2,
+  "muertes": 8,
+  "muertas_por_depredador": 1,
+  "comidas": 32,
+  "desplazamiento_por_tamano": {
+   "1": 1.17,
+   "3": 0.74,
+   "2": 0.78,
+   "4": 1.11
+  },
+  "segundos": 4.8
+ },
+ {
+  "epoca": 128,
+  "t": 2580.0,
+  "celulas": 415,
+  "grupos": 387,
+  "tamanos": {
+   "1": 368,
+   "3": 7,
+   "2": 11,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.06,
+  "adhesion_media": 0.072,
+  "cilio_frac": 0.504,
+  "sesgo_medio": 0.547,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 14,
+  "muertas_por_depredador": 2,
+  "comidas": 33,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "3": 0.83,
+   "2": 0.88,
+   "4": 0.79
+  },
+  "segundos": 5.8
+ },
+ {
+  "epoca": 129,
+  "t": 2600.0,
+  "celulas": 414,
+  "grupos": 388,
+  "tamanos": {
+   "1": 371,
+   "3": 7,
+   "2": 9,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.06,
+  "adhesion_media": 0.071,
+  "cilio_frac": 0.5,
+  "sesgo_medio": 0.547,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 18,
+  "muertas_por_depredador": 5,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "3": 0.66,
+   "2": 1.04,
+   "4": 0.78
+  },
+  "segundos": 5.4
+ },
+ {
+  "epoca": 130,
+  "t": 2620.0,
+  "celulas": 422,
+  "grupos": 398,
+  "tamanos": {
+   "1": 382,
+   "3": 6,
+   "2": 9,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.052,
+  "adhesion_media": 0.068,
+  "cilio_frac": 0.495,
+  "sesgo_medio": 0.557,
+  "nacimientos": 26,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 6,
+  "comidas": 47,
+  "desplazamiento_por_tamano": {
+   "1": 1.15,
+   "3": 0.81,
+   "2": 0.77,
+   "4": 0.84
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 131,
+  "t": 2640.0,
+  "celulas": 417,
+  "grupos": 392,
+  "tamanos": {
+   "1": 374,
+   "3": 5,
+   "2": 12,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.046,
+  "adhesion_media": 0.066,
+  "cilio_frac": 0.494,
+  "sesgo_medio": 0.555,
+  "nacimientos": 15,
+  "nacidas_unidas": 2,
+  "muertes": 20,
+  "muertas_por_depredador": 8,
+  "comidas": 27,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "3": 0.77,
+   "2": 0.7,
+   "4": 1.14
+  },
+  "segundos": 5.4
+ },
+ {
+  "epoca": 132,
+  "t": 2660.0,
+  "celulas": 410,
+  "grupos": 385,
+  "tamanos": {
+   "1": 367,
+   "3": 5,
+   "2": 12,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.046,
+  "adhesion_media": 0.065,
+  "cilio_frac": 0.498,
+  "sesgo_medio": 0.553,
+  "nacimientos": 13,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 10,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "3": 0.74,
+   "2": 0.8,
+   "4": 0.51
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 133,
+  "t": 2680.0,
+  "celulas": 402,
+  "grupos": 378,
+  "tamanos": {
+   "1": 360,
+   "3": 4,
+   "2": 13,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.04,
+  "adhesion_media": 0.061,
+  "cilio_frac": 0.502,
+  "sesgo_medio": 0.552,
+  "nacimientos": 20,
+  "nacidas_unidas": 1,
+  "muertes": 28,
+  "muertas_por_depredador": 19,
+  "comidas": 49,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "3": 0.89,
+   "2": 0.81,
+   "4": 1.67
+  },
+  "segundos": 4.8
+ },
+ {
+  "epoca": 134,
+  "t": 2700.0,
+  "celulas": 401,
+  "grupos": 378,
+  "tamanos": {
+   "1": 360,
+   "3": 3,
+   "2": 14,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.032,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.501,
+  "sesgo_medio": 0.563,
+  "nacimientos": 18,
+  "nacidas_unidas": 1,
+  "muertes": 19,
+  "muertas_por_depredador": 14,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.18,
+   "3": 0.92,
+   "2": 0.95,
+   "4": 0.39
+  },
+  "segundos": 4.8
+ },
+ {
+  "epoca": 135,
+  "t": 2720.0,
+  "celulas": 403,
+  "grupos": 377,
+  "tamanos": {
+   "1": 357,
+   "3": 4,
+   "2": 15,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.04,
+  "adhesion_media": 0.061,
+  "cilio_frac": 0.504,
+  "sesgo_medio": 0.557,
+  "nacimientos": 26,
+  "nacidas_unidas": 3,
+  "muertes": 24,
+  "muertas_por_depredador": 21,
+  "comidas": 51,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "3": 0.51,
+   "2": 0.73,
+   "4": 0.46
+  },
+  "segundos": 4.9
+ },
+ {
+  "epoca": 136,
+  "t": 2740.0,
+  "celulas": 405,
+  "grupos": 385,
+  "tamanos": {
+   "1": 367,
+   "3": 2,
+   "2": 16
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.496,
+  "sesgo_medio": 0.558,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 4,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "3": 1.21,
+   "2": 0.84,
+   "4": 0.39
+  },
+  "segundos": 4.3
+ },
+ {
+  "epoca": 137,
+  "t": 2760.0,
+  "celulas": 409,
+  "grupos": 392,
+  "tamanos": {
+   "1": 377,
+   "3": 2,
+   "2": 13
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.501,
+  "sesgo_medio": 0.558,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 5,
+  "comidas": 48,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "3": 1.16,
+   "2": 0.95
+  },
+  "segundos": 4.8
+ },
+ {
+  "epoca": 138,
+  "t": 2780.0,
+  "celulas": 396,
+  "grupos": 380,
+  "tamanos": {
+   "1": 366,
+   "3": 2,
+   "2": 12
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.052,
+  "cilio_frac": 0.508,
+  "sesgo_medio": 0.567,
+  "nacimientos": 9,
+  "nacidas_unidas": 0,
+  "muertes": 22,
+  "muertas_por_depredador": 12,
+  "comidas": 32,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "3": 0.98,
+   "2": 0.85
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 139,
+  "t": 2800.0,
+  "celulas": 397,
+  "grupos": 381,
+  "tamanos": {
+   "1": 367,
+   "3": 2,
+   "2": 12
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.499,
+  "sesgo_medio": 0.58,
+  "nacimientos": 21,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 18,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "3": 0.57,
+   "2": 0.96
+  },
+  "segundos": 5.0
+ },
+ {
+  "epoca": 140,
+  "t": 2820.0,
+  "celulas": 399,
+  "grupos": 384,
+  "tamanos": {
+   "1": 370,
+   "2": 13,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.008,
+  "adhesion_media": 0.054,
+  "cilio_frac": 0.501,
+  "sesgo_medio": 0.597,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 9,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "3": 1.1,
+   "2": 0.59
+  },
+  "segundos": 4.8
+ },
+ {
+  "epoca": 141,
+  "t": 2840.0,
+  "celulas": 404,
+  "grupos": 388,
+  "tamanos": {
+   "1": 374,
+   "2": 12,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.054,
+  "cilio_frac": 0.507,
+  "sesgo_medio": 0.601,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 12,
+  "muertas_por_depredador": 5,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "2": 0.97,
+   "3": 0.92
+  },
+  "segundos": 4.3
+ },
+ {
+  "epoca": 142,
+  "t": 2860.0,
+  "celulas": 398,
+  "grupos": 383,
+  "tamanos": {
+   "1": 370,
+   "2": 11,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.513,
+  "sesgo_medio": 0.582,
+  "nacimientos": 14,
+  "nacidas_unidas": 1,
+  "muertes": 20,
+  "muertas_por_depredador": 12,
+  "comidas": 32,
+  "desplazamiento_por_tamano": {
+   "1": 1.31,
+   "2": 1.21,
+   "3": 0.27
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 143,
+  "t": 2880.0,
+  "celulas": 399,
+  "grupos": 384,
+  "tamanos": {
+   "1": 371,
+   "2": 11,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.524,
+  "sesgo_medio": 0.58,
+  "nacimientos": 16,
+  "nacidas_unidas": 1,
+  "muertes": 15,
+  "muertas_por_depredador": 7,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.7,
+   "3": 0.59
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 144,
+  "t": 2900.0,
+  "celulas": 403,
+  "grupos": 388,
+  "tamanos": {
+   "1": 375,
+   "2": 11,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.531,
+  "sesgo_medio": 0.583,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 13,
+  "muertas_por_depredador": 7,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.81,
+   "3": 0.75
+  },
+  "segundos": 4.8
+ },
+ {
+  "epoca": 145,
+  "t": 2920.0,
+  "celulas": 397,
+  "grupos": 383,
+  "tamanos": {
+   "1": 371,
+   "2": 10,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.516,
+  "sesgo_medio": 0.597,
+  "nacimientos": 16,
+  "nacidas_unidas": 0,
+  "muertes": 22,
+  "muertas_por_depredador": 17,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.89,
+   "3": 1.15
+  },
+  "segundos": 5.4
+ },
+ {
+  "epoca": 146,
+  "t": 2940.0,
+  "celulas": 395,
+  "grupos": 380,
+  "tamanos": {
+   "1": 367,
+   "2": 11,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.062,
+  "cilio_frac": 0.516,
+  "sesgo_medio": 0.603,
+  "nacimientos": 12,
+  "nacidas_unidas": 1,
+  "muertes": 14,
+  "muertas_por_depredador": 8,
+  "comidas": 29,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.94,
+   "3": 1.42
+  },
+  "segundos": 5.8
+ },
+ {
+  "epoca": 147,
+  "t": 2960.0,
+  "celulas": 382,
+  "grupos": 367,
+  "tamanos": {
+   "1": 354,
+   "2": 11,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.06,
+  "cilio_frac": 0.513,
+  "sesgo_medio": 0.59,
+  "nacimientos": 11,
+  "nacidas_unidas": 0,
+  "muertes": 24,
+  "muertas_por_depredador": 17,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.93,
+   "3": 0.8
+  },
+  "segundos": 5.4
+ },
+ {
+  "epoca": 148,
+  "t": 2980.0,
+  "celulas": 376,
+  "grupos": 363,
+  "tamanos": {
+   "1": 351,
+   "2": 11,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.008,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.503,
+  "sesgo_medio": 0.597,
+  "nacimientos": 11,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 4,
+  "comidas": 30,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 1.07,
+   "3": 0.68
+  },
+  "segundos": 5.3
+ },
+ {
+  "epoca": 149,
+  "t": 3000.0,
+  "celulas": 369,
+  "grupos": 353,
+  "tamanos": {
+   "1": 339,
+   "2": 12,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.063,
+  "cilio_frac": 0.499,
+  "sesgo_medio": 0.602,
+  "nacimientos": 13,
+  "nacidas_unidas": 3,
+  "muertes": 20,
+  "muertas_por_depredador": 16,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.98,
+   "3": 0.31
+  },
+  "segundos": 5.9
+ },
+ {
+  "epoca": 150,
+  "t": 3020.0,
+  "celulas": 380,
+  "grupos": 363,
+  "tamanos": {
+   "1": 349,
+   "2": 11,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.024,
+  "adhesion_media": 0.067,
+  "cilio_frac": 0.484,
+  "sesgo_medio": 0.615,
+  "nacimientos": 22,
+  "nacidas_unidas": 1,
+  "muertes": 11,
+  "muertas_por_depredador": 8,
+  "comidas": 54,
+  "desplazamiento_por_tamano": {
+   "1": 1.18,
+   "2": 1.16,
+   "3": 1.24
+  },
+  "segundos": 5.5
+ },
+ {
+  "epoca": 151,
+  "t": 3040.0,
+  "celulas": 368,
+  "grupos": 351,
+  "tamanos": {
+   "1": 337,
+   "2": 11,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.024,
+  "adhesion_media": 0.069,
+  "cilio_frac": 0.478,
+  "sesgo_medio": 0.626,
+  "nacimientos": 11,
+  "nacidas_unidas": 0,
+  "muertes": 23,
+  "muertas_por_depredador": 20,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.61,
+   "3": 0.84
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 152,
+  "t": 3060.0,
+  "celulas": 388,
+  "grupos": 370,
+  "tamanos": {
+   "1": 356,
+   "2": 10,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.031,
+  "adhesion_media": 0.069,
+  "cilio_frac": 0.474,
+  "sesgo_medio": 0.619,
+  "nacimientos": 22,
+  "nacidas_unidas": 1,
+  "muertes": 2,
+  "muertas_por_depredador": 0,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 0.96,
+   "3": 0.53
+  },
+  "segundos": 5.3
+ },
+ {
+  "epoca": 153,
+  "t": 3080.0,
+  "celulas": 374,
+  "grupos": 357,
+  "tamanos": {
+   "1": 344,
+   "2": 9,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.032,
+  "adhesion_media": 0.067,
+  "cilio_frac": 0.479,
+  "sesgo_medio": 0.616,
+  "nacimientos": 14,
+  "nacidas_unidas": 0,
+  "muertes": 28,
+  "muertas_por_depredador": 19,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.72,
+   "3": 0.65
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 154,
+  "t": 3100.0,
+  "celulas": 354,
+  "grupos": 335,
+  "tamanos": {
+   "1": 320,
+   "2": 11,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.034,
+  "adhesion_media": 0.072,
+  "cilio_frac": 0.463,
+  "sesgo_medio": 0.639,
+  "nacimientos": 15,
+  "nacidas_unidas": 2,
+  "muertes": 35,
+  "muertas_por_depredador": 31,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "2": 0.85,
+   "3": 0.69
+  },
+  "segundos": 5.3
+ },
+ {
+  "epoca": 155,
+  "t": 3120.0,
+  "celulas": 355,
+  "grupos": 336,
+  "tamanos": {
+   "1": 322,
+   "2": 10,
+   "3": 3,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.037,
+  "adhesion_media": 0.075,
+  "cilio_frac": 0.476,
+  "sesgo_medio": 0.644,
+  "nacimientos": 18,
+  "nacidas_unidas": 1,
+  "muertes": 17,
+  "muertas_por_depredador": 16,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "2": 0.8,
+   "3": 0.71
+  },
+  "segundos": 5.9
+ },
+ {
+  "epoca": 156,
+  "t": 3140.0,
+  "celulas": 360,
+  "grupos": 341,
+  "tamanos": {
+   "1": 327,
+   "2": 10,
+   "3": 3,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.036,
+  "adhesion_media": 0.073,
+  "cilio_frac": 0.478,
+  "sesgo_medio": 0.637,
+  "nacimientos": 14,
+  "nacidas_unidas": 1,
+  "muertes": 9,
+  "muertas_por_depredador": 5,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.18,
+   "2": 0.61,
+   "3": 0.53,
+   "4": 0.38
+  },
+  "segundos": 4.2
+ },
+ {
+  "epoca": 157,
+  "t": 3160.0,
+  "celulas": 353,
+  "grupos": 335,
+  "tamanos": {
+   "1": 322,
+   "2": 9,
+   "3": 3,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.037,
+  "adhesion_media": 0.078,
+  "cilio_frac": 0.479,
+  "sesgo_medio": 0.635,
+  "nacimientos": 14,
+  "nacidas_unidas": 0,
+  "muertes": 21,
+  "muertas_por_depredador": 14,
+  "comidas": 33,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "2": 0.82,
+   "3": 0.92,
+   "4": 1.27
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 158,
+  "t": 3180.0,
+  "celulas": 357,
+  "grupos": 338,
+  "tamanos": {
+   "1": 324,
+   "2": 10,
+   "3": 3,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.036,
+  "adhesion_media": 0.073,
+  "cilio_frac": 0.49,
+  "sesgo_medio": 0.627,
+  "nacimientos": 29,
+  "nacidas_unidas": 3,
+  "muertes": 25,
+  "muertas_por_depredador": 16,
+  "comidas": 50,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.78,
+   "3": 0.94,
+   "4": 0.97
+  },
+  "segundos": 4.2
+ },
+ {
+  "epoca": 159,
+  "t": 3200.0,
+  "celulas": 359,
+  "grupos": 339,
+  "tamanos": {
+   "2": 11,
+   "1": 324,
+   "3": 3,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.036,
+  "adhesion_media": 0.071,
+  "cilio_frac": 0.487,
+  "sesgo_medio": 0.628,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 15,
+  "muertas_por_depredador": 11,
+  "comidas": 31,
+  "desplazamiento_por_tamano": {
+   "1": 1.29,
+   "2": 0.79,
+   "3": 1.2,
+   "4": 0.93
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 160,
+  "t": 3220.0,
+  "celulas": 354,
+  "grupos": 334,
+  "tamanos": {
+   "2": 13,
+   "1": 318,
+   "3": 2,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.028,
+  "adhesion_media": 0.07,
+  "cilio_frac": 0.489,
+  "sesgo_medio": 0.615,
+  "nacimientos": 19,
+  "nacidas_unidas": 2,
+  "muertes": 24,
+  "muertas_por_depredador": 19,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "2": 0.78,
+   "1": 1.17,
+   "3": 0.39,
+   "4": 1.09
+  },
+  "segundos": 4.5
+ },
+ {
+  "epoca": 161,
+  "t": 3240.0,
+  "celulas": 343,
+  "grupos": 324,
+  "tamanos": {
+   "2": 12,
+   "1": 309,
+   "3": 2,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.029,
+  "adhesion_media": 0.072,
+  "cilio_frac": 0.504,
+  "sesgo_medio": 0.593,
+  "nacimientos": 12,
+  "nacidas_unidas": 0,
+  "muertes": 23,
+  "muertas_por_depredador": 16,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "2": 0.84,
+   "1": 1.17,
+   "3": 0.7,
+   "4": 0.08
+  },
+  "segundos": 5.4
+ },
+ {
+  "epoca": 162,
+  "t": 3260.0,
+  "celulas": 348,
+  "grupos": 330,
+  "tamanos": {
+   "1": 316,
+   "3": 2,
+   "2": 11,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.029,
+  "adhesion_media": 0.071,
+  "cilio_frac": 0.506,
+  "sesgo_medio": 0.593,
+  "nacimientos": 15,
+  "nacidas_unidas": 1,
+  "muertes": 10,
+  "muertas_por_depredador": 4,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "2": 0.69,
+   "1": 1.22,
+   "3": 0.63,
+   "4": 0.1
+  },
+  "segundos": 5.3
+ },
+ {
+  "epoca": 163,
+  "t": 3280.0,
+  "celulas": 359,
+  "grupos": 339,
+  "tamanos": {
+   "1": 325,
+   "5": 1,
+   "2": 11,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.033,
+  "adhesion_media": 0.072,
+  "cilio_frac": 0.496,
+  "sesgo_medio": 0.584,
+  "nacimientos": 15,
+  "nacidas_unidas": 2,
+  "muertes": 4,
+  "muertas_por_depredador": 3,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "3": 0.28,
+   "2": 0.72,
+   "4": 0.36
+  },
+  "segundos": 6.3
+ },
+ {
+  "epoca": 164,
+  "t": 3300.0,
+  "celulas": 373,
+  "grupos": 352,
+  "tamanos": {
+   "1": 338,
+   "6": 1,
+   "2": 11,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.035,
+  "adhesion_media": 0.074,
+  "cilio_frac": 0.507,
+  "sesgo_medio": 0.583,
+  "nacimientos": 24,
+  "nacidas_unidas": 1,
+  "muertes": 10,
+  "muertas_por_depredador": 5,
+  "comidas": 53,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "5": 0.54,
+   "2": 0.77,
+   "3": 0.3,
+   "4": 1.18
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 165,
+  "t": 3320.0,
+  "celulas": 371,
+  "grupos": 351,
+  "tamanos": {
+   "1": 337,
+   "6": 1,
+   "2": 12,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.027,
+  "adhesion_media": 0.065,
+  "cilio_frac": 0.507,
+  "sesgo_medio": 0.58,
+  "nacimientos": 21,
+  "nacidas_unidas": 0,
+  "muertes": 23,
+  "muertas_por_depredador": 17,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "6": 0.38,
+   "2": 0.74,
+   "3": 0.78,
+   "4": 0.34
+  },
+  "segundos": 6.8
+ },
+ {
+  "epoca": 166,
+  "t": 3340.0,
+  "celulas": 370,
+  "grupos": 353,
+  "tamanos": {
+   "1": 340,
+   "6": 1,
+   "2": 12
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.062,
+  "cilio_frac": 0.495,
+  "sesgo_medio": 0.574,
+  "nacimientos": 23,
+  "nacidas_unidas": 0,
+  "muertes": 24,
+  "muertas_por_depredador": 20,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "6": 0.81,
+   "2": 1.04,
+   "4": 1.19
+  },
+  "segundos": 5.9
+ },
+ {
+  "epoca": 167,
+  "t": 3360.0,
+  "celulas": 380,
+  "grupos": 364,
+  "tamanos": {
+   "1": 352,
+   "6": 1,
+   "2": 11
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.487,
+  "sesgo_medio": 0.575,
+  "nacimientos": 21,
+  "nacidas_unidas": 0,
+  "muertes": 11,
+  "muertas_por_depredador": 7,
+  "comidas": 45,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "6": 1.08,
+   "2": 0.81
+  },
+  "segundos": 6.3
+ },
+ {
+  "epoca": 168,
+  "t": 3380.0,
+  "celulas": 394,
+  "grupos": 378,
+  "tamanos": {
+   "1": 366,
+   "6": 1,
+   "2": 11
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.06,
+  "cilio_frac": 0.482,
+  "sesgo_medio": 0.574,
+  "nacimientos": 26,
+  "nacidas_unidas": 0,
+  "muertes": 12,
+  "muertas_por_depredador": 10,
+  "comidas": 49,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "6": 0.41,
+   "2": 0.72
+  },
+  "segundos": 7.8
+ },
+ {
+  "epoca": 169,
+  "t": 3400.0,
+  "celulas": 394,
+  "grupos": 380,
+  "tamanos": {
+   "1": 370,
+   "6": 1,
+   "2": 9
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.058,
+  "cilio_frac": 0.48,
+  "sesgo_medio": 0.566,
+  "nacimientos": 16,
+  "nacidas_unidas": 0,
+  "muertes": 16,
+  "muertas_por_depredador": 11,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "6": 0.2,
+   "2": 0.83
+  },
+  "segundos": 7.1
+ },
+ {
+  "epoca": 170,
+  "t": 3420.0,
+  "celulas": 400,
+  "grupos": 386,
+  "tamanos": {
+   "1": 376,
+   "6": 1,
+   "2": 9
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.06,
+  "cilio_frac": 0.487,
+  "sesgo_medio": 0.559,
+  "nacimientos": 23,
+  "nacidas_unidas": 1,
+  "muertes": 17,
+  "muertas_por_depredador": 10,
+  "comidas": 52,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "6": 0.33,
+   "2": 0.87
+  },
+  "segundos": 5.8
+ },
+ {
+  "epoca": 171,
+  "t": 3440.0,
+  "celulas": 398,
+  "grupos": 385,
+  "tamanos": {
+   "1": 376,
+   "6": 1,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.477,
+  "sesgo_medio": 0.547,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 13,
+  "comidas": 45,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "6": 0.18,
+   "2": 0.87
+  },
+  "segundos": 7.3
+ },
+ {
+  "epoca": 172,
+  "t": 3460.0,
+  "celulas": 407,
+  "grupos": 394,
+  "tamanos": {
+   "1": 385,
+   "6": 1,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.491,
+  "sesgo_medio": 0.548,
+  "nacimientos": 22,
+  "nacidas_unidas": 0,
+  "muertes": 13,
+  "muertas_por_depredador": 11,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "6": 0.09,
+   "2": 0.92
+  },
+  "segundos": 5.5
+ },
+ {
+  "epoca": 173,
+  "t": 3480.0,
+  "celulas": 411,
+  "grupos": 399,
+  "tamanos": {
+   "1": 391,
+   "6": 1,
+   "2": 7
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.496,
+  "sesgo_medio": 0.541,
+  "nacimientos": 16,
+  "nacidas_unidas": 0,
+  "muertes": 12,
+  "muertas_por_depredador": 4,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "6": 0.45,
+   "2": 0.78
+  },
+  "segundos": 5.9
+ },
+ {
+  "epoca": 174,
+  "t": 3500.0,
+  "celulas": 427,
+  "grupos": 414,
+  "tamanos": {
+   "1": 405,
+   "6": 1,
+   "2": 8
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.494,
+  "sesgo_medio": 0.546,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 1,
+  "muertas_por_depredador": 0,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "6": 0.4,
+   "2": 1.06
+  },
+  "segundos": 6.0
+ },
+ {
+  "epoca": 175,
+  "t": 3520.0,
+  "celulas": 435,
+  "grupos": 420,
+  "tamanos": {
+   "1": 409,
+   "6": 1,
+   "2": 10
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.492,
+  "sesgo_medio": 0.539,
+  "nacimientos": 16,
+  "nacidas_unidas": 2,
+  "muertes": 8,
+  "muertas_por_depredador": 1,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "6": 0.96,
+   "2": 0.74
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 176,
+  "t": 3540.0,
+  "celulas": 432,
+  "grupos": 416,
+  "tamanos": {
+   "1": 405,
+   "6": 1,
+   "2": 9,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.021,
+  "adhesion_media": 0.06,
+  "cilio_frac": 0.491,
+  "sesgo_medio": 0.542,
+  "nacimientos": 22,
+  "nacidas_unidas": 3,
+  "muertes": 25,
+  "muertas_por_depredador": 16,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "6": 0.47,
+   "2": 0.76
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 177,
+  "t": 3560.0,
+  "celulas": 436,
+  "grupos": 417,
+  "tamanos": {
+   "1": 405,
+   "6": 1,
+   "2": 9,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.03,
+  "adhesion_media": 0.063,
+  "cilio_frac": 0.493,
+  "sesgo_medio": 0.545,
+  "nacimientos": 19,
+  "nacidas_unidas": 4,
+  "muertes": 15,
+  "muertas_por_depredador": 12,
+  "comidas": 33,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "6": 0.4,
+   "2": 0.65,
+   "3": 0.18
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 178,
+  "t": 3580.0,
+  "celulas": 446,
+  "grupos": 427,
+  "tamanos": {
+   "1": 415,
+   "6": 1,
+   "2": 9,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.029,
+  "adhesion_media": 0.062,
+  "cilio_frac": 0.491,
+  "sesgo_medio": 0.547,
+  "nacimientos": 19,
+  "nacidas_unidas": 0,
+  "muertes": 9,
+  "muertas_por_depredador": 3,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "6": 0.5,
+   "2": 0.83,
+   "3": 0.59,
+   "4": 0.72
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 179,
+  "t": 3600.0,
+  "celulas": 450,
+  "grupos": 435,
+  "tamanos": {
+   "1": 423,
+   "2": 10,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.06,
+  "cilio_frac": 0.498,
+  "sesgo_medio": 0.545,
+  "nacimientos": 22,
+  "nacidas_unidas": 1,
+  "muertes": 18,
+  "muertas_por_depredador": 9,
+  "comidas": 52,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "6": 0.96,
+   "2": 0.8,
+   "3": 0.27,
+   "4": 0.53
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 180,
+  "t": 3620.0,
+  "celulas": 438,
+  "grupos": 422,
+  "tamanos": {
+   "1": 409,
+   "2": 11,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.061,
+  "cilio_frac": 0.507,
+  "sesgo_medio": 0.543,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 29,
+  "muertas_por_depredador": 19,
+  "comidas": 50,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.72,
+   "3": 0.76,
+   "4": 0.37
+  },
+  "segundos": 7.2
+ },
+ {
+  "epoca": 181,
+  "t": 3640.0,
+  "celulas": 440,
+  "grupos": 423,
+  "tamanos": {
+   "1": 409,
+   "2": 12,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.502,
+  "sesgo_medio": 0.531,
+  "nacimientos": 22,
+  "nacidas_unidas": 3,
+  "muertes": 20,
+  "muertas_por_depredador": 14,
+  "comidas": 45,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 1.11,
+   "3": 1.16,
+   "4": 0.47
+  },
+  "segundos": 6.3
+ },
+ {
+  "epoca": 182,
+  "t": 3660.0,
+  "celulas": 448,
+  "grupos": 432,
+  "tamanos": {
+   "1": 419,
+   "2": 11,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.504,
+  "sesgo_medio": 0.518,
+  "nacimientos": 20,
+  "nacidas_unidas": 0,
+  "muertes": 12,
+  "muertas_por_depredador": 3,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 1.07,
+   "3": 0.87,
+   "4": 0.82
+  },
+  "segundos": 9.4
+ },
+ {
+  "epoca": 183,
+  "t": 3680.0,
+  "celulas": 453,
+  "grupos": 436,
+  "tamanos": {
+   "1": 422,
+   "2": 12,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.503,
+  "sesgo_medio": 0.503,
+  "nacimientos": 20,
+  "nacidas_unidas": 1,
+  "muertes": 15,
+  "muertas_por_depredador": 12,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.97,
+   "3": 0.94,
+   "4": 0.66
+  },
+  "segundos": 7.9
+ },
+ {
+  "epoca": 184,
+  "t": 3700.0,
+  "celulas": 462,
+  "grupos": 445,
+  "tamanos": {
+   "1": 431,
+   "2": 12,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.06,
+  "cilio_frac": 0.5,
+  "sesgo_medio": 0.507,
+  "nacimientos": 23,
+  "nacidas_unidas": 0,
+  "muertes": 14,
+  "muertas_por_depredador": 7,
+  "comidas": 33,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 0.69,
+   "3": 0.62,
+   "4": 0.34
+  },
+  "segundos": 7.4
+ },
+ {
+  "epoca": 185,
+  "t": 3720.0,
+  "celulas": 470,
+  "grupos": 451,
+  "tamanos": {
+   "1": 435,
+   "2": 14,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.062,
+  "cilio_frac": 0.502,
+  "sesgo_medio": 0.504,
+  "nacimientos": 17,
+  "nacidas_unidas": 2,
+  "muertes": 9,
+  "muertas_por_depredador": 5,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.82,
+   "3": 0.6,
+   "4": 0.48
+  },
+  "segundos": 7.3
+ },
+ {
+  "epoca": 186,
+  "t": 3740.0,
+  "celulas": 475,
+  "grupos": 456,
+  "tamanos": {
+   "1": 440,
+   "2": 14,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.064,
+  "cilio_frac": 0.497,
+  "sesgo_medio": 0.497,
+  "nacimientos": 14,
+  "nacidas_unidas": 1,
+  "muertes": 9,
+  "muertas_por_depredador": 0,
+  "comidas": 30,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.98,
+   "3": 0.8,
+   "4": 0.66
+  },
+  "segundos": 9.0
+ },
+ {
+  "epoca": 187,
+  "t": 3760.0,
+  "celulas": 476,
+  "grupos": 457,
+  "tamanos": {
+   "1": 441,
+   "2": 14,
+   "3": 1,
+   "4": 1
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.065,
+  "cilio_frac": 0.504,
+  "sesgo_medio": 0.485,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 12,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.8,
+   "3": 0.56,
+   "4": 0.35
+  },
+  "segundos": 8.2
+ },
+ {
+  "epoca": 188,
+  "t": 3780.0,
+  "celulas": 472,
+  "grupos": 453,
+  "tamanos": {
+   "1": 437,
+   "2": 13,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.019,
+  "adhesion_media": 0.065,
+  "cilio_frac": 0.498,
+  "sesgo_medio": 0.479,
+  "nacimientos": 13,
+  "nacidas_unidas": 1,
+  "muertes": 17,
+  "muertas_por_depredador": 10,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.96,
+   "3": 0.7,
+   "4": 0.16
+  },
+  "segundos": 6.8
+ },
+ {
+  "epoca": 189,
+  "t": 3800.0,
+  "celulas": 478,
+  "grupos": 459,
+  "tamanos": {
+   "1": 443,
+   "2": 13,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.019,
+  "adhesion_media": 0.067,
+  "cilio_frac": 0.506,
+  "sesgo_medio": 0.482,
+  "nacimientos": 16,
+  "nacidas_unidas": 1,
+  "muertes": 10,
+  "muertas_por_depredador": 4,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.89,
+   "3": 0.36
+  },
+  "segundos": 6.9
+ },
+ {
+  "epoca": 190,
+  "t": 3820.0,
+  "celulas": 478,
+  "grupos": 459,
+  "tamanos": {
+   "1": 443,
+   "2": 13,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.019,
+  "adhesion_media": 0.067,
+  "cilio_frac": 0.51,
+  "sesgo_medio": 0.506,
+  "nacimientos": 22,
+  "nacidas_unidas": 0,
+  "muertes": 22,
+  "muertas_por_depredador": 11,
+  "comidas": 47,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.92,
+   "3": 0.64
+  },
+  "segundos": 8.1
+ },
+ {
+  "epoca": 191,
+  "t": 3840.0,
+  "celulas": 469,
+  "grupos": 454,
+  "tamanos": {
+   "1": 440,
+   "2": 13,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.006,
+  "adhesion_media": 0.068,
+  "cilio_frac": 0.514,
+  "sesgo_medio": 0.494,
+  "nacimientos": 14,
+  "nacidas_unidas": 2,
+  "muertes": 23,
+  "muertas_por_depredador": 14,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.8,
+   "3": 0.62
+  },
+  "segundos": 8.2
+ },
+ {
+  "epoca": 192,
+  "t": 3860.0,
+  "celulas": 458,
+  "grupos": 443,
+  "tamanos": {
+   "1": 429,
+   "2": 13,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.007,
+  "adhesion_media": 0.069,
+  "cilio_frac": 0.502,
+  "sesgo_medio": 0.493,
+  "nacimientos": 21,
+  "nacidas_unidas": 1,
+  "muertes": 32,
+  "muertas_por_depredador": 28,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.96,
+   "3": 0.22
+  },
+  "segundos": 7.3
+ },
+ {
+  "epoca": 193,
+  "t": 3880.0,
+  "celulas": 444,
+  "grupos": 428,
+  "tamanos": {
+   "1": 413,
+   "2": 14,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.007,
+  "adhesion_media": 0.073,
+  "cilio_frac": 0.495,
+  "sesgo_medio": 0.502,
+  "nacimientos": 12,
+  "nacidas_unidas": 1,
+  "muertes": 26,
+  "muertas_por_depredador": 20,
+  "comidas": 30,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.87,
+   "3": 0.14
+  },
+  "segundos": 6.3
+ },
+ {
+  "epoca": 194,
+  "t": 3900.0,
+  "celulas": 431,
+  "grupos": 415,
+  "tamanos": {
+   "1": 400,
+   "2": 14,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.007,
+  "adhesion_media": 0.074,
+  "cilio_frac": 0.499,
+  "sesgo_medio": 0.496,
+  "nacimientos": 14,
+  "nacidas_unidas": 0,
+  "muertes": 27,
+  "muertas_por_depredador": 21,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 1.11,
+   "3": 0.44
+  },
+  "segundos": 7.0
+ },
+ {
+  "epoca": 195,
+  "t": 3920.0,
+  "celulas": 439,
+  "grupos": 423,
+  "tamanos": {
+   "1": 408,
+   "2": 14,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.007,
+  "adhesion_media": 0.072,
+  "cilio_frac": 0.49,
+  "sesgo_medio": 0.502,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 9,
+  "muertas_por_depredador": 6,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.71,
+   "3": 0.45
+  },
+  "segundos": 7.5
+ },
+ {
+  "epoca": 196,
+  "t": 3940.0,
+  "celulas": 436,
+  "grupos": 420,
+  "tamanos": {
+   "1": 405,
+   "2": 14,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.007,
+  "adhesion_media": 0.075,
+  "cilio_frac": 0.482,
+  "sesgo_medio": 0.515,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 21,
+  "muertas_por_depredador": 16,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.78,
+   "3": 0.44
+  },
+  "segundos": 7.0
+ },
+ {
+  "epoca": 197,
+  "t": 3960.0,
+  "celulas": 444,
+  "grupos": 428,
+  "tamanos": {
+   "1": 413,
+   "2": 14,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.007,
+  "adhesion_media": 0.072,
+  "cilio_frac": 0.482,
+  "sesgo_medio": 0.509,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 10,
+  "muertas_por_depredador": 6,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.91,
+   "3": 1.11
+  },
+  "segundos": 7.0
+ },
+ {
+  "epoca": 198,
+  "t": 3980.0,
+  "celulas": 452,
+  "grupos": 436,
+  "tamanos": {
+   "1": 422,
+   "2": 12,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.07,
+  "cilio_frac": 0.471,
+  "sesgo_medio": 0.496,
+  "nacimientos": 26,
+  "nacidas_unidas": 2,
+  "muertes": 18,
+  "muertas_por_depredador": 12,
+  "comidas": 58,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.96,
+   "3": 0.54
+  },
+  "segundos": 6.6
+ },
+ {
+  "epoca": 199,
+  "t": 4000.0,
+  "celulas": 457,
+  "grupos": 440,
+  "tamanos": {
+   "1": 425,
+   "2": 13,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.07,
+  "cilio_frac": 0.46,
+  "sesgo_medio": 0.507,
+  "nacimientos": 24,
+  "nacidas_unidas": 1,
+  "muertes": 19,
+  "muertas_por_depredador": 9,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.68,
+   "3": 0.5
+  },
+  "segundos": 6.0
+ },
+ {
+  "epoca": 200,
+  "t": 4020.0,
+  "celulas": 462,
+  "grupos": 445,
+  "tamanos": {
+   "1": 430,
+   "2": 13,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.071,
+  "cilio_frac": 0.452,
+  "sesgo_medio": 0.507,
+  "nacimientos": 19,
+  "nacidas_unidas": 2,
+  "muertes": 14,
+  "muertas_por_depredador": 10,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 0.77,
+   "3": 0.83
+  },
+  "segundos": 6.6
+ },
+ {
+  "epoca": 201,
+  "t": 4040.0,
+  "celulas": 455,
+  "grupos": 435,
+  "tamanos": {
+   "1": 418,
+   "2": 14,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.072,
+  "cilio_frac": 0.455,
+  "sesgo_medio": 0.524,
+  "nacimientos": 19,
+  "nacidas_unidas": 3,
+  "muertes": 26,
+  "muertas_por_depredador": 25,
+  "comidas": 32,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.84,
+   "3": 0.6
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 202,
+  "t": 4060.0,
+  "celulas": 449,
+  "grupos": 427,
+  "tamanos": {
+   "1": 408,
+   "2": 16,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.075,
+  "cilio_frac": 0.454,
+  "sesgo_medio": 0.505,
+  "nacimientos": 11,
+  "nacidas_unidas": 2,
+  "muertes": 17,
+  "muertas_por_depredador": 11,
+  "comidas": 30,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.73,
+   "3": 0.93
+  },
+  "segundos": 6.3
+ },
+ {
+  "epoca": 203,
+  "t": 4080.0,
+  "celulas": 455,
+  "grupos": 434,
+  "tamanos": {
+   "1": 415,
+   "2": 17,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.074,
+  "cilio_frac": 0.455,
+  "sesgo_medio": 0.502,
+  "nacimientos": 13,
+  "nacidas_unidas": 1,
+  "muertes": 7,
+  "muertas_por_depredador": 2,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.99,
+   "3": 0.66
+  },
+  "segundos": 6.4
+ },
+ {
+  "epoca": 204,
+  "t": 4100.0,
+  "celulas": 444,
+  "grupos": 423,
+  "tamanos": {
+   "1": 404,
+   "2": 17,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.075,
+  "cilio_frac": 0.471,
+  "sesgo_medio": 0.517,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 28,
+  "muertas_por_depredador": 25,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.78,
+   "3": 0.62
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 205,
+  "t": 4120.0,
+  "celulas": 418,
+  "grupos": 400,
+  "tamanos": {
+   "1": 384,
+   "2": 14,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.075,
+  "cilio_frac": 0.464,
+  "sesgo_medio": 0.512,
+  "nacimientos": 20,
+  "nacidas_unidas": 1,
+  "muertes": 46,
+  "muertas_por_depredador": 40,
+  "comidas": 31,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 0.84,
+   "3": 0.41
+  },
+  "segundos": 6.0
+ },
+ {
+  "epoca": 206,
+  "t": 4140.0,
+  "celulas": 407,
+  "grupos": 388,
+  "tamanos": {
+   "1": 371,
+   "2": 15,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.079,
+  "cilio_frac": 0.464,
+  "sesgo_medio": 0.505,
+  "nacimientos": 21,
+  "nacidas_unidas": 1,
+  "muertes": 32,
+  "muertas_por_depredador": 29,
+  "comidas": 50,
+  "desplazamiento_por_tamano": {
+   "1": 1.15,
+   "2": 0.96,
+   "3": 0.61
+  },
+  "segundos": 5.9
+ },
+ {
+  "epoca": 207,
+  "t": 4160.0,
+  "celulas": 408,
+  "grupos": 387,
+  "tamanos": {
+   "1": 368,
+   "2": 17,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.081,
+  "cilio_frac": 0.471,
+  "sesgo_medio": 0.5,
+  "nacimientos": 18,
+  "nacidas_unidas": 2,
+  "muertes": 17,
+  "muertas_por_depredador": 14,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.98,
+   "3": 1.29
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 208,
+  "t": 4180.0,
+  "celulas": 409,
+  "grupos": 389,
+  "tamanos": {
+   "1": 371,
+   "2": 16,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.015,
+  "adhesion_media": 0.08,
+  "cilio_frac": 0.479,
+  "sesgo_medio": 0.484,
+  "nacimientos": 24,
+  "nacidas_unidas": 0,
+  "muertes": 23,
+  "muertas_por_depredador": 19,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.81,
+   "3": 0.75
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 209,
+  "t": 4200.0,
+  "celulas": 422,
+  "grupos": 401,
+  "tamanos": {
+   "1": 382,
+   "2": 17,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.078,
+  "cilio_frac": 0.486,
+  "sesgo_medio": 0.481,
+  "nacimientos": 21,
+  "nacidas_unidas": 2,
+  "muertes": 8,
+  "muertas_por_depredador": 5,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.91,
+   "3": 0.56
+  },
+  "segundos": 5.4
+ },
+ {
+  "epoca": 210,
+  "t": 4220.0,
+  "celulas": 429,
+  "grupos": 406,
+  "tamanos": {
+   "1": 386,
+   "2": 17,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.021,
+  "adhesion_media": 0.077,
+  "cilio_frac": 0.485,
+  "sesgo_medio": 0.472,
+  "nacimientos": 19,
+  "nacidas_unidas": 3,
+  "muertes": 12,
+  "muertas_por_depredador": 7,
+  "comidas": 48,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 1.03,
+   "3": 0.52
+  },
+  "segundos": 5.5
+ },
+ {
+  "epoca": 211,
+  "t": 4240.0,
+  "celulas": 441,
+  "grupos": 416,
+  "tamanos": {
+   "1": 394,
+   "2": 19,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.078,
+  "cilio_frac": 0.478,
+  "sesgo_medio": 0.473,
+  "nacimientos": 18,
+  "nacidas_unidas": 3,
+  "muertes": 6,
+  "muertas_por_depredador": 3,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.91,
+   "3": 0.9
+  },
+  "segundos": 5.6
+ },
+ {
+  "epoca": 212,
+  "t": 4260.0,
+  "celulas": 440,
+  "grupos": 415,
+  "tamanos": {
+   "1": 393,
+   "2": 19,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.02,
+  "adhesion_media": 0.079,
+  "cilio_frac": 0.477,
+  "sesgo_medio": 0.471,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 16,
+  "muertas_por_depredador": 14,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.87,
+   "3": 1.16
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 213,
+  "t": 4280.0,
+  "celulas": 441,
+  "grupos": 414,
+  "tamanos": {
+   "1": 389,
+   "2": 23,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.079,
+  "cilio_frac": 0.488,
+  "sesgo_medio": 0.462,
+  "nacimientos": 21,
+  "nacidas_unidas": 3,
+  "muertes": 20,
+  "muertas_por_depredador": 14,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.93,
+   "3": 0.99
+  },
+  "segundos": 6.0
+ },
+ {
+  "epoca": 214,
+  "t": 4300.0,
+  "celulas": 426,
+  "grupos": 398,
+  "tamanos": {
+   "1": 372,
+   "2": 24,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.08,
+  "cilio_frac": 0.477,
+  "sesgo_medio": 0.433,
+  "nacimientos": 18,
+  "nacidas_unidas": 2,
+  "muertes": 33,
+  "muertas_por_depredador": 31,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.94,
+   "3": 0.89
+  },
+  "segundos": 6.8
+ },
+ {
+  "epoca": 215,
+  "t": 4320.0,
+  "celulas": 431,
+  "grupos": 404,
+  "tamanos": {
+   "1": 379,
+   "3": 2,
+   "2": 23
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.077,
+  "cilio_frac": 0.473,
+  "sesgo_medio": 0.437,
+  "nacimientos": 23,
+  "nacidas_unidas": 1,
+  "muertes": 18,
+  "muertas_por_depredador": 13,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "2": 0.9,
+   "3": 0.62
+  },
+  "segundos": 7.1
+ },
+ {
+  "epoca": 216,
+  "t": 4340.0,
+  "celulas": 442,
+  "grupos": 417,
+  "tamanos": {
+   "1": 394,
+   "3": 2,
+   "2": 21
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.073,
+  "cilio_frac": 0.477,
+  "sesgo_medio": 0.444,
+  "nacimientos": 23,
+  "nacidas_unidas": 0,
+  "muertes": 12,
+  "muertas_por_depredador": 6,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "3": 1.12,
+   "2": 0.77
+  },
+  "segundos": 6.0
+ },
+ {
+  "epoca": 217,
+  "t": 4360.0,
+  "celulas": 441,
+  "grupos": 417,
+  "tamanos": {
+   "1": 395,
+   "3": 2,
+   "2": 20
+  },
+  "fraccion_en_grupo": 0.014,
+  "adhesion_media": 0.077,
+  "cilio_frac": 0.483,
+  "sesgo_medio": 0.443,
+  "nacimientos": 16,
+  "nacidas_unidas": 0,
+  "muertes": 17,
+  "muertas_por_depredador": 12,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "3": 0.43,
+   "2": 0.75
+  },
+  "segundos": 6.4
+ },
+ {
+  "epoca": 218,
+  "t": 4380.0,
+  "celulas": 428,
+  "grupos": 403,
+  "tamanos": {
+   "1": 382,
+   "3": 4,
+   "2": 17
+  },
+  "fraccion_en_grupo": 0.028,
+  "adhesion_media": 0.075,
+  "cilio_frac": 0.486,
+  "sesgo_medio": 0.455,
+  "nacimientos": 20,
+  "nacidas_unidas": 2,
+  "muertes": 33,
+  "muertas_por_depredador": 29,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "3": 0.66,
+   "2": 0.65
+  },
+  "segundos": 6.4
+ },
+ {
+  "epoca": 219,
+  "t": 4400.0,
+  "celulas": 412,
+  "grupos": 388,
+  "tamanos": {
+   "1": 368,
+   "3": 4,
+   "2": 16
+  },
+  "fraccion_en_grupo": 0.029,
+  "adhesion_media": 0.074,
+  "cilio_frac": 0.488,
+  "sesgo_medio": 0.473,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 31,
+  "muertas_por_depredador": 27,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "3": 0.56,
+   "2": 0.85
+  },
+  "segundos": 5.6
+ },
+ {
+  "epoca": 220,
+  "t": 4420.0,
+  "celulas": 416,
+  "grupos": 392,
+  "tamanos": {
+   "1": 372,
+   "3": 4,
+   "2": 16
+  },
+  "fraccion_en_grupo": 0.029,
+  "adhesion_media": 0.069,
+  "cilio_frac": 0.481,
+  "sesgo_medio": 0.483,
+  "nacimientos": 28,
+  "nacidas_unidas": 1,
+  "muertes": 24,
+  "muertas_por_depredador": 22,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "3": 0.62,
+   "2": 1.09
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 221,
+  "t": 4440.0,
+  "celulas": 427,
+  "grupos": 402,
+  "tamanos": {
+   "1": 381,
+   "3": 4,
+   "2": 17
+  },
+  "fraccion_en_grupo": 0.028,
+  "adhesion_media": 0.069,
+  "cilio_frac": 0.496,
+  "sesgo_medio": 0.479,
+  "nacimientos": 19,
+  "nacidas_unidas": 1,
+  "muertes": 8,
+  "muertas_por_depredador": 5,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "3": 0.79,
+   "2": 1.0
+  },
+  "segundos": 7.4
+ },
+ {
+  "epoca": 222,
+  "t": 4460.0,
+  "celulas": 434,
+  "grupos": 408,
+  "tamanos": {
+   "1": 387,
+   "2": 16,
+   "3": 5
+  },
+  "fraccion_en_grupo": 0.035,
+  "adhesion_media": 0.068,
+  "cilio_frac": 0.493,
+  "sesgo_medio": 0.479,
+  "nacimientos": 19,
+  "nacidas_unidas": 2,
+  "muertes": 12,
+  "muertas_por_depredador": 9,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "3": 0.7,
+   "2": 0.72
+  },
+  "segundos": 7.8
+ },
+ {
+  "epoca": 223,
+  "t": 4480.0,
+  "celulas": 444,
+  "grupos": 418,
+  "tamanos": {
+   "1": 397,
+   "2": 16,
+   "3": 5
+  },
+  "fraccion_en_grupo": 0.034,
+  "adhesion_media": 0.068,
+  "cilio_frac": 0.48,
+  "sesgo_medio": 0.477,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 8,
+  "muertas_por_depredador": 6,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.7,
+   "3": 0.97
+  },
+  "segundos": 6.8
+ },
+ {
+  "epoca": 224,
+  "t": 4500.0,
+  "celulas": 459,
+  "grupos": 430,
+  "tamanos": {
+   "1": 406,
+   "2": 19,
+   "3": 5
+  },
+  "fraccion_en_grupo": 0.033,
+  "adhesion_media": 0.071,
+  "cilio_frac": 0.484,
+  "sesgo_medio": 0.472,
+  "nacimientos": 25,
+  "nacidas_unidas": 3,
+  "muertes": 10,
+  "muertas_por_depredador": 7,
+  "comidas": 51,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 0.89,
+   "3": 0.87
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 225,
+  "t": 4520.0,
+  "celulas": 468,
+  "grupos": 443,
+  "tamanos": {
+   "1": 422,
+   "2": 17,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.026,
+  "adhesion_media": 0.069,
+  "cilio_frac": 0.483,
+  "sesgo_medio": 0.475,
+  "nacimientos": 20,
+  "nacidas_unidas": 0,
+  "muertes": 11,
+  "muertas_por_depredador": 7,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 1.0,
+   "3": 0.68
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 226,
+  "t": 4540.0,
+  "celulas": 465,
+  "grupos": 442,
+  "tamanos": {
+   "1": 423,
+   "2": 15,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.026,
+  "adhesion_media": 0.064,
+  "cilio_frac": 0.488,
+  "sesgo_medio": 0.469,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 15,
+  "comidas": 33,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 1.0,
+   "3": 0.57
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 227,
+  "t": 4560.0,
+  "celulas": 453,
+  "grupos": 434,
+  "tamanos": {
+   "1": 417,
+   "2": 15,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.066,
+  "cilio_frac": 0.483,
+  "sesgo_medio": 0.468,
+  "nacimientos": 21,
+  "nacidas_unidas": 0,
+  "muertes": 33,
+  "muertas_por_depredador": 28,
+  "comidas": 49,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.87,
+   "3": 0.5
+  },
+  "segundos": 6.3
+ },
+ {
+  "epoca": 228,
+  "t": 4580.0,
+  "celulas": 464,
+  "grupos": 445,
+  "tamanos": {
+   "1": 428,
+   "2": 15,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.064,
+  "cilio_frac": 0.478,
+  "sesgo_medio": 0.459,
+  "nacimientos": 23,
+  "nacidas_unidas": 1,
+  "muertes": 12,
+  "muertas_por_depredador": 7,
+  "comidas": 40,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.77,
+   "3": 0.6
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 229,
+  "t": 4600.0,
+  "celulas": 458,
+  "grupos": 438,
+  "tamanos": {
+   "1": 420,
+   "2": 16,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.063,
+  "cilio_frac": 0.485,
+  "sesgo_medio": 0.454,
+  "nacimientos": 12,
+  "nacidas_unidas": 1,
+  "muertes": 18,
+  "muertas_por_depredador": 16,
+  "comidas": 32,
+  "desplazamiento_por_tamano": {
+   "1": 1.18,
+   "2": 1.11,
+   "3": 1.1
+  },
+  "segundos": 6.4
+ },
+ {
+  "epoca": 230,
+  "t": 4620.0,
+  "celulas": 477,
+  "grupos": 455,
+  "tamanos": {
+   "1": 435,
+   "2": 18,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.069,
+  "cilio_frac": 0.482,
+  "sesgo_medio": 0.464,
+  "nacimientos": 25,
+  "nacidas_unidas": 2,
+  "muertes": 6,
+  "muertas_por_depredador": 4,
+  "comidas": 48,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.83,
+   "3": 0.57
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 231,
+  "t": 4640.0,
+  "celulas": 487,
+  "grupos": 466,
+  "tamanos": {
+   "1": 447,
+   "2": 17,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.012,
+  "adhesion_media": 0.067,
+  "cilio_frac": 0.483,
+  "sesgo_medio": 0.457,
+  "nacimientos": 25,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 13,
+  "comidas": 52,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.97,
+   "3": 0.69
+  },
+  "segundos": 6.1
+ },
+ {
+  "epoca": 232,
+  "t": 4660.0,
+  "celulas": 492,
+  "grupos": 470,
+  "tamanos": {
+   "2": 18,
+   "1": 450,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.012,
+  "adhesion_media": 0.068,
+  "cilio_frac": 0.482,
+  "sesgo_medio": 0.468,
+  "nacimientos": 20,
+  "nacidas_unidas": 1,
+  "muertes": 15,
+  "muertas_por_depredador": 14,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.18,
+   "2": 0.83,
+   "3": 0.86
+  },
+  "segundos": 6.6
+ },
+ {
+  "epoca": 233,
+  "t": 4680.0,
+  "celulas": 470,
+  "grupos": 449,
+  "tamanos": {
+   "2": 17,
+   "1": 430,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.067,
+  "cilio_frac": 0.477,
+  "sesgo_medio": 0.46,
+  "nacimientos": 21,
+  "nacidas_unidas": 3,
+  "muertes": 43,
+  "muertas_por_depredador": 38,
+  "comidas": 54,
+  "desplazamiento_por_tamano": {
+   "2": 0.85,
+   "1": 1.26,
+   "3": 1.0
+  },
+  "segundos": 6.3
+ },
+ {
+  "epoca": 234,
+  "t": 4700.0,
+  "celulas": 465,
+  "grupos": 444,
+  "tamanos": {
+   "2": 15,
+   "1": 426,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.019,
+  "adhesion_media": 0.063,
+  "cilio_frac": 0.49,
+  "sesgo_medio": 0.461,
+  "nacimientos": 24,
+  "nacidas_unidas": 2,
+  "muertes": 29,
+  "muertas_por_depredador": 28,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "2": 0.88,
+   "1": 1.25,
+   "3": 0.79
+  },
+  "segundos": 5.5
+ },
+ {
+  "epoca": 235,
+  "t": 4720.0,
+  "celulas": 464,
+  "grupos": 445,
+  "tamanos": {
+   "1": 429,
+   "3": 3,
+   "2": 13
+  },
+  "fraccion_en_grupo": 0.019,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.478,
+  "sesgo_medio": 0.46,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 14,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "2": 0.68,
+   "1": 1.24,
+   "3": 0.52
+  },
+  "segundos": 6.6
+ },
+ {
+  "epoca": 236,
+  "t": 4740.0,
+  "celulas": 473,
+  "grupos": 454,
+  "tamanos": {
+   "1": 437,
+   "2": 15,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.478,
+  "sesgo_medio": 0.465,
+  "nacimientos": 20,
+  "nacidas_unidas": 1,
+  "muertes": 11,
+  "muertas_por_depredador": 8,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "3": 0.94,
+   "2": 0.9
+  },
+  "segundos": 6.7
+ },
+ {
+  "epoca": 237,
+  "t": 4760.0,
+  "celulas": 485,
+  "grupos": 465,
+  "tamanos": {
+   "1": 446,
+   "2": 18,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.006,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.474,
+  "sesgo_medio": 0.451,
+  "nacimientos": 24,
+  "nacidas_unidas": 2,
+  "muertes": 12,
+  "muertas_por_depredador": 9,
+  "comidas": 48,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 1.04,
+   "3": 0.48
+  },
+  "segundos": 5.4
+ },
+ {
+  "epoca": 238,
+  "t": 4780.0,
+  "celulas": 481,
+  "grupos": 462,
+  "tamanos": {
+   "1": 444,
+   "2": 17,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.006,
+  "adhesion_media": 0.052,
+  "cilio_frac": 0.474,
+  "sesgo_medio": 0.453,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 22,
+  "muertas_por_depredador": 20,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.86,
+   "3": 0.92
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 239,
+  "t": 4800.0,
+  "celulas": 500,
+  "grupos": 480,
+  "tamanos": {
+   "1": 462,
+   "2": 16,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.012,
+  "adhesion_media": 0.054,
+  "cilio_frac": 0.478,
+  "sesgo_medio": 0.462,
+  "nacimientos": 24,
+  "nacidas_unidas": 1,
+  "muertes": 5,
+  "muertas_por_depredador": 4,
+  "comidas": 48,
+  "desplazamiento_por_tamano": {
+   "1": 1.29,
+   "2": 0.81,
+   "3": 0.89
+  },
+  "segundos": 6.0
+ },
+ {
+  "epoca": 240,
+  "t": 4820.0,
+  "celulas": 480,
+  "grupos": 462,
+  "tamanos": {
+   "1": 446,
+   "2": 14,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.483,
+  "sesgo_medio": 0.476,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 35,
+  "muertas_por_depredador": 31,
+  "comidas": 32,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.77,
+   "3": 1.18
+  },
+  "segundos": 5.8
+ },
+ {
+  "epoca": 241,
+  "t": 4840.0,
+  "celulas": 476,
+  "grupos": 458,
+  "tamanos": {
+   "1": 442,
+   "2": 14,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.052,
+  "cilio_frac": 0.485,
+  "sesgo_medio": 0.483,
+  "nacimientos": 24,
+  "nacidas_unidas": 0,
+  "muertes": 28,
+  "muertas_por_depredador": 25,
+  "comidas": 53,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.75,
+   "3": 1.03
+  },
+  "segundos": 5.1
+ },
+ {
+  "epoca": 242,
+  "t": 4860.0,
+  "celulas": 471,
+  "grupos": 454,
+  "tamanos": {
+   "1": 439,
+   "2": 13,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.478,
+  "sesgo_medio": 0.498,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 22,
+  "muertas_por_depredador": 15,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.78,
+   "3": 0.73
+  },
+  "segundos": 5.4
+ },
+ {
+  "epoca": 243,
+  "t": 4880.0,
+  "celulas": 476,
+  "grupos": 459,
+  "tamanos": {
+   "1": 444,
+   "2": 13,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.013,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.477,
+  "sesgo_medio": 0.498,
+  "nacimientos": 25,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 19,
+  "comidas": 47,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.97,
+   "3": 0.63
+  },
+  "segundos": 5.3
+ },
+ {
+  "epoca": 244,
+  "t": 4900.0,
+  "celulas": 482,
+  "grupos": 465,
+  "tamanos": {
+   "1": 450,
+   "2": 13,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.012,
+  "adhesion_media": 0.048,
+  "cilio_frac": 0.483,
+  "sesgo_medio": 0.506,
+  "nacimientos": 23,
+  "nacidas_unidas": 1,
+  "muertes": 17,
+  "muertas_por_depredador": 11,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.28,
+   "2": 0.72,
+   "3": 0.94
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 245,
+  "t": 4920.0,
+  "celulas": 499,
+  "grupos": 484,
+  "tamanos": {
+   "1": 471,
+   "2": 11,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.012,
+  "adhesion_media": 0.047,
+  "cilio_frac": 0.479,
+  "sesgo_medio": 0.514,
+  "nacimientos": 24,
+  "nacidas_unidas": 0,
+  "muertes": 7,
+  "muertas_por_depredador": 4,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.74,
+   "3": 0.85
+  },
+  "segundos": 5.3
+ },
+ {
+  "epoca": 246,
+  "t": 4940.0,
+  "celulas": 516,
+  "grupos": 500,
+  "tamanos": {
+   "1": 487,
+   "2": 10,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.017,
+  "adhesion_media": 0.047,
+  "cilio_frac": 0.483,
+  "sesgo_medio": 0.519,
+  "nacimientos": 19,
+  "nacidas_unidas": 1,
+  "muertes": 2,
+  "muertas_por_depredador": 2,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.29,
+   "2": 1.01,
+   "3": 0.67
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 247,
+  "t": 4960.0,
+  "celulas": 520,
+  "grupos": 506,
+  "tamanos": {
+   "1": 495,
+   "2": 8,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.017,
+  "adhesion_media": 0.047,
+  "cilio_frac": 0.479,
+  "sesgo_medio": 0.521,
+  "nacimientos": 24,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 15,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.65,
+   "3": 1.12
+  },
+  "segundos": 5.8
+ },
+ {
+  "epoca": 248,
+  "t": 4980.0,
+  "celulas": 519,
+  "grupos": 503,
+  "tamanos": {
+   "1": 490,
+   "2": 10,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.017,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.476,
+  "sesgo_medio": 0.515,
+  "nacimientos": 19,
+  "nacidas_unidas": 3,
+  "muertes": 20,
+  "muertas_por_depredador": 18,
+  "comidas": 35,
+  "desplazamiento_por_tamano": {
+   "1": 1.18,
+   "2": 0.64,
+   "3": 1.17
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 249,
+  "t": 5000.0,
+  "celulas": 508,
+  "grupos": 491,
+  "tamanos": {
+   "1": 478,
+   "2": 9,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.024,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.49,
+  "sesgo_medio": 0.51,
+  "nacimientos": 21,
+  "nacidas_unidas": 1,
+  "muertes": 32,
+  "muertas_por_depredador": 30,
+  "comidas": 33,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.8,
+   "3": 1.11
+  },
+  "segundos": 6.1
+ },
+ {
+  "epoca": 250,
+  "t": 5020.0,
+  "celulas": 509,
+  "grupos": 493,
+  "tamanos": {
+   "1": 481,
+   "2": 8,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.024,
+  "adhesion_media": 0.054,
+  "cilio_frac": 0.489,
+  "sesgo_medio": 0.504,
+  "nacimientos": 9,
+  "nacidas_unidas": 0,
+  "muertes": 8,
+  "muertas_por_depredador": 5,
+  "comidas": 33,
+  "desplazamiento_por_tamano": {
+   "1": 1.29,
+   "2": 0.57,
+   "3": 0.46
+  },
+  "segundos": 5.8
+ },
+ {
+  "epoca": 251,
+  "t": 5040.0,
+  "celulas": 512,
+  "grupos": 496,
+  "tamanos": {
+   "1": 484,
+   "2": 8,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.023,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.49,
+  "sesgo_medio": 0.508,
+  "nacimientos": 27,
+  "nacidas_unidas": 1,
+  "muertes": 24,
+  "muertas_por_depredador": 17,
+  "comidas": 48,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.83,
+   "3": 0.87
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 252,
+  "t": 5060.0,
+  "celulas": 523,
+  "grupos": 507,
+  "tamanos": {
+   "1": 495,
+   "2": 8,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.023,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.495,
+  "sesgo_medio": 0.508,
+  "nacimientos": 25,
+  "nacidas_unidas": 0,
+  "muertes": 14,
+  "muertas_por_depredador": 12,
+  "comidas": 52,
+  "desplazamiento_por_tamano": {
+   "1": 1.17,
+   "2": 0.74,
+   "3": 0.91
+  },
+  "segundos": 5.3
+ },
+ {
+  "epoca": 253,
+  "t": 5080.0,
+  "celulas": 527,
+  "grupos": 511,
+  "tamanos": {
+   "1": 499,
+   "2": 8,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.023,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.491,
+  "sesgo_medio": 0.491,
+  "nacimientos": 20,
+  "nacidas_unidas": 0,
+  "muertes": 16,
+  "muertas_por_depredador": 15,
+  "comidas": 32,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.89,
+   "3": 0.63
+  },
+  "segundos": 6.7
+ },
+ {
+  "epoca": 254,
+  "t": 5100.0,
+  "celulas": 541,
+  "grupos": 525,
+  "tamanos": {
+   "1": 513,
+   "2": 8,
+   "3": 4
+  },
+  "fraccion_en_grupo": 0.022,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.492,
+  "sesgo_medio": 0.493,
+  "nacimientos": 20,
+  "nacidas_unidas": 0,
+  "muertes": 6,
+  "muertas_por_depredador": 4,
+  "comidas": 50,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.7,
+   "3": 0.63
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 255,
+  "t": 5120.0,
+  "celulas": 539,
+  "grupos": 525,
+  "tamanos": {
+   "1": 514,
+   "2": 8,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.017,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.499,
+  "sesgo_medio": 0.49,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 12,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.63,
+   "3": 0.53
+  },
+  "segundos": 6.3
+ },
+ {
+  "epoca": 256,
+  "t": 5140.0,
+  "celulas": 539,
+  "grupos": 525,
+  "tamanos": {
+   "1": 514,
+   "2": 8,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.017,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.503,
+  "sesgo_medio": 0.492,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 14,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.6,
+   "3": 0.81
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 257,
+  "t": 5160.0,
+  "celulas": 541,
+  "grupos": 528,
+  "tamanos": {
+   "1": 518,
+   "2": 7,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.017,
+  "adhesion_media": 0.059,
+  "cilio_frac": 0.506,
+  "sesgo_medio": 0.493,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 8,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.72,
+   "3": 1.24
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 258,
+  "t": 5180.0,
+  "celulas": 559,
+  "grupos": 546,
+  "tamanos": {
+   "1": 536,
+   "2": 7,
+   "3": 3
+  },
+  "fraccion_en_grupo": 0.016,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.512,
+  "sesgo_medio": 0.492,
+  "nacimientos": 23,
+  "nacidas_unidas": 1,
+  "muertes": 5,
+  "muertas_por_depredador": 4,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 1.15,
+   "3": 0.53
+  },
+  "segundos": 5.9
+ },
+ {
+  "epoca": 259,
+  "t": 5200.0,
+  "celulas": 551,
+  "grupos": 540,
+  "tamanos": {
+   "1": 531,
+   "2": 7,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.011,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.512,
+  "sesgo_medio": 0.487,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 26,
+  "muertas_por_depredador": 17,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.84,
+   "3": 0.51
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 260,
+  "t": 5220.0,
+  "celulas": 538,
+  "grupos": 525,
+  "tamanos": {
+   "1": 514,
+   "2": 9,
+   "3": 2
+  },
+  "fraccion_en_grupo": 0.011,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.528,
+  "sesgo_medio": 0.482,
+  "nacimientos": 10,
+  "nacidas_unidas": 2,
+  "muertes": 23,
+  "muertas_por_depredador": 19,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.93,
+   "3": 0.52
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 261,
+  "t": 5240.0,
+  "celulas": 538,
+  "grupos": 525,
+  "tamanos": {
+   "1": 513,
+   "2": 11,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.006,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.526,
+  "sesgo_medio": 0.485,
+  "nacimientos": 15,
+  "nacidas_unidas": 1,
+  "muertes": 15,
+  "muertas_por_depredador": 7,
+  "comidas": 29,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.82,
+   "3": 0.84
+  },
+  "segundos": 6.1
+ },
+ {
+  "epoca": 262,
+  "t": 5260.0,
+  "celulas": 544,
+  "grupos": 530,
+  "tamanos": {
+   "1": 517,
+   "2": 12,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.006,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.537,
+  "sesgo_medio": 0.491,
+  "nacimientos": 29,
+  "nacidas_unidas": 1,
+  "muertes": 23,
+  "muertas_por_depredador": 15,
+  "comidas": 58,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 1.12,
+   "3": 0.07
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 263,
+  "t": 5280.0,
+  "celulas": 526,
+  "grupos": 511,
+  "tamanos": {
+   "1": 497,
+   "2": 13,
+   "3": 1
+  },
+  "fraccion_en_grupo": 0.006,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.542,
+  "sesgo_medio": 0.499,
+  "nacimientos": 23,
+  "nacidas_unidas": 2,
+  "muertes": 41,
+  "muertas_por_depredador": 39,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.91,
+   "3": 1.07
+  },
+  "segundos": 6.1
+ },
+ {
+  "epoca": 264,
+  "t": 5300.0,
+  "celulas": 525,
+  "grupos": 510,
+  "tamanos": {
+   "1": 495,
+   "2": 15
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.545,
+  "sesgo_medio": 0.497,
+  "nacimientos": 18,
+  "nacidas_unidas": 1,
+  "muertes": 19,
+  "muertas_por_depredador": 16,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.86,
+   "3": 0.31
+  },
+  "segundos": 6.0
+ },
+ {
+  "epoca": 265,
+  "t": 5320.0,
+  "celulas": 540,
+  "grupos": 524,
+  "tamanos": {
+   "1": 508,
+   "2": 16
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.054,
+  "cilio_frac": 0.548,
+  "sesgo_medio": 0.498,
+  "nacimientos": 28,
+  "nacidas_unidas": 2,
+  "muertes": 13,
+  "muertas_por_depredador": 6,
+  "comidas": 52,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.93
+  },
+  "segundos": 5.8
+ },
+ {
+  "epoca": 266,
+  "t": 5340.0,
+  "celulas": 543,
+  "grupos": 527,
+  "tamanos": {
+   "1": 511,
+   "2": 16
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.551,
+  "sesgo_medio": 0.494,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 10,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.69
+  },
+  "segundos": 6.6
+ },
+ {
+  "epoca": 267,
+  "t": 5360.0,
+  "celulas": 545,
+  "grupos": 531,
+  "tamanos": {
+   "1": 517,
+   "2": 14
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.561,
+  "sesgo_medio": 0.494,
+  "nacimientos": 23,
+  "nacidas_unidas": 1,
+  "muertes": 21,
+  "muertas_por_depredador": 15,
+  "comidas": 41,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.87
+  },
+  "segundos": 6.6
+ },
+ {
+  "epoca": 268,
+  "t": 5380.0,
+  "celulas": 536,
+  "grupos": 521,
+  "tamanos": {
+   "1": 506,
+   "2": 15
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.052,
+  "cilio_frac": 0.569,
+  "sesgo_medio": 0.489,
+  "nacimientos": 12,
+  "nacidas_unidas": 1,
+  "muertes": 21,
+  "muertas_por_depredador": 18,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.64
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 269,
+  "t": 5400.0,
+  "celulas": 533,
+  "grupos": 517,
+  "tamanos": {
+   "1": 501,
+   "2": 16
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.054,
+  "cilio_frac": 0.559,
+  "sesgo_medio": 0.49,
+  "nacimientos": 15,
+  "nacidas_unidas": 1,
+  "muertes": 18,
+  "muertas_por_depredador": 13,
+  "comidas": 37,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.68
+  },
+  "segundos": 6.4
+ },
+ {
+  "epoca": 270,
+  "t": 5420.0,
+  "celulas": 536,
+  "grupos": 519,
+  "tamanos": {
+   "1": 502,
+   "2": 17
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.054,
+  "cilio_frac": 0.567,
+  "sesgo_medio": 0.487,
+  "nacimientos": 14,
+  "nacidas_unidas": 1,
+  "muertes": 11,
+  "muertas_por_depredador": 7,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.91
+  },
+  "segundos": 6.2
+ },
+ {
+  "epoca": 271,
+  "t": 5440.0,
+  "celulas": 533,
+  "grupos": 518,
+  "tamanos": {
+   "1": 503,
+   "2": 15
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.567,
+  "sesgo_medio": 0.492,
+  "nacimientos": 10,
+  "nacidas_unidas": 0,
+  "muertes": 13,
+  "muertas_por_depredador": 6,
+  "comidas": 30,
+  "desplazamiento_por_tamano": {
+   "1": 1.22,
+   "2": 0.98
+  },
+  "segundos": 6.3
+ },
+ {
+  "epoca": 272,
+  "t": 5460.0,
+  "celulas": 522,
+  "grupos": 508,
+  "tamanos": {
+   "1": 494,
+   "2": 14
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.051,
+  "cilio_frac": 0.554,
+  "sesgo_medio": 0.506,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 29,
+  "muertas_por_depredador": 24,
+  "comidas": 46,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "2": 0.86
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 273,
+  "t": 5480.0,
+  "celulas": 511,
+  "grupos": 498,
+  "tamanos": {
+   "1": 485,
+   "2": 13
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.049,
+  "cilio_frac": 0.56,
+  "sesgo_medio": 0.498,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 28,
+  "muertas_por_depredador": 23,
+  "comidas": 34,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.85
+  },
+  "segundos": 6.5
+ },
+ {
+  "epoca": 274,
+  "t": 5500.0,
+  "celulas": 502,
+  "grupos": 490,
+  "tamanos": {
+   "1": 478,
+   "2": 12
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.548,
+  "sesgo_medio": 0.506,
+  "nacimientos": 20,
+  "nacidas_unidas": 1,
+  "muertes": 29,
+  "muertas_por_depredador": 25,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.98
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 275,
+  "t": 5520.0,
+  "celulas": 499,
+  "grupos": 488,
+  "tamanos": {
+   "1": 477,
+   "2": 11
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.049,
+  "cilio_frac": 0.553,
+  "sesgo_medio": 0.507,
+  "nacimientos": 25,
+  "nacidas_unidas": 0,
+  "muertes": 28,
+  "muertas_por_depredador": 24,
+  "comidas": 43,
+  "desplazamiento_por_tamano": {
+   "1": 1.27,
+   "2": 1.12
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 276,
+  "t": 5540.0,
+  "celulas": 506,
+  "grupos": 495,
+  "tamanos": {
+   "1": 484,
+   "2": 11
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.049,
+  "cilio_frac": 0.553,
+  "sesgo_medio": 0.517,
+  "nacimientos": 18,
+  "nacidas_unidas": 1,
+  "muertes": 11,
+  "muertas_por_depredador": 4,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.94
+  },
+  "segundos": 5.0
+ },
+ {
+  "epoca": 277,
+  "t": 5560.0,
+  "celulas": 494,
+  "grupos": 483,
+  "tamanos": {
+   "1": 472,
+   "2": 11
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.05,
+  "cilio_frac": 0.555,
+  "sesgo_medio": 0.524,
+  "nacimientos": 20,
+  "nacidas_unidas": 0,
+  "muertes": 32,
+  "muertas_por_depredador": 25,
+  "comidas": 45,
+  "desplazamiento_por_tamano": {
+   "1": 1.21,
+   "2": 0.81
+  },
+  "segundos": 5.2
+ },
+ {
+  "epoca": 278,
+  "t": 5580.0,
+  "celulas": 503,
+  "grupos": 492,
+  "tamanos": {
+   "1": 481,
+   "2": 11
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.551,
+  "sesgo_medio": 0.521,
+  "nacimientos": 24,
+  "nacidas_unidas": 0,
+  "muertes": 15,
+  "muertas_por_depredador": 10,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.24,
+   "2": 0.96
+  },
+  "segundos": 5.3
+ },
+ {
+  "epoca": 279,
+  "t": 5600.0,
+  "celulas": 511,
+  "grupos": 499,
+  "tamanos": {
+   "1": 487,
+   "2": 12
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.546,
+  "sesgo_medio": 0.522,
+  "nacimientos": 17,
+  "nacidas_unidas": 1,
+  "muertes": 9,
+  "muertas_por_depredador": 6,
+  "comidas": 38,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 1.14
+  },
+  "segundos": 5.0
+ },
+ {
+  "epoca": 280,
+  "t": 5620.0,
+  "celulas": 509,
+  "grupos": 497,
+  "tamanos": {
+   "1": 485,
+   "2": 12
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.55,
+  "sesgo_medio": 0.533,
+  "nacimientos": 17,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 14,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.23,
+   "2": 0.79
+  },
+  "segundos": 5.7
+ },
+ {
+  "epoca": 281,
+  "t": 5640.0,
+  "celulas": 491,
+  "grupos": 479,
+  "tamanos": {
+   "1": 467,
+   "2": 12
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.532,
+  "sesgo_medio": 0.548,
+  "nacimientos": 21,
+  "nacidas_unidas": 1,
+  "muertes": 39,
+  "muertas_por_depredador": 33,
+  "comidas": 39,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.93
+  },
+  "segundos": 5.5
+ },
+ {
+  "epoca": 282,
+  "t": 5660.0,
+  "celulas": 486,
+  "grupos": 476,
+  "tamanos": {
+   "1": 466,
+   "2": 10
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.051,
+  "cilio_frac": 0.527,
+  "sesgo_medio": 0.544,
+  "nacimientos": 15,
+  "nacidas_unidas": 0,
+  "muertes": 20,
+  "muertas_por_depredador": 16,
+  "comidas": 36,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.7
+  },
+  "segundos": 5.0
+ },
+ {
+  "epoca": 283,
+  "t": 5680.0,
+  "celulas": 480,
+  "grupos": 469,
+  "tamanos": {
+   "1": 458,
+   "2": 11
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.053,
+  "cilio_frac": 0.515,
+  "sesgo_medio": 0.549,
+  "nacimientos": 24,
+  "nacidas_unidas": 1,
+  "muertes": 30,
+  "muertas_por_depredador": 29,
+  "comidas": 49,
+  "desplazamiento_por_tamano": {
+   "1": 1.19,
+   "2": 0.88
+  },
+  "segundos": 5.1
+ },
+ {
+  "epoca": 284,
+  "t": 5700.0,
+  "celulas": 483,
+  "grupos": 472,
+  "tamanos": {
+   "1": 461,
+   "2": 11
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.055,
+  "cilio_frac": 0.505,
+  "sesgo_medio": 0.542,
+  "nacimientos": 22,
+  "nacidas_unidas": 0,
+  "muertes": 19,
+  "muertas_por_depredador": 16,
+  "comidas": 42,
+  "desplazamiento_por_tamano": {
+   "1": 1.2,
+   "2": 0.89
+  },
+  "segundos": 4.9
+ },
+ {
+  "epoca": 285,
+  "t": 5720.0,
+  "celulas": 483,
+  "grupos": 472,
+  "tamanos": {
+   "1": 461,
+   "2": 11
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.056,
+  "cilio_frac": 0.509,
+  "sesgo_medio": 0.539,
+  "nacimientos": 18,
+  "nacidas_unidas": 0,
+  "muertes": 18,
+  "muertas_por_depredador": 15,
+  "comidas": 44,
+  "desplazamiento_por_tamano": {
+   "1": 1.25,
+   "2": 0.83
+  },
+  "segundos": 5.0
+ },
+ {
+  "epoca": 286,
+  "t": 5740.0,
+  "celulas": 491,
+  "grupos": 478,
+  "tamanos": {
+   "1": 465,
+   "2": 13
+  },
+  "fraccion_en_grupo": 0.0,
+  "adhesion_media": 0.057,
+  "cilio_frac": 0.505,
+  "sesgo_medio": 0.527,
+  "nacimientos": 22,
+  "nacidas_unidas": 2,
+  "muertes": 14,
+  "muertas_por_depredador": 10,
+  "comidas": 47,
+  "desplazamiento_por_tamano": {
+   "1": 1.26,
+   "2": 0.74
+  },
+  "segundos": 5.0
+ }
+]
