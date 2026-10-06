@@ -27,7 +27,9 @@ inercia (`src/mundo2d.py`, `src/ecosistema2d.py`, visor `viewer/acuario2d.html`)
 500 criaturas, mundo de 50 m, comida de dos tamaños que exigen cuerpos distintos.
 Primera corrida: monocultivo de anguilas a los 10 min, y después, dentro de la
 anguila, radiación hacia cuerpos cortos que ocupan el nicho de la comida chica
-(BITACORA 0022-0023). `viewer/vivo.html` es el mismo mundo portado a JavaScript:
+(BITACORA 0022-0023). El visor 2D publicado muestra `eco2d-fluido`: 40 criaturas en un mundo de
+24 m, las 50 épocas grabadas enteras y reproducidas de corrido con interpolación
+(`--mundo 24 --tope 40 --grabar-cada 1 --fps 2`). `viewer/vivo.html` es el mismo mundo portado a JavaScript:
 corre en vivo en el navegador, con las reglas (comida, energía, agitación, tope)
 editables, y una «sopa primitiva» de cajas sueltas como partida alternativa.
 

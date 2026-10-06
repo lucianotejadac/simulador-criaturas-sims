@@ -279,7 +279,9 @@ def correr(nombre: str, semilla: int, epocas: int, especies: list[str], por_espe
             com_tot["grande"] += r["grande"]
             if grabar and k % cada == 0:
                 centro, phi, _ = E.lote.cinematica()
-                cuadros.append(np.concatenate([centro, phi[..., None]], axis=2).round(3).tolist())
+                # formato compacto: por criatura una lista plana [x0, y0, phi0, x1, y1, phi1, ...] con 2 decimales
+                arr = np.concatenate([centro, phi[..., None]], axis=2)
+                cuadros.append([arr[b, :E.lote.nseg[b]].reshape(-1).round(2).tolist() for b in range(E.B)])
                 cuadros_comida.append(comida[:, :3].round(2).tolist())
         t_global += T_EPOCA
         individuos_epoca = individuos
@@ -392,6 +394,9 @@ def main() -> None:
     ap.add_argument("--e-repro", type=float, default=None)
     ap.add_argument("--edad-maxima", type=float, default=None)
     ap.add_argument("--n-chica", type=int, default=None)
+    ap.add_argument("--n-grande", type=int, default=None)
+    ap.add_argument("--tope", type=int, default=None)
+    ap.add_argument("--mundo", type=float, default=None, help="lado del acuario en m (50 por defecto)")
     a = ap.parse_args()
     if a.sopa:
         a.especies = "sopa"
@@ -407,6 +412,12 @@ def main() -> None:
         g["EDAD_MAXIMA"] = a.edad_maxima
     if a.n_chica is not None:
         g["N_CHICA"] = a.n_chica
+    if a.n_grande is not None:
+        g["N_GRANDE"] = a.n_grande
+    if a.tope is not None:
+        g["POBLACION_MAXIMA"] = a.tope
+    if a.mundo is not None:
+        g["MUNDO"] = a.mundo
     correr(a.nombre, a.semilla, a.epocas, a.especies.split(","), a.por_especie, a.grabar_cada, a.fps)
 
 

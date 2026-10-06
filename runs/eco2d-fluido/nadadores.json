@@ -1,0 +1,1002 @@
+[
+ {
+  "epoca": 11,
+  "t": 240.0,
+  "id": 14,
+  "n": 6,
+  "madre": null,
+  "nacimiento": 0.0,
+  "desplazamiento_solo": 1.22,
+  "genoma": {
+   "siguiente_id": 10,
+   "raiz": 0,
+   "nodos": [
+    {
+     "dims": [
+      0.3,
+      0.26,
+      0.2
+     ],
+     "art": "rigida",
+     "limite": 60.0,
+     "rec": 1,
+     "neuronas": [
+      {
+       "id": 0,
+       "f": "oscillate-wave",
+       "in": [
+        [
+         "c",
+         0,
+         1.0
+        ],
+        [
+         "c",
+         0,
+         2.0
+        ],
+        [
+         "c",
+         0,
+         0.0
+        ]
+       ]
+      }
+     ],
+     "efectores": [],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 1.0,
+       "reflejo": false,
+       "terminal": false
+      }
+     ]
+    },
+    {
+     "dims": [
+      0.22,
+      0.06,
+      0.12
+     ],
+     "art": "bisagra",
+     "limite": 60.0,
+     "rec": 4,
+     "neuronas": [
+      {
+       "id": 2,
+       "f": "sum",
+       "in": [
+        [
+         "p",
+         0,
+         2.2
+        ],
+        [
+         "p",
+         3,
+         2.2
+        ],
+        [
+         "l",
+         1,
+         4.0
+        ]
+       ]
+      },
+      {
+       "id": 3,
+       "f": "smooth",
+       "in": [
+        [
+         "n",
+         2,
+         1.0
+        ],
+        [
+         "c",
+         0,
+         0.0065
+        ]
+       ]
+      }
+     ],
+     "efectores": [
+      [
+       "n",
+       3,
+       1.0
+      ]
+     ],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 0.8,
+       "reflejo": false,
+       "terminal": false
+      },
+      {
+       "a": 2,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 1.0,
+       "reflejo": false,
+       "terminal": true
+      }
+     ]
+    },
+    {
+     "dims": [
+      0.14,
+      0.04,
+      0.26
+     ],
+     "art": "bisagra",
+     "limite": 35.0,
+     "rec": 1,
+     "neuronas": [],
+     "efectores": [
+      [
+       "p",
+       3,
+       1.3
+      ]
+     ],
+     "conexiones": []
+    }
+   ],
+   "central": []
+  },
+  "cerebro": "nodo 0 (raíz): caja 0.30×0.26×0.20 m, rigida ±60°, rec 1\n  n0 = oscillate-wave(c×+1.00, c×+2.00, c×+0.00)\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 1.00\nnodo 1: caja 0.22×0.06×0.12 m, bisagra ±60°, rec 4\n  n2 = sum(p0×+2.20, p3×+2.20, l1×+4.00)\n  n3 = smooth(n2×+1.00, c×+0.01)\n  e0 = n3×+1.00\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 0.80\n  -> nodo 2 cara 0 (+0.00,+0.00) rot 0/0/0 esc 1.00 terminal\nnodo 2: caja 0.14×0.04×0.26 m, bisagra ±35°, rec 1\n  e0 = p3×+1.30"
+ },
+ {
+  "epoca": 12,
+  "t": 260.0,
+  "id": 13,
+  "n": 6,
+  "madre": null,
+  "nacimiento": 0.0,
+  "desplazamiento_solo": 1.22,
+  "genoma": {
+   "siguiente_id": 10,
+   "raiz": 0,
+   "nodos": [
+    {
+     "dims": [
+      0.3,
+      0.26,
+      0.2
+     ],
+     "art": "rigida",
+     "limite": 60.0,
+     "rec": 1,
+     "neuronas": [
+      {
+       "id": 0,
+       "f": "oscillate-wave",
+       "in": [
+        [
+         "c",
+         0,
+         1.0
+        ],
+        [
+         "c",
+         0,
+         2.0
+        ],
+        [
+         "c",
+         0,
+         0.0
+        ]
+       ]
+      }
+     ],
+     "efectores": [],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 1.0,
+       "reflejo": false,
+       "terminal": false
+      }
+     ]
+    },
+    {
+     "dims": [
+      0.22,
+      0.06,
+      0.12
+     ],
+     "art": "bisagra",
+     "limite": 60.0,
+     "rec": 4,
+     "neuronas": [
+      {
+       "id": 2,
+       "f": "sum",
+       "in": [
+        [
+         "p",
+         0,
+         2.2
+        ],
+        [
+         "p",
+         3,
+         2.2
+        ],
+        [
+         "l",
+         1,
+         4.0
+        ]
+       ]
+      },
+      {
+       "id": 3,
+       "f": "smooth",
+       "in": [
+        [
+         "n",
+         2,
+         1.0
+        ],
+        [
+         "c",
+         0,
+         0.0065
+        ]
+       ]
+      }
+     ],
+     "efectores": [
+      [
+       "n",
+       3,
+       1.0
+      ]
+     ],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 0.8,
+       "reflejo": false,
+       "terminal": false
+      },
+      {
+       "a": 2,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 1.0,
+       "reflejo": false,
+       "terminal": true
+      }
+     ]
+    },
+    {
+     "dims": [
+      0.14,
+      0.04,
+      0.26
+     ],
+     "art": "bisagra",
+     "limite": 35.0,
+     "rec": 1,
+     "neuronas": [],
+     "efectores": [
+      [
+       "p",
+       3,
+       1.3
+      ]
+     ],
+     "conexiones": []
+    }
+   ],
+   "central": []
+  },
+  "cerebro": "nodo 0 (raíz): caja 0.30×0.26×0.20 m, rigida ±60°, rec 1\n  n0 = oscillate-wave(c×+1.00, c×+2.00, c×+0.00)\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 1.00\nnodo 1: caja 0.22×0.06×0.12 m, bisagra ±60°, rec 4\n  n2 = sum(p0×+2.20, p3×+2.20, l1×+4.00)\n  n3 = smooth(n2×+1.00, c×+0.01)\n  e0 = n3×+1.00\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 0.80\n  -> nodo 2 cara 0 (+0.00,+0.00) rot 0/0/0 esc 1.00 terminal\nnodo 2: caja 0.14×0.04×0.26 m, bisagra ±35°, rec 1\n  e0 = p3×+1.30"
+ },
+ {
+  "epoca": 19,
+  "t": 400.0,
+  "id": 55,
+  "n": 7,
+  "madre": 34,
+  "nacimiento": 280.0,
+  "desplazamiento_solo": 1.7,
+  "genoma": {
+   "siguiente_id": 12,
+   "raiz": 0,
+   "nodos": [
+    {
+     "dims": [
+      0.15,
+      0.09,
+      0.09
+     ],
+     "art": "rigida",
+     "limite": 60.0,
+     "rec": 1,
+     "neuronas": [
+      {
+       "id": 0,
+       "f": "oscillate-wave",
+       "in": [
+        [
+         "c",
+         0,
+         1.0
+        ],
+        [
+         "n",
+         10,
+         1.4
+        ],
+        [
+         "c",
+         0,
+         0.0
+        ]
+       ]
+      },
+      {
+       "id": 10,
+       "f": "log",
+       "in": [
+        [
+         "l",
+         0,
+         -3.318053151772885
+        ]
+       ]
+      }
+     ],
+     "efectores": [],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 1.0,
+       "reflejo": false,
+       "terminal": false
+      }
+     ]
+    },
+    {
+     "dims": [
+      0.25,
+      0.08,
+      0.08
+     ],
+     "art": "bisagra",
+     "limite": 60.0,
+     "rec": 6,
+     "neuronas": [
+      {
+       "id": 2,
+       "f": "sum",
+       "in": [
+        [
+         "p",
+         0,
+         2.2
+        ],
+        [
+         "p",
+         3,
+         2.2
+        ],
+        [
+         "l",
+         1,
+         2.0
+        ]
+       ]
+      },
+      {
+       "id": 3,
+       "f": "smooth",
+       "in": [
+        [
+         "n",
+         2,
+         1.0
+        ],
+        [
+         "c",
+         0,
+         0.0065
+        ]
+       ]
+      }
+     ],
+     "efectores": [
+      [
+       "n",
+       3,
+       1.0
+      ]
+     ],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 0.97,
+       "reflejo": true,
+       "terminal": false
+      }
+     ]
+    }
+   ],
+   "central": []
+  },
+  "cerebro": "nodo 0 (raíz): caja 0.15×0.09×0.09 m, rigida ±60°, rec 1\n  n0 = oscillate-wave(c×+1.00, n10×+1.40, c×+0.00)\n  n10 = log(l0×-3.32)\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 1.00\nnodo 1: caja 0.25×0.08×0.08 m, bisagra ±60°, rec 6\n  n2 = sum(p0×+2.20, p3×+2.20, l1×+2.00)\n  n3 = smooth(n2×+1.00, c×+0.01)\n  e0 = n3×+1.00\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 0.97 reflejo"
+ },
+ {
+  "epoca": 26,
+  "t": 540.0,
+  "id": 81,
+  "n": 7,
+  "madre": 72,
+  "nacimiento": 520.0,
+  "desplazamiento_solo": 1.08,
+  "genoma": {
+   "siguiente_id": 12,
+   "raiz": 0,
+   "nodos": [
+    {
+     "dims": [
+      0.15,
+      0.09,
+      0.09
+     ],
+     "art": "rigida",
+     "limite": 60.0,
+     "rec": 1,
+     "neuronas": [
+      {
+       "id": 0,
+       "f": "oscillate-wave",
+       "in": [
+        [
+         "c",
+         0,
+         1.0
+        ],
+        [
+         "n",
+         10,
+         1.4
+        ],
+        [
+         "c",
+         0,
+         0.0
+        ]
+       ]
+      },
+      {
+       "id": 10,
+       "f": "log",
+       "in": [
+        [
+         "l",
+         0,
+         -3.318053151772885
+        ]
+       ]
+      }
+     ],
+     "efectores": [],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.08084206823081645,
+       "rot": [
+        0.0,
+        0.0,
+        -12.047641871146027
+       ],
+       "escala": 1.2253677320946839,
+       "reflejo": false,
+       "terminal": false
+      },
+      {
+       "a": 0,
+       "cara": 4,
+       "u": -0.7233035227857612,
+       "v": -0.3092132534883808,
+       "rot": [
+        55.63324894210663,
+        38.990647078652145,
+        -3.7371394936071027
+       ],
+       "escala": 0.7362201463926941,
+       "reflejo": false,
+       "terminal": false
+      }
+     ]
+    },
+    {
+     "dims": [
+      0.24054080170521844,
+      0.08,
+      0.08
+     ],
+     "art": "bisagra",
+     "limite": 60.0,
+     "rec": 6,
+     "neuronas": [
+      {
+       "id": 2,
+       "f": "sum",
+       "in": [
+        [
+         "p",
+         0,
+         2.2
+        ],
+        [
+         "p",
+         3,
+         2.2
+        ],
+        [
+         "l",
+         1,
+         2.0
+        ]
+       ]
+      },
+      {
+       "id": 3,
+       "f": "smooth",
+       "in": [
+        [
+         "n",
+         2,
+         1.0
+        ],
+        [
+         "c",
+         0,
+         0.0065
+        ]
+       ]
+      },
+      {
+       "id": 11,
+       "f": "atan",
+       "in": [
+        [
+         "p",
+         2,
+         -1.3174168399175183
+        ]
+       ]
+      }
+     ],
+     "efectores": [
+      [
+       "n",
+       11,
+       1.0
+      ]
+     ],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 0.97,
+       "reflejo": false,
+       "terminal": false
+      }
+     ]
+    }
+   ],
+   "central": []
+  },
+  "cerebro": "nodo 0 (raíz): caja 0.15×0.09×0.09 m, rigida ±60°, rec 1\n  n0 = oscillate-wave(c×+1.00, n10×+1.40, c×+0.00)\n  n10 = log(l0×-3.32)\n  -> nodo 1 cara 0 (+0.00,+0.08) rot 0/0/-12 esc 1.23\n  -> nodo 0 cara 4 (-0.72,-0.31) rot 56/39/-4 esc 0.74\nnodo 1: caja 0.24×0.08×0.08 m, bisagra ±60°, rec 6\n  n2 = sum(p0×+2.20, p3×+2.20, l1×+2.00)\n  n3 = smooth(n2×+1.00, c×+0.01)\n  n11 = atan(p2×-1.32)\n  e0 = n11×+1.00\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 0.97"
+ },
+ {
+  "epoca": 29,
+  "t": 600.0,
+  "id": 86,
+  "n": 13,
+  "madre": 72,
+  "nacimiento": 580.0,
+  "desplazamiento_solo": 1.45,
+  "genoma": {
+   "siguiente_id": 11,
+   "raiz": 0,
+   "nodos": [
+    {
+     "dims": [
+      0.15,
+      0.09,
+      0.09
+     ],
+     "art": "rigida",
+     "limite": 60.0,
+     "rec": 1,
+     "neuronas": [
+      {
+       "id": 0,
+       "f": "oscillate-wave",
+       "in": [
+        [
+         "c",
+         0,
+         1.0
+        ],
+        [
+         "n",
+         10,
+         1.4
+        ],
+        [
+         "c",
+         0,
+         0.0
+        ]
+       ]
+      },
+      {
+       "id": 10,
+       "f": "log",
+       "in": [
+        [
+         "l",
+         0,
+         -3.318053151772885
+        ]
+       ]
+      }
+     ],
+     "efectores": [],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.08084206823081645,
+       "rot": [
+        0.0,
+        0.0,
+        -12.047641871146027
+       ],
+       "escala": 1.0,
+       "reflejo": false,
+       "terminal": false
+      },
+      {
+       "a": 0,
+       "cara": 2,
+       "u": -0.7233035227857612,
+       "v": -0.3092132534883808,
+       "rot": [
+        83.90119258583056,
+        38.990647078652145,
+        -3.7371394936071027
+       ],
+       "escala": 0.6509240499036621,
+       "reflejo": false,
+       "terminal": false
+      },
+      {
+       "a": 1,
+       "cara": 3,
+       "u": 0.17670046008652862,
+       "v": -0.7439288569318929,
+       "rot": [
+        75.77898876301171,
+        50.407999148141826,
+        46.19643178704392
+       ],
+       "escala": 0.6301110302173399,
+       "reflejo": true,
+       "terminal": false
+      }
+     ]
+    },
+    {
+     "dims": [
+      0.24054080170521844,
+      0.08,
+      0.08
+     ],
+     "art": "bisagra",
+     "limite": 60.0,
+     "rec": 6,
+     "neuronas": [
+      {
+       "id": 2,
+       "f": "sum",
+       "in": [
+        [
+         "p",
+         0,
+         2.2
+        ],
+        [
+         "p",
+         3,
+         2.2
+        ],
+        [
+         "l",
+         1,
+         2.0
+        ]
+       ]
+      },
+      {
+       "id": 3,
+       "f": "smooth",
+       "in": [
+        [
+         "n",
+         2,
+         1.0
+        ],
+        [
+         "c",
+         0,
+         0.0065
+        ]
+       ]
+      }
+     ],
+     "efectores": [
+      [
+       "n",
+       3,
+       1.0
+      ]
+     ],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 0.97,
+       "reflejo": false,
+       "terminal": false
+      }
+     ]
+    }
+   ],
+   "central": []
+  },
+  "cerebro": "nodo 0 (raíz): caja 0.15×0.09×0.09 m, rigida ±60°, rec 1\n  n0 = oscillate-wave(c×+1.00, n10×+1.40, c×+0.00)\n  n10 = log(l0×-3.32)\n  -> nodo 1 cara 0 (+0.00,+0.08) rot 0/0/-12 esc 1.00\n  -> nodo 0 cara 2 (-0.72,-0.31) rot 84/39/-4 esc 0.65\n  -> nodo 1 cara 3 (+0.18,-0.74) rot 76/50/46 esc 0.63 reflejo\nnodo 1: caja 0.24×0.08×0.08 m, bisagra ±60°, rec 6\n  n2 = sum(p0×+2.20, p3×+2.20, l1×+2.00)\n  n3 = smooth(n2×+1.00, c×+0.01)\n  e0 = n3×+1.00\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 0.97"
+ },
+ {
+  "epoca": 48,
+  "t": 980.0,
+  "id": 121,
+  "n": 14,
+  "madre": 88,
+  "nacimiento": 900.0,
+  "desplazamiento_solo": 2.28,
+  "genoma": {
+   "siguiente_id": 10,
+   "raiz": 0,
+   "nodos": [
+    {
+     "dims": [
+      0.15,
+      0.09,
+      0.09
+     ],
+     "art": "rigida",
+     "limite": 54.42152505256878,
+     "rec": 2,
+     "neuronas": [
+      {
+       "id": 0,
+       "f": "oscillate-wave",
+       "in": [
+        [
+         "c",
+         0,
+         1.0
+        ],
+        [
+         "c",
+         0,
+         1.4
+        ],
+        [
+         "c",
+         0,
+         0.0
+        ]
+       ]
+      }
+     ],
+     "efectores": [],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 1.0,
+       "reflejo": false,
+       "terminal": false
+      },
+      {
+       "a": 0,
+       "cara": 5,
+       "u": -0.11591978367661981,
+       "v": 0.04077513950836331,
+       "rot": [
+        69.81019128629652,
+        20.610389759080107,
+        -46.35470560671725
+       ],
+       "escala": 1.2987760442202927,
+       "reflejo": false,
+       "terminal": false
+      }
+     ]
+    },
+    {
+     "dims": [
+      0.25,
+      0.08,
+      0.08
+     ],
+     "art": "bisagra",
+     "limite": 60.0,
+     "rec": 6,
+     "neuronas": [
+      {
+       "id": 2,
+       "f": "sum",
+       "in": [
+        [
+         "p",
+         0,
+         2.2
+        ],
+        [
+         "p",
+         3,
+         2.2
+        ],
+        [
+         "l",
+         1,
+         2.0
+        ]
+       ]
+      },
+      {
+       "id": 3,
+       "f": "smooth",
+       "in": [
+        [
+         "n",
+         2,
+         1.0
+        ],
+        [
+         "c",
+         0,
+         0.0065
+        ]
+       ]
+      }
+     ],
+     "efectores": [
+      [
+       "n",
+       3,
+       1.0
+      ]
+     ],
+     "conexiones": [
+      {
+       "a": 1,
+       "cara": 0,
+       "u": 0.0,
+       "v": 0.0,
+       "rot": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "escala": 0.97,
+       "reflejo": false,
+       "terminal": false
+      }
+     ]
+    }
+   ],
+   "central": []
+  },
+  "cerebro": "nodo 0 (raíz): caja 0.15×0.09×0.09 m, rigida ±54°, rec 2\n  n0 = oscillate-wave(c×+1.00, c×+1.40, c×+0.00)\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 1.00\n  -> nodo 0 cara 5 (-0.12,+0.04) rot 70/21/-46 esc 1.30\nnodo 1: caja 0.25×0.08×0.08 m, bisagra ±60°, rec 6\n  n2 = sum(p0×+2.20, p3×+2.20, l1×+2.00)\n  n3 = smooth(n2×+1.00, c×+0.01)\n  e0 = n3×+1.00\n  -> nodo 1 cara 0 (+0.00,+0.00) rot 0/0/0 esc 0.97"
+ }
+]

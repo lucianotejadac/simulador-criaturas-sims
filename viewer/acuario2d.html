@@ -52,7 +52,8 @@ footer{font-size:12px;color:var(--muted);max-width:72ch}footer a{color:var(--acc
     <button class="primary" id="play">Pausar</button>
     <span class="t" id="time">0.0 s</span>
     <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Tiempo">
-    <select id="speed" aria-label="Velocidad"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option><option value="8">8×</option></select>
+    <select id="speed" aria-label="Velocidad"><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option><option value="8">8×</option></select>
+    <label><input type="checkbox" id="corrido" checked> Todo de corrido</label>
     <label><input type="checkbox" id="rastro" checked> Rastros</label>
     <label><input type="checkbox" id="portam"> Colorear por segmentos</label>
   </div>
@@ -70,11 +71,13 @@ footer{font-size:12px;color:var(--muted);max-width:72ch}footer a{color:var(--acc
   var PALETA=['#3fb7cc','#ffc94d','#ff6f91','#9be36b','#c59bff','#ff9f43','#e0e6ea','#6fd3a7'];
   var datos=null, ep=null, t=0, playing=true, last=null, colores={}, dpr=Math.min(window.devicePixelRatio||1,2);
   function resize(){ var w=stage.clientWidth, h=stage.clientHeight; if(canvas.width!==Math.floor(w*dpr)){canvas.width=Math.floor(w*dpr);canvas.height=Math.floor(h*dpr);} }
+  function seg(cu,b,i){ var c=cu[b]; return (typeof c[0]==='number')?[c[3*i],c[3*i+1],c[3*i+2]]:c[i]; }
+  function lerpSeg(a,b,u,L){ var dx=b[0]-a[0],dy=b[1]-a[1]; if(Math.abs(dx)>L/2||Math.abs(dy)>L/2) return u<0.5?a:b; var dp=b[2]-a[2]; if(dp>Math.PI)dp-=2*Math.PI; if(dp<-Math.PI)dp+=2*Math.PI; return [a[0]+dx*u,a[1]+dy*u,a[2]+dp*u]; }
   function cargar(d){
     datos=d; d.meta.especies.forEach(function(e,i){colores[e]=PALETA[i%PALETA.length];});
     var sel=$('epoca'); sel.innerHTML='';
     d.epocas.forEach(function(E,i){var o=document.createElement('option');o.value=i;o.textContent='época '+(E.epoca+1)+' · t = '+E.t+' s · '+E.criaturas.length+' vivas';sel.appendChild(o);});
-    sel.value=d.epocas.length-1; elegir(d.epocas.length-1);
+    var ini=($('corrido').checked&&d.epocas.length>3)?0:d.epocas.length-1; sel.value=ini; elegir(ini);
     var r=d.meta.reglas; $('reglas').textContent='Reglas: energía inicial '+r.e0+', reproducción a '+r.e_repro+' (cría con '+r.e_cria+'), comida chica '+r.e_chica+' (largo ≤ '+r.largo_chico+' m), grande '+r.e_grande+' (masa ≥ '+r.masa_grande+' kg), costo '+r.costo_masa+'/kg·s y '+r.costo_torque+'/N·m·s, edad máxima '+r.edad_maxima+' s, tope '+r.poblacion_maxima+'.';
     $('tag').textContent='Etapa 7 · acuario '+d.meta.corrida+' · '+d.meta.epocas+' épocas de '+d.meta.t_epoca+' s · mundo de '+d.meta.mundo+' m';
     dibujarPoblaciones();
@@ -90,22 +93,24 @@ footer{font-size:12px;color:var(--muted);max-width:72ch}footer a{color:var(--acc
   function dibujar(){
     resize(); var W=canvas.width, H=canvas.height; ctx.fillStyle='#071a24'; ctx.fillRect(0,0,W,H);
     if(!ep) return;
-    var L=datos.meta.mundo, esc=W/L, f=Math.min(ep.cuadros.length-1,Math.max(0,Math.floor(t*ep.fps)));
+    var L=datos.meta.mundo, esc=W/L, ff=t*ep.fps, f=Math.min(ep.cuadros.length-1,Math.max(0,Math.floor(ff))), f2=Math.min(ep.cuadros.length-1,f+1), u=Math.max(0,Math.min(1,ff-f));
     var X=function(x){return (x+L/2)*esc;}, Y=function(y){return H-(y+L/2)*esc;};
     ctx.strokeStyle='#123842'; ctx.lineWidth=1; for(var g=0;g<=L;g+=5){ctx.beginPath();ctx.moveTo(X(g-L/2),0);ctx.lineTo(X(g-L/2),H);ctx.stroke();ctx.beginPath();ctx.moveTo(0,Y(g-L/2));ctx.lineTo(W,Y(g-L/2));ctx.stroke();}
     // comida
     var com=ep.comida[f]; for(var i=0;i<com.length;i++){ var c=com[i]; ctx.beginPath(); ctx.arc(X(c[0]),Y(c[1]),(c[2]?0.35:0.18)*esc,0,6.283); ctx.fillStyle=c[2]?'rgba(255,230,120,0.9)':'rgba(180,240,200,0.9)'; ctx.fill(); }
     // rastros
-    if($('rastro').checked&&f>0){ ctx.lineWidth=1; for(var b=0;b<ep.criaturas.length;b++){ ctx.strokeStyle=colores[ep.criaturas[b].especie]+'55'; ctx.beginPath(); var f0=Math.max(0,f-20); for(var k=f0;k<=f;k++){ var p=ep.cuadros[k][b][0]; if(k===f0)ctx.moveTo(X(p[0]),Y(p[1])); else { var q=ep.cuadros[k-1][b][0]; if(Math.abs(p[0]-q[0])>L/2||Math.abs(p[1]-q[1])>L/2) ctx.moveTo(X(p[0]),Y(p[1])); else ctx.lineTo(X(p[0]),Y(p[1])); } } ctx.stroke(); } }
+    if($('rastro').checked&&f>0){ ctx.lineWidth=1; for(var b=0;b<ep.criaturas.length;b++){ ctx.strokeStyle=colores[ep.criaturas[b].especie]+'55'; ctx.beginPath(); var f0=Math.max(0,f-20); for(var k=f0;k<=f;k++){ var p=seg(ep.cuadros[k],b,0); if(k===f0)ctx.moveTo(X(p[0]),Y(p[1])); else { var q=seg(ep.cuadros[k-1],b,0); if(Math.abs(p[0]-q[0])>L/2||Math.abs(p[1]-q[1])>L/2) ctx.moveTo(X(p[0]),Y(p[1])); else ctx.lineTo(X(p[0]),Y(p[1])); } } ctx.stroke(); } }
     // criaturas: cada segmento es un rectángulo orientado
     var cu=ep.cuadros[f];
     for(var b=0;b<ep.criaturas.length;b++){ var cr=ep.criaturas[b]; ctx.fillStyle=$('portam').checked?(cr.n<=3?'#9be36b':cr.n<=6?'#3fb7cc':cr.n<=9?'#ffc94d':'#ff6f91'):colores[cr.especie];
-      for(var i=0;i<cr.n;i++){ var s=cu[b][i], seg=cr.segmentos[i]; ctx.save(); ctx.translate(X(s[0]),Y(s[1])); ctx.rotate(-s[2]); ctx.globalAlpha=i===0?1:0.75; ctx.fillRect(-seg[0]/2*esc,-seg[1]/2*esc,seg[0]*esc,seg[1]*esc); ctx.restore(); }
+      var cu2=ep.cuadros[f2];
+      for(var i=0;i<cr.n;i++){ var s=lerpSeg(seg(cu,b,i),seg(cu2,b,i),u,L), sg=cr.segmentos[i]; ctx.save(); ctx.translate(X(s[0]),Y(s[1])); ctx.rotate(-s[2]); ctx.globalAlpha=i===0?1:0.75; ctx.fillRect(-sg[0]/2*esc,-sg[1]/2*esc,sg[0]*esc,sg[1]*esc); ctx.restore(); }
+      var h=lerpSeg(seg(cu,b,0),seg(cu2,b,0),u,L), sg0=cr.segmentos[0]; ctx.fillStyle='#071a24'; ctx.beginPath(); ctx.arc(X(h[0]-Math.cos(h[2])*sg0[0]*0.35),Y(h[1]-Math.sin(h[2])*sg0[0]*0.35),Math.max(1.2,sg0[1]*0.18*esc),0,6.283); ctx.fill();
       ctx.globalAlpha=1; }
     $('hud').innerHTML='época <b>'+(ep.epoca+1)+'</b> · t = <b>'+(ep.t+t).toFixed(0)+' s</b> · <b>'+ep.criaturas.length+'</b> criaturas · <b>'+com.length+'</b> comidas';
   }
   function frame(now){ requestAnimationFrame(frame); if(last===null)last=now; var dt=Math.min(0.1,(now-last)/1000); last=now;
-    if(playing&&ep){ t+=dt*parseFloat($('speed').value); if(t>=datos.meta.t_epoca)t=0; $('scrub').value=Math.round(t/datos.meta.t_epoca*1000); }
+    if(playing&&ep){ t+=dt*parseFloat($('speed').value); if(t>=datos.meta.t_epoca){ if($('corrido').checked){ var i=parseInt($('epoca').value,10); if(i<datos.epocas.length-1){ $('epoca').value=i+1; elegir(i+1); } else t=0; } else t=0; } $('scrub').value=Math.round(t/datos.meta.t_epoca*1000); }
     $('time').textContent=t.toFixed(1)+' s'; dibujar(); }
   requestAnimationFrame(frame);
   function dibujarPoblaciones(){ var hist=datos.historia, svg=$('chart'), W=520, H=240, m={l:44,r:40,t:12,b:30}; if(!hist.length)return;
